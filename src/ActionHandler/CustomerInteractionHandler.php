@@ -1,9 +1,9 @@
 <?php
 
-namespace CommonGateway\PetStoreBundle\ActionHandler;
+namespace CommonGateway\CustomerInteractionBundle\ActionHandler;
 
 use CommonGateway\CoreBundle\ActionHandler\ActionHandlerInterface;
-use CommonGateway\PetStoreBundle\Service\PetStoreService;
+use CommonGateway\CustomerInteractionBundle\Service\CustomerInteractionService;
 
 /**
  * An example handler for the per store.
@@ -12,25 +12,25 @@ use CommonGateway\PetStoreBundle\Service\PetStoreService;
  *
  * @license EUPL-1.2 https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12
  */
-class PetStoreHandler implements ActionHandlerInterface
+class CustomerInteractionHandler implements ActionHandlerInterface
 {
 
     /**
      * The pet store service used by the handler
      *
-     * @var PetStoreService
+     * @var CustomerInteractionService
      */
-    private PetStoreService $petStoreService;
+    private CustomerInteractionService $service;
 
 
     /**
      * The constructor
      *
-     * @param PetStoreService $petStoreService The pet store service
+     * @param CustomerInteractionService $service The pet store service
      */
-    public function __construct(PetStoreService $petStoreService)
+    public function __construct(CustomerInteractionService $service)
     {
-        $this->petStoreService = $petStoreService;
+        $this->service = $service;
 
     }//end __construct()
 
@@ -43,9 +43,9 @@ class PetStoreHandler implements ActionHandlerInterface
     public function getConfiguration(): array
     {
         return [
-            '$id'         => 'https://example.com/ActionHandler/PetStoreHandler.ActionHandler.json',
+            '$id'         => 'https://example.com/ActionHandler/CustomerInteractionHandler.ActionHandler.json',
             '$schema'     => 'https://docs.commongateway.nl/schemas/ActionHandler.schema.json',
-            'title'       => 'PetStore ActionHandler',
+            'title'       => 'CustomerInteraction ActionHandler',
             'description' => 'This handler returns a welcoming string',
             'required'    => [],
             'properties'  => [],
@@ -66,7 +66,7 @@ class PetStoreHandler implements ActionHandlerInterface
      */
     public function run(array $data, array $configuration): array
     {
-        return $this->petStoreService->petStoreHandler($data, $configuration);
+        return $this->service->customerInteractionHandler($data, $configuration);
 
     }//end run()
 
