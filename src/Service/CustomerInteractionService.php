@@ -1,6 +1,6 @@
 <?php
 
-namespace CommonGateway\PetStoreBundle\Service;
+namespace CommonGateway\CustomerInteractionBundle\Service;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Log\LoggerInterface;
@@ -14,7 +14,7 @@ use Psr\Log\LoggerInterface;
  *
  * @category Service
  */
-class PetStoreService
+class CustomerInteractionService
 {
 
     /**
@@ -64,16 +64,16 @@ class PetStoreService
      *
      * @return array A handler must ALWAYS return an array
      */
-    public function petStoreHandler(array $data, array $configuration): array
+    public function customerInteractionHandler(array $data, array $configuration): array
     {
         $this->data          = $data;
         $this->configuration = $configuration;
 
-        $this->logger->debug("PetStoreService -> petStoreHandler()");
+        $this->logger->debug("CustomerInteractionService -> customerInteractionHandler()");
 
-        return ['response' => 'Hello. Your PetStoreBundle works'];
+        return ['response' => 'Hello. Your CustomerInteractionBundle works'];
 
-    }//end petStoreHandler()
+    }//end customerInteractionHandler()
 
 
 }//end class
