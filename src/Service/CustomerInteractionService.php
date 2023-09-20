@@ -73,7 +73,7 @@ class CustomerInteractionService
 
         return ['response' => 'Hello. Your CustomerInteractionBundle works'];
 
-    }//end petStoreHandler()
+    }//end customerInteractionHandler()
 
 
 }//end class
