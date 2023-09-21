@@ -28,7 +28,7 @@
             },
             {
                 "version": "0.0.1",
-                "reference": "ttps://commongateway.nl/klant.medewerker.schema.json",
+                "reference": "https://commongateway.nl/klant.medewerker.schema.json",
                 "path": "medewerkers",
                 "methods": ["GET", "PATCH", "POST", "DELETE"]
             },
