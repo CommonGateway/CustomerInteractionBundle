@@ -1,0 +1,40 @@
+{
+  "title": "Bijlage",
+  "$id": "https://commongateway.nl/klant.bijlage.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "description": "Een digitale bijlage bij een klantcontact. Deze bijlage kan bestaan uit een bestand dat meegestuurd is met een e-mail of een ingescand document.",
+  "required": ["externId", "externRegister", "id", "indicatieWeerTeGeven", "klantcontactId", "omschrijving"],
+  "properties": {
+    "externId": {
+      "type": "string",
+      "maxLength": 40,
+      "required": true
+    },
+    "externRegister": {
+      "type": "string",
+      "maxLength": 40,
+      "required": true
+    },
+    "id": {
+      "type": "string",
+      "maxLength": 40,
+      "required": true
+    },
+    "indicatieWeerTeGeven": {
+      "type": "boolean",
+      "required": true
+    },
+    "klantcontactId": {
+      "type": "string",
+      "maxLength": 40,
+      "required": true
+    },
+    "omschrijving": {
+      "type": "string",
+      "maxLength": 40,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Land",
+  "$id": "https://commongateway.nl/klant.land.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "description": "Het SUBJECT dat heeft aangegeven te (gaan) verblijven dan wel verblijft in het LAND",
+  "required": ["einddatumLand", "ingangsdatumLand", "landcode", "landnaam"],
+  "properties": {
+    "einddatumLand": {
+      "title": "Einddatum land",
+      "type": "date",
+      "description": "De datum waarop het land/gebied is opgeheven.",
+      "required": true
+    },
+    "ingangsdatumLand": {
+      "title": "Ingangsdatum land",
+      "type": "date",
+      "description": "De datum waarop het land/gebied is ontstaan.",
+      "required": true
+    },
+    "landcode": {
+      "title": "Landcode",
+      "type": "string",
+      "description": "De code, behorende bij de landnaam, opgenomen in de Landentabel van de GBA.",
+      "minLength": 1,
+      "required": true
+    },
+    "landnaam": {
+      "title": "Landnaam",
+      "type": "string",
+      "description": "De naam van het land, zoals opgenomen in de Landentabel van de GBA.",
+      "minLength": 1,
+      "required": true
+    }
+  }
+}

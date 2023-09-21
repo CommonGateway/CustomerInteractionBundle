@@ -1,0 +1,69 @@
+{
+  "title": "Partij",
+  "$id": "https://commongateway.nl/klant.partij.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "description": "Een persoon of organisatie waarmee de gemeente een relatie heeft.\n\n(Uiteindelijk) belanghebbenden waarmee de gemeente geen direct contact heeft (of heeft gehad) (bijvoorbeeld door vertegenwoordiging) zien we als partijen waarmee de gemeente een relatie heeft.? Een vertegenwoordiger (van een belanghebbende) is een partij? Partijen zijn ???gekende??? personen of organisaties? Dit betekent dat er voor eerste registratie en bij eventueel (her)gebruik authenticatie heeft plaatsgevonden. Dit hoeft niet per se te gebeuren met DigiD, eHerkenning o.i.d. Er is dus ook niet altijd sprake van vastlegging en verwerking van een BSN of ander buiten de gemeente toegekend ID-nummer.?\n\n(Uiteindelijk) belanghebbenden waarmee de gemeente geen direct contact heeft (of heeft gehad) (bijvoorbeeld door vertegenwoordiging) zien we als partijen waarmee de gemeente een relatie heeft.? Een vertegenwoordiger (van een belanghebbende) is een partij? Partijen zijn ???gekende??? personen of organisaties? Dit betekent dat er voor eerste registratie en bij eventueel (her)gebruik authenticatie heeft plaatsgevonden. Dit hoeft niet per se te gebeuren met DigiD, eHerkenning o.i.d. Er is dus ook niet altijd sprake van vastlegging en verwerking van een BSN of ander buiten de gemeente toegekend ID-nummer.?\n\n(Uiteindelijk) belanghebbenden waarmee de gemeente geen direct contact heeft (of heeft gehad) (bijvoorbeeld door vertegenwoordiging) zien we als partijen waarmee de gemeente een relatie heeft.? Een vertegenwoordiger (van een belanghebbende) is een partij? Partijen zijn ???gekende??? personen of organisaties? Dit betekent dat er voor eerste registratie en bij eventueel (her)gebruik authenticatie heeft plaatsgevonden. Dit hoeft niet per se te gebeuren met DigiD, eHerkenning o.i.d. Er is dus ook niet altijd sprake van vastlegging en verwerking van een BSN of ander buiten de gemeente toegekend ID-nummer.?",
+  "required": ["externeIdentificatie", "id", "interneNotitie", "nummer"],
+  "properties": {
+    "bezoekadres": {
+      "type": "object",
+      "description": "Een bezoekadres is een adres waar een persoon of een bedrijf bezoekers ontvangt.",
+      "$ref": "https://commongateway.nl/klant.bezoekadres.schema.json"
+    },
+    "correspondentieadres": {
+      "type": "object",
+      "description": "Het adres waarnaar de persoon of de organisatie de voor hen bestemde correspondentie laat verzenden.",
+      "$ref": "https://commongateway.nl/klant.correspondentieadres.schema.json"
+    },
+    "externeIdentificatie": {
+      "type": "array",
+      "properties": {
+        "type": "object",
+        "description": "De identificatiecode van een Relatie zoals die in een andere (authentieke?) registratie gevoerd wordt.",
+        "$ref": "https://commongateway.nl/klant.externeIdentificatie.schema.json"
+      },
+      "required": true
+    },
+    "id": {
+      "type": "string",
+      "maxLength": 40,
+      "required": true
+    },
+    "interneNotitie": {
+      "type": "string",
+      "maxLength": 200,
+      "required": true
+    },
+    "klanttaakId": {
+      "type": "array",
+      "properties": {
+        "type": "string",
+        "maxLength": 40
+      }
+    },
+    "nummer": {
+      "type": "integer",
+      "required": true
+    },
+    "organisatienaam": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "persoonsnaam": {
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.persoonsnaam.schema.json"
+    },
+    "voorkeurskanaal": {
+      "type": "object",
+      "description": "Het kanaal waarlangs de partij bij voorkeur interactie heeft met de gemeente.",
+      "$ref": "https://commongateway.nl/klant.voorkeur.schema.json"
+    },
+    "voorkeurstaal": {
+      "type": "object",
+      "description": "De taal waarin de persoon of organisatie bij voorkeur interactie heeft met de gemeente.",
+      "$ref": "https://commongateway.nl/klant.voorkeur.schema.json"
+    }
+  }
+}

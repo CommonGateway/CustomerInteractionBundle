@@ -1,0 +1,25 @@
+{
+  "title": "Persoonsnaam",
+  "$id": "https://commongateway.nl/klant.persoonsnaam.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "achternaam": {
+      "title": "Achternaam",
+      "type": "string",
+      "description": "De achternaam waarmee de persoon aangesproken wenst te worden. Deze zal over het algemeen gelijk zijn aan de (geslachts)naam waarvan de eventueel aanwezige voorvoegsels en adellijke titel/predikaat zijn afgesplitst."
+    },
+    "voornaam": {
+      "title": "Voornaam",
+      "type": "string",
+      "description": "De roepnaam waarmee de persoon wenst aangeproken te worden."
+    },
+    "voorvoegselAchternaam": {
+      "title": "Voorvoegsel achternaam",
+      "type": "string",
+      "description": "Dat deel van de achternaam dat voorkomt in de Voorvoegseltabel en, gescheiden door een spatie, vooraf gaat aan de rest van de achternaam."
+    }
+  }
+}
