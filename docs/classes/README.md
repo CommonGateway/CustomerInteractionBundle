@@ -1,4 +1,4 @@
-# CommonGateway\PetStoreBundle
+# CommonGateway\CustomerInteractionBundle
 
 * [Service\InstallationService](Service/InstallationService.md) 
-* [Service\PetStoreService](Service/PetStoreService.md) 
+* [Service\CustomerInteractionService](Service/CustomerInteractionService.md) 
