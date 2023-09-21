@@ -1,4 +1,4 @@
-# CommonGateway\PetStoreBundle\Service\InstallationService  
+# CommonGateway\CustomerInteractionBundle\Service\InstallationService  
 
 The installation service for this plugin.
 
