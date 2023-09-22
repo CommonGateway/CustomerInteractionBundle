@@ -5,13 +5,8 @@
   "version": "0.0.1",
   "type": "object",
   "description": "De actor handelt in een interne taak of een klantcontact.",
-  "required": ["id", "naam"],
+  "required": ["naam"],
   "properties": {
-    "id": {
-      "type": "string",
-      "maxLength": 40,
-      "required": true
-    },
     "klantcontactId": {
       "type": "array",
       "properties": {

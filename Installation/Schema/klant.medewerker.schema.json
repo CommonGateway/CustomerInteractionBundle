@@ -5,13 +5,8 @@
   "version": "0.0.1",
   "type": "object",
   "description": "Iemand die voor of namens de gemeente werkzaamheden verricht.",
-  "required": ["id", "naam", "eMailadres", "externId", "externRegister", "functie", "telefoonnummer"],
+  "required": ["naam", "eMailadres", "externId", "externRegister", "functie", "telefoonnummer"],
   "properties": {
-    "id": {
-      "type": "string",
-      "maxLength": 40,
-      "required": true
-    },
     "klantcontactId": {
       "type": "array",
       "properties": {
