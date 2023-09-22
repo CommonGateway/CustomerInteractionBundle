@@ -2,6 +2,6 @@
 
 This repository is based on the VNG-Realisatie Klantinteracties API. Using the following openapi.yamls:
 
-- [klantinteracties](https://github.com/VNG-Realisatie/klantinteracties/blob/main/docs/api_familie_klantinteracties/klantinteracties/openapi.yaml)
-- [klantinteracties_CRUD](https://github.com/VNG-Realisatie/klantinteracties/blob/main/docs/api_familie_klantinteracties/klantinteracties_CRUD/openapi.yaml)
-- [klantinteracties variant4-bijhouding](https://github.com/VNG-Realisatie/klantinteracties/blob/main/docs/api_familie_varianten/variant4-bijhouding/openapi.yaml)
+* [klantinteracties](https://github.com/VNG-Realisatie/klantinteracties/blob/main/docs/api_familie_klantinteracties/klantinteracties/openapi.yaml)
+* [klantinteracties\_CRUD](https://github.com/VNG-Realisatie/klantinteracties/blob/main/docs/api_familie_klantinteracties/klantinteracties_CRUD/openapi.yaml)
+* [klantinteracties variant4-bijhouding](https://github.com/VNG-Realisatie/klantinteracties/blob/main/docs/api_familie_varianten/variant4-bijhouding/openapi.yaml)
