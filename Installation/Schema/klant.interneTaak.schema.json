@@ -1,0 +1,37 @@
+{
+  "title": "InterneTaak",
+  "$id": "https://commongateway.nl/klant.interneTaak.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "required": ["actorId", "geregistreerdOp", "gevraagdeHandeling", "nummer", "status"],
+  "properties": {
+    "actorId": {
+      "type": "string",
+      "maxLength": 40,
+      "required": true
+    },
+    "geregistreerdOp": {
+      "type": "datetime",
+      "required": true
+    },
+    "gevraagdeHandeling": {
+      "type": "string",
+      "maxLength": 200,
+      "required": true
+    },
+    "nummer": {
+      "type": "integer",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "description": "De waarden van de typering van de voortgang van afhandeling van\n\n een VERZOEK.<body><ul><li>`te_verwerken` - te verwerken Het verzoek is afgehandeld.</li><li>`verwerkt`\n\n - verwerkt Het verzoek id buiten behandeling gesteld.</li></ul></body>",
+      "enum": [
+        "te_verwerken",
+        "verwerkt"
+      ],
+      "required": true
+    }
+  }
+}
