@@ -1,0 +1,57 @@
+{
+  "title": "BetrokkeneBijKlantcontact",
+  "$id": "https://commongateway.nl/klant.betrokkeneBijKlantcontact.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "description": "De betrokkenheid en de rol van een persoon of organisatie bij het klantcontact.\n\nKlantcontact-betrokkene kent afhankelijk van mogelijkheid of wenselijkheid om in het kader van (opvolging van) de klantinteractie persoonsgegevens te verwerken twee gebruiksmogelijkheden. 1) is van de bij het klantcontact betrokken inwoner of ondernemer na identificatie en/of authenticatie voldoende duidelijk wie die is of vertegenwoordigt, dan wordt eerst opgezocht of deze inwoner of ondernemer reeds als partij bij de gemeente bekend is. Is dat niet zo, dan kan vervolgens een partij worden geregistreerd. Tussen de opgezochte of gecre??erde partij en klantcontact-betrokkene wordt vervolgens een relatie gelegd. Als de betrokkene aangeeft dat all????n voor opvolging van het klantcontact andere dan de bij partij geregistreerde 'default'-contactgegevens gebruikt moeten, worden deze alternatieve contactgegevens vastgelegd in klantcontact-betrokkene. Voor opvolging van het klantcontact gelden de in Klantcontact-betrokkene vastgelegde contactgegevens dus boven gelijkaardige gegevens die bij partij zijn geregistreerd. 2) is van de bij het klantcontact betrokken inwoner of ondernemer na eventuele identificatie en/of authenticatie onvoldoende duidelijk is wie die is of vertegenwoordigt, dan kan in klantcontact-betrokkene een set voor opvolging van het klantcontact benodigde of gewenste contactgegevens worden geregistreerd. In dit geval is er dus g????n sprake van een realtie tussen klantcontact-betrokkene en partij.",
+  "required": ["klantcontactId", "rol"],
+  "properties": {
+    "bezoekadres": {
+      "type": "object",
+      "description": "Een bezoekadres is een adres waar een persoon of een bedrijf bezoekers ontvangt.",
+      "$ref": "https://commongateway.nl/klant.bezoekadres.schema.json"
+    },
+    "correspondentieadres": {
+      "type": "object",
+      "description": "Het adres waarnaar de persoon of de organisatie de voor hen bestemde correspondentie laat verzenden.",
+      "$ref": "https://commongateway.nl/klant.correspondentieadres.schema.json"
+    },
+    "klantcontactId": {
+      "type": "string",
+      "required": true,
+      "maxLength": 40
+    },
+    "organisatienaam": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "partijId": {
+      "type": "string",
+      "maxLength": 40
+    },
+    "persoonsnaam": {
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.persoonsnaam.schema.json"
+    },
+    "rol": {
+      "type": "string",
+      "description": "De typering van de rol van de persoon of organisatie in het klantcontact.",
+      "required": true,
+      "enum": [
+        "vertegenwoordiger",
+        "klant"
+      ]
+    },
+    "voorkeurskanaal": {
+      "type": "object",
+      "description": "Het kanaal waarlangs de partij bij voorkeur interactie heeft met de gemeente.",
+      "$ref": "https://commongateway.nl/klant.voorkeur.schema.json"
+    },
+    "voorkeurstaal": {
+      "type": "object",
+      "description": "De taal waarin de persoon of organisatie bij voorkeur interactie heeft met de gemeente.",
+      "$ref": "https://commongateway.nl/klant.voorkeur.schema.json"
+    }
+  }
+}

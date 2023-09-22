@@ -1,3 +1,49 @@
 {
-    "installationService": "CommonGateway\\CustomerInteractionBundle\\Service\\InstallationService"
+    "installationService": "CommonGateway\\CustomerInteractionBundle\\Service\\InstallationService",
+    "endpoints": {
+        "schemas": [
+            {
+                "version": "0.0.1",
+                "reference": "https://commongateway.nl/klant.betrokkeneBijKlantcontact.schema.json",
+                "path": "betrokkenenbijklantcontact",
+                "methods": ["GET", "PATCH", "POST"]
+            },
+            {
+                "version": "0.0.1",
+                "reference": "https://commongateway.nl/klant.bijlage.schema.json",
+                "path": "bijlagen",
+                "methods": ["GET", "PATCH", "POST", "DELETE"]
+            },
+            {
+                "version": "0.0.1",
+                "reference": "https://commongateway.nl/klant.digitaalAdres.schema.json",
+                "path": "digitaaladressen",
+                "methods": ["GET", "PATCH", "POST", "DELETE"]
+            },
+            {
+                "version": "0.0.1",
+                "reference": "https://commongateway.nl/klant.klantcontact.schema.json",
+                "path": "klantcontacten",
+                "methods": ["GET", "PATCH", "POST"]
+            },
+            {
+                "version": "0.0.1",
+                "reference": "https://commongateway.nl/klant.medewerker.schema.json",
+                "path": "medewerkers",
+                "methods": ["GET", "PATCH", "POST", "DELETE"]
+            },
+            {
+                "version": "0.0.1",
+                "reference": "https://commongateway.nl/klant.organisatorischeEenheid.schema.json",
+                "path": "organisatorischeeenheden",
+                "methods": ["GET", "PATCH", "POST", "DELETE"]
+            },
+            {
+                "version": "0.0.1",
+                "reference": "https://commongateway.nl/klant.partij.schema.json",
+                "path": "partijen",
+                "methods": ["GET", "PATCH", "POST", "DELETE"]
+            }
+        ]
+    }
 }

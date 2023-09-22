@@ -1,0 +1,50 @@
+{
+  "title": "Medewerker",
+  "$id": "https://commongateway.nl/klant.medewerker.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "description": "Iemand die voor of namens de gemeente werkzaamheden verricht.",
+  "required": ["naam", "eMailadres", "externId", "externRegister", "functie", "telefoonnummer"],
+  "properties": {
+    "klantcontactId": {
+      "type": "array",
+      "properties": {
+        "type": "string",
+        "maxLength": 40
+      }
+    },
+    "naam": {
+      "type": "string",
+      "maxLength": 200,
+      "required": true
+    },
+    "eMailadres": {
+      "type": "string",
+      "format": "email",
+      "description": "Een geldig email-adres, maximaal 20 karakters lang en minimaal een @ en een . opgenomen.",
+      "maxLength": 200,
+      "required": true
+    },
+    "externId": {
+      "type": "string",
+      "maxLength": 40,
+      "required": true
+    },
+    "externRegister": {
+      "type": "string",
+      "maxLength": 40,
+      "required": true
+    },
+    "functie": {
+      "type": "string",
+      "maxLength": 40,
+      "required": true
+    },
+    "telefoonnummer": {
+      "type": "string",
+      "maxLength": 20,
+      "required": true
+    }
+  }
+}

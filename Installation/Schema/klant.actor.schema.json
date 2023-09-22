@@ -1,0 +1,23 @@
+{
+  "title": "Actor",
+  "$id": "https://commongateway.nl/klant.actor.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "description": "De actor handelt in een interne taak of een klantcontact.",
+  "required": ["naam"],
+  "properties": {
+    "klantcontactId": {
+      "type": "array",
+      "properties": {
+        "type": "string",
+        "maxLength": 40
+      }
+    },
+    "naam": {
+      "type": "string",
+      "maxLength": 200,
+      "required": true
+    }
+  }
+}

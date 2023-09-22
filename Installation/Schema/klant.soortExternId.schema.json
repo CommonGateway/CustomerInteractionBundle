@@ -1,0 +1,31 @@
+{
+  "title": "Soort Extern Id",
+  "$id": "https://commongateway.nl/klant.soortExternId.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "description": "Een opsomming van de soorten externe identificatiecodes met de bijbehorende externe registers.\n\n",
+  "required": ["code", "externRegister", "naam"],
+  "properties": {
+    "code": {
+      "title": "Code",
+      "type": "string",
+      "minLength": 1,
+      "description": "De code, behorende bij de landnaam, opgenomen in de Landentabel van de GBA."
+    },
+    "externRegister": {
+      "title": "Extern register",
+      "type": "string",
+      "minLength": 1,
+      "required": true,
+      "description": "Het register dat geraadpleegd kan worden m.b.v. de externe identificatiecode."
+    },
+    "naam": {
+      "title": "Naam",
+      "type": "string",
+      "minLength": 1,
+      "description": "De naam van het land, zoals opgenomen in de Landentabel van de GBA.",
+      "required": true
+    }
+  }
+}

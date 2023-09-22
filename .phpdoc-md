@@ -4,7 +4,6 @@ return (object)[
     'destDirectory' => 'docs/classes',
     'format' => 'github',
     'classes' => [
-        '\CommonGateway\CustomerInteractionBundle\Service\InstallationService',
-        '\CommonGateway\CustomerInteractionBundle\Service\CustomerInteractionService'
+        '\CommonGateway\CustomerInteractionBundle\Service\InstallationService'
     ],
 ];
