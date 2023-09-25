@@ -1,0 +1,8 @@
+{
+    "title": "Klantinteracties",
+    "$id": "https://vng.opencatalogi.nl/collection/kic.klantinteracties.collection.json",
+    "$schema": "https://docs.commongateway.nl/schemas/CollectionEntity.schema.json",
+    "version": "0.0.1",
+    "prefix": "kic/v1",
+    "plugin": "CustomerInteractionBundle"
+}
