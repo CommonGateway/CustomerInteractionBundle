@@ -8,14 +8,17 @@ RECTANGLE "Klant Interactie Component" {
     - Object Store Oplossing (MongoDB)
   }
 
-  RECTANGLE "Laag 4: API's" {
+  RECTANGLE "Laag 2: API's" {
     - Adapter naar Klant Interactie CRUD API's
   }
 
   RECTANGLE "Laag 3: Integratie" {
     - Integratie van Diverse Gegevensbronnen
-    - Brononafhankelijke Serviceaanbieding
     - Bronoverstijgende Extensie zonder Koppeling van Registers
+  }
+
+  RECTANGLE "Laag 4: Business Rules" {
+    - Brononafhankelijke Serviceaanbieding
   }
 }
 
