@@ -37,10 +37,11 @@ Onze Klant Interactie Component is opgebouwd uit verschillende lagen. Hieronder 
     * Flexibele validatie: Bronoverstijgende validatie wordt hier uitgevoerd, waardoor de validatie flexibeler wordt.
 
 ### Laag 4: Business Rules
+
 * **Brononafhankelijke Serviceaanbieding**:
-    * Op deze laag bieden we services aan die handelingsgerichte klanten-API's ondersteunen. De voordelen zijn:
-        * Brononafhankelijkheid: Services kunnen werken met verschillende bronnen zonder aanpassingen.
-        * Bronnen overschrijden: Services kunnen gegevens van verschillende bronnen overschrijden voor meerwaarde.
+  * Op deze laag bieden we services aan die handelingsgerichte klanten-API's ondersteunen. De voordelen zijn:
+    * Brononafhankelijkheid: Services kunnen werken met verschillende bronnen zonder aanpassingen.
+    * Bronnen overschrijden: Services kunnen gegevens van verschillende bronnen overschrijden voor meerwaarde.
 
 Met deze gelaagde aanpak bevorderen we leveranciers om verder te gaan in hun dienstverlening en onderscheidend vermogen te behouden, terwijl ze toch de mogelijkheid hebben om informatie te delen. Bovendien maken we de overstap naar registers niet dwingend voor leveranciers, wat de marktadoptie versnelt.
 
