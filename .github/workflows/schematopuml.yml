@@ -1,0 +1,63 @@
+# Generates puml files from shema.json files for documentation purposes
+name: Generate PlantUML files from JSON Schema
+
+on: push
+jobs:
+  generate-puml:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install jsonschema
+
+      - name: Create docs/schema directory if it doesn't exist
+        run: |
+          mkdir -p docs/schema
+
+      - name: Find JSON Schema files and Generate PUMl
+        run: |
+          # Embedded Python script to generate .puml files from JSON Schema
+          python << 'EOF'
+          import json
+          import os
+          
+          def generate_puml(schema, puml_file_path):
+              with open(puml_file_path, 'w') as puml_file:
+                  puml_file.write("@startuml\n")
+                  puml_file.write(f"class {schema.get('title', 'Untitled')} {{\n")
+                  properties = schema.get('properties', {})
+                  for prop, details in properties.items():
+                      puml_file.write(f"  + {prop}: {details.get('type', 'Any')}\n")
+                  puml_file.write("}\n")
+                  puml_file.write("@enduml\n")
+          
+          for root, dirs, files in os.walk("."):
+              for file in files:
+                  if file.endswith("schema.json"):
+                      schema_file_path = os.path.join(root, file)
+                      with open(schema_file_path, 'r') as f:
+                          schema = json.load(f)
+                      puml_file_name = os.path.basename(schema_file_path).replace("schema.json", "puml")
+                      puml_file_path = os.path.join("docs/schema", puml_file_name)
+                      generate_puml(schema, puml_file_path)
+          EOF
+      - name: Git commit
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email ""
+          git add .
+          git reset package.json
+          git reset package-lock.json
+          git reset node_modules
+          git commit -m "Created puml files for schema's" || echo "No changes to commit"
+          git pull origin $(git rev-parse --abbrev-ref HEAD) --rebase --autostash
+          git push
