@@ -2,7 +2,7 @@
 
 No description available.
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.interneTaaksvg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.interneTaak.svg)
 
 ## Properties
 
