@@ -61,10 +61,10 @@ jobs:
                       generate_puml(schema, puml_file_path)
           
           # Generate an additional .puml file that includes all classes
-          with open("docs/schema/all_classes.puml", 'w') as f:
-              f.write("@startuml\n")
-              f.write("\n".join(all_classes))
-              f.write("\n@enduml\n")
+          #with open("docs/schema/all_classes.puml", 'w') as f:
+          #    f.write("@startuml\n")
+          #    f.write("\n".join(all_classes))
+          #    f.write("\n@enduml\n")
           EOF
 
       - name: Generate SVG from PUMl
