@@ -4,7 +4,7 @@ Een opsomming van de soorten externe identificatiecodes met de bijbehorende exte
 
 
 
-![Class Diagram](docs/schema/klant.soortExternId.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.soortExternIdsvg)
 
 ## Properties
 

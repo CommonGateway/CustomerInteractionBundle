@@ -2,7 +2,7 @@
 
 No description available.
 
-![Class Diagram](docs/schema/klant.persoonsnaam.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.persoonsnaamsvg)
 
 ## Properties
 
