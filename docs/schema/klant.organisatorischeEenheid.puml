@@ -1,5 +1,5 @@
 @startuml
-class Organisatorische Eenheid {
+class OrganisatorischeEenheid {
   + klantcontactId: array
   + naam: string
   + eMailadres: string
