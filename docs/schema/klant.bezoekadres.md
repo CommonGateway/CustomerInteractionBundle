@@ -2,6 +2,8 @@
 
 Een bezoekadres is een adres waar een persoon of een bedrijf bezoekers ontvangt.
 
+![Class Diagram](docs/schema/klant.bezoekadres.svg)
+
 ## Properties
 
 | Property | Type | Description |

@@ -2,6 +2,8 @@
 
 No description available.
 
+![Class Diagram](docs/schema/klant.interneTaak.svg)
+
 ## Properties
 
 | Property | Type | Description |

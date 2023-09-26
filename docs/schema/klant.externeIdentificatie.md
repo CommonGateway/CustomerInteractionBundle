@@ -2,6 +2,8 @@
 
 De identificatiecode van een Relatie zoals die in een andere (authentieke?) registratie gevoerd wordt.
 
+![Class Diagram](docs/schema/klant.externeIdentificatie.svg)
+
 ## Properties
 
 | Property | Type | Description |

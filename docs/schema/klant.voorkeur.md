@@ -2,6 +2,8 @@
 
 No description available.
 
+![Class Diagram](docs/schema/klant.voorkeur.svg)
+
 ## Properties
 
 | Property | Type | Description |
