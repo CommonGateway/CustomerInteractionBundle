@@ -1,0 +1,8 @@
+@startuml
+class Land {
+  + einddatumLand: date
+  + ingangsdatumLand: date
+  + landcode: string
+  + landnaam: string
+}
+@enduml

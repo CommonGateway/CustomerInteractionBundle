@@ -1,0 +1,6 @@
+@startuml
+class Actor {
+  + klantcontactId: array
+  + naam: string
+}
+@enduml

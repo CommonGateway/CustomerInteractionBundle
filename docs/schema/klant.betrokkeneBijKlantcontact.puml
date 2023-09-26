@@ -1,0 +1,13 @@
+@startuml
+class BetrokkeneBijKlantcontact {
+  + bezoekadres: object
+  + correspondentieadres: object
+  + klantcontactId: string
+  + organisatienaam: string
+  + partijId: string
+  + persoonsnaam: object
+  + rol: string
+  + voorkeurskanaal: object
+  + voorkeurstaal: object
+}
+@enduml

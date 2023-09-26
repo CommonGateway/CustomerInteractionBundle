@@ -1,0 +1,7 @@
+@startuml
+class Soort Extern Id {
+  + code: string
+  + externRegister: string
+  + naam: string
+}
+@enduml
