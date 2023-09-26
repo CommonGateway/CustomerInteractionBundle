@@ -1,11 +1,87 @@
-# .github/workflows/generate_markdown.yml
+# Generates documentation for the schema's
 
-name: Generate Markdown files from JSON Schema
+name: Generate PlantUML and SVG files from JSON Schema
 
 on:
   push: # Trigger on any push
 
 jobs:
+  generate-puml-and-svg:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install PlantUML
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y plantuml
+
+      - name: Create docs/schema directory if it doesn't exist
+        run: |
+          mkdir -p docs/schema
+
+      - name: Find JSON Schema files and Generate PUMl
+        run: |
+          # Embedded Python script to generate .puml files from JSON Schema
+          python << 'EOF'
+          import json
+          import os
+          
+          all_classes = []
+          
+          def generate_puml(schema, puml_file_path):
+              title = schema.get('title', 'Untitled').replace(" ", "")  # Remove spaces from title
+              class_def = [f"class {title} {{"]
+              properties = schema.get('properties', {})
+              for prop, details in properties.items():
+                  class_def.append(f"  + {prop}: {details.get('type', 'Any')}")
+              class_def.append("}")
+              all_classes.append("\n".join(class_def))
+          
+              with open(puml_file_path, 'w') as puml_file:
+                  puml_file.write("@startuml\n")
+                  puml_file.write("\n".join(class_def))
+                  puml_file.write("\n@enduml\n")
+          
+          for root, dirs, files in os.walk("."):
+              for file in files:
+                  if file.endswith("schema.json"):
+                      schema_file_path = os.path.join(root, file)
+                      with open(schema_file_path, 'r') as f:
+                          schema = json.load(f)
+                      puml_file_name = os.path.basename(schema_file_path).replace("schema.json", "puml")
+                      puml_file_path = os.path.join("docs/schema", puml_file_name)
+                      generate_puml(schema, puml_file_path)
+          
+          # Generate an additional .puml file that includes all classes
+          with open("docs/schema/all_classes.puml", 'w') as f:
+              f.write("@startuml\n")
+              f.write("\n".join(all_classes))
+              f.write("\n@enduml\n")
+          EOF
+
+      - name: Generate SVG from PUMl
+        run: |
+          for puml_file in docs/schema/*.puml; do
+            plantuml -tsvg $puml_file
+          done
+
+      # Commit and push changes
+      - name: Commit and Push Generated Files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git pull
+          git add docs/schema/*.puml docs/schema/*.svg
+          git commit -m "Add generated PlantUML and SVG files" || echo "No changes to commit"
+          git push
   generate-markdown:
     runs-on: ubuntu-latest
 
