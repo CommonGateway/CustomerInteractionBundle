@@ -1,7 +1,10 @@
-# Generates puml files from shema.json files for documentation purposes
+# .github/workflows/generate_puml.yml
+
 name: Generate PlantUML files from JSON Schema
 
-on: push
+on:
+  push: # Trigger on any push
+
 jobs:
   generate-puml:
     runs-on: ubuntu-latest
@@ -15,10 +18,6 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
-        run: |
-          pip install jsonschema
-
       - name: Create docs/schema directory if it doesn't exist
         run: |
           mkdir -p docs/schema
@@ -30,15 +29,21 @@ jobs:
           import json
           import os
           
+          all_classes = []
+          
           def generate_puml(schema, puml_file_path):
+              class_def = []
+              class_def.append(f"class {schema.get('title', 'Untitled')} {{")
+              properties = schema.get('properties', {})
+              for prop, details in properties.items():
+                  class_def.append(f"  + {prop}: {details.get('type', 'Any')}")
+              class_def.append("}")
+              all_classes.append("\n".join(class_def))
+          
               with open(puml_file_path, 'w') as puml_file:
                   puml_file.write("@startuml\n")
-                  puml_file.write(f"class {schema.get('title', 'Untitled')} {{\n")
-                  properties = schema.get('properties', {})
-                  for prop, details in properties.items():
-                      puml_file.write(f"  + {prop}: {details.get('type', 'Any')}\n")
-                  puml_file.write("}\n")
-                  puml_file.write("@enduml\n")
+                  puml_file.write("\n".join(class_def))
+                  puml_file.write("\n@enduml\n")
           
           for root, dirs, files in os.walk("."):
               for file in files:
@@ -49,35 +54,19 @@ jobs:
                       puml_file_name = os.path.basename(schema_file_path).replace("schema.json", "puml")
                       puml_file_path = os.path.join("docs/schema", puml_file_name)
                       generate_puml(schema, puml_file_path)
+          
+          # Generate an additional .puml file that includes all classes
+          with open("docs/schema/all_classes.puml", 'w') as f:
+              f.write("@startuml\n")
+              f.write("\n".join(all_classes))
+              f.write("\n@enduml\n")
           EOF
-      - name: Git commit
+
+      # Commit and push changes
+      - name: Commit and Push Generated Files
         run: |
-          git config user.name "GitHub Actions"
-          git config user.email ""
-          git add .
-          git commit -m "Created puml files for schema's" || echo "No changes to commit"
-          git pull origin $(git rev-parse --abbrev-ref HEAD) --rebase --autostash
-          git push
-  generate_plantuml:
-    runs-on: ubuntu-latest
-    name: plantuml
-    steps:
-      - name: checkout
-        uses: actions/checkout@v1
-        with:
-          fetch-depth: 1
-      - name: plantuml
-        id: plantuml
-        uses: grassedge/generate-plantuml-action@v1.5
-        with:
-          message: "Render PlantUML files"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Git commit
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email ""
-          git add .
-          git commit -m "Created puml files for schema's" || echo "No changes to commit"
-          git pull origin $(git rev-parse --abbrev-ref HEAD) --rebase --autostash
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add docs/schema/*.puml
+          git commit -m "Add generated PlantUML files" || echo "No changes to commit"
           git push
