@@ -99,53 +99,56 @@ jobs:
           mkdir -p docs/schema
 
       - name: Find JSON Schema files and Generate Markdown
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REF: ${{ github.ref }}
         run: |
           # Embedded Python script to generate .md files from JSON Schema
           python << 'EOF'
           import json
           import os
           
+          repo_url = f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/blob/{os.environ['GITHUB_REF'].split('/')[-1]}"
           all_classes = []
           
-          def generate_markdown(schema, md_file_path, svg_file_path):
-              with open(md_file_path, 'w') as md_file:
-                  title = schema.get('title', 'Untitled')
-                  md_file.write(f"# {title}\n\n")
-                  md_file.write(f"{schema.get('description', 'No description available.')}\n\n")
-                  md_file.write(f"![Class Diagram]({svg_file_path})\n\n")
-                  md_file.write("## Properties\n\n")
-                  md_file.write("| Property | Type | Description | Required |\n")
-                  md_file.write("|----------|------|-------------|----------|\n")
-                  required_fields = schema.get('required', [])
-                  properties = schema.get('properties', {})
-                  for prop, details in properties.items():
-                      is_required = "Yes" if prop in required_fields else "No"
-                      md_file.write(f"| {prop} | {details.get('type', 'Any')} | {details.get('description', 'N/A')} | {is_required} |\n")
-                  all_classes.append((title, md_file_path))
+          def generate_markdown(schema, md_file_path, svg_file_name):
+           with open(md_file_path, 'w') as md_file:
+               title = schema.get('title', 'Untitled')
+               md_file.write(f"# {title}\n\n")
+               md_file.write(f"{schema.get('description', 'No description available.')}\n\n")
+               absolute_svg_url = f"{repo_url}/docs/schema/{svg_file_name}"
+               md_file.write(f"![Class Diagram]({absolute_svg_url})\n\n")
+               md_file.write("## Properties\n\n")
+               md_file.write("| Property | Type | Description | Required |\n")
+               md_file.write("|----------|------|-------------|----------|\n")
+               required_fields = schema.get('required', [])
+               properties = schema.get('properties', {})
+               for prop, details in properties.items():
+                   is_required = "Yes" if prop in required_fields else "No"
+                   md_file.write(f"| {prop} | {details.get('type', 'Any')} | {details.get('description', 'N/A')} | {is_required} |\n")
+               all_classes.append((title, md_file_path))
           
           for root, dirs, files in os.walk("."):
-              for file in files:
-                  if file.endswith("schema.json"):
-                      schema_file_path = os.path.join(root, file)
-                      with open(schema_file_path, 'r') as f:
-                          schema = json.load(f)
-                      base_name = os.path.basename(schema_file_path).replace("schema.json", "")
-                      md_file_name = base_name + "md"
-                      svg_file_name = base_name + "svg"
-                      md_file_path = os.path.join("docs/schema", md_file_name)
-                      svg_file_path = os.path.join("docs/schema", svg_file_name)
-                      generate_markdown(schema, md_file_path, svg_file_path)
+           for file in files:
+               if file.endswith("schema.json"):
+                   schema_file_path = os.path.join(root, file)
+                   with open(schema_file_path, 'r') as f:
+                       schema = json.load(f)
+                   base_name = os.path.basename(schema_file_path).replace("schema.json", "")
+                   md_file_name = base_name + ".md"
+                   svg_file_name = base_name + ".svg"
+                   md_file_path = os.path.join("docs/schema", md_file_name)
+                   generate_markdown(schema, md_file_path, svg_file_name)
           
           # Generate a generic README.md in docs/schema
           with open("docs/schema/README.md", 'w') as f:
-              f.write("# Schema Documentation\n\n")
-              f.write("![All Classes](all_classes.svg)\n\n")
-              f.write("## Table of Classes\n\n")
-              f.write("| Class | Documentation |\n")
-              f.write("|-------|--------------|\n")
-              for title, md_file_path in all_classes:
-                  md_file_name = os.path.basename(md_file_path)
-                  f.write(f"| {title} | [{md_file_name}]({md_file_name}) |\n")
+           f.write("# Schema Documentation\n\n")
+           f.write("## Table of Classes\n\n")
+           f.write("| Class | Documentation |\n")
+           f.write("|-------|--------------|\n")
+           for title, md_file_path in all_classes:
+               md_file_name = os.path.basename(md_file_path)
+               f.write(f"| {title} | [{md_file_name}]({md_file_name}) |\n")
           EOF
 
       # Commit and push changes
