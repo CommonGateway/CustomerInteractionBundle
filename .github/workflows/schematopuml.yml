@@ -55,9 +55,6 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email ""
           git add .
-          git reset package.json
-          git reset package-lock.json
-          git reset node_modules
           git commit -m "Created puml files for schema's" || echo "No changes to commit"
           git pull origin $(git rev-parse --abbrev-ref HEAD) --rebase --autostash
           git push
