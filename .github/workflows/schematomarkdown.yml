@@ -2,7 +2,8 @@
 
 name: Generate Markdown files from JSON Schema
 
-on: push
+on:
+  push: # Trigger on any push
 
 jobs:
   generate-markdown:
@@ -28,36 +29,54 @@ jobs:
           import json
           import os
           
+          all_classes = []
+          
           def generate_markdown(schema, md_file_path, svg_file_path):
-           with open(md_file_path, 'w') as md_file:
-               md_file.write(f"# {schema.get('title', 'Untitled')}\n\n")
-               md_file.write(f"{schema.get('description', 'No description available.')}\n\n")
-               md_file.write(f"![Class Diagram]({svg_file_path})\n\n")  # Include SVG
-               md_file.write("## Properties\n\n")
-               md_file.write("| Property | Type | Description |\n")
-               md_file.write("|----------|------|-------------|\n")
-               properties = schema.get('properties', {})
-               for prop, details in properties.items():
-                   md_file.write(f"| {prop} | {details.get('type', 'Any')} | {details.get('description', 'N/A')} |\n")
+              with open(md_file_path, 'w') as md_file:
+                  title = schema.get('title', 'Untitled')
+                  md_file.write(f"# {title}\n\n")
+                  md_file.write(f"{schema.get('description', 'No description available.')}\n\n")
+                  md_file.write(f"![Class Diagram]({svg_file_path})\n\n")
+                  md_file.write("## Properties\n\n")
+                  md_file.write("| Property | Type | Description | Required |\n")
+                  md_file.write("|----------|------|-------------|----------|\n")
+                  required_fields = schema.get('required', [])
+                  properties = schema.get('properties', {})
+                  for prop, details in properties.items():
+                      is_required = "Yes" if prop in required_fields else "No"
+                      md_file.write(f"| {prop} | {details.get('type', 'Any')} | {details.get('description', 'N/A')} | {is_required} |\n")
+                  all_classes.append((title, md_file_path))
           
           for root, dirs, files in os.walk("."):
-           for file in files:
-               if file.endswith("schema.json"):
-                   schema_file_path = os.path.join(root, file)
-                   with open(schema_file_path, 'r') as f:
-                       schema = json.load(f)
-                   base_name = os.path.basename(schema_file_path).replace("schema.json", "")
-                   md_file_name = base_name + "md"
-                   svg_file_name = base_name + "svg"
-                   md_file_path = os.path.join("docs/schema", md_file_name)
-                   svg_file_path = os.path.join("docs/schema", svg_file_name)
-                   generate_markdown(schema, md_file_path, svg_file_path)
+              for file in files:
+                  if file.endswith("schema.json"):
+                      schema_file_path = os.path.join(root, file)
+                      with open(schema_file_path, 'r') as f:
+                          schema = json.load(f)
+                      base_name = os.path.basename(schema_file_path).replace("schema.json", "")
+                      md_file_name = base_name + "md"
+                      svg_file_name = base_name + "svg"
+                      md_file_path = os.path.join("docs/schema", md_file_name)
+                      svg_file_path = os.path.join("docs/schema", svg_file_name)
+                      generate_markdown(schema, md_file_path, svg_file_path)
+          
+          # Generate a generic README.md in docs/schema
+          with open("docs/schema/README.md", 'w') as f:
+              f.write("# Schema Documentation\n\n")
+              f.write("![All Classes](all_classes.svg)\n\n")
+              f.write("## Table of Classes\n\n")
+              f.write("| Class | Documentation |\n")
+              f.write("|-------|--------------|\n")
+              for title, md_file_path in all_classes:
+                  md_file_name = os.path.basename(md_file_path)
+                  f.write(f"| {title} | [{md_file_name}]({md_file_name}) |\n")
           EOF
-      - name: Git commit
+
+      # Commit and push changes
+      - name: Commit and Push Generated Files
         run: |
-          git config user.name "GitHub Actions"
-          git config user.email ""
-          git add .
-          git commit -m "Created mardown files for schema's" || echo "No changes to commit"
-          git pull origin $(git rev-parse --abbrev-ref HEAD) --rebase --autostash
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add docs/schema/*.md
+          git commit -m "Add generated Markdown files" || echo "No changes to commit"
           git push
