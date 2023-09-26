@@ -1,5 +1,5 @@
 @startuml
-class Soort Extern Id {
+class SoortExternId {
   + code: string
   + externRegister: string
   + naam: string

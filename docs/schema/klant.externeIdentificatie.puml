@@ -1,5 +1,5 @@
 @startuml
-class Externe Identificatie {
+class ExterneIdentificatie {
   + anderSoortExternId: string
   + externId: string
   + soortExternId: object
