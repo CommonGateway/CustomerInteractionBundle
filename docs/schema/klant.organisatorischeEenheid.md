@@ -8,13 +8,13 @@ Alleen ORGANISATORISCHE EENHEden van de organisaties die zaken behandelen worden
 
 ## Properties
 
-| Property | Type | Description |
-|----------|------|-------------|
-| klantcontactId | array | N/A |
-| naam | string | N/A |
-| eMailadres | string | Een geldig email-adres, maximaal 20 karakters lang en minimaal een @ en een . opgenomen. |
-| externId | string | N/A |
-| externRegister | string | N/A |
-| faxnummer | string | N/A |
-| omschrijving | string | N/A |
-| telefoonnummer | string | N/A |
+| Property | Type | Description | Required |
+|----------|------|-------------|----------|
+| klantcontactId | array | N/A | No |
+| naam | string | N/A | Yes |
+| eMailadres | string | Een geldig email-adres, maximaal 20 karakters lang en minimaal een @ en een . opgenomen. | No |
+| externId | string | N/A | Yes |
+| externRegister | string | N/A | Yes |
+| faxnummer | string | N/A | No |
+| omschrijving | string | N/A | No |
+| telefoonnummer | string | N/A | No |

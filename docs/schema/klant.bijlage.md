@@ -6,10 +6,10 @@ Een digitale bijlage bij een klantcontact. Deze bijlage kan bestaan uit een best
 
 ## Properties
 
-| Property | Type | Description |
-|----------|------|-------------|
-| externId | string | N/A |
-| externRegister | string | N/A |
-| indicatieWeerTeGeven | boolean | N/A |
-| klantcontactId | string | N/A |
-| omschrijving | string | N/A |
+| Property | Type | Description | Required |
+|----------|------|-------------|----------|
+| externId | string | N/A | Yes |
+| externRegister | string | N/A | Yes |
+| indicatieWeerTeGeven | boolean | N/A | Yes |
+| klantcontactId | string | N/A | Yes |
+| omschrijving | string | N/A | Yes |

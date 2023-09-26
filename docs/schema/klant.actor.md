@@ -6,7 +6,7 @@ De actor handelt in een interne taak of een klantcontact.
 
 ## Properties
 
-| Property | Type | Description |
-|----------|------|-------------|
-| klantcontactId | array | N/A |
-| naam | string | N/A |
+| Property | Type | Description | Required |
+|----------|------|-------------|----------|
+| klantcontactId | array | N/A | No |
+| naam | string | N/A | Yes |

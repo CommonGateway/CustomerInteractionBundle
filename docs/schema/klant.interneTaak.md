@@ -6,14 +6,14 @@ No description available.
 
 ## Properties
 
-| Property | Type | Description |
-|----------|------|-------------|
-| actorId | string | N/A |
-| geregistreerdOp | datetime | N/A |
-| gevraagdeHandeling | string | N/A |
-| nummer | integer | N/A |
+| Property | Type | Description | Required |
+|----------|------|-------------|----------|
+| actorId | string | N/A | Yes |
+| geregistreerdOp | datetime | N/A | Yes |
+| gevraagdeHandeling | string | N/A | Yes |
+| nummer | integer | N/A | Yes |
 | status | string | De waarden van de typering van de voortgang van afhandeling van
 
  een VERZOEK.<body><ul><li>`te_verwerken` - te verwerken Het verzoek is afgehandeld.</li><li>`verwerkt`
 
- - verwerkt Het verzoek id buiten behandeling gesteld.</li></ul></body> |
+ - verwerkt Het verzoek id buiten behandeling gesteld.</li></ul></body> | Yes |

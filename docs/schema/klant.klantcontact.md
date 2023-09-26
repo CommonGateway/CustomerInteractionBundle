@@ -12,23 +12,23 @@ Het klantcontact is bedoeld om inwoners of ondernemers die contact hebben gehad 
 
 ## Properties
 
-| Property | Type | Description |
-|----------|------|-------------|
-| actorId | string | N/A |
-| bijlageId | string | N/A |
-| gaatOverInterneTaakId | array | N/A |
-| geregistreerdOp | datetime | N/A |
+| Property | Type | Description | Required |
+|----------|------|-------------|----------|
+| actorId | string | N/A | No |
+| bijlageId | string | N/A | Yes |
+| gaatOverInterneTaakId | array | N/A | No |
+| geregistreerdOp | datetime | N/A | Yes |
 | indicatieContactMislukt | string | Deze enumeratie is toegevoegd omdat de ingevulde waarde geen boolean kan zijn (waar of niet waar). De gewenste waarden zijn Ja of leeg. Als het attribuut dus opgenomen wordt heeft het de Nill waarde of de waarde `Ja`.
 
-`ja` - Het verzoek is afgehandeld. |
-| inhoud | string | N/A |
+`ja` - Het verzoek is afgehandeld. | Yes |
+| inhoud | string | N/A | No |
 | initiatiefnemer | string | De waarden van de partij die het contact heeft geinitieerd.
 
 `gemeente` - De gemeente heeft het contact geinitieerd.
 `klant` - De klant heeft het contact geinitieerd.
-`vertegenwoordiger` - |
-| interneTaakOntstaanUit | array | N/A |
-| kanaal | object | Het communicatiekanaal dat tijdens het klantcontact werd gebruikt. |
-| nummer | integer | N/A |
-| onderwerp | string | N/A |
-| plaatsgevondenOp | datetime | N/A |
+`vertegenwoordiger` - | Yes |
+| interneTaakOntstaanUit | array | N/A | No |
+| kanaal | object | Het communicatiekanaal dat tijdens het klantcontact werd gebruikt. | Yes |
+| nummer | integer | N/A | Yes |
+| onderwerp | string | N/A | Yes |
+| plaatsgevondenOp | datetime | N/A | Yes |

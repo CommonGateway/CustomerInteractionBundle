@@ -6,12 +6,12 @@ Iemand die voor of namens de gemeente werkzaamheden verricht.
 
 ## Properties
 
-| Property | Type | Description |
-|----------|------|-------------|
-| klantcontactId | array | N/A |
-| naam | string | N/A |
-| eMailadres | string | Een geldig email-adres, maximaal 20 karakters lang en minimaal een @ en een . opgenomen. |
-| externId | string | N/A |
-| externRegister | string | N/A |
-| functie | string | N/A |
-| telefoonnummer | string | N/A |
+| Property | Type | Description | Required |
+|----------|------|-------------|----------|
+| klantcontactId | array | N/A | No |
+| naam | string | N/A | Yes |
+| eMailadres | string | Een geldig email-adres, maximaal 20 karakters lang en minimaal een @ en een . opgenomen. | Yes |
+| externId | string | N/A | Yes |
+| externRegister | string | N/A | Yes |
+| functie | string | N/A | Yes |
+| telefoonnummer | string | N/A | Yes |

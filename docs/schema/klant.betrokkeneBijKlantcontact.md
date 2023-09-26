@@ -8,14 +8,14 @@ Klantcontact-betrokkene kent afhankelijk van mogelijkheid of wenselijkheid om in
 
 ## Properties
 
-| Property | Type | Description |
-|----------|------|-------------|
-| bezoekadres | object | Een bezoekadres is een adres waar een persoon of een bedrijf bezoekers ontvangt. |
-| correspondentieadres | object | Het adres waarnaar de persoon of de organisatie de voor hen bestemde correspondentie laat verzenden. |
-| klantcontactId | string | N/A |
-| organisatienaam | string | N/A |
-| partijId | string | N/A |
-| persoonsnaam | object | N/A |
-| rol | string | De typering van de rol van de persoon of organisatie in het klantcontact. |
-| voorkeurskanaal | object | Het kanaal waarlangs de partij bij voorkeur interactie heeft met de gemeente. |
-| voorkeurstaal | object | De taal waarin de persoon of organisatie bij voorkeur interactie heeft met de gemeente. |
+| Property | Type | Description | Required |
+|----------|------|-------------|----------|
+| bezoekadres | object | Een bezoekadres is een adres waar een persoon of een bedrijf bezoekers ontvangt. | No |
+| correspondentieadres | object | Het adres waarnaar de persoon of de organisatie de voor hen bestemde correspondentie laat verzenden. | No |
+| klantcontactId | string | N/A | Yes |
+| organisatienaam | string | N/A | No |
+| partijId | string | N/A | No |
+| persoonsnaam | object | N/A | No |
+| rol | string | De typering van de rol van de persoon of organisatie in het klantcontact. | Yes |
+| voorkeurskanaal | object | Het kanaal waarlangs de partij bij voorkeur interactie heeft met de gemeente. | No |
+| voorkeurstaal | object | De taal waarin de persoon of organisatie bij voorkeur interactie heeft met de gemeente. | No |

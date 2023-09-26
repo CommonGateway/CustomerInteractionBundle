@@ -8,8 +8,8 @@ Digitaal adres duidt gegevens aan die beschrijven hoe een persoon of organisatie
 
 ## Properties
 
-| Property | Type | Description |
-|----------|------|-------------|
-| adres | string | Een generieke regel om adresgegevens in op te nemen. |
-| omschrijving | string | N/A |
-| soortDigitaalAdres | object | De typering van het digitale adres waarmee bepaald kan worden op welk kanaal dit digitale adres valide is. |
+| Property | Type | Description | Required |
+|----------|------|-------------|----------|
+| adres | string | Een generieke regel om adresgegevens in op te nemen. | Yes |
+| omschrijving | string | N/A | Yes |
+| soortDigitaalAdres | object | De typering van het digitale adres waarmee bepaald kan worden op welk kanaal dit digitale adres valide is. | No |

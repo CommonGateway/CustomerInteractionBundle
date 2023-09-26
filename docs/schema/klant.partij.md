@@ -12,15 +12,15 @@ Een persoon of organisatie waarmee de gemeente een relatie heeft.
 
 ## Properties
 
-| Property | Type | Description |
-|----------|------|-------------|
-| bezoekadres | object | Een bezoekadres is een adres waar een persoon of een bedrijf bezoekers ontvangt. |
-| correspondentieadres | object | Het adres waarnaar de persoon of de organisatie de voor hen bestemde correspondentie laat verzenden. |
-| externeIdentificatie | array | N/A |
-| interneNotitie | string | N/A |
-| klanttaakId | array | N/A |
-| nummer | integer | N/A |
-| organisatienaam | string | N/A |
-| persoonsnaam | object | N/A |
-| voorkeurskanaal | object | Het kanaal waarlangs de partij bij voorkeur interactie heeft met de gemeente. |
-| voorkeurstaal | object | De taal waarin de persoon of organisatie bij voorkeur interactie heeft met de gemeente. |
+| Property | Type | Description | Required |
+|----------|------|-------------|----------|
+| bezoekadres | object | Een bezoekadres is een adres waar een persoon of een bedrijf bezoekers ontvangt. | No |
+| correspondentieadres | object | Het adres waarnaar de persoon of de organisatie de voor hen bestemde correspondentie laat verzenden. | No |
+| externeIdentificatie | array | N/A | Yes |
+| interneNotitie | string | N/A | Yes |
+| klanttaakId | array | N/A | No |
+| nummer | integer | N/A | Yes |
+| organisatienaam | string | N/A | No |
+| persoonsnaam | object | N/A | No |
+| voorkeurskanaal | object | Het kanaal waarlangs de partij bij voorkeur interactie heeft met de gemeente. | No |
+| voorkeurstaal | object | De taal waarin de persoon of organisatie bij voorkeur interactie heeft met de gemeente. | No |
