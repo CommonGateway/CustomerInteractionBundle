@@ -1,0 +1,9 @@
+@startuml
+class Bijlage {
+  + externId: string
+  + externRegister: string
+  + indicatieWeerTeGeven: boolean
+  + klantcontactId: string
+  + omschrijving: string
+}
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+class InterneTaak {
+  + actorId: string
+  + geregistreerdOp: datetime
+  + gevraagdeHandeling: string
+  + nummer: integer
+  + status: string
+}
+@enduml

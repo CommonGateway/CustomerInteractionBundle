@@ -1,0 +1,11 @@
+@startuml
+class Medewerker {
+  + klantcontactId: array
+  + naam: string
+  + eMailadres: string
+  + externId: string
+  + externRegister: string
+  + functie: string
+  + telefoonnummer: string
+}
+@enduml

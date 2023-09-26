@@ -1,0 +1,7 @@
+@startuml
+class Digitaal Adres {
+  + adres: string
+  + omschrijving: string
+  + soortDigitaalAdres: object
+}
+@enduml

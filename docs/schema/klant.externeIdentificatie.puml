@@ -1,0 +1,7 @@
+@startuml
+class Externe Identificatie {
+  + anderSoortExternId: string
+  + externId: string
+  + soortExternId: object
+}
+@enduml

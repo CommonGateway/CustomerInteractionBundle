@@ -1,0 +1,18 @@
+@startuml
+class Correspondentieadres {
+  + aanduidingBijHuisnummer: string
+  + adresregelBuitenland1: string
+  + adresregelBuitenland2: string
+  + adresregelBuitenland3: string
+  + antwoordnummer: integer
+  + huisletter: string
+  + huisnummer: integer
+  + huisnummertoevoeging: string
+  + land: object
+  + postbusnummer: integer
+  + postcode: string
+  + soortCorrespondentieadres: string
+  + straat: string
+  + woonplaats: string
+}
+@enduml

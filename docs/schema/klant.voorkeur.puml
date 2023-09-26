@@ -1,0 +1,6 @@
+@startuml
+class Voorkeur {
+  + code: string
+  + naam: string
+}
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+class Organisatorische Eenheid {
+  + klantcontactId: array
+  + naam: string
+  + eMailadres: string
+  + externId: string
+  + externRegister: string
+  + faxnummer: string
+  + omschrijving: string
+  + telefoonnummer: string
+}
+@enduml

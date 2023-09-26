@@ -1,0 +1,7 @@
+@startuml
+class Persoonsnaam {
+  + achternaam: string
+  + voornaam: string
+  + voorvoegselAchternaam: string
+}
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+class Partij {
+  + bezoekadres: object
+  + correspondentieadres: object
+  + externeIdentificatie: array
+  + interneNotitie: string
+  + klanttaakId: array
+  + nummer: integer
+  + organisatienaam: string
+  + persoonsnaam: object
+  + voorkeurskanaal: object
+  + voorkeurstaal: object
+}
+@enduml

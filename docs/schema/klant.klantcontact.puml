@@ -1,0 +1,16 @@
+@startuml
+class Klantcontact {
+  + actorId: string
+  + bijlageId: string
+  + gaatOverInterneTaakId: array
+  + geregistreerdOp: datetime
+  + indicatieContactMislukt: string
+  + inhoud: string
+  + initiatiefnemer: string
+  + interneTaakOntstaanUit: array
+  + kanaal: object
+  + nummer: integer
+  + onderwerp: string
+  + plaatsgevondenOp: datetime
+}
+@enduml
