@@ -134,9 +134,9 @@ jobs:
                    schema_file_path = os.path.join(root, file)
                    with open(schema_file_path, 'r') as f:
                        schema = json.load(f)
-                   base_name = os.path.basename(schema_file_path).replace("schema.json", "")
+                   base_name = os.path.basename(schema_file_path).replace(".schema.json", "")
                    md_file_name = base_name + ".md"
-                   svg_file_name = base_name + ".svg"
+                   svg_file_name = base_name + "svg"
                    md_file_path = os.path.join("docs/schema", md_file_name)
                    generate_markdown(schema, md_file_path, svg_file_name)
           
