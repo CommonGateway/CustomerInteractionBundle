@@ -4,6 +4,8 @@ Een opsomming van de soorten externe identificatiecodes met de bijbehorende exte
 
 
 
+![Class Diagram](docs/schema/klant.soortExternId.svg)
+
 ## Properties
 
 | Property | Type | Description |

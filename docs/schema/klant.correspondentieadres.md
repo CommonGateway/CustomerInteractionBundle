@@ -2,6 +2,8 @@
 
 Het adres waarnaar de persoon of de organisatie de voor hen bestemde correspondentie laat verzenden.
 
+![Class Diagram](docs/schema/klant.correspondentieadres.svg)
+
 ## Properties
 
 | Property | Type | Description |

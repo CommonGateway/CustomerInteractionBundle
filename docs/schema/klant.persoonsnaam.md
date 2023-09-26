@@ -2,6 +2,8 @@
 
 No description available.
 
+![Class Diagram](docs/schema/klant.persoonsnaam.svg)
+
 ## Properties
 
 | Property | Type | Description |
