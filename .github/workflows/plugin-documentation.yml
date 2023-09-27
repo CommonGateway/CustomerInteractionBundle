@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -289,6 +289,7 @@ jobs:
 
           EOF
 
+      # Generate SVG from PUMl
       - name: Generate SVG from PUMl
         run: |
           for puml_file in docs/mapping/*.puml; do
@@ -303,6 +304,14 @@ jobs:
           for puml_file in docs/source/*.puml; do
             plantuml -tsvg $puml_file
           done
+
+      # Create php docs
+      - uses: php-actions/composer@v6
+        with:
+          php_version: "7.4"
+          php_extensions: redis exif mongodb intl pdo_pgsql zip mysqli pdo_mysql pcntl gd gmp
+          version: 2.x
+          command: require clean/phpdoc-md
 
       # Commit and push changes
       - name: Commit and Push Generated Files
