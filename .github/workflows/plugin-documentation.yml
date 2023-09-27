@@ -342,7 +342,7 @@ jobs:
   generate-plantuml:
     runs-on: ubuntu-latest
     name: Generate plant UML files
-    needs: puml
+    needs: generate-puml
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -384,7 +384,7 @@ jobs:
   remark-lint:
     name: runner / remark-lint
     runs-on: ubuntu-latest
-    needs: [generate-php-documentation,puml]
+    needs: [generate-php-documentation,generate-puml]
     steps:
       - uses: actions/checkout@v2
       - name: install remark presets
@@ -408,7 +408,7 @@ jobs:
   git-commit:
     name: Commit changes to github
     runs-on: ubuntu-latest
-    needs: [generate-php-documentation,puml]
+    needs: [generate-php-documentation,generate-puml]
     steps:
       - name: Git commit
         run: |
