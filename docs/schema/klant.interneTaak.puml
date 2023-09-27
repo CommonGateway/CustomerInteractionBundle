@@ -1,4 +1,8 @@
 @startuml
+title: InterneTaak
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
 class InterneTaak {
   + actorId: string
   + geregistreerdOp: datetime

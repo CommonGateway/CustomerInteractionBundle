@@ -1,4 +1,8 @@
 @startuml
+title: Bijlage
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
 class Bijlage {
   + externId: string
   + externRegister: string

@@ -1,10 +1,6 @@
 @startuml
-title: Voorkeur
+title: All mappings
 footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
-header: Schema
+header: Mapping
 
-class Voorkeur {
-  + code: string
-  + naam: string
-}
 @enduml

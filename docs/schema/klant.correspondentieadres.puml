@@ -1,4 +1,8 @@
 @startuml
+title: Correspondentieadres
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
 class Correspondentieadres {
   + aanduidingBijHuisnummer: string
   + adresregelBuitenland1: string

@@ -1,4 +1,8 @@
 @startuml
+title: BetrokkeneBijKlantcontact
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
 class BetrokkeneBijKlantcontact {
   + bezoekadres: object
   + correspondentieadres: object

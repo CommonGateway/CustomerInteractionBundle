@@ -1,4 +1,8 @@
 @startuml
+title: Medewerker
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
 class Medewerker {
   + klantcontactId: array
   + naam: string

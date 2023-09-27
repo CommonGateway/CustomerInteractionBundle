@@ -1,4 +1,8 @@
 @startuml
+title: SoortExternId
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
 class SoortExternId {
   + code: string
   + externRegister: string

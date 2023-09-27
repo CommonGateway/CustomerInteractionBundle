@@ -1,4 +1,8 @@
 @startuml
+title: Partij
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
 class Partij {
   + bezoekadres: object
   + correspondentieadres: object
