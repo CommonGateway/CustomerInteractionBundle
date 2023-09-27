@@ -13,63 +13,64 @@
       "format": "uuid",
       "required": true
     },
-    "data": {
-      "type": "object",
-      "additionalProperties": true
-    },
-    "zaak": {
+    "gebruikerID": {
+      "description":"Het BSN of KVK nummer van de geadreseerde",
       "type": "string",
-      "format": "uri"
+      "format": "bsn",
+      "required": true
     },
-    "title": {
-      "type": "string"
-    },
-    "status": {
+    "soortGebruiker": {
+      "description":"Het soort gebruiker natuurlijkpersoon of niet natuurlijkpersoon",
+      "type": "string",
+      "required": true,
       "enum": [
-        "open",
-        "ingediend",
-        "verwerkt",
-        "gesloten"
-      ],
-      "type": "string"
+        "natuurlijk-persoon",
+        "niet-natuurlijk-persoon"
+      ]
     },
-    "formulier": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "enum": [
-            "id",
-            "url"
-          ],
-          "type": "string"
-        },
-        "value": {
-          "type": "string"
-        }
-      }
-    },
-    "verloopdatum": {
+    "id": {
+      "description":"De unieke id van dit object voor verder",
       "type": "string",
+      "format": "uuid",
+      "required": true
+    },
+    "onderwerp": {
+      "description":"Onderwerp van het bericht",
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    },
+    "berichttekst": {
+      "description":"Tekst van het bericht.",
+      "type": "string",
+      "maxLength": 2555,
+      "required": true
+    },
+    "Referentie": {
+      "description":"Berichtreferentie",
+      "type": "string",
+      "maxLength": 255
+    },
+    "handelingsPerspectief": {
+      "description":"Benodigde reactie van de geadresseerde (bijv: betalen, informatie verstrekken).",
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    },
+    "eindDatumHandelingsTermijn": {
+      "description":"Termijn waarbinnen de geadresseerde moet reageren.",
+      "type": "date",
       "format": "date-time"
     },
-    "identificatie": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string"
-        },
-        "value": {
-          "type": "string"
-        }
-      }
+    "bijlagen": {
+      "description":"De bijlagen bij een bericht.",
+      "type": "array",
+      "format": "$bijlage"
     },
-    "verzonden_data": {
-      "type": "object",
-      "additionalProperties": true
-    },
-    "verwerker_taak_id": {
-      "type": "string",
-      "format": "uuid"
+    "geopend": {
+      "description":"Het bericht is door de geadresseerde geopend of nog niet geopend.",
+      "type": "boolean",
+      "default": false
     }
   }
 }
