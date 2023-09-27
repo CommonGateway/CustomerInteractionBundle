@@ -1,4 +1,8 @@
 @startuml
+title: ExterneIdentificatie
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
 class ExterneIdentificatie {
   + anderSoortExternId: string
   + externId: string

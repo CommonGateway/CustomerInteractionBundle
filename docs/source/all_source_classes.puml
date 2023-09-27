@@ -1,10 +1,6 @@
 @startuml
-title: Voorkeur
+title: All sources
 footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
-header: Schema
+header: Source
 
-class Voorkeur {
-  + code: string
-  + naam: string
-}
 @enduml

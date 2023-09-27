@@ -1,4 +1,8 @@
 @startuml
+title: Actor
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
 class Actor {
   + klantcontactId: array
   + naam: string

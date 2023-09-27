@@ -1,4 +1,8 @@
 @startuml
+title: Bezoekadres
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
 class Bezoekadres {
   + aanduidingBijHuisnummer: string
   + adresregelBuitenland1: string

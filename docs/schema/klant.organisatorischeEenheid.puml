@@ -1,4 +1,8 @@
 @startuml
+title: OrganisatorischeEenheid
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
 class OrganisatorischeEenheid {
   + klantcontactId: array
   + naam: string
