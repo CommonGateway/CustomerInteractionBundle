@@ -2,9 +2,9 @@
 name: generate plantuml
 on: push
 jobs:
-  generate_plantuml:
+  generate-plantuml:
     runs-on: ubuntu-latest
-    name: plantuml
+    name: Generate plant UML files
     steps:
       - name: checkout
         uses: actions/checkout@v3

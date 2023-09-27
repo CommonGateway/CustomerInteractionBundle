@@ -4,7 +4,8 @@ name: Genereate php documentation
 on: [push]
 
 jobs:
-  build:
+  generate-php-documentation:
+    name: Genereate php documentation
     runs-on: ubuntu-latest
 
     steps:

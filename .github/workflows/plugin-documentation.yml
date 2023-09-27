@@ -314,3 +314,92 @@ jobs:
           git add *.puml *.svg *.md
           git commit -m "Add generated puml,svg,md and README files based on plugin installation files" || echo "No changes to commit"
           git push
+
+  generate-php-documentation:
+    name: Genereate php documentation
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: php-actions/composer@v6
+        with:
+          php_version: "7.4"
+          php_extensions: redis exif mongodb intl pdo_pgsql zip mysqli pdo_mysql pcntl gd gmp
+          version: 2.x
+          command: require clean/phpdoc-md
+      - name: Build the docs
+        run: vendor/bin/phpdoc-md
+      - name: Git commit
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email ""
+          git add docs/classes
+          git commit -m "Update phpdoc" || echo "No changes to commit"
+          git pull origin $(git rev-parse --abbrev-ref HEAD) --rebase --autostash
+          git push
+
+  # Generate puml files
+  generate-plantuml:
+    runs-on: ubuntu-latest
+    name: Generate plant UML files
+    needs: puml
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      - name: plantuml
+        id: plantuml
+        uses: grassedge/generate-plantuml-action@v1.5
+        with:
+          message: "Render PlantUML files"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # clean up the php code
+  php-cbf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: cs2pr, phpcbf
+
+      - name: Run phpcbf
+        run: phpcbf .
+        continue-on-error: true
+      - name: Git commit
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email ""
+          git add src
+          git commit -m "Update src from PHP Codesniffer" || echo "No changes to commit"
+          git pull origin $(git rev-parse --abbrev-ref HEAD) --rebase --autostash
+          git push
+
+  # clean up the markdowncode
+  remark-lint:
+    name: runner / remark-lint
+    runs-on: ubuntu-latest
+    needs: []generate-php-documentation,puml]
+    steps:
+      - uses: actions/checkout@v2
+      - name: install remark presets
+        run: npm install remark-cli remark-preset-lint-consistent remark-preset-lint-recommended remark-lint-list-item-indent
+        shell: bash
+      - name: run remark
+        run: npx remark . --output --use remark-preset-lint-consistent --use remark-preset-lint-recommended --use remark-lint-list-item-indent
+      - name: Git commit
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email ""
+          git add .
+          git reset package.json
+          git reset package-lock.json
+          git reset node_modules
+          git commit -m "Update src from remark-lint" || echo "No changes to commit"
+          git pull origin $(git rev-parse --abbrev-ref HEAD) --rebase --autostash
+          git push
