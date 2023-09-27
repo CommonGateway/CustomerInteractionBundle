@@ -384,7 +384,7 @@ jobs:
   remark-lint:
     name: runner / remark-lint
     runs-on: ubuntu-latest
-    needs: []generate-php-documentation,puml]
+    needs: [generate-php-documentation,puml]
     steps:
       - uses: actions/checkout@v2
       - name: install remark presets
@@ -392,6 +392,24 @@ jobs:
         shell: bash
       - name: run remark
         run: npx remark . --output --use remark-preset-lint-consistent --use remark-preset-lint-recommended --use remark-lint-list-item-indent
+      - name: Git commit
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email ""
+          git add .
+          git reset package.json
+          git reset package-lock.json
+          git reset node_modules
+          git commit -m "Update src from remark-lint" || echo "No changes to commit"
+          git pull origin $(git rev-parse --abbrev-ref HEAD) --rebase --autostash
+          git push
+
+  # clean up the markdowncode
+  git-commit:
+    name: Commit changes to github
+    runs-on: ubuntu-latest
+    needs: [generate-php-documentation,puml]
+    steps:
       - name: Git commit
         run: |
           git config user.name "GitHub Actions"
