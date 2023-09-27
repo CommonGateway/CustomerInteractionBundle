@@ -9,7 +9,7 @@ class Bericht {
   + soortGebruiker: string
   + onderwerp: string
   + berichttekst: string
-  + Referentie: string
+  + referentie: string
   + handelingsPerspectief: string
   + eindDatumHandelingsTermijn: date
   + bijlagen: array

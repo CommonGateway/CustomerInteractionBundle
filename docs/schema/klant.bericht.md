@@ -8,12 +8,12 @@ Een bericht aan een bedrijf,burger, inwoner of organisatie die tot handelen opro
 
 | Property | Type | Description | Required |
 |----------|------|-------------|----------|
-| id | string | De unieke id van dit object voor verder | Yes |
+| id | string | De unieke id van dit object voor verder gebruik | Yes |
 | gebruikerID | string | Het BSN of KVK nummer van de geadreseerde | No |
 | soortGebruiker | string | Het soort gebruiker natuurlijkpersoon of niet natuurlijkpersoon | No |
 | onderwerp | string | Onderwerp van het bericht | Yes |
 | berichttekst | string | Tekst van het bericht. | Yes |
-| Referentie | string | Berichtreferentie | No |
+| referentie | string | Berichtreferentie | No |
 | handelingsPerspectief | string | Benodigde reactie van de geadresseerde (bijv: betalen, informatie verstrekken). | Yes |
 | eindDatumHandelingsTermijn | date | Termijn waarbinnen de geadresseerde moet reageren. | No |
 | bijlagen | array | De bijlagen bij een bericht. | No |
