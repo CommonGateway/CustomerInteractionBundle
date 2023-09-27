@@ -1,0 +1,75 @@
+{
+  "title": "Bericht",
+  "$id": "https://commongateway.nl/klant.bericht.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "description": "Een bericht aan een bedrijf,burger, inwoner of organisatie die tot handelen oproept",
+  "required": ["id", "onderwerp", "berichttekst", "handelingsPerspectief", "geopend"],
+  "properties": {
+    "id": {
+      "description":"De unieke id van dit object voor verder gebruik",
+      "type": "string",
+      "format": "uuid",
+      "required": true
+    },
+    "data": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "zaak": {
+      "type": "string",
+      "format": "uri"
+    },
+    "title": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "open",
+        "ingediend",
+        "verwerkt",
+        "gesloten"
+      ],
+      "type": "string"
+    },
+    "formulier": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "enum": [
+            "id",
+            "url"
+          ],
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "verloopdatum": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "identificatie": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "verzonden_data": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "verwerker_taak_id": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}

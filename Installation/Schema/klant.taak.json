@@ -1,0 +1,76 @@
+{
+  "title": "Taak",
+  "$id": "https://commongateway.nl/klant.taak.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "description": "Een taak voor een burger, inwoner of vertegenwoordiger van een organisatie die moet worden uitgevoerd",
+  "required": ["id", "onderwerp", "berichttekst", "handelingsPerspectief", "geopend"],
+  "properties": {
+    "id": {
+      "description":"De unieke id van dit object voor verder gebruik",
+      "type": "string",
+      "format": "uuid",
+      "required": true
+    },
+    "gebruikerID": {
+      "description":"Het BSN of KVK nummer van de geadreseerde",
+      "type": "string",
+      "format": "bsn",
+      "required": true
+    },
+    "soortGebruiker": {
+      "description":"Het soort gebruiker natuurlijkpersoon of niet natuurlijkpersoon",
+      "type": "string",
+      "required": true,
+      "enum": [
+        "natuurlijk-persoon",
+        "niet-natuurlijk-persoon"
+      ]
+    },
+    "id": {
+      "description":"De unieke id van dit object voor verder",
+      "type": "string",
+      "format": "uuid",
+      "required": true
+    },
+    "onderwerp": {
+      "description":"Onderwerp van het bericht",
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    },
+    "berichttekst": {
+      "description":"Tekst van het bericht.",
+      "type": "string",
+      "maxLength": 2555,
+      "required": true
+    },
+    "Referentie": {
+      "description":"Berichtreferentie",
+      "type": "string",
+      "maxLength": 255
+    },
+    "handelingsPerspectief": {
+      "description":"Benodigde reactie van de geadresseerde (bijv: betalen, informatie verstrekken).",
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    },
+    "eindDatumHandelingsTermijn": {
+      "description":"Termijn waarbinnen de geadresseerde moet reageren.",
+      "type": "date",
+      "format": "date-time"
+    },
+    "bijlagen": {
+      "description":"De bijlagen bij een bericht.",
+      "type": "array",
+      "format": "$bijlage"
+    },
+    "geopend": {
+      "description":"Het bericht is door de geadresseerde geopend of nog niet geopend.",
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
