@@ -6,6 +6,18 @@ class Voorkeur {
   + code: string
   + naam: string
 }
+class Taak {
+  + id: string
+  + gebruikerID: string
+  + soortGebruiker: string
+  + onderwerp: string
+  + berichttekst: string
+  + Referentie: string
+  + handelingsPerspectief: string
+  + eindDatumHandelingsTermijn: date
+  + bijlagen: array
+  + geopend: boolean
+}
 class Partij {
   + bezoekadres: object
   + correspondentieadres: object
@@ -53,6 +65,18 @@ class Correspondentieadres {
   + soortCorrespondentieadres: string
   + straat: string
   + woonplaats: string
+}
+class Bericht {
+  + id: string
+  + data: object
+  + zaak: string
+  + title: string
+  + status: string
+  + formulier: object
+  + verloopdatum: string
+  + identificatie: object
+  + verzonden_data: object
+  + verwerker_taak_id: string
 }
 class Bezoekadres {
   + aanduidingBijHuisnummer: string

@@ -5,11 +5,13 @@
 | Class | Documentation |
 |-------|--------------|
 | Voorkeur | [klant.voorkeur.md](klant.voorkeur.md) |
+| Taak | [klant.taak.md](klant.taak.md) |
 | Partij | [klant.partij.md](klant.partij.md) |
 | Externe Identificatie | [klant.externeIdentificatie.md](klant.externeIdentificatie.md) |
 | Land | [klant.land.md](klant.land.md) |
 | Medewerker | [klant.medewerker.md](klant.medewerker.md) |
 | Correspondentieadres | [klant.correspondentieadres.md](klant.correspondentieadres.md) |
+| Bericht | [klant.bericht.md](klant.bericht.md) |
 | Bezoekadres | [klant.bezoekadres.md](klant.bezoekadres.md) |
 | Actor | [klant.actor.md](klant.actor.md) |
 | Bijlage | [klant.bijlage.md](klant.bijlage.md) |

@@ -1,0 +1,18 @@
+@startuml
+title: Taak
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
+class Taak {
+  + id: string
+  + gebruikerID: string
+  + soortGebruiker: string
+  + onderwerp: string
+  + berichttekst: string
+  + Referentie: string
+  + handelingsPerspectief: string
+  + eindDatumHandelingsTermijn: date
+  + bijlagen: array
+  + geopend: boolean
+}
+@enduml

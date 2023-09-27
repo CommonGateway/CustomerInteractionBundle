@@ -1,0 +1,18 @@
+@startuml
+title: Bericht
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
+class Bericht {
+  + id: string
+  + data: object
+  + zaak: string
+  + title: string
+  + status: string
+  + formulier: object
+  + verloopdatum: string
+  + identificatie: object
+  + verzonden_data: object
+  + verwerker_taak_id: string
+}
+@enduml
