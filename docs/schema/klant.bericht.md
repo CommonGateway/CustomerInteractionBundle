@@ -8,13 +8,13 @@ Een bericht aan een bedrijf,burger, inwoner of organisatie die tot handelen opro
 
 | Property | Type | Description | Required |
 |----------|------|-------------|----------|
-| id | string | De unieke id van dit object voor verder gebruik | Yes |
-| data | object | N/A | No |
-| zaak | string | N/A | No |
-| title | string | N/A | No |
-| status | string | N/A | No |
-| formulier | object | N/A | No |
-| verloopdatum | string | N/A | No |
-| identificatie | object | N/A | No |
-| verzonden_data | object | N/A | No |
-| verwerker_taak_id | string | N/A | No |
+| id | string | De unieke id van dit object voor verder | Yes |
+| gebruikerID | string | Het BSN of KVK nummer van de geadreseerde | No |
+| soortGebruiker | string | Het soort gebruiker natuurlijkpersoon of niet natuurlijkpersoon | No |
+| onderwerp | string | Onderwerp van het bericht | Yes |
+| berichttekst | string | Tekst van het bericht. | Yes |
+| Referentie | string | Berichtreferentie | No |
+| handelingsPerspectief | string | Benodigde reactie van de geadresseerde (bijv: betalen, informatie verstrekken). | Yes |
+| eindDatumHandelingsTermijn | date | Termijn waarbinnen de geadresseerde moet reageren. | No |
+| bijlagen | array | De bijlagen bij een bericht. | No |
+| geopend | boolean | Het bericht is door de geadresseerde geopend of nog niet geopend. | Yes |

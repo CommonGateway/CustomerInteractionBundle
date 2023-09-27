@@ -8,15 +8,15 @@ class Voorkeur {
 }
 class Taak {
   + id: string
-  + gebruikerID: string
-  + soortGebruiker: string
-  + onderwerp: string
-  + berichttekst: string
-  + Referentie: string
-  + handelingsPerspectief: string
-  + eindDatumHandelingsTermijn: date
-  + bijlagen: array
-  + geopend: boolean
+  + data: object
+  + zaak: string
+  + title: string
+  + status: string
+  + formulier: object
+  + verloopdatum: string
+  + identificatie: object
+  + verzonden_data: object
+  + verwerker_taak_id: string
 }
 class Partij {
   + bezoekadres: object
@@ -68,15 +68,15 @@ class Correspondentieadres {
 }
 class Bericht {
   + id: string
-  + data: object
-  + zaak: string
-  + title: string
-  + status: string
-  + formulier: object
-  + verloopdatum: string
-  + identificatie: object
-  + verzonden_data: object
-  + verwerker_taak_id: string
+  + gebruikerID: string
+  + soortGebruiker: string
+  + onderwerp: string
+  + berichttekst: string
+  + Referentie: string
+  + handelingsPerspectief: string
+  + eindDatumHandelingsTermijn: date
+  + bijlagen: array
+  + geopend: boolean
 }
 class Bezoekadres {
   + aanduidingBijHuisnummer: string
