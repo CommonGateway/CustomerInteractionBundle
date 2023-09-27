@@ -289,22 +289,6 @@ jobs:
 
           EOF
 
-      # Generate SVG from PUMl
-      - name: Generate SVG from PUMl
-        run: |
-          for puml_file in docs/mapping/*.puml; do
-            plantuml -tsvg $puml_file
-          done
-          for puml_file in docs/schema/*.puml; do
-            plantuml -tsvg $puml_file
-          done
-          for puml_file in docs/security/*.puml; do
-            plantuml -tsvg $puml_file
-          done
-          for puml_file in docs/source/*.puml; do
-            plantuml -tsvg $puml_file
-          done
-
       # Commit and push changes
       - name: Commit and Push Generated Files
         run: |
@@ -392,24 +376,6 @@ jobs:
         shell: bash
       - name: run remark
         run: npx remark . --output --use remark-preset-lint-consistent --use remark-preset-lint-recommended --use remark-lint-list-item-indent
-      - name: Git commit
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email ""
-          git add .
-          git reset package.json
-          git reset package-lock.json
-          git reset node_modules
-          git commit -m "Update src from remark-lint" || echo "No changes to commit"
-          git pull origin $(git rev-parse --abbrev-ref HEAD) --rebase --autostash
-          git push
-
-  # clean up the markdowncode
-  git-commit:
-    name: Commit changes to github
-    runs-on: ubuntu-latest
-    needs: [generate-php-documentation,generate-puml]
-    steps:
       - name: Git commit
         run: |
           git config user.name "GitHub Actions"
