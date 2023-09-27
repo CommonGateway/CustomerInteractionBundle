@@ -306,7 +306,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git pull
-          git add *.puml *.svg *.md
+          git add .
           git commit -m "Add generated puml,svg,md and README files based on plugin installation files" || echo "No changes to commit"
           git push
 
