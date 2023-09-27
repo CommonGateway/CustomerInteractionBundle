@@ -1,5 +1,5 @@
 # .github/workflows/documentation.yml
-name: Docs
+name: PHP Documentation generation
 
 on: [push]
 
@@ -15,7 +15,7 @@ jobs:
           php_version: "7.4"
           php_extensions: redis exif mongodb intl pdo_pgsql zip mysqli pdo_mysql pcntl gd gmp
           version: 2.x
-          command: require clean/phpdoc-md
+          command: composer config --no-plugins allow-plugins.symfony/flex true && require clean/phpdoc-md
 
       - name: Build the docs
         run: vendor/bin/phpdoc-md
