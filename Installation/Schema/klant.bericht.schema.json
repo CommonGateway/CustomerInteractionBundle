@@ -28,12 +28,6 @@
         "niet-natuurlijk-persoon"
       ]
     },
-    "id": {
-      "description":"De unieke id van dit object voor verder",
-      "type": "string",
-      "format": "uuid",
-      "required": true
-    },
     "onderwerp": {
       "description":"Onderwerp van het bericht",
       "type": "string",
@@ -46,7 +40,7 @@
       "maxLength": 2555,
       "required": true
     },
-    "Referentie": {
+    "referentie": {
       "description":"Berichtreferentie",
       "type": "string",
       "maxLength": 255
