@@ -1,14 +1,7 @@
 @startuml
-class BetrokkeneBijKlantcontact {
-  + bezoekadres: object
-  + correspondentieadres: object
-  + klantcontactId: string
-  + organisatienaam: string
-  + partijId: string
-  + persoonsnaam: object
-  + rol: string
-  + voorkeurskanaal: object
-  + voorkeurstaal: object
+class Voorkeur {
+  + code: string
+  + naam: string
 }
 class Partij {
   + bezoekadres: object
@@ -22,20 +15,25 @@ class Partij {
   + voorkeurskanaal: object
   + voorkeurstaal: object
 }
-class Bijlage {
+class ExterneIdentificatie {
+  + anderSoortExternId: string
   + externId: string
-  + externRegister: string
-  + indicatieWeerTeGeven: boolean
-  + klantcontactId: string
-  + omschrijving: string
+  + soortExternId: object
 }
-class Actor {
+class Land {
+  + einddatumLand: date
+  + ingangsdatumLand: date
+  + landcode: string
+  + landnaam: string
+}
+class Medewerker {
   + klantcontactId: array
   + naam: string
-}
-class Voorkeur {
-  + code: string
-  + naam: string
+  + eMailadres: string
+  + externId: string
+  + externRegister: string
+  + functie: string
+  + telefoonnummer: string
 }
 class Correspondentieadres {
   + aanduidingBijHuisnummer: string
@@ -53,29 +51,6 @@ class Correspondentieadres {
   + straat: string
   + woonplaats: string
 }
-class Medewerker {
-  + klantcontactId: array
-  + naam: string
-  + eMailadres: string
-  + externId: string
-  + externRegister: string
-  + functie: string
-  + telefoonnummer: string
-}
-class Klantcontact {
-  + actorId: string
-  + bijlageId: string
-  + gaatOverInterneTaakId: array
-  + geregistreerdOp: datetime
-  + indicatieContactMislukt: string
-  + inhoud: string
-  + initiatiefnemer: string
-  + interneTaakOntstaanUit: array
-  + kanaal: object
-  + nummer: integer
-  + onderwerp: string
-  + plaatsgevondenOp: datetime
-}
 class Bezoekadres {
   + aanduidingBijHuisnummer: string
   + adresregelBuitenland1: string
@@ -89,6 +64,22 @@ class Bezoekadres {
   + soortBezoekadres: string
   + straat: string
   + woonplaats: string
+}
+class Actor {
+  + klantcontactId: array
+  + naam: string
+}
+class Bijlage {
+  + externId: string
+  + externRegister: string
+  + indicatieWeerTeGeven: boolean
+  + klantcontactId: string
+  + omschrijving: string
+}
+class SoortExternId {
+  + code: string
+  + externRegister: string
+  + naam: string
 }
 class OrganisatorischeEenheid {
   + klantcontactId: array
@@ -105,11 +96,10 @@ class DigitaalAdres {
   + omschrijving: string
   + soortDigitaalAdres: object
 }
-class Land {
-  + einddatumLand: date
-  + ingangsdatumLand: date
-  + landcode: string
-  + landnaam: string
+class Persoonsnaam {
+  + achternaam: string
+  + voornaam: string
+  + voorvoegselAchternaam: string
 }
 class InterneTaak {
   + actorId: string
@@ -118,19 +108,29 @@ class InterneTaak {
   + nummer: integer
   + status: string
 }
-class SoortExternId {
-  + code: string
-  + externRegister: string
-  + naam: string
+class Klantcontact {
+  + actorId: string
+  + bijlageId: string
+  + gaatOverInterneTaakId: array
+  + geregistreerdOp: datetime
+  + indicatieContactMislukt: string
+  + inhoud: string
+  + initiatiefnemer: string
+  + interneTaakOntstaanUit: array
+  + kanaal: object
+  + nummer: integer
+  + onderwerp: string
+  + plaatsgevondenOp: datetime
 }
-class Persoonsnaam {
-  + achternaam: string
-  + voornaam: string
-  + voorvoegselAchternaam: string
-}
-class ExterneIdentificatie {
-  + anderSoortExternId: string
-  + externId: string
-  + soortExternId: object
+class BetrokkeneBijKlantcontact {
+  + bezoekadres: object
+  + correspondentieadres: object
+  + klantcontactId: string
+  + organisatienaam: string
+  + partijId: string
+  + persoonsnaam: object
+  + rol: string
+  + voorkeurskanaal: object
+  + voorkeurstaal: object
 }
 @enduml
