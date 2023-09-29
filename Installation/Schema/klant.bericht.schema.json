@@ -53,13 +53,11 @@
     },
     "eindDatumHandelingsTermijn": {
       "description":"Termijn waarbinnen de geadresseerde moet reageren.",
-      "type": "date",
-      "format": "date-time"
+      "type": "datetime"
     },
     "bijlagen": {
       "description":"De bijlagen bij een bericht.",
-      "type": "array",
-      "format": "$bijlage"
+      "type": "array"
     },
     "geopend": {
       "description":"Het bericht is door de geadresseerde geopend of nog niet geopend.",

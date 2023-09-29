@@ -14,8 +14,7 @@
       "required": true
     },
     "data": {
-      "type": "object",
-      "additionalProperties": true
+      "type": "object"
     },
     "zaak": {
       "type": "string",
@@ -36,37 +35,18 @@
     },
     "formulier": {
       "type": "object",
-      "properties": {
-        "type": {
-          "enum": [
-            "id",
-            "url"
-          ],
-          "type": "string"
-        },
-        "value": {
-          "type": "string"
-        }
-      }
+      "$ref": "https://commongateway.nl/klant.taak.formulier.schema.json"
     },
     "verloopdatum": {
       "type": "string",
-      "format": "date-time"
+      "format": "datetime"
     },
     "identificatie": {
       "type": "object",
-      "properties": {
-        "type": {
-          "type": "string"
-        },
-        "value": {
-          "type": "string"
-        }
-      }
+      "$ref": "https://commongateway.nl/klant.taak.identificatie.schema.json"
     },
     "verzonden_data": {
-      "type": "object",
-      "additionalProperties": true
+      "type": "object"
     },
     "verwerker_taak_id": {
       "type": "string",
