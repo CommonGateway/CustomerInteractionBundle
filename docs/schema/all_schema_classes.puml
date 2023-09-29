@@ -25,6 +25,10 @@ class Partij {
   + voorkeurskanaal: object
   + voorkeurstaal: object
 }
+class TaakFormulier {
+  + type: string
+  + value: string
+}
 class Bijlage {
   + externId: string
   + externRegister: string
@@ -35,6 +39,10 @@ class Bijlage {
 class Actor {
   + klantcontactId: array
   + naam: string
+}
+class TaakIdentificatie {
+  + type: string
+  + value: string
 }
 class Voorkeur {
   + code: string
@@ -73,7 +81,7 @@ class Bericht {
   + berichttekst: string
   + referentie: string
   + handelingsPerspectief: string
-  + eindDatumHandelingsTermijn: date
+  + eindDatumHandelingsTermijn: datetime
   + bijlagen: array
   + geopend: boolean
 }

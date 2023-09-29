@@ -11,7 +11,7 @@ class Bericht {
   + berichttekst: string
   + referentie: string
   + handelingsPerspectief: string
-  + eindDatumHandelingsTermijn: date
+  + eindDatumHandelingsTermijn: datetime
   + bijlagen: array
   + geopend: boolean
 }

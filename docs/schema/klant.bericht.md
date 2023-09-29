@@ -15,6 +15,6 @@ Een bericht aan een bedrijf,burger, inwoner of organisatie die tot handelen opro
 | berichttekst | string | Tekst van het bericht. | Yes |
 | referentie | string | Berichtreferentie | No |
 | handelingsPerspectief | string | Benodigde reactie van de geadresseerde (bijv: betalen, informatie verstrekken). | Yes |
-| eindDatumHandelingsTermijn | date | Termijn waarbinnen de geadresseerde moet reageren. | No |
+| eindDatumHandelingsTermijn | datetime | Termijn waarbinnen de geadresseerde moet reageren. | No |
 | bijlagen | array | De bijlagen bij een bericht. | No |
 | geopend | boolean | Het bericht is door de geadresseerde geopend of nog niet geopend. | Yes |

@@ -1,0 +1,10 @@
+@startuml
+title: TaakFormulier
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
+class TaakFormulier {
+  + type: string
+  + value: string
+}
+@enduml
