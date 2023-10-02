@@ -1,0 +1,10 @@
+@startuml
+title: TaakIdentificatie
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
+class TaakIdentificatie {
+  + type: string
+  + value: string
+}
+@enduml

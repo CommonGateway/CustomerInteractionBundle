@@ -6,8 +6,10 @@
 |-------|--------------|
 | BetrokkeneBijKlantcontact | [klant.betrokkeneBijKlantcontact.md](klant.betrokkeneBijKlantcontact.md) |
 | Partij | [klant.partij.md](klant.partij.md) |
+| TaakFormulier | [klant.taak.formulier.md](klant.taak.formulier.md) |
 | Bijlage | [klant.bijlage.md](klant.bijlage.md) |
 | Actor | [klant.actor.md](klant.actor.md) |
+| TaakIdentificatie | [klant.taak.identificatie.md](klant.taak.identificatie.md) |
 | Voorkeur | [klant.voorkeur.md](klant.voorkeur.md) |
 | Correspondentieadres | [klant.correspondentieadres.md](klant.correspondentieadres.md) |
 | Medewerker | [klant.medewerker.md](klant.medewerker.md) |
