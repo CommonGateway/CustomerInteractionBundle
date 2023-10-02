@@ -1,0 +1,62 @@
+{
+  "title": "Klant",
+  "$id": "https://commongateway.nl/klant.klant.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "url": {
+      "type": "string",
+      "format": "url"
+    },
+    "bronorganisatie": {
+      "type": "string"
+    },
+    "klantnummer": {
+      "type": "string"
+    },
+    "bedrijfsnaam": {
+      "type": "string"
+    },
+    "functie": {
+      "type": "string"
+    },
+    "websiteUrl": {
+      "type": "string"
+    },
+    "voornaam": {
+      "type": "string"
+    },
+    "voorvoegselAchternaam": {
+      "type": "string"
+    },
+    "achternaam": {
+      "type": "string"
+    },
+    "telefoonnummer": {
+      "type": "string"
+    },
+    "emailadres": {
+      "type": "string"
+    },
+    "adres": {
+      "$ref": "https://commongateway.nl/klant.klantAdres.schema.json"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "subjectType": {
+      "type": "string"
+    },
+    "aanmaakkanaal": {
+      "type": "string"
+    },
+    "geverifieerd": {
+      "type": "string"
+    },
+    "subjectIdentificatie": {
+      "$ref": "https://commongateway.nl/klant.subjectIdentificatie.schema.json"
+    }
+  }
+}

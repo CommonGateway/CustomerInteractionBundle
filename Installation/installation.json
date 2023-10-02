@@ -10,6 +10,11 @@
     "schemas": [
       {
         "version": "0.0.1",
+        "reference": "https://commongateway.nl/klant.klant.schema.json",
+        "path": "klanten/api/v1/klanten"
+      },
+      {
+        "version": "0.0.1",
         "reference": "https://commongateway.nl/klant.betrokkeneBijKlantcontact.schema.json",
         "path": "betrokkenenbijklantcontact",
         "methods": [

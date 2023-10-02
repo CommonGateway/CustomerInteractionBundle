@@ -1,0 +1,44 @@
+{
+  "title": "Subject Identificatie",
+  "$id": "https://commongateway.nl/klant.subjectIdentificatie.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "inpBsn": {
+      "type": "string",
+      "format": "url"
+    },
+    "anpIdentificatie": {
+      "type": "string"
+    },
+    "inpANummer": {
+      "type": "string"
+    },
+    "geslachtsnaam": {
+      "type": "string"
+    },
+    "voorvoegselGeslachtsnaam": {
+      "type": "string"
+    },
+    "voorletters": {
+      "type": "string"
+    },
+    "voornamen": {
+      "type": "string"
+    },
+    "geslachtsaanduiding": {
+      "type": "string"
+    },
+    "geboortedatum": {
+      "type": "string"
+    },
+    "verblijfsadres": {
+      "$ref": "https://commongateway.nl/klant.verblijfAdres.schema.json"
+    },
+    "subVerblijfBuitenland": {
+      "type": "string"
+    }
+  }
+}
