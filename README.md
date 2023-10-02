@@ -11,4 +11,5 @@ De klantinteractie mock voorziet in
 * Berichten API
 
 ## Patroon
+
 ![Sequence Diagram](https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/mijnzaken_sequence_diagram.svg "Sequence Diagram")
