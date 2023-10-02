@@ -4,11 +4,11 @@ Deze plugin is bedoeld als MOCK voor de klant interactie api's tijden de Mijn Za
 
 ## Positionering
 
-De klantinteractie mock voorziet in  
+De klantinteractie mock voorziet in
 
-- Klanten API's
-- Taken API
-- Berichten API
+* Klanten API's
+* Taken API
+* Berichten API
 
 ## Patroon
 ![Sequence Diagram](https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/mijnzaken_sequence_diagram.svg "Sequence Diagram")
