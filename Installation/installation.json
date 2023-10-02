@@ -4,6 +4,10 @@
     {
       "reference": "https://vng.opencatalogi.nl/collection/kic.klantinteracties.collection.json",
       "schemaPrefix": "https://commongateway.nl/klant"
+    },
+    {
+      "reference": "https://vng.opencatalogi.nl/collection/klant.klanten.collection.json",
+      "schemaPrefix": "https://klantenBundle.nl/klant"
     }
   ],
   "endpoints": {
@@ -11,7 +15,7 @@
       {
         "version": "0.0.1",
         "reference": "https://klantenBundle.nl/klant.klant.schema.json",
-        "path": "klanten/api/v1/klanten"
+        "path": "klanten"
       },
       {
         "version": "0.0.1",
