@@ -24,3 +24,4 @@ Een persoon of organisatie waarmee de gemeente een relatie heeft.
 | persoonsnaam | object | N/A | No |
 | voorkeurskanaal | object | Het kanaal waarlangs de partij bij voorkeur interactie heeft met de gemeente. | No |
 | voorkeurstaal | object | De taal waarin de persoon of organisatie bij voorkeur interactie heeft met de gemeente. | No |
+| wasBereikbaarOp | object | N/A | No |
