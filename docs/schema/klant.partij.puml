@@ -14,5 +14,6 @@ class Partij {
   + persoonsnaam: object
   + voorkeurskanaal: object
   + voorkeurstaal: object
+  + wasBereikbaarOp: array
 }
 @enduml

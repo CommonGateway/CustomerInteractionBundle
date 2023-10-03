@@ -1,0 +1,25 @@
+@startuml
+title: Klant
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
+class Klant {
+  + url: string
+  + bronorganisatie: string
+  + klantnummer: string
+  + bedrijfsnaam: string
+  + functie: string
+  + websiteUrl: string
+  + voornaam: string
+  + voorvoegselAchternaam: string
+  + achternaam: string
+  + telefoonnummer: string
+  + emailadres: string
+  + adres: Any
+  + subject: string
+  + subjectType: string
+  + aanmaakkanaal: string
+  + geverifieerd: string
+  + subjectIdentificatie: Any
+}
+@enduml

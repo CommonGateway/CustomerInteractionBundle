@@ -1,0 +1,148 @@
+{
+  "https://klantenBundle.nl/klant.klant.schema.json": [
+    {
+      "id": "8cda9e0e-aae2-42ad-8621-0d87aa1abde0",
+      "voornaam": "Common",
+      "achternaam": "Ground",
+      "adres": {
+        "straatnaam": "Common Groundtuin",
+        "huisnummer": "42",
+        "postcode": "1000AA",
+        "woonplaatsnaam": "Ridderkerk"
+      },
+      "subjectType": "natuurlijk_persoon",
+      "subjectIdentificatie": {
+        "inpBsn": "900198424",
+        "voorletters": "V.N.G",
+        "voornamen": "Common",
+        "geslachtsnaam": "Ground",
+        "geboortedatum": "8-11-2018",
+        "verblijfsadres": {
+          "wplWoonplaatsNaam": "Ridderkerk",
+          "aoaPostcode": "1000AA",
+          "aoaHuisnummer": "42"
+        }
+      }
+    },
+    {
+      "id": "67c6bd10-9f7f-425f-b6cc-849b3ae799de",
+      "voornaam": "Proef",
+      "achternaam": "Tuin",
+      "adres": {
+        "straatnaam": "Open Webconceptplein",
+        "huisnummer": "42",
+        "postcode": "1000AA",
+        "woonplaatsnaam": "Ridderkerk"
+      },
+      "subjectType": "natuurlijk_persoon",
+      "subjectIdentificatie": {
+        "inpBsn": "900037829",
+        "voorletters": "B.A.R",
+        "voornamen": "Proef",
+        "geslachtsnaam": "Tuin",
+        "geboortedatum": "8-11-2018",
+        "verblijfsadres": {
+          "wplWoonplaatsNaam": "Ridderkerk",
+          "aoaPostcode": "1000AA",
+          "aoaHuisnummer": "42"
+        }
+      }
+    },
+    {
+      "id": "c0f101e4-87b2-4030-9a18-907c6ea95821",
+      "voornaam": "Proef",
+      "achternaam": "Tuin",
+      "adres": {
+        "straatnaam": "Open Webconceptplein",
+        "huisnummer": "42",
+        "postcode": "1000AA",
+        "woonplaatsnaam": "Ridderkerk"
+      },
+      "subjectType": "natuurlijk_persoon",
+      "subjectIdentificatie": {
+        "inpBsn": "900198436",
+        "voorletters": "B.A.R",
+        "voornamen": "Proef",
+        "geslachtsnaam": "Tuin",
+        "geboortedatum": "8-11-2018",
+        "verblijfsadres": {
+          "wplWoonplaatsNaam": "Ridderkerk",
+          "aoaPostcode": "1000AA",
+          "aoaHuisnummer": "42"
+        }
+      }
+    },
+    {
+      "id": "27ba52fa-92a0-4cfc-8b5a-f8e02f208cb9",
+      "voornaam": "Open",
+      "achternaam": "Webconcept",
+      "adres": {
+        "straatnaam": "Common Groundtuin",
+        "huisnummer": "42",
+        "postcode": "1000AA",
+        "woonplaatsnaam": "Barendrecht"
+      },
+      "subjectType": "natuurlijk_persoon",
+      "subjectIdentificatie": {
+        "inpBsn": "900198448",
+        "voorletters": "O.W.C",
+        "voornamen": "Open",
+        "geslachtsnaam": "Webconcept",
+        "geboortedatum": "8-11-2018",
+        "verblijfsadres": {
+          "wplWoonplaatsNaam": "Barendrecht",
+          "aoaPostcode": "1000AA",
+          "aoaHuisnummer": "42"
+        }
+      }
+    },
+    {
+      "id": "cc6294e4-6a8d-45cb-8e6c-48ad9a332c20",
+      "voornaam": "Common",
+      "achternaam": "Ground",
+      "adres": {
+        "straatnaam": "Open Webconceptplein",
+        "huisnummer": "42",
+        "postcode": "1000AA",
+        "woonplaatsnaam": "Nieuwstadt"
+      },
+      "subjectType": "natuurlijk_persoon",
+      "subjectIdentificatie": {
+        "inpBsn": "900198473",
+        "voorletters": "O.W.C.",
+        "voornamen": "Common",
+        "geslachtsnaam": "Ground",
+        "geboortedatum": "8-11-2018",
+        "verblijfsadres": {
+          "wplWoonplaatsNaam": "Nieuwstadt",
+          "aoaPostcode": "1000AA",
+          "aoaHuisnummer": "42"
+        }
+      }
+    },
+    {
+      "id": "906bd169-0256-433d-87be-4ed393a9511c",
+      "voornaam": "Open",
+      "achternaam": "Webconcept",
+      "adres": {
+        "straatnaam": "Common Groundtuin",
+        "huisnummer": "42",
+        "postcode": "1000AA",
+        "woonplaatsnaam": "Nooitgedacht"
+      },
+      "subjectType": "natuurlijk_persoon",
+      "subjectIdentificatie": {
+        "inpBsn": "900198461",
+        "voorletters": "V.N.G",
+        "voornamen": "Open",
+        "geslachtsnaam": "Webconcept",
+        "geboortedatum": "8-11-2018",
+        "verblijfsadres": {
+          "wplWoonplaatsNaam": "Nooitgedacht",
+          "aoaPostcode": "1000AA",
+          "aoaHuisnummer": "42"
+        }
+      }
+    }
+  ]
+}

@@ -59,6 +59,12 @@
       "type": "object",
       "description": "De taal waarin de persoon of organisatie bij voorkeur interactie heeft met de gemeente.",
       "$ref": "https://commongateway.nl/klant.voorkeur.schema.json"
+    },
+    "wasBereikbaarOp": {
+      "type": "array",
+      "properties": {
+        "$ref": "https://commongateway.nl/klant.digitaalAdres.schema.json"
+      }
     }
   }
 }

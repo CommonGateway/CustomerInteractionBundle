@@ -2,6 +2,25 @@
 title: All schemas
 footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
 header: Schema
+class Klant {
+  + url: string
+  + bronorganisatie: string
+  + klantnummer: string
+  + bedrijfsnaam: string
+  + functie: string
+  + websiteUrl: string
+  + voornaam: string
+  + voorvoegselAchternaam: string
+  + achternaam: string
+  + telefoonnummer: string
+  + emailadres: string
+  + adres: Any
+  + subject: string
+  + subjectType: string
+  + aanmaakkanaal: string
+  + geverifieerd: string
+  + subjectIdentificatie: Any
+}
 class BetrokkeneBijKlantcontact {
   + bezoekadres: object
   + correspondentieadres: object
@@ -24,6 +43,7 @@ class Partij {
   + persoonsnaam: object
   + voorkeurskanaal: object
   + voorkeurstaal: object
+  + wasBereikbaarOp: array
 }
 class TaakFormulier {
   + type: string
@@ -35,6 +55,17 @@ class Bijlage {
   + indicatieWeerTeGeven: boolean
   + klantcontactId: string
   + omschrijving: string
+}
+class VerblijfAdres {
+  + id: string
+  + aoaIdentificatie: string
+  + wplWoonplaatsNaam: string
+  + gorOpenbareRuimteNaam: integer
+  + aoaPostcode: string
+  + aoaHuisnummer: string
+  + aoaHuisletter: string
+  + aoaHuisnummertoevoeging: string
+  + inpLocatiebeschrijving: string
 }
 class Actor {
   + klantcontactId: array
@@ -141,6 +172,19 @@ class InterneTaak {
   + nummer: integer
   + status: string
 }
+class SubjectIdentificatie {
+  + inpBsn: string
+  + anpIdentificatie: string
+  + inpANummer: string
+  + geslachtsnaam: string
+  + voorvoegselGeslachtsnaam: string
+  + voorletters: string
+  + voornamen: string
+  + geslachtsaanduiding: string
+  + geboortedatum: string
+  + verblijfsadres: Any
+  + subVerblijfBuitenland: string
+}
 class Taak {
   + id: string
   + data: object
@@ -167,5 +211,16 @@ class ExterneIdentificatie {
   + anderSoortExternId: string
   + externId: string
   + soortExternId: object
+}
+class KlantAdres {
+  + id: string
+  + naam: string
+  + straatnaam: string
+  + huisnummer: integer
+  + huisletter: string
+  + huisnummertoevoeging: string
+  + postcode: string
+  + woonplaatsnaam: string
+  + landcode: string
 }
 @enduml

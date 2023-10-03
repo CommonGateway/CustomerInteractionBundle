@@ -2,7 +2,7 @@
 
 Een taak.formulier
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.taak.formulier.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/klanten/docs/schema/klant.taak.formulier.svg)
 
 ## Properties
 
