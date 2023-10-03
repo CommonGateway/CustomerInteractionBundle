@@ -43,7 +43,7 @@ class Partij {
   + persoonsnaam: object
   + voorkeurskanaal: object
   + voorkeurstaal: object
-  + wasBereikbaarOp: object
+  + wasBereikbaarOp: array
 }
 class TaakFormulier {
   + type: string
