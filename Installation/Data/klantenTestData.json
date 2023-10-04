@@ -1,7 +1,6 @@
 {
   "https://klantenBundle.nl/klant.klant.schema.json": [
     {
-      "id": "8cda9e0e-aae2-42ad-8621-0d87aa1abde0",
       "voornaam": "Common",
       "achternaam": "Ground",
       "adres": {
@@ -25,7 +24,6 @@
       }
     },
     {
-      "id": "67c6bd10-9f7f-425f-b6cc-849b3ae799de",
       "voornaam": "Proef",
       "achternaam": "Tuin",
       "adres": {
@@ -49,7 +47,6 @@
       }
     },
     {
-      "id": "c0f101e4-87b2-4030-9a18-907c6ea95821",
       "voornaam": "Proef",
       "achternaam": "Tuin",
       "adres": {
@@ -73,7 +70,6 @@
       }
     },
     {
-      "id": "27ba52fa-92a0-4cfc-8b5a-f8e02f208cb9",
       "voornaam": "Open",
       "achternaam": "Webconcept",
       "adres": {
@@ -97,7 +93,6 @@
       }
     },
     {
-      "id": "cc6294e4-6a8d-45cb-8e6c-48ad9a332c20",
       "voornaam": "Common",
       "achternaam": "Ground",
       "adres": {
@@ -121,7 +116,6 @@
       }
     },
     {
-      "id": "906bd169-0256-433d-87be-4ed393a9511c",
       "voornaam": "Open",
       "achternaam": "Webconcept",
       "adres": {
