@@ -2,6 +2,29 @@
 title: All schemas
 footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
 header: Schema
+class Bericht {
+  + id: string
+  + gebruikerID: string
+  + soortGebruiker: string
+  + onderwerp: string
+  + berichttekst: string
+  + referentie: string
+  + handelingsPerspectief: string
+  + eindDatumHandelingsTermijn: datetime
+  + bijlagen: array
+  + geopend: boolean
+}
+class KlantAdres {
+  + id: string
+  + naam: string
+  + straatnaam: string
+  + huisnummer: integer
+  + huisletter: string
+  + huisnummertoevoeging: string
+  + postcode: string
+  + woonplaatsnaam: string
+  + landcode: string
+}
 class Klant {
   + url: string
   + bronorganisatie: string
@@ -21,63 +44,12 @@ class Klant {
   + geverifieerd: string
   + subjectIdentificatie: Any
 }
-class BetrokkeneBijKlantcontact {
-  + bezoekadres: object
-  + correspondentieadres: object
-  + klantcontactId: string
-  + organisatienaam: string
-  + partijId: string
-  + persoonsnaam: object
-  + rol: string
-  + voorkeurskanaal: object
-  + voorkeurstaal: object
-}
-class Partij {
-  + bezoekadres: object
-  + correspondentieadres: object
-  + externeIdentificatie: array
-  + interneNotitie: string
-  + klanttaakId: array
+class InterneTaak {
+  + actorId: string
+  + geregistreerdOp: datetime
+  + gevraagdeHandeling: string
   + nummer: integer
-  + organisatienaam: string
-  + persoonsnaam: object
-  + voorkeurskanaal: object
-  + voorkeurstaal: object
-  + wasBereikbaarOp: array
-}
-class TaakFormulier {
-  + type: string
-  + value: string
-}
-class Bijlage {
-  + externId: string
-  + externRegister: string
-  + indicatieWeerTeGeven: boolean
-  + klantcontactId: string
-  + omschrijving: string
-}
-class VerblijfAdres {
-  + id: string
-  + aoaIdentificatie: string
-  + wplWoonplaatsNaam: string
-  + gorOpenbareRuimteNaam: integer
-  + aoaPostcode: string
-  + aoaHuisnummer: string
-  + aoaHuisletter: string
-  + aoaHuisnummertoevoeging: string
-  + inpLocatiebeschrijving: string
-}
-class Actor {
-  + klantcontactId: array
-  + naam: string
-}
-class TaakIdentificatie {
-  + type: string
-  + value: string
-}
-class Voorkeur {
-  + code: string
-  + naam: string
+  + status: string
 }
 class Correspondentieadres {
   + aanduidingBijHuisnummer: string
@@ -95,26 +67,14 @@ class Correspondentieadres {
   + straat: string
   + woonplaats: string
 }
-class Medewerker {
-  + klantcontactId: array
-  + naam: string
-  + eMailadres: string
-  + externId: string
-  + externRegister: string
-  + functie: string
-  + telefoonnummer: string
+class TaakFormulier {
+  + type: string
+  + value: string
 }
-class Bericht {
-  + id: string
-  + gebruikerID: string
-  + soortGebruiker: string
-  + onderwerp: string
-  + berichttekst: string
-  + referentie: string
-  + handelingsPerspectief: string
-  + eindDatumHandelingsTermijn: datetime
-  + bijlagen: array
-  + geopend: boolean
+class ExterneIdentificatie {
+  + anderSoortExternId: string
+  + externId: string
+  + soortExternId: object
 }
 class Klantcontact {
   + actorId: string
@@ -130,6 +90,46 @@ class Klantcontact {
   + onderwerp: string
   + plaatsgevondenOp: datetime
 }
+class Actor {
+  + klantcontactId: array
+  + naam: string
+}
+class Bijlage {
+  + externId: string
+  + externRegister: string
+  + indicatieWeerTeGeven: boolean
+  + klantcontactId: string
+  + omschrijving: string
+}
+class BetrokkeneBijKlantcontact {
+  + bezoekadres: object
+  + correspondentieadres: object
+  + klantcontactId: string
+  + organisatienaam: string
+  + partijId: string
+  + persoonsnaam: object
+  + rol: string
+  + voorkeurskanaal: object
+  + voorkeurstaal: object
+}
+class SoortExternId {
+  + code: string
+  + externRegister: string
+  + naam: string
+}
+class Partij {
+  + bezoekadres: object
+  + correspondentieadres: object
+  + externeIdentificatie: array
+  + interneNotitie: string
+  + klanttaakId: array
+  + nummer: integer
+  + organisatienaam: string
+  + persoonsnaam: object
+  + voorkeurskanaal: object
+  + voorkeurstaal: object
+  + wasBereikbaarOp: array
+}
 class Bezoekadres {
   + aanduidingBijHuisnummer: string
   + adresregelBuitenland1: string
@@ -143,6 +143,53 @@ class Bezoekadres {
   + soortBezoekadres: string
   + straat: string
   + woonplaats: string
+}
+class VerblijfAdres {
+  + id: string
+  + aoaIdentificatie: string
+  + wplWoonplaatsNaam: string
+  + gorOpenbareRuimteNaam: integer
+  + aoaPostcode: string
+  + aoaHuisnummer: string
+  + aoaHuisletter: string
+  + aoaHuisnummertoevoeging: string
+  + inpLocatiebeschrijving: string
+}
+class Medewerker {
+  + klantcontactId: array
+  + naam: string
+  + eMailadres: string
+  + externId: string
+  + externRegister: string
+  + functie: string
+  + telefoonnummer: string
+}
+class TaakIdentificatie {
+  + type: string
+  + value: string
+}
+class SubjectIdentificatie {
+  + inpBsn: string
+  + anpIdentificatie: string
+  + inpANummer: string
+  + geslachtsnaam: string
+  + voorvoegselGeslachtsnaam: string
+  + voorletters: string
+  + voornamen: string
+  + geslachtsaanduiding: string
+  + geboortedatum: string
+  + verblijfsadres: Any
+  + subVerblijfBuitenland: string
+}
+class Land {
+  + einddatumLand: date
+  + ingangsdatumLand: date
+  + landcode: string
+  + landnaam: string
+}
+class Voorkeur {
+  + code: string
+  + naam: string
 }
 class OrganisatorischeEenheid {
   + klantcontactId: array
@@ -159,31 +206,10 @@ class DigitaalAdres {
   + omschrijving: string
   + soortDigitaalAdres: object
 }
-class Land {
-  + einddatumLand: date
-  + ingangsdatumLand: date
-  + landcode: string
-  + landnaam: string
-}
-class InterneTaak {
-  + actorId: string
-  + geregistreerdOp: datetime
-  + gevraagdeHandeling: string
-  + nummer: integer
-  + status: string
-}
-class SubjectIdentificatie {
-  + inpBsn: string
-  + anpIdentificatie: string
-  + inpANummer: string
-  + geslachtsnaam: string
-  + voorvoegselGeslachtsnaam: string
-  + voorletters: string
-  + voornamen: string
-  + geslachtsaanduiding: string
-  + geboortedatum: string
-  + verblijfsadres: Any
-  + subVerblijfBuitenland: string
+class Persoonsnaam {
+  + achternaam: string
+  + voornaam: string
+  + voorvoegselAchternaam: string
 }
 class Taak {
   + id: string
@@ -196,31 +222,5 @@ class Taak {
   + identificatie: object
   + verzonden_data: object
   + verwerker_taak_id: string
-}
-class SoortExternId {
-  + code: string
-  + externRegister: string
-  + naam: string
-}
-class Persoonsnaam {
-  + achternaam: string
-  + voornaam: string
-  + voorvoegselAchternaam: string
-}
-class ExterneIdentificatie {
-  + anderSoortExternId: string
-  + externId: string
-  + soortExternId: object
-}
-class KlantAdres {
-  + id: string
-  + naam: string
-  + straatnaam: string
-  + huisnummer: integer
-  + huisletter: string
-  + huisnummertoevoeging: string
-  + postcode: string
-  + woonplaatsnaam: string
-  + landcode: string
 }
 @enduml
