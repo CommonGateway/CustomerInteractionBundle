@@ -1,19 +1,53 @@
-publiccodeYmlVersion: "0.1"
-name: "CustomerInteractionBundle"
-url: "https://github.com/CommonGateway/CustomerInteractionBundle"
-releaseDate: "2022-10-01"
-softwareType: addon
-
-platforms:
-  - web
-  
 categories:
-  - collaboration
-  - it-development
-  
-developmentStatus: beta
+- collaboration
+- it-development
 description:
-  nl:
-    shortDescription: "CustomerInteractionBundle"
   en:
-    shortDescription: "CustomerInteractionBundle"
+    apiDocumentation: ''
+    awards: []
+    documentation: ''
+    features: []
+    genericName: "De CustomerInteractionBundle voorziet de common gateway in twee\
+      \ functionaliteiten, het uitleveren van de klantinteractie registers en het\
+      \ faciliteren van de klantinteractie convience api\u2019s "
+    localisedName: ''
+    longDescription: ''
+    screenshots: []
+    shortDescription: CustomerInteractionBundle
+    videos: []
+  nl:
+    shortDescription: CustomerInteractionBundle
+developmentStatus: beta
+landingURL: ''
+legal:
+  authorsFile: ''
+  license: ''
+  mainCopyrightOwner: ''
+  repoOwner: ''
+localisation:
+  availableLanguages:
+  - en
+  localisationReady: false
+maintenance:
+  contacts: []
+  contractors: []
+  type: none
+name: CustomerInteractionBundle
+nl:
+  vng:
+    commonground: []
+    gemma: []
+organisation:
+  description: The common gateway
+  logo: https://avatars.githubusercontent.com/u/106860777?v=4
+  name: CommonGateway
+  url: CommonGateway
+platforms:
+- web
+publiccodeYmlVersion: '0.1'
+releaseDate: '2022-10-01'
+roadmap: ''
+softwareType: addon
+softwareVersion: ''
+url: https://commongateway.github.io/CustomerInteractionBundle/
+usedBy: []
