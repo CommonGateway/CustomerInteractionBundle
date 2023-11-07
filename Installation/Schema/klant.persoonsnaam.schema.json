@@ -2,7 +2,7 @@
   "title": "Persoonsnaam",
   "$id": "https://commongateway.nl/klant.persoonsnaam.schema.json",
   "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "object",
   "required": [],
   "properties": {
@@ -20,6 +20,10 @@
       "title": "Voorvoegsel achternaam",
       "type": "string",
       "description": "Dat deel van de achternaam dat voorkomt in de Voorvoegseltabel en, gescheiden door een spatie, vooraf gaat aan de rest van de achternaam."
+    },
+    "voorletters": {
+      "title": "Voorletters",
+      "type": "string"
     }
   }
 }

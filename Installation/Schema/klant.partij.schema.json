@@ -2,11 +2,57 @@
   "title": "Partij",
   "$id": "https://commongateway.nl/klant.partij.schema.json",
   "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "object",
   "description": "Een persoon of organisatie waarmee de gemeente een relatie heeft.\n\n(Uiteindelijk) belanghebbenden waarmee de gemeente geen direct contact heeft (of heeft gehad) (bijvoorbeeld door vertegenwoordiging) zien we als partijen waarmee de gemeente een relatie heeft.? Een vertegenwoordiger (van een belanghebbende) is een partij? Partijen zijn ???gekende??? personen of organisaties? Dit betekent dat er voor eerste registratie en bij eventueel (her)gebruik authenticatie heeft plaatsgevonden. Dit hoeft niet per se te gebeuren met DigiD, eHerkenning o.i.d. Er is dus ook niet altijd sprake van vastlegging en verwerking van een BSN of ander buiten de gemeente toegekend ID-nummer.?\n\n(Uiteindelijk) belanghebbenden waarmee de gemeente geen direct contact heeft (of heeft gehad) (bijvoorbeeld door vertegenwoordiging) zien we als partijen waarmee de gemeente een relatie heeft.? Een vertegenwoordiger (van een belanghebbende) is een partij? Partijen zijn ???gekende??? personen of organisaties? Dit betekent dat er voor eerste registratie en bij eventueel (her)gebruik authenticatie heeft plaatsgevonden. Dit hoeft niet per se te gebeuren met DigiD, eHerkenning o.i.d. Er is dus ook niet altijd sprake van vastlegging en verwerking van een BSN of ander buiten de gemeente toegekend ID-nummer.?\n\n(Uiteindelijk) belanghebbenden waarmee de gemeente geen direct contact heeft (of heeft gehad) (bijvoorbeeld door vertegenwoordiging) zien we als partijen waarmee de gemeente een relatie heeft.? Een vertegenwoordiger (van een belanghebbende) is een partij? Partijen zijn ???gekende??? personen of organisaties? Dit betekent dat er voor eerste registratie en bij eventueel (her)gebruik authenticatie heeft plaatsgevonden. Dit hoeft niet per se te gebeuren met DigiD, eHerkenning o.i.d. Er is dus ook niet altijd sprake van vastlegging en verwerking van een BSN of ander buiten de gemeente toegekend ID-nummer.?",
   "required": ["externeIdentificatie", "interneNotitie", "nummer"],
   "properties": {
+    "nummer": {
+      "type": "integer",
+      "required": true
+    },
+    "interneNotitie": {
+      "type": "string",
+      "required": true
+    },
+    "indicatieGeheimhouding": {
+      "type": "boolean",
+      "required": true,
+      "default": "false"
+    },
+    "voorkeurstaal": {
+      "type": "object",
+      "description": "De taal waarin de persoon of organisatie bij voorkeur interactie heeft met de gemeente.",
+      "$ref": "https://commongateway.nl/klant.digitaalAdres.schema.json"
+    },
+    "indicatieActief": {
+      "type": "boolean",
+      "required": true,
+      "default": "true"
+    },
+    "soortPartij": {
+      "type": "string",
+      "enum": []
+    },
+    "organisatienaam": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "persoonsnaam": {
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.persoonsnaam.schema.json"
+    },
+    "voorkeurskanaal": {
+      "type": "object",
+      "description": "Het kanaal waarlangs de partij bij voorkeur interactie heeft met de gemeente.",
+      "$ref": "https://commongateway.nl/klant.digitaalAdres.schema.json"
+    },
+    "verstrekteAdressen": {
+      "type": "array",
+      "properties": {
+        "$ref": "https://commongateway.nl/klant.digitaalAdres.schema.json"
+      }
+    },
     "bezoekadres": {
       "type": "object",
       "description": "Een bezoekadres is een adres waar een persoon of een bedrijf bezoekers ontvangt.",
@@ -24,47 +70,16 @@
         "description": "De identificatiecode van een Relatie zoals die in een andere (authentieke?) registratie gevoerd wordt.",
         "$ref": "https://commongateway.nl/klant.externeIdentificatie.schema.json"
       },
-      "required": true
-    },
-    "interneNotitie": {
-      "type": "string",
-      "maxLength": 200,
-      "required": true
+      "required": true,
+      "deprecated": true
     },
     "klanttaakId": {
       "type": "array",
       "properties": {
         "type": "string",
         "maxLength": 40
-      }
-    },
-    "nummer": {
-      "type": "integer",
-      "required": true
-    },
-    "organisatienaam": {
-      "type": "string",
-      "maxLength": 200
-    },
-    "persoonsnaam": {
-      "type": "object",
-      "$ref": "https://commongateway.nl/klant.persoonsnaam.schema.json"
-    },
-    "voorkeurskanaal": {
-      "type": "object",
-      "description": "Het kanaal waarlangs de partij bij voorkeur interactie heeft met de gemeente.",
-      "$ref": "https://commongateway.nl/klant.voorkeur.schema.json"
-    },
-    "voorkeurstaal": {
-      "type": "object",
-      "description": "De taal waarin de persoon of organisatie bij voorkeur interactie heeft met de gemeente.",
-      "$ref": "https://commongateway.nl/klant.voorkeur.schema.json"
-    },
-    "wasBereikbaarOp": {
-      "type": "array",
-      "properties": {
-        "$ref": "https://commongateway.nl/klant.digitaalAdres.schema.json"
-      }
+      },
+      "deprecated": true
     }
   }
 }
