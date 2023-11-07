@@ -2,7 +2,7 @@
 
 No description available.
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.subjectIdentificatie.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/redesign/docs/schema/klant.subjectIdentificatie.svg)
 
 ## Properties
 

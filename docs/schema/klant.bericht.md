@@ -2,7 +2,7 @@
 
 Een bericht aan een bedrijf,burger, inwoner of organisatie die tot handelen oproept
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.bericht.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/redesign/docs/schema/klant.bericht.svg)
 
 ## Properties
 

@@ -2,7 +2,7 @@
 
 De actor handelt in een interne taak of een klantcontact.
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.actor.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/redesign/docs/schema/klant.actor.svg)
 
 ## Properties
 

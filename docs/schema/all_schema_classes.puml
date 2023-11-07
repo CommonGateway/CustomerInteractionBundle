@@ -77,18 +77,18 @@ class ExterneIdentificatie {
   + soortExternId: object
 }
 class Klantcontact {
-  + actorId: string
-  + bijlageId: string
-  + gaatOverInterneTaakId: array
-  + geregistreerdOp: datetime
-  + indicatieContactMislukt: string
-  + inhoud: string
-  + initiatiefnemer: string
-  + interneTaakOntstaanUit: array
-  + kanaal: object
   + nummer: integer
   + onderwerp: string
   + plaatsgevondenOp: datetime
+  + actor: object
+  + bijlage: array
+  + gaatOverInterneTaak: object
+  + geregistreerdOp: datetime
+  + inhoud: string
+  + indicatieContactGelukt: string
+  + initiatiefnemer: string
+  + interneTaakOntstaanUit: array
+  + kanaal: object
 }
 class Actor {
   + klantcontactId: array
@@ -102,14 +102,15 @@ class Bijlage {
   + omschrijving: string
 }
 class BetrokkeneBijKlantcontact {
+  + klantcontact: object
+  + partij: object
+  + rol: string
+  + intitiator: boolean
+  + organisatienaam: string
+  + contactnaam: object
   + bezoekadres: object
   + correspondentieadres: object
-  + klantcontactId: string
-  + organisatienaam: string
-  + partijId: string
-  + persoonsnaam: object
-  + rol: string
-  + voorkeurskanaal: object
+  + communicatiekanaal: object
   + voorkeurstaal: object
 }
 class SoortExternId {
@@ -118,17 +119,20 @@ class SoortExternId {
   + naam: string
 }
 class Partij {
-  + bezoekadres: object
-  + correspondentieadres: object
-  + externeIdentificatie: array
-  + interneNotitie: string
-  + klanttaakId: array
   + nummer: integer
+  + interneNotitie: string
+  + indicatieGeheimhouding: boolean
+  + voorkeurstaal: object
+  + indicatieActief: boolean
+  + soortPartij: string
   + organisatienaam: string
   + persoonsnaam: object
   + voorkeurskanaal: object
-  + voorkeurstaal: object
-  + wasBereikbaarOp: array
+  + verstrekteAdressen: array
+  + bezoekadres: object
+  + correspondentieadres: object
+  + externeIdentificatie: array
+  + klanttaakId: array
 }
 class Bezoekadres {
   + aanduidingBijHuisnummer: string
@@ -204,12 +208,13 @@ class OrganisatorischeEenheid {
 class DigitaalAdres {
   + adres: string
   + omschrijving: string
-  + soortDigitaalAdres: object
+  + soortDigitaalAdres: string
 }
 class Persoonsnaam {
   + achternaam: string
   + voornaam: string
   + voorvoegselAchternaam: string
+  + voorletters: string
 }
 class Taak {
   + id: string

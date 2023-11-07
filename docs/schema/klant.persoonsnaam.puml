@@ -7,5 +7,6 @@ class Persoonsnaam {
   + achternaam: string
   + voornaam: string
   + voorvoegselAchternaam: string
+  + voorletters: string
 }
 @enduml

@@ -4,16 +4,19 @@ footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle
 header: Schema
 
 class Partij {
-  + bezoekadres: object
-  + correspondentieadres: object
-  + externeIdentificatie: array
-  + interneNotitie: string
-  + klanttaakId: array
   + nummer: integer
+  + interneNotitie: string
+  + indicatieGeheimhouding: boolean
+  + voorkeurstaal: object
+  + indicatieActief: boolean
+  + soortPartij: string
   + organisatienaam: string
   + persoonsnaam: object
   + voorkeurskanaal: object
-  + voorkeurstaal: object
-  + wasBereikbaarOp: array
+  + verstrekteAdressen: array
+  + bezoekadres: object
+  + correspondentieadres: object
+  + externeIdentificatie: array
+  + klanttaakId: array
 }
 @enduml
