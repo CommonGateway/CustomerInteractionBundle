@@ -21,7 +21,7 @@
     "soortDigitaalAdres": {
       "type": "string",
       "description": "De typering van het digitale adres waarmee bepaald kan worden op welk kanaal dit digitale adres valide is.",
-      "enum": []
+      "enum": ["emailadres", "telefoonnummer"]
     }
   }
 }

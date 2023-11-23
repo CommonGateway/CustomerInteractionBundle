@@ -5,7 +5,7 @@
   "version": "0.0.2",
   "type": "object",
   "description": "Iemand die voor of namens de gemeente werkzaamheden verricht.",
-  "required": ["naam", "eMailadres", "telefoonnummer"],
+  "required": ["eMailadres", "telefoonnummer"],
   "properties": {
     "eMailadres": {
       "type": "string",
