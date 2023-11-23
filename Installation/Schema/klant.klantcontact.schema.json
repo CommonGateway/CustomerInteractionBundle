@@ -9,8 +9,6 @@
     "bijlage",
     "geregistreerdOp",
     "indicatieContactMislukt",
-    "initiatiefnemer",
-    "kanaal",
     "nummer",
     "onderwerp",
     "plaatsgevondenOp"
@@ -81,16 +79,6 @@
     },
     "geregistreerdOp": {
       "type": "datetime",
-      "deprecated": true
-    },
-    "initiatiefnemer": {
-      "type": "string",
-      "description": "De waarden van de partij die het contact heeft geinitieerd.\n\n`gemeente` - De gemeente heeft het contact geinitieerd.\n`klant` - De klant heeft het contact geinitieerd.\n`vertegenwoordiger` -",
-      "enum": [
-        "gemeente",
-        "klant",
-        "vertegenwoordiger"
-      ],
       "deprecated": true
     }
   }

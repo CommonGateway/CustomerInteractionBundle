@@ -2,15 +2,14 @@
   "title": "Bijlage",
   "$id": "https://commongateway.nl/klant.bijlage.schema.json",
   "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "object",
   "description": "Een digitale bijlage bij een klantcontact. Deze bijlage kan bestaan uit een bestand dat meegestuurd is met een e-mail of een ingescand document.",
-  "required": ["externId", "externRegister", "indicatieWeerTeGeven", "klantcontactId", "omschrijving"],
+  "required": ["klantcontact", "objectIdentificator"],
   "properties": {
     "objectIdentificator": {
-      "type": "string",
-      "maxLength": 40,
-      "required": true
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.identificator.schema.json"
     },
     "klantcontact": {
       "type": "object",

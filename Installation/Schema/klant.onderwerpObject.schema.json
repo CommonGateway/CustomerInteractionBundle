@@ -1,6 +1,6 @@
 {
   "title": "Onderwerpobject",
-  "$id": "https://commongateway.nl/klant.organisatorischeEenheid.schema.json",
+  "$id": "https://commongateway.nl/klant.onderwerpObject.schema.json",
   "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
   "version": "0.0.1",
   "type": "object",

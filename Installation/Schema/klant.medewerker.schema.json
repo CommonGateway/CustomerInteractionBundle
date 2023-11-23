@@ -2,10 +2,10 @@
   "title": "Medewerker",
   "$id": "https://commongateway.nl/klant.medewerker.schema.json",
   "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "object",
   "description": "Iemand die voor of namens de gemeente werkzaamheden verricht.",
-  "required": ["naam", "eMailadres", "externId", "externRegister", "functie", "telefoonnummer"],
+  "required": ["naam", "eMailadres", "telefoonnummer"],
   "properties": {
     "eMailadres": {
       "type": "string",

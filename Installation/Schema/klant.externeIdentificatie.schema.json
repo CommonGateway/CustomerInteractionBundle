@@ -2,7 +2,7 @@
   "title": "Externe Identificatie",
   "$id": "https://commongateway.nl/klant.externeIdentificatie.schema.json",
   "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "object",
   "description": "De identificatiecode van een Relatie zoals die in een andere (authentieke?) registratie gevoerd wordt.",
   "required": ["externId", "soortExternId"],
