@@ -2,16 +2,11 @@
   "title": "InterneTaak",
   "$id": "https://commongateway.nl/klant.interneTaak.schema.json",
   "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "type": "object",
   "required": ["actorId", "geregistreerdOp", "gevraagdeHandeling", "nummer", "status"],
   "properties": {
-    "actorId": {
-      "type": "string",
-      "maxLength": 40,
-      "required": true
-    },
-    "geregistreerdOp": {
+    "toegewezenOp": {
       "type": "datetime",
       "required": true
     },
@@ -32,6 +27,17 @@
         "verwerkt"
       ],
       "required": true
+    },
+    "toelichting": {
+      "type": "string"
+    },
+    "actor": {
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.actor.schema.json"
+    },
+    "klantcontact": {
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.klantcontact.schema.json"
     }
   }
 }

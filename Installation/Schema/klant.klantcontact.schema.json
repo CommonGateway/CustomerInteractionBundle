@@ -6,7 +6,7 @@
   "type": "object",
   "description": "Een contact tussen een klant of een vertegenwoordiger van een klant en de gemeente.\n\nHet klantcontact is bedoeld om inwoners of ondernemers die contact hebben gehad met de gemeente op een voor hen zo begrijpelijk en relevant mogelijke manier te infomeren over de inhoud van dat contact. Over een klantcontact vastgelegde informatie kan bijvoorbeeld (na inloggen) worden getoond op de gemeentelijke website of telefonisch worden verstrekt door een medewerker van het klantcontactcentrum. Als gevolg hiervan is de volledige inhoud van een klantcontact geschikt voor openbaarmaking aan betrokken inwoners. De definitie van klantcontact is bewust wat 'open' gelaten. Op deze manier passen daarbinnen ook contacten die voortkomen uit nu onvoorziene scenario's of via nog te ontwikkelen kanalen. Uitgangspunt is in alle gevallen dat ????n klantcontact de informatie omvat die een klant of dienst vertegenwoordiger tijdens een voor hen herkenbare handeling of gebeurtenis overbrengt aan de gemeente of vice versa. Zo'n handeling kan bijvoorbeeld het afleggen van baliebezoek zijn, het telefonisch voeren van een gesprek met een medewerker of een interactie met een chatbot op de gemeentelijke website. Maar ook gebeurtenissen als het indienen van een elektronisch formulier of het versturen van een brief door de gemeente aan een klant of vertegenwoordiger resulteren in een klantcontact. Voor het bepalen van het begin en eind van een klantcontact geldt dat informatie die binnen een korte tijdsperiode tussen gemeente en klant wordt uitgewisseld waar mogelijk resulteert in ????n klantcontact, terwijl een verzonden kennisgeving en een uren of dagen later ontvangen reactie daarop resulteren in twee ???losse??? klantcontacten. Dit betekent dat een klantcontact naar aanleiding van een telefoongesprek 'duurt' van het aannemen van het gesprek tot het be??indigen hiervan, terwijl een contact naar aanleiding van een baliebezoek de periode beschrijft vanaf het aan een medewerker verschijnen van een klant of vertegenwoordiger tot aan diens vertrek. In het geval van ontvangst door de gemeente van een brief van een klant waarop de gemeente enige dagen later eveneens schriftelijk reageert, worden beide brieven daarentegen als twee individuele klantcontacten te beschouwd. Tussen de voorbeelden hierboven in ligt een aantal kanalen waarbij informatie minder snel wordt uitgewisseld dan bij een telefoongesprek of baliecontact, maar (veel) sneller dan bij een briefwisseling. Denk aan communicatie via contactformulieren, e-mail of chatapps en -bots. Zeker in de laatste gevallen kan sprake zijn van korte, elkaar snel opvolgende interacties die samen het karakter hebben van een gesprek. Anders dan een telefoon- of baliegesprek kan een interactie via deze kanalen echter voor uren of dagen onderbroken worden, om daarna weer te worden opgepakt. In zo'n geval is het aan medewerkers van de gemeente - in geval van geautomatiseerde interacties samen met systeemontwikkelaars - om te bepalen wat vanuit klantperspectief de meest voor de hand liggende ???omvang??? van een klantcontact is. Tijdens een klantcontact kan duidelijk worden dat een inwoner verschillende verzoeken voor de gemeente heeft. Een klant kan tijdens een telefoongesprek bijvoorbeeld vragen naar een afspraak voor overleg over een te verbouwen woning en daarnaast een verzakking van stoep voor zijn huis melden. Deze verzoeken moeten op uiteenlopende wijze en waarschijnlijk door verschillende afdelingen worden opgevolgd. Met het bepalen welke medewerlkers of afdelingen nodig zijn om aan verzoeken van een klant invulling te geven, begint in feite de behandeling van deze verzoeken. Deze behandeling is nadrukkelijk g????n onderdeel van het klantcontact. Anders dan het registreren van voor het klantcontact relevante onderwerpen biedt het klantcontact dan ook geen mogelijkheden de inhoud daarvan naar verschillende verzoeken, aanvragen of meldingen uit te splitsen. Hiervoor zijn de concepten 'interne taak' en 'zaak' bedoeld. Het klantcontact uit het voorbeeld hierboven zou bijvoorbeeld aanleiding kunnen zijn voor het aanmaken van zowel een zaak van type 'melding openbare ruimte' om de stoep te herstellen, als een interne taak voor een medewerker van de afdeling fysieke leefomgeving om een afspraak te maken voor overleg over de voorgenomen verbouwing.\n\nHet klantcontact is bedoeld om inwoners of ondernemers die contact hebben gehad met de gemeente op een voor hen zo begrijpelijk en relevant mogelijke manier te infomeren over de inhoud van dat contact. Over een klantcontact vastgelegde informatie kan bijvoorbeeld (na inloggen) worden getoond op de gemeentelijke website of telefonisch worden verstrekt door een medewerker van het klantcontactcentrum. Als gevolg hiervan is de volledige inhoud van een klantcontact geschikt voor openbaarmaking aan betrokken inwoners. De definitie van klantcontact is bewust wat 'open' gelaten. Op deze manier passen daarbinnen ook contacten die voortkomen uit nu onvoorziene scenario's of via nog te ontwikkelen kanalen. Uitgangspunt is in alle gevallen dat ????n klantcontact de informatie omvat die een klant of dienst vertegenwoordiger tijdens een voor hen herkenbare handeling of gebeurtenis overbrengt aan de gemeente of vice versa. Zo'n handeling kan bijvoorbeeld het afleggen van baliebezoek zijn, het telefonisch voeren van een gesprek met een medewerker of een interactie met een chatbot op de gemeentelijke website. Maar ook gebeurtenissen als het indienen van een elektronisch formulier of het versturen van een brief door de gemeente aan een klant of vertegenwoordiger resulteren in een klantcontact. Voor het bepalen van het begin en eind van een klantcontact geldt dat informatie die binnen een korte tijdsperiode tussen gemeente en klant wordt uitgewisseld waar mogelijk resulteert in ????n klantcontact, terwijl een verzonden kennisgeving en een uren of dagen later ontvangen reactie daarop resulteren in twee ???losse??? klantcontacten. Dit betekent dat een klantcontact naar aanleiding van een telefoongesprek 'duurt' van het aannemen van het gesprek tot het be??indigen hiervan, terwijl een contact naar aanleiding van een baliebezoek de periode beschrijft vanaf het aan een medewerker verschijnen van een klant of vertegenwoordiger tot aan diens vertrek. In het geval van ontvangst door de gemeente van een brief van een klant waarop de gemeente enige dagen later eveneens schriftelijk reageert, worden beide brieven daarentegen als twee individuele klantcontacten te beschouwd. Tussen de voorbeelden hierboven in ligt een aantal kanalen waarbij informatie minder snel wordt uitgewisseld dan bij een telefoongesprek of baliecontact, maar (veel) sneller dan bij een briefwisseling. Denk aan communicatie via contactformulieren, e-mail of chatapps en -bots. Zeker in de laatste gevallen kan sprake zijn van korte, elkaar snel opvolgende interacties die samen het karakter hebben van een gesprek. Anders dan een telefoon- of baliegesprek kan een interactie via deze kanalen echter voor uren of dagen onderbroken worden, om daarna weer te worden opgepakt. In zo'n geval is het aan medewerkers van de gemeente - in geval van geautomatiseerde interacties samen met systeemontwikkelaars - om te bepalen wat vanuit klantperspectief de meest voor de hand liggende ???omvang??? van een klantcontact is. Tijdens een klantcontact kan duidelijk worden dat een inwoner verschillende verzoeken voor de gemeente heeft. Een klant kan tijdens een telefoongesprek bijvoorbeeld vragen naar een afspraak voor overleg over een te verbouwen woning en daarnaast een verzakking van stoep voor zijn huis melden. Deze verzoeken moeten op uiteenlopende wijze en waarschijnlijk door verschillende afdelingen worden opgevolgd. Met het bepalen welke medewerlkers of afdelingen nodig zijn om aan verzoeken van een klant invulling te geven, begint in feite de behandeling van deze verzoeken. Deze behandeling is nadrukkelijk g????n onderdeel van het klantcontact. Anders dan het registreren van voor het klantcontact relevante onderwerpen biedt het klantcontact dan ook geen mogelijkheden de inhoud daarvan naar verschillende verzoeken, aanvragen of meldingen uit te splitsen. Hiervoor zijn de concepten 'interne taak' en 'zaak' bedoeld. Het klantcontact uit het voorbeeld hierboven zou bijvoorbeeld aanleiding kunnen zijn voor het aanmaken van zowel een zaak van type 'melding openbare ruimte' om de stoep te herstellen, als een interne taak voor een medewerker van de afdeling fysieke leefomgeving om een afspraak te maken voor overleg over de voorgenomen verbouwing.\n\nHet klantcontact is bedoeld om inwoners of ondernemers die contact hebben gehad met de gemeente op een voor hen zo begrijpelijk en relevant mogelijke manier te infomeren over de inhoud van dat contact. Over een klantcontact vastgelegde informatie kan bijvoorbeeld (na inloggen) worden getoond op de gemeentelijke website of telefonisch worden verstrekt door een medewerker van het klantcontactcentrum. Als gevolg hiervan is de volledige inhoud van een klantcontact geschikt voor openbaarmaking aan betrokken inwoners. De definitie van klantcontact is bewust wat 'open' gelaten. Op deze manier passen daarbinnen ook contacten die voortkomen uit nu onvoorziene scenario's of via nog te ontwikkelen kanalen. Uitgangspunt is in alle gevallen dat ????n klantcontact de informatie omvat die een klant of dienst vertegenwoordiger tijdens een voor hen herkenbare handeling of gebeurtenis overbrengt aan de gemeente of vice versa. Zo'n handeling kan bijvoorbeeld het afleggen van baliebezoek zijn, het telefonisch voeren van een gesprek met een medewerker of een interactie met een chatbot op de gemeentelijke website. Maar ook gebeurtenissen als het indienen van een elektronisch formulier of het versturen van een brief door de gemeente aan een klant of vertegenwoordiger resulteren in een klantcontact. Voor het bepalen van het begin en eind van een klantcontact geldt dat informatie die binnen een korte tijdsperiode tussen gemeente en klant wordt uitgewisseld waar mogelijk resulteert in ????n klantcontact, terwijl een verzonden kennisgeving en een uren of dagen later ontvangen reactie daarop resulteren in twee ???losse??? klantcontacten. Dit betekent dat een klantcontact naar aanleiding van een telefoongesprek 'duurt' van het aannemen van het gesprek tot het be??indigen hiervan, terwijl een contact naar aanleiding van een baliebezoek de periode beschrijft vanaf het aan een medewerker verschijnen van een klant of vertegenwoordiger tot aan diens vertrek. In het geval van ontvangst door de gemeente van een brief van een klant waarop de gemeente enige dagen later eveneens schriftelijk reageert, worden beide brieven daarentegen als twee individuele klantcontacten te beschouwd. Tussen de voorbeelden hierboven in ligt een aantal kanalen waarbij informatie minder snel wordt uitgewisseld dan bij een telefoongesprek of baliecontact, maar (veel) sneller dan bij een briefwisseling. Denk aan communicatie via contactformulieren, e-mail of chatapps en -bots. Zeker in de laatste gevallen kan sprake zijn van korte, elkaar snel opvolgende interacties die samen het karakter hebben van een gesprek. Anders dan een telefoon- of baliegesprek kan een interactie via deze kanalen echter voor uren of dagen onderbroken worden, om daarna weer te worden opgepakt. In zo'n geval is het aan medewerkers van de gemeente - in geval van geautomatiseerde interacties samen met systeemontwikkelaars - om te bepalen wat vanuit klantperspectief de meest voor de hand liggende ???omvang??? van een klantcontact is. Tijdens een klantcontact kan duidelijk worden dat een inwoner verschillende verzoeken voor de gemeente heeft. Een klant kan tijdens een telefoongesprek bijvoorbeeld vragen naar een afspraak voor overleg over een te verbouwen woning en daarnaast een verzakking van stoep voor zijn huis melden. Deze verzoeken moeten op uiteenlopende wijze en waarschijnlijk door verschillende afdelingen worden opgevolgd. Met het bepalen welke medewerlkers of afdelingen nodig zijn om aan verzoeken van een klant invulling te geven, begint in feite de behandeling van deze verzoeken. Deze behandeling is nadrukkelijk g????n onderdeel van het klantcontact. Anders dan het registreren van voor het klantcontact relevante onderwerpen biedt het klantcontact dan ook geen mogelijkheden de inhoud daarvan naar verschillende verzoeken, aanvragen of meldingen uit te splitsen. Hiervoor zijn de concepten 'interne taak' en 'zaak' bedoeld. Het klantcontact uit het voorbeeld hierboven zou bijvoorbeeld aanleiding kunnen zijn voor het aanmaken van zowel een zaak van type 'melding openbare ruimte' om de stoep te herstellen, als een interne taak voor een medewerker van de afdeling fysieke leefomgeving om een afspraak te maken voor overleg over de voorgenomen verbouwing.",
   "required": [
-    "bijlageId",
+    "bijlage",
     "geregistreerdOp",
     "indicatieContactMislukt",
     "initiatiefnemer",
@@ -25,6 +25,35 @@
       "maxLength": 40,
       "required": true
     },
+    "kanaal": {
+      "type": "object",
+      "description": "Het communicatiekanaal dat tijdens het klantcontact werd gebruikt.",
+      "$ref": "https://commongateway.nl/klant.digitaalAdres.schema.json",
+      "required": true
+    },,
+    "inhoud": {
+      "type": "string"
+    },
+    "indicatieContactGelukt": {
+      "type": "string",
+      "description": "Deze enumeratie is toegevoegd omdat de ingevulde waarde geen boolean kan zijn (waar of niet waar). De gewenste waarden zijn Ja of leeg. Als het attribuut dus opgenomen wordt heeft het de Nill waarde of de waarde `Ja`.\n\n`ja` - Het verzoek is afgehandeld.",
+      "enum": [
+        "ja",
+        "nee",
+        "onbekend"
+      ]
+    },
+    "taal": {
+      "type": "string"
+    },
+    "vertrouwelijk": {
+      "type": "string",
+      "description": "Deze enumeratie is toegevoegd omdat de ingevulde waarde geen boolean kan zijn (waar of niet waar). De gewenste waarden zijn Ja of leeg. Als het attribuut dus opgenomen wordt heeft het de Nill waarde of de waarde `Ja`.\n\n`ja` - Het verzoek is afgehandeld.",
+      "enum": [
+        "ja",
+        "nee"
+      ]
+    },
     "plaatsgevondenOp": {
       "type": "datetime",
       "required": true
@@ -39,23 +68,20 @@
         "$ref": "https://commongateway.nl/klant.bijlage.schema.json"
       }
     },
-    "gaatOverInterneTaak": {
+    "gaatOver": {
       "type": "object",
-      "$ref": "https://commongateway.nl/klant.interneTaak.schema.json"
+      "$ref": "https://commongateway.nl/klant.onderwerpObject.schema.json"
+    },,
+    "interneTaakOntstaanUit": {
+      "type": "array",
+      "properties": {
+        "type": "object",
+        "$ref": "https://commongateway.nl/klant.interneTaak.schema.json"
+      }
     },
     "geregistreerdOp": {
       "type": "datetime",
       "deprecated": true
-    },
-    "inhoud": {
-      "type": "string"
-    },
-    "indicatieContactGelukt": {
-      "type": "string",
-      "description": "Deze enumeratie is toegevoegd omdat de ingevulde waarde geen boolean kan zijn (waar of niet waar). De gewenste waarden zijn Ja of leeg. Als het attribuut dus opgenomen wordt heeft het de Nill waarde of de waarde `Ja`.\n\n`ja` - Het verzoek is afgehandeld.",
-      "enum": [
-        "ja"
-      ]
     },
     "initiatiefnemer": {
       "type": "string",
@@ -65,20 +91,7 @@
         "klant",
         "vertegenwoordiger"
       ],
-      "required": true
-    },
-    "interneTaakOntstaanUit": {
-      "type": "array",
-      "properties": {
-        "type": "string",
-        "maxLength": 40
-      }
-    },
-    "kanaal": {
-      "type": "object",
-      "description": "Het communicatiekanaal dat tijdens het klantcontact werd gebruikt.",
-      "$ref": "https://commongateway.nl/klant.digitaalAdres.schema.json",
-      "required": true
+      "deprecated": true
     }
   }
 }

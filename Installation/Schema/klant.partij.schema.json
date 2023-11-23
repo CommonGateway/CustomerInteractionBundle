@@ -34,13 +34,17 @@
       "type": "string",
       "enum": []
     },
-    "organisatienaam": {
+    "organisatie": {
       "type": "string",
       "maxLength": 200
     },
-    "persoonsnaam": {
+    "persoon": {
       "type": "object",
-      "$ref": "https://commongateway.nl/klant.persoonsnaam.schema.json"
+      "$ref": "https://commongateway.nl/klant.persoon.schema.json"
+    },
+    "contactpersoon": {
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.contactpersoon.schema.json"
     },
     "voorkeurskanaal": {
       "type": "object",
@@ -70,8 +74,17 @@
         "description": "De identificatiecode van een Relatie zoals die in een andere (authentieke?) registratie gevoerd wordt.",
         "$ref": "https://commongateway.nl/klant.externeIdentificatie.schema.json"
       },
-      "required": true,
-      "deprecated": true
+      "required": true
+    },
+    "vertegenwoordiger": {
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.partij.schema.json",
+      "inversedBy": "vertegenwoordigde"
+    },
+    "vertegenwoordigde": {
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.partij.schema.json",
+      "inversedBy": "vertegenwoordiger"
     },
     "klanttaakId": {
       "type": "array",

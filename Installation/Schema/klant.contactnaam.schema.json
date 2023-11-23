@@ -1,8 +1,8 @@
 {
-  "title": "Persoonsnaam",
-  "$id": "https://commongateway.nl/klant.persoonsnaam.schema.json",
+  "title": "Contactnaam",
+  "$id": "https://commongateway.nl/klant.contactnaam.schema.json",
   "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "type": "object",
   "required": [],
   "properties": {
