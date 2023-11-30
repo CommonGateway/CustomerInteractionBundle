@@ -15,7 +15,8 @@
       "enum": [
         "integer",
         "url",
-        "uuid"
+        "uuid",
+        "bsn"
       ]
     },
     "objectId": {

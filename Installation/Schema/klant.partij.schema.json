@@ -40,7 +40,7 @@
     },
     "persoon": {
       "type": "object",
-      "$ref": "https://commongateway.nl/klant.persoon.schema.json"
+      "$ref": "https://commongateway.nl/klant.persoonsnaam.schema.json"
     },
     "contactpersoon": {
       "type": "object",
