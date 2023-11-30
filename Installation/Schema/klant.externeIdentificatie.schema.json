@@ -5,7 +5,7 @@
   "version": "0.0.2",
   "type": "object",
   "description": "De identificatiecode van een Relatie zoals die in een andere (authentieke?) registratie gevoerd wordt.",
-  "required": ["externId", "soortExternId"],
+  "required": ["partijIdentificator"],
   "properties": {
     "anderePartijIdentificator": {
       "type": "string",
