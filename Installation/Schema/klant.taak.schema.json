@@ -14,7 +14,7 @@
       "required": true
     },
     "data": {
-      "type": "object"
+      "type": "array"
     },
     "zaak": {
       "type": "string",
@@ -46,7 +46,7 @@
       "$ref": "https://commongateway.nl/klant.taak.identificatie.schema.json"
     },
     "verzonden_data": {
-      "type": "object"
+      "type": "array"
     },
     "verwerker_taak_id": {
       "type": "string",
