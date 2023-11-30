@@ -1,0 +1,56 @@
+{
+  "title": "Taak",
+  "$id": "https://commongateway.nl/klant.taak.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "description": "Een taak voor een burger, inwoner of vertegenwoordiger van een organisatie die moet worden uitgevoerd",
+  "required": ["id", "title"],
+  "properties": {
+    "id": {
+      "description":"De unieke id van dit object voor verder gebruik",
+      "type": "string",
+      "format": "uuid",
+      "required": true
+    },
+    "data": {
+      "type": "object"
+    },
+    "zaak": {
+      "type": "string",
+      "format": "uri"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "enum": [
+        "open",
+        "ingediend",
+        "verwerkt",
+        "gesloten"
+      ],
+      "type": "string"
+    },
+    "formulier": {
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.taak.formulier.schema.json"
+    },
+    "verloopdatum": {
+      "type": "string",
+      "format": "datetime"
+    },
+    "identificatie": {
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.taak.identificatie.schema.json"
+    },
+    "verzonden_data": {
+      "type": "object"
+    },
+    "verwerker_taak_id": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}
