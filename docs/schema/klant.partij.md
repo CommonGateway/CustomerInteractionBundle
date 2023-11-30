@@ -16,15 +16,17 @@ Een persoon of organisatie waarmee de gemeente een relatie heeft.
 |----------|------|-------------|----------|
 | nummer | integer | N/A | Yes |
 | interneNotitie | string | N/A | Yes |
-| indicatieGeheimhouding | boolean | N/A | No |
+| indicatieGeheimhouding | boolean | N/A | Yes |
 | voorkeurstaal | object | De taal waarin de persoon of organisatie bij voorkeur interactie heeft met de gemeente. | No |
-| indicatieActief | boolean | N/A | No |
+| indicatieActief | boolean | N/A | Yes |
 | soortPartij | string | N/A | No |
-| organisatienaam | string | N/A | No |
-| persoonsnaam | object | N/A | No |
+| organisatie | string | N/A | No |
+| persoon | object | N/A | No |
+| contactpersoon | object | N/A | No |
 | voorkeurskanaal | object | Het kanaal waarlangs de partij bij voorkeur interactie heeft met de gemeente. | No |
 | verstrekteAdressen | array | N/A | No |
 | bezoekadres | object | Een bezoekadres is een adres waar een persoon of een bedrijf bezoekers ontvangt. | No |
 | correspondentieadres | object | Het adres waarnaar de persoon of de organisatie de voor hen bestemde correspondentie laat verzenden. | No |
 | externeIdentificatie | array | N/A | Yes |
-| klanttaakId | array | N/A | No |
+| vertegenwoordiger | object | N/A | No |
+| vertegenwoordigde | object | N/A | No |
