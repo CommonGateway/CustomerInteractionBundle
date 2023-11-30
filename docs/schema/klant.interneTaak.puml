@@ -4,10 +4,12 @@ footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle
 header: Schema
 
 class InterneTaak {
-  + actorId: string
-  + geregistreerdOp: datetime
+  + toegewezenOp: datetime
   + gevraagdeHandeling: string
   + nummer: integer
   + status: string
+  + toelichting: string
+  + actor: object
+  + klantcontact: object
 }
 @enduml

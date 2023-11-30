@@ -4,7 +4,11 @@ footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle
 header: Schema
 
 class Actor {
-  + klantcontactId: array
+  + klantcontact: array
   + naam: string
+  + soortActor: string
+  + medewerker: object
+  + geautomatiseerdeActor: object
+  + organisatorischeEenheid: object
 }
 @enduml

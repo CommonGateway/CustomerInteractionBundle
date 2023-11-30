@@ -10,13 +10,15 @@ class Partij {
   + voorkeurstaal: object
   + indicatieActief: boolean
   + soortPartij: string
-  + organisatienaam: string
-  + persoonsnaam: object
+  + organisatie: string
+  + persoon: object
+  + contactpersoon: object
   + voorkeurskanaal: object
   + verstrekteAdressen: array
   + bezoekadres: object
   + correspondentieadres: object
   + externeIdentificatie: array
-  + klanttaakId: array
+  + vertegenwoordiger: object
+  + vertegenwoordigde: object
 }
 @enduml

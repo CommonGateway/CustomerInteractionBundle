@@ -12,4 +12,4 @@ Digitaal adres duidt gegevens aan die beschrijven hoe een persoon of organisatie
 |----------|------|-------------|----------|
 | adres | string | Een generieke regel om adresgegevens in op te nemen. | Yes |
 | omschrijving | string | N/A | Yes |
-| soortDigitaalAdres | string | De typering van het digitale adres waarmee bepaald kan worden op welk kanaal dit digitale adres valide is. | No |
+| soortDigitaalAdres | string | De typering van het digitale adres waarmee bepaald kan worden op welk kanaal dit digitale adres valide is. | Yes |

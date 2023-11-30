@@ -1,11 +1,10 @@
 @startuml
-title: Medewerker
+title: GeautomatiseerdeActor
 footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
 header: Schema
 
-class Medewerker {
-  + eMailadres: string
+class GeautomatiseerdeActor {
   + functie: string
-  + telefoonnummer: string
+  + omschrijving: string
 }
 @enduml

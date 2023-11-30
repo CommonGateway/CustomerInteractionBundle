@@ -10,7 +10,7 @@ Klantcontact-betrokkene kent afhankelijk van mogelijkheid of wenselijkheid om in
 
 | Property | Type | Description | Required |
 |----------|------|-------------|----------|
-| klantcontact | object | N/A | No |
+| klantcontact | object | N/A | Yes |
 | partij | object | N/A | No |
 | rol | string | De typering van de rol van de persoon of organisatie in het klantcontact. | Yes |
 | intitiator | boolean | N/A | No |

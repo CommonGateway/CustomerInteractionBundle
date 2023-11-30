@@ -1,10 +1,10 @@
 @startuml
-title: Bijlage
+title: Onderwerpobject
 footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
 header: Schema
 
-class Bijlage {
+class Onderwerpobject {
   + objectIdentificator: object
-  + klantcontact: object
+  + klantContact: https://commongateway.nl/klant.klantcontact.schema.json
 }
 @enduml

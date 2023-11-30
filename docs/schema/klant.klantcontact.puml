@@ -6,15 +6,16 @@ header: Schema
 class Klantcontact {
   + nummer: integer
   + onderwerp: string
-  + plaatsgevondenOp: datetime
-  + actor: object
-  + bijlage: array
-  + gaatOverInterneTaak: object
-  + geregistreerdOp: datetime
+  + kanaal: object
   + inhoud: string
   + indicatieContactGelukt: string
-  + initiatiefnemer: string
+  + taal: string
+  + vertrouwelijk: string
+  + plaatsgevondenOp: datetime
+  + actors: array
+  + bijlage: array
+  + gaatOver: object
   + interneTaakOntstaanUit: array
-  + kanaal: object
+  + geregistreerdOp: datetime
 }
 @enduml
