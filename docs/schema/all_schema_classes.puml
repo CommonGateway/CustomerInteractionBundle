@@ -45,6 +45,18 @@ class Contactnaam {
   + voorvoegselAchternaam: string
   + voorletters: string
 }
+class Taak {
+  + id: string
+  + data: object
+  + zaak: string
+  + title: string
+  + status: string
+  + formulier: object
+  + verloopdatum: string
+  + identificatie: object
+  + verzonden_data: object
+  + verwerker_taak_id: string
+}
 class Land {
   + einddatumLand: date
   + ingangsdatumLand: date
@@ -127,6 +139,10 @@ class Onderwerpobject {
 class Voorkeur {
   + code: string
   + naam: string
+}
+class TaakIdentificatie {
+  + type: string
+  + value: string
 }
 class Contactpersoon {
   + contactnaam: object
