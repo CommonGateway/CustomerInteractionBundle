@@ -124,6 +124,10 @@ class Onderwerpobject {
   + objectIdentificator: object
   + klantContact: https://commongateway.nl/klant.klantcontact.schema.json
 }
+class Voorkeur {
+  + code: string
+  + naam: string
+}
 class Contactpersoon {
   + contactnaam: object
   + organisatie: object

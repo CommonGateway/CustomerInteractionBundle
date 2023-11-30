@@ -20,6 +20,7 @@
 | BetrokkeneBijKlantcontact | [klant.betrokkeneBijKlantcontact.md](klant.betrokkeneBijKlantcontact.md) |
 | Organisatorische Eenheid | [klant.organisatorischeEenheid.md](klant.organisatorischeEenheid.md) |
 | Onderwerpobject | [klant.onderwerpObject.md](klant.onderwerpObject.md) |
+| Voorkeur | [klant.voorkeur.md](klant.voorkeur.md) |
 | Contactpersoon | [klant.contactpersoon.md](klant.contactpersoon.md) |
 | Bijlage | [klant.bijlage.md](klant.bijlage.md) |
 | Partij | [klant.partij.md](klant.partij.md) |
