@@ -45,6 +45,18 @@ class Contactnaam {
   + voorvoegselAchternaam: string
   + voorletters: string
 }
+class Taak {
+  + id: string
+  + data: object
+  + zaak: string
+  + title: string
+  + status: string
+  + formulier: object
+  + verloopdatum: string
+  + identificatie: object
+  + verzonden_data: object
+  + verwerker_taak_id: string
+}
 class Land {
   + einddatumLand: date
   + ingangsdatumLand: date
@@ -128,6 +140,10 @@ class Voorkeur {
   + code: string
   + naam: string
 }
+class TaakIdentificatie {
+  + type: string
+  + value: string
+}
 class Contactpersoon {
   + contactnaam: object
   + organisatie: object
@@ -143,14 +159,14 @@ class Partij {
   + voorkeurstaal: object
   + indicatieActief: boolean
   + soortPartij: string
-  + organisatie: string
+  + organisatie: object
   + persoon: object
   + contactpersoon: object
   + voorkeurskanaal: object
   + verstrekteAdressen: array
   + bezoekadres: object
   + correspondentieadres: object
-  + externeIdentificatie: array
+  + externeIdentificaties: array
   + vertegenwoordiger: object
   + vertegenwoordigde: object
 }

@@ -17,4 +17,4 @@ Een inhoudelijke toelichting op de toepassing van het informatie-element.
 
 Een inhoudelijke toelichting op de toepassing van het informatie-element.
 
-De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur. | No |
+De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur. | Yes |

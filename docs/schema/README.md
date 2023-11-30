@@ -10,6 +10,7 @@
 | Digitaal Adres | [klant.digitaalAdres.md](klant.digitaalAdres.md) |
 | Organisatie | [klant.organisatie.md](klant.organisatie.md) |
 | Contactnaam | [klant.contactnaam.md](klant.contactnaam.md) |
+| Taak | [klant.taak.md](klant.taak.md) |
 | Land | [klant.land.md](klant.land.md) |
 | Correspondentieadres | [klant.correspondentieadres.md](klant.correspondentieadres.md) |
 | Klantcontact | [klant.klantcontact.md](klant.klantcontact.md) |
@@ -21,6 +22,7 @@
 | Organisatorische Eenheid | [klant.organisatorischeEenheid.md](klant.organisatorischeEenheid.md) |
 | Onderwerpobject | [klant.onderwerpObject.md](klant.onderwerpObject.md) |
 | Voorkeur | [klant.voorkeur.md](klant.voorkeur.md) |
+| TaakIdentificatie | [klant.taak.identificatie.md](klant.taak.identificatie.md) |
 | Contactpersoon | [klant.contactpersoon.md](klant.contactpersoon.md) |
 | Bijlage | [klant.bijlage.md](klant.bijlage.md) |
 | Partij | [klant.partij.md](klant.partij.md) |

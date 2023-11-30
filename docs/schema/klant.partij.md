@@ -20,13 +20,13 @@ Een persoon of organisatie waarmee de gemeente een relatie heeft.
 | voorkeurstaal | object | De taal waarin de persoon of organisatie bij voorkeur interactie heeft met de gemeente. | No |
 | indicatieActief | boolean | N/A | Yes |
 | soortPartij | string | N/A | No |
-| organisatie | string | N/A | No |
+| organisatie | object | N/A | No |
 | persoon | object | N/A | No |
 | contactpersoon | object | N/A | No |
 | voorkeurskanaal | object | Het kanaal waarlangs de partij bij voorkeur interactie heeft met de gemeente. | No |
 | verstrekteAdressen | array | N/A | No |
 | bezoekadres | object | Een bezoekadres is een adres waar een persoon of een bedrijf bezoekers ontvangt. | No |
 | correspondentieadres | object | Het adres waarnaar de persoon of de organisatie de voor hen bestemde correspondentie laat verzenden. | No |
-| externeIdentificatie | array | N/A | Yes |
+| externeIdentificaties | array | N/A | No |
 | vertegenwoordiger | object | N/A | No |
 | vertegenwoordigde | object | N/A | No |
