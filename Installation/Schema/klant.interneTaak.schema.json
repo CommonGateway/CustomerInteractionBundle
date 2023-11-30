@@ -4,7 +4,7 @@
   "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
   "version": "0.0.3",
   "type": "object",
-  "required": ["actor", "toegewezenOp", "gevraagdeHandeling", "nummer", "status"],
+  "required": ["actor", "toegewezenOp", "gevraagdeHandeling", "nummer", "status", "klantcontact"],
   "properties": {
     "toegewezenOp": {
       "type": "datetime",

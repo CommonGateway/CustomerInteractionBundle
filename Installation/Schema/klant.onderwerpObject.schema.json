@@ -10,6 +10,9 @@
     "objectIdentificator": {
       "type": "object",
       "$ref": "https://commongateway.nl/klant.identificator.schema.json"
+    },
+    "klantContact": {
+      "type": "https://commongateway.nl/klant.klantcontact.schema.json"
     }
   }
 }
