@@ -143,14 +143,14 @@ class Partij {
   + voorkeurstaal: object
   + indicatieActief: boolean
   + soortPartij: string
-  + organisatie: string
+  + organisatie: object
   + persoon: object
   + contactpersoon: object
   + voorkeurskanaal: object
   + verstrekteAdressen: array
   + bezoekadres: object
   + correspondentieadres: object
-  + externeIdentificatie: array
+  + externeIdentificaties: array
   + vertegenwoordiger: object
   + vertegenwoordigde: object
 }
