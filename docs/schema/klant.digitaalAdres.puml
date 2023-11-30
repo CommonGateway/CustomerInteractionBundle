@@ -6,6 +6,6 @@ header: Schema
 class DigitaalAdres {
   + adres: string
   + omschrijving: string
-  + soortDigitaalAdres: object
+  + soortDigitaalAdres: string
 }
 @enduml

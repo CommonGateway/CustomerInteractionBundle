@@ -2,15 +2,14 @@
 
 De identificatiecode van een Relatie zoals die in een andere (authentieke?) registratie gevoerd wordt.
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.externeIdentificatie.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/redesign/docs/schema/klant.externeIdentificatie.svg)
 
 ## Properties
 
 | Property | Type | Description | Required |
 |----------|------|-------------|----------|
-| anderSoortExternId | string | N/A | No |
-| externId | string | N/A | Yes |
-| soortExternId | object | De code van het soort identificatiecode.
+| anderePartijIdentificator | string | N/A | No |
+| partijIdentificator | object | De code van het soort identificatiecode.
 
 Een inhoudelijke toelichting op de toepassing van het informatie-element.
 

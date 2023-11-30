@@ -1,11 +1,10 @@
 @startuml
-title: Medewerker
+title: Contactpersoon
 footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
 header: Schema
 
-class Medewerker {
-  + eMailadres: string
-  + functie: string
-  + telefoonnummer: string
+class Contactpersoon {
+  + contactnaam: object
+  + organisatie: object
 }
 @enduml

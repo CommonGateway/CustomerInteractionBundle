@@ -4,17 +4,18 @@ footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle
 header: Schema
 
 class Klantcontact {
-  + actorId: string
-  + bijlageId: string
-  + gaatOverInterneTaakId: array
-  + geregistreerdOp: datetime
-  + indicatieContactMislukt: string
-  + inhoud: string
-  + initiatiefnemer: string
-  + interneTaakOntstaanUit: array
-  + kanaal: object
   + nummer: integer
   + onderwerp: string
+  + kanaal: object
+  + inhoud: string
+  + indicatieContactGelukt: string
+  + taal: string
+  + vertrouwelijk: string
   + plaatsgevondenOp: datetime
+  + actors: array
+  + bijlage: array
+  + gaatOver: object
+  + interneTaakOntstaanUit: array
+  + geregistreerdOp: datetime
 }
 @enduml

@@ -2,10 +2,10 @@
   "title": "Digitaal Adres",
   "$id": "https://commongateway.nl/klant.digitaalAdres.schema.json",
   "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "object",
   "description": "Adres waarop een persoon of een organisatie via een digitaal kanaal bereikt kan worden.\n\nDigitaal adres duidt gegevens aan die beschrijven hoe een persoon of organisatie via een digitaal kanaal bereikt kan worden. Voorbeelden hiervan zijn een telefoonnummer, een e-mailadres of een gebruikersnaam op een sociaal medium. Adressen die gekoppeld kunnen worden aan een vaste plaats in de fysieke wereld, zoals een bezoekadres, postbus of antwoordnummer zijn geen digitaal adres.",
-  "required": ["adres", "omschrijving"],
+  "required": ["adres", "omschrijving", "soortDigitaalAdres"],
   "properties": {
     "adres": {
       "type": "string",
@@ -19,9 +19,9 @@
       "required": true
     },
     "soortDigitaalAdres": {
-      "type": "object",
+      "type": "string",
       "description": "De typering van het digitale adres waarmee bepaald kan worden op welk kanaal dit digitale adres valide is.",
-      "$ref": "https://commongateway.nl/klant.voorkeur.schema.json"
+      "enum": ["emailadres", "telefoonnummer"]
     }
   }
 }

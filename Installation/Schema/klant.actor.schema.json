@@ -2,22 +2,42 @@
   "title": "Actor",
   "$id": "https://commongateway.nl/klant.actor.schema.json",
   "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "object",
   "description": "De actor handelt in een interne taak of een klantcontact.",
   "required": ["naam"],
   "properties": {
-    "klantcontactId": {
+    "klantcontact": {
       "type": "array",
       "properties": {
-        "type": "string",
-        "maxLength": 40
+        "type": "object",
+        "$ref": "https://commongateway.nl/klant.klantcontact.schema.json"
       }
     },
     "naam": {
       "type": "string",
       "maxLength": 200,
       "required": true
+    },
+    "soortActor": {
+      "type": "string",
+      "enum": [
+        "Medewerker",
+        "Geautomatiseerde actor",
+        "Organisatorische eenheid"
+      ]
+    },
+    "medewerker": {
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.medewerker.schema.json"
+    },
+    "geautomatiseerdeActor": {
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.geautomatiseerdeActor.schema.json"
+    },
+    "organisatorischeEenheid": {
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.organisatorischeEenheid.schema.json"
     }
   }
 }

@@ -1,0 +1,18 @@
+{
+  "title": "Contactpersoon",
+  "$id": "https://commongateway.nl/klant.contactpersoon.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "contactnaam": {
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.contactnaam.schema.json"
+    },
+    "organisatie":{
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.organisatie.schema.json"
+    }
+  }
+}

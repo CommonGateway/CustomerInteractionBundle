@@ -4,8 +4,7 @@ footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle
 header: Schema
 
 class ExterneIdentificatie {
-  + anderSoortExternId: string
-  + externId: string
-  + soortExternId: object
+  + anderePartijIdentificator: string
+  + partijIdentificator: object
 }
 @enduml

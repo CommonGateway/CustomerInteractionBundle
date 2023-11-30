@@ -1,8 +1,8 @@
-# Persoonsnaam
+# Contactnaam
 
 No description available.
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/redesign/docs/schema/klant.persoonsnaam.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/redesign/docs/schema/klant.contactnaam.svg)
 
 ## Properties
 

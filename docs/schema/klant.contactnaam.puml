@@ -1,9 +1,9 @@
 @startuml
-title: Persoonsnaam
+title: Contactnaam
 footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
 header: Schema
 
-class Persoonsnaam {
+class Contactnaam {
   + achternaam: string
   + voornaam: string
   + voorvoegselAchternaam: string

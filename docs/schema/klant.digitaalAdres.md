@@ -4,7 +4,7 @@ Adres waarop een persoon of een organisatie via een digitaal kanaal bereikt kan 
 
 Digitaal adres duidt gegevens aan die beschrijven hoe een persoon of organisatie via een digitaal kanaal bereikt kan worden. Voorbeelden hiervan zijn een telefoonnummer, een e-mailadres of een gebruikersnaam op een sociaal medium. Adressen die gekoppeld kunnen worden aan een vaste plaats in de fysieke wereld, zoals een bezoekadres, postbus of antwoordnummer zijn geen digitaal adres.
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.digitaalAdres.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/redesign/docs/schema/klant.digitaalAdres.svg)
 
 ## Properties
 
@@ -12,4 +12,4 @@ Digitaal adres duidt gegevens aan die beschrijven hoe een persoon of organisatie
 |----------|------|-------------|----------|
 | adres | string | Een generieke regel om adresgegevens in op te nemen. | Yes |
 | omschrijving | string | N/A | Yes |
-| soortDigitaalAdres | object | De typering van het digitale adres waarmee bepaald kan worden op welk kanaal dit digitale adres valide is. | No |
+| soortDigitaalAdres | string | De typering van het digitale adres waarmee bepaald kan worden op welk kanaal dit digitale adres valide is. | Yes |

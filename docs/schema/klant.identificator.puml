@@ -1,0 +1,12 @@
+@startuml
+title: Identificator
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
+class Identificator {
+  + objecttype: string
+  + soortObjectId: string
+  + objectId: string
+  + register: string
+}
+@enduml

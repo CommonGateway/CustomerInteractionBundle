@@ -2,24 +2,19 @@
   "title": "Externe Identificatie",
   "$id": "https://commongateway.nl/klant.externeIdentificatie.schema.json",
   "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "object",
   "description": "De identificatiecode van een Relatie zoals die in een andere (authentieke?) registratie gevoerd wordt.",
-  "required": ["externId", "soortExternId"],
+  "required": ["partijIdentificator"],
   "properties": {
-    "anderSoortExternId": {
+    "anderePartijIdentificator": {
       "type": "string",
       "maxLength": 40
     },
-    "externId": {
-      "type": "string",
-      "maxLength": 40,
-      "required": true
-    },
-    "soortExternId": {
+    "partijIdentificator": {
       "type": "object",
       "description": "De code van het soort identificatiecode.\n\nEen inhoudelijke toelichting op de toepassing van het informatie-element.\n\nEen inhoudelijke toelichting op de toepassing van het informatie-element.\n\nEen inhoudelijke toelichting op de toepassing van het informatie-element.\n\nDe verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.",
-      "$ref": "https://commongateway.nl/klant.soortExternId.schema.json",
+      "$ref": "https://commongateway.nl/klant.identificator.schema.json",
       "required": true
     }
   }

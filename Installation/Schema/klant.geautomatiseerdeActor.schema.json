@@ -1,0 +1,20 @@
+{
+  "title": "Geautomatiseerde Actor",
+  "$id": "https://commongateway.nl/klant.geautomatiseerdeActor.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "description": "Iemand die voor of namens de gemeente werkzaamheden verricht.",
+  "required": ["functie", "omschrijving"],
+  "properties": {
+    "functie": {
+      "type": "string",
+      "maxLength": 40,
+      "required": true
+    },
+    "omschrijving": {
+      "type": "string",
+      "maxLength": 40
+    }
+  }
+}

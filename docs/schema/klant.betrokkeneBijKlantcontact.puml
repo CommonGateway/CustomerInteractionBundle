@@ -4,14 +4,15 @@ footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle
 header: Schema
 
 class BetrokkeneBijKlantcontact {
+  + klantcontact: object
+  + partij: object
+  + rol: string
+  + intitiator: boolean
+  + organisatienaam: string
+  + contactnaam: object
   + bezoekadres: object
   + correspondentieadres: object
-  + klantcontactId: string
-  + organisatienaam: string
-  + partijId: string
-  + persoonsnaam: object
-  + rol: string
-  + voorkeurskanaal: object
+  + communicatiekanaal: object
   + voorkeurstaal: object
 }
 @enduml
