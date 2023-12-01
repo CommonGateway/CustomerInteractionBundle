@@ -15,7 +15,8 @@
       "type": "object",
       "description": "De code van het soort identificatiecode.\n\nEen inhoudelijke toelichting op de toepassing van het informatie-element.\n\nEen inhoudelijke toelichting op de toepassing van het informatie-element.\n\nEen inhoudelijke toelichting op de toepassing van het informatie-element.\n\nDe verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.",
       "$ref": "https://commongateway.nl/klant.identificator.schema.json",
-      "required": true
+      "required": true,
+      "format": "json"
     }
   }
 }
