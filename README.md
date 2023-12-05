@@ -16,7 +16,7 @@ De klantinteractie bundle voorziet in
 
 ## Datamodel
 
-![Datamodel](.., "Datamodel")
+![Datamodel](https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/schema/all_classes.svg "Datamodel")
 
 ## Gebruik
 
