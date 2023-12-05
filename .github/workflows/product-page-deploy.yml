@@ -12,8 +12,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Create or Update publiccode.yaml
-        uses: OpenCatalogi/publiccode-action@1.1.1
       - name: Create een Productpagina
         uses: OpenCatalogi/productpage-action@1.0.0
         with:
@@ -21,3 +19,5 @@ jobs:
           start_page: 'https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/README.md'
           jumbotron_image_placement: "right"
           jumbotron_image_url: "https://raw.githubusercontent.com/CommonGateway/NotificiationsBundle/main/docs/notificaties.svg"
+      - name: Create or Update publiccode.yaml
+        uses: OpenCatalogi/publiccode-action@1.1.1
