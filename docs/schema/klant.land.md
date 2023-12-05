@@ -2,7 +2,7 @@
 
 Het SUBJECT dat heeft aangegeven te (gaan) verblijven dan wel verblijft in het LAND
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/documentation/docs/schema/klant.land.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.land.svg)
 
 ## Properties
 
