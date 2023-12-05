@@ -12,11 +12,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '18'
       - name: Create een Productpagina
-        uses: OpenCatalogi/productpage-action@1.0.2
+        uses: OpenCatalogi/productpage-action@45896b5eb490c19b5857b9f131a882d173752fef
         with:
           nl_design_theme_classname: "open-webconcept-theme"
           start_page: 'https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/README.md'
