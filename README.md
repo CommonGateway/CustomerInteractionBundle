@@ -27,12 +27,11 @@ In de klantinteractie API worden klanten opgeslagen in het objecttype `Partij`. 
 De identificator bevat het externe register waar de klant nog meer in bestaat, het objecttype waarmee er in het externe register verbonden wordt, het identificatienummer in het externe register en het type identificatienummer.
 Op dit moment wordt voor BSN's het type 'bsn' gebruikt.
 
-Om een klant op te halen aan de hand van een BSN kan dus de volgende call worden gedaan: 
+Om een klant op te halen aan de hand van een BSN kan dus de volgende call worden gedaan:
 
-```/api/kic/v1/partijen?externeIdentificatie.partijIdentificator.objectId={{ bsn }}&externeIdentificatie.partijIdentificator.objecttype=ingeschrevenpersoon```
+`/api/kic/v1/partijen?externeIdentificatie.partijIdentificator.objectId={{ bsn }}&externeIdentificatie.partijIdentificator.objecttype=ingeschrevenpersoon`
 
 Waarin `{{ bsn }}` het BSN is dat we elders hebben gevonden.
-
 
 ### Digitaal Adressen
 
