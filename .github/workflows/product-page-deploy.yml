@@ -19,5 +19,6 @@ jobs:
           start_page: 'https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/README.md'
           jumbotron_image_placement: "right"
           jumbotron_image_url: "https://raw.githubusercontent.com/CommonGateway/NotificiationsBundle/main/docs/notificaties.svg"
+          github_base_url: https://api.github.com/repos/CommonGateway/CustomerInteractionBundle/contents
       - name: Create or Update publiccode.yaml
         uses: OpenCatalogi/publiccode-action@1.1.1
