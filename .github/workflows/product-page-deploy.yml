@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create een Productpagina
-        uses: OpenCatalogi/productpage-action@45896b5eb490c19b5857b9f131a882d173752fef
+        uses: OpenCatalogi/productpage-action@990e1f7f9edc7f89d9479c9ccdf59fda06af709d
         with:
           nl_design_theme_classname: "open-webconcept-theme"
           start_page: 'https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/README.md'
