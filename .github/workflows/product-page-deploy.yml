@@ -20,5 +20,6 @@ jobs:
           jumbotron_image_placement: "right"
           jumbotron_image_url: "https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/klanten.svg"
           github_api_base_url: https://api.github.com/repos/CommonGateway/CustomerInteractionBundle/contents
+          favicon_url: https://openwebconcept.nl/wp-content/uploads/2019/07/cropped-Favicon-32x32.png
       - name: Create or Update publiccode.yaml
         uses: OpenCatalogi/publiccode-action@1.1.1
