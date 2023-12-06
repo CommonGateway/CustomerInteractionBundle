@@ -4,6 +4,7 @@ namespace CommonGateway\CustomerInteractionBundle\Service;
 
 use App\Entity\Gateway as Source;
 use CommonGateway\CoreBundle\Service\CallService;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Response;
 
 class CustomerInteractionService
@@ -14,13 +15,23 @@ class CustomerInteractionService
      */
     private array $configuration;
 
+    /**
+     * @var CallService The call service.
+     */
     private CallService $callService;
+
+    /**
+     * @var EntityManagerInterface The entity manager.
+     */
+    private EntityManagerInterface $entityManager;
 
 
     public function __construct(
-        CallService $callService
+        CallService $callService,
+        EntityManagerInterface $entityManager
     ) {
         $this->callService = $callService;
+        $this->entityManager = $entityManager;
 
     }//end __construct()
 
@@ -35,7 +46,7 @@ class CustomerInteractionService
      *
      * @throws \Safe\Exceptions\UrlException
      */
-    private function getSource(string $url, string &$endpoint): ?Source
+    private function getSource(string $url, ?string &$endpoint): ?Source
     {
         // 1. Get the domain from the url
         $parse    = \Safe\parse_url($url);
@@ -118,7 +129,7 @@ class CustomerInteractionService
 
         foreach ($result as $key => $item) {
             if ($key !== '_self' && is_array($item)) {
-                $result[$key] = $this->recursiveFindIdentificators($result);
+                $result[$key] = $this->recursiveFindIdentificators($item);
             }
         }
 
@@ -146,7 +157,7 @@ class CustomerInteractionService
         }
 
         // Get the result from the original request.
-        $result = \Safe\json_decode($response->getContents()->getBody(), true);
+        $result = \Safe\json_decode($response->getContent(), true);
 
         // Find the extendible identificators and extend them.
         $updatedResult = \Safe\json_encode($this->recursiveFindIdentificators($result));
