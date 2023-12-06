@@ -134,7 +134,7 @@ class OrganisatorischeEenheid {
 }
 class Onderwerpobject {
   + objectIdentificator: object
-  + klantContact: https://commongateway.nl/klant.klantcontact.schema.json
+  + klantContact: object
 }
 class Voorkeur {
   + code: string
