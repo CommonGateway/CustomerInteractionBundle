@@ -30,7 +30,7 @@ class CustomerInteractionService
         CallService $callService,
         EntityManagerInterface $entityManager
     ) {
-        $this->callService = $callService;
+        $this->callService   = $callService;
         $this->entityManager = $entityManager;
 
     }//end __construct()
