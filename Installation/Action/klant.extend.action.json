@@ -1,0 +1,15 @@
+{
+    "title": "ExtendObjectAction",
+    "$id": "https://commongateway.nl/action/klant.extend.action.json",
+    "$schema": "https://docs.commongateway.nl/schemas/Action.schema.json",
+    "version": "0.0.1",
+    "listens": ["extend.object"],
+    "conditions":
+    {
+        "==": [1,1]
+    },
+    "class": "CommonGateway\\CustomerInteractionBundle\\ActionHandler\\ExtendHandler",
+    "configuration": {
+        "identificatorEntity": "https://commongateway.nl/klant.identificator.schema.json"
+    }
+}
