@@ -51,11 +51,11 @@ class ExtendHandler implements ActionHandlerInterface
             'required'    => ['identificatorEntity'],
             'properties'  => [
                 'identificatorEntity' => [
-                    'type' => 'string',
+                    'type'        => 'string',
                     'description' => 'The reference of the entity/schema that contains the identificator objects to extend.',
-                    'example' => 'https://commongateway.nl/klant.identificator.schema.json',
-                    'required' => true,
-                ]
+                    'example'     => 'https://commongateway.nl/klant.identificator.schema.json',
+                    'required'    => true,
+                ],
             ],
         ];
 

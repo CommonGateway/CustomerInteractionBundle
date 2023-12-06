@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class CustomerInteractionService
 {
+
     /**
      * @var array The action configuration.
      */
@@ -15,11 +16,14 @@ class CustomerInteractionService
 
     private CallService $callService;
 
-    public function __construct (
+
+    public function __construct(
         CallService $callService
     ) {
         $this->callService = $callService;
-    }
+
+    }//end __construct()
+
 
     /**
      * Find a source for a given url.
@@ -34,11 +38,11 @@ class CustomerInteractionService
     private function getSource(string $url, string &$endpoint): ?Source
     {
         // 1. Get the domain from the url
-        $parse = \Safe\parse_url($url);
+        $parse    = \Safe\parse_url($url);
         $location = $parse['scheme'].'://'.$parse['host'];
 
         // 2.c Try to establish a source for the domain
-        $source = $this->entityManager->getRepository('App:Gateway')->findOneBy(['location'=>$location]);
+        $source = $this->entityManager->getRepository('App:Gateway')->findOneBy(['location' => $location]);
 
         // 2.b The source might be on a path e.g. /v1 so if whe cant find a source let try to cycle
         if ($source instanceof Source === false && isset($parse['path']) === true) {
@@ -46,19 +50,23 @@ class CustomerInteractionService
                 if ($pathPart !== '') {
                     $location = $location.'/'.$pathPart;
                 }
-                $source = $this->entityManager->getRepository('App:Gateway')->findOneBy(['location'=>$location]);
+
+                $source = $this->entityManager->getRepository('App:Gateway')->findOneBy(['location' => $location]);
                 if ($source !== null) {
                     $endpoint = str_replace($location, '', $url);
                     break;
                 }
             }
         }
+
         if ($source instanceof Source === false) {
             return null;
         }
 
         return $source;
-    }
+
+    }//end getSource()
+
 
     /**
      * Extend an identificator object with the subobject.
@@ -69,7 +77,7 @@ class CustomerInteractionService
      *
      * @throws \Exception
      */
-    public function extendIdentificator (array $identificator): array
+    public function extendIdentificator(array $identificator): array
     {
         // Build the object url.
         $url = $identificator['register'].'/'.$identificator['objecttype'].'/'.$identificator['objectId'];
@@ -89,7 +97,9 @@ class CustomerInteractionService
         $identificator['object'] = $object;
 
         return $identificator;
-    }
+
+    }//end extendIdentificator()
+
 
     /**
      * Recursively walk trough the result of the original request and extend the identificators.
@@ -100,26 +110,28 @@ class CustomerInteractionService
      */
     public function recursiveFindIdentificators(array $result): array
     {
-        if(array_key_exists('_self', $result) && $result['_self']['schema']['ref'] === $this->configuration['identificatorEntity']) {
+        if (array_key_exists('_self', $result) && $result['_self']['schema']['ref'] === $this->configuration['identificatorEntity']) {
             $result = $this->extendIdentificator($result);
 
             return $result;
         }
 
-        foreach($result as $key => $item) {
-            if($key !== '_self' && is_array($item)) {
+        foreach ($result as $key => $item) {
+            if ($key !== '_self' && is_array($item)) {
                 $result[$key] = $this->recursiveFindIdentificators($result);
             }
         }
 
         return $result;
-    }
+
+    }//end recursiveFindIdentificators()
+
 
     /**
      * Extend requests to external sources
      *
-     * @param array $data           The result of the original request.
-     * @param array $configuration  The configuration of this action, contains the entity that should be extended.
+     * @param array $data          The result of the original request.
+     * @param array $configuration The configuration of this action, contains the entity that should be extended.
      *
      * @return array The updated data.
      */
@@ -129,7 +141,7 @@ class CustomerInteractionService
 
         // Fetch the response and check if it's valid.
         $response = $data['response'];
-        if($response instanceof Response === false) {
+        if ($response instanceof Response === false) {
             return $data;
         }
 
@@ -143,7 +155,9 @@ class CustomerInteractionService
         $response->setContent($updatedResult);
         $data['response'] = $response;
 
-
         return $data;
-    }
-}
+
+    }//end extendHandler()
+
+
+}//end class
