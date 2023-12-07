@@ -9,9 +9,12 @@
 
 namespace CommonGateway\CustomerInteractionBundle\Service;
 
+use Adbar\Dot;
 use App\Entity\Gateway as Source;
 use CommonGateway\CoreBundle\Service\CallService;
 use Doctrine\ORM\EntityManagerInterface;
+use Ramsey\Uuid\Uuid;
+use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
 
 class CustomerInteractionService
@@ -33,23 +36,33 @@ class CustomerInteractionService
 
     /**
      * The entity manager.
-     *
+     * 
      * @var EntityManagerInterface
      */
     private EntityManagerInterface $entityManager;
 
+    /**
+     * The request stack.
+     *
+     * @var RequestStack
+     */
+    private RequestStack $requestStack;
 
     /**
-     * @param CallService            $callService
-     * @param EntityManagerInterface $entityManager
+     * The service constructor.
+     *
+     * @param CallService $callService the call service
+     * @param EntityManagerInterface $entityManager the entity manager
+     * @param RequestStack $requestStack the request stack
      */
     public function __construct(
         CallService $callService,
-        EntityManagerInterface $entityManager
+        EntityManagerInterface $entityManager,
+        RequestStack $requestStack
     ) {
-        $this->callService   = $callService;
+        $this->callService = $callService;
         $this->entityManager = $entityManager;
-
+        $this->requestStack = $requestStack;
     }//end __construct()
 
 
@@ -118,7 +131,6 @@ class CustomerInteractionService
         }
 
         // Call the source and decode the result.
-        $endpoint = '';
         $response = $this->callService->call($source, $endpoint);
         $object   = $this->callService->decodeResponse($source, $response);
 
@@ -137,9 +149,9 @@ class CustomerInteractionService
      *
      * @return array The updated result.
      */
-    public function recursiveFindIdentificators(array $result): array
+    public function recursiveFindIdentificators(array $result, array $extend = []): array
     {
-        if (array_key_exists('_self', $result) === true
+        if (array_key_exists('_self', $result)
             && $result['_self']['schema']['ref'] === $this->configuration['identificatorEntity']
         ) {
             $result = $this->extendIdentificator($result);
@@ -148,8 +160,11 @@ class CustomerInteractionService
         }
 
         foreach ($result as $key => $item) {
-            if ($key !== '_self' && is_array($item) === true) {
-                $result[$key] = $this->recursiveFindIdentificators($item);
+            if ($key !== '_self'
+                && is_array($item) === true
+                && in_array($key, array_keys($extend)) === true
+            ) {
+                $result[$key] = $this->recursiveFindIdentificators($item, $extend[$key]);
             }
         }
 
@@ -170,6 +185,24 @@ class CustomerInteractionService
     {
         $this->configuration = $configuration;
 
+        $url = \Safe\parse_url($this->requestStack->getCurrentRequest()->getUri());
+        $path = explode('/', $url['path']);
+
+        if ($this->requestStack->getCurrentRequest()->getMethod() !== 'GET'
+            || Uuid::isValid(end($path)) !== true
+            || $this->requestStack->getCurrentRequest()->query->has('_extend') === false
+        ) {
+            return $data;
+        }
+
+        $extendQuery = $this->requestStack->getCurrentRequest()->query->get('_extend');
+
+        $extendDot = new Dot();
+        foreach($extendQuery as $extend) {
+            $extendDot->add($extend, []);
+        }
+        $extend = $extendDot->jsonSerialize();
+
         // Fetch the response and check if it's valid.
         $response = $data['response'];
         if ($response instanceof Response === false) {
@@ -180,7 +213,7 @@ class CustomerInteractionService
         $result = \Safe\json_decode($response->getContent(), true);
 
         // Find the extendible identificators and extend them.
-        $updatedResult = \Safe\json_encode($this->recursiveFindIdentificators($result));
+        $updatedResult = \Safe\json_encode($this->recursiveFindIdentificators($result, $extend));
 
         // Set the updated content.
         $response->setContent($updatedResult);

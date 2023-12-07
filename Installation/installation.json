@@ -13,14 +13,10 @@
   "endpoints": {
     "schemas": [
       {
-        "version": "0.0.1",
-        "reference": "https://klantenBundle.nl/klant.klant.schema.json",
-        "path": "klanten"
-      },
-      {
-        "version": "0.0.1",
+        "version": "0.0.2",
         "reference": "https://commongateway.nl/klant.betrokkeneBijKlantcontact.schema.json",
         "path": "betrokkenenbijklantcontact",
+        "throws": ["klant.object.extend"],
         "methods": [
           "GET",
           "PATCH",
@@ -65,9 +61,10 @@
         ]
       },
       {
-        "version": "0.0.1",
+        "version": "0.0.2",
         "reference": "https://commongateway.nl/klant.klantcontact.schema.json",
         "path": "klantcontacten",
+        "throws": ["klant.object.extend"],
         "methods": [
           "GET",
           "PATCH",
@@ -100,9 +97,10 @@
         ]
       },
       {
-        "version": "0.0.1",
+        "version": "0.0.2",
         "reference": "https://commongateway.nl/klant.partij.schema.json",
         "path": "partijen",
+        "throws": ["klant.object.extend"],
         "methods": [
           "GET",
           "PATCH",

@@ -2,8 +2,8 @@
     "title": "ExtendObjectAction",
     "$id": "https://commongateway.nl/action/klant.extend.action.json",
     "$schema": "https://docs.commongateway.nl/schemas/Action.schema.json",
-    "version": "0.0.1",
-    "listens": ["extend.object"],
+    "version": "0.0.2",
+    "listens": ["klant.object.extend"],
     "conditions":
     {
         "==": [1,1]
