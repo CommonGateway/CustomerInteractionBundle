@@ -69,7 +69,7 @@ class CustomerInteractionService
         $parse    = \Safe\parse_url($url);
         $location = $parse['scheme'].'://'.$parse['host'];
 
-        // 2.c Try to establish a source for the domain
+        // 2.a Try to establish a source for the domain
         $source = $this->entityManager->getRepository('App:Gateway')->findOneBy(['location' => $location]);
 
         // 2.b The source might be on a path e.g. /v1 so if whe cant find a source let try to cycle
