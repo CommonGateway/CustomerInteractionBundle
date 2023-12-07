@@ -40,7 +40,7 @@ class CustomerInteractionService
 
 
     /**
-     * @param CallService $callService
+     * @param CallService            $callService
      * @param EntityManagerInterface $entityManager
      */
     public function __construct(
