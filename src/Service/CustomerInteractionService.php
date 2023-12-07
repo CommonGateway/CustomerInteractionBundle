@@ -39,6 +39,10 @@ class CustomerInteractionService
     private EntityManagerInterface $entityManager;
 
 
+    /**
+     * @param CallService $callService
+     * @param EntityManagerInterface $entityManager
+     */
     public function __construct(
         CallService $callService,
         EntityManagerInterface $entityManager
@@ -135,7 +139,7 @@ class CustomerInteractionService
      */
     public function recursiveFindIdentificators(array $result): array
     {
-        if (array_key_exists('_self', $result)
+        if (array_key_exists('_self', $result) === true
             && $result['_self']['schema']['ref'] === $this->configuration['identificatorEntity']
         ) {
             $result = $this->extendIdentificator($result);
@@ -144,7 +148,7 @@ class CustomerInteractionService
         }
 
         foreach ($result as $key => $item) {
-            if ($key !== '_self' && is_array($item)) {
+            if ($key !== '_self' && is_array($item) === true) {
                 $result[$key] = $this->recursiveFindIdentificators($item);
             }
         }
