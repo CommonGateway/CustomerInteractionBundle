@@ -38,3 +38,12 @@ Waarin `{{ bsn }}` het BSN is dat we elders hebben gevonden.
 Digitaal adressen zijn in de klantinteractie-API de plaats waar e-mail adressen en telefoonnummers leven (andere soorten adressen kunnen worden toegevoegd).
 Deze digitaal adressen bestaan uit het adres zelf (dus het e-mail adres of het telefoonnummer), een omschrijving (bijvoorbeeld 'e-mail adres werk' of 'telefoonnummer mobiel') en
 het type van het digitaal adres. (Voor e-mail adressen is dit `emailadres`, voor telefoonummers is dit `telefoonnummer`. Andere types kunnen op aanvraag worden toegevoegd.)
+
+### Externe resources extenden
+
+In het datamodel van de klantinteractie-API wordt op 3 plekken naar externe objecten verwezen. Dit gebeurt in de objecten klantcontact en partij, in de subobjecten onder het veld `bijlage`, `gaatOver` in het object KlantContact en `externeIdentificaties` in het object Partij.
+
+Deze externe verwijzingen kunnen worden extend bij het ophalen van een enkel object van het type. Dit gebeurt dan door het extenden van het veld waarin het object Identificator in zit, dus bijvoorbeeld voor het gaatOver veld van een klantcontact moet de query `?_extend[]=gaatOver.objectIdentificator` worden meegegeven. Indien het identificator-object zich in een array van objecten bevind (zoals bij partijen.externeIdentificaties), dan moet de index van het te extenden object worden meegegeven.
+Bijvoorbeeld als het eerste object in de externeIdentificaties van een partij moet worden extend, moet de query als volgt zijn: `_extend[]=externeIdentificaties.0.partijIdentificator`.
+
+> :warning: Let op, een `_extend[]=all` wordt hier niet gezien als vervanging van het specifieke veld, in verband met privacy en performance overwegingen moeten extended velden specifiek meegegeven worden bij het bevragen van externe gegevens.
