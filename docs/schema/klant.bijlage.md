@@ -2,7 +2,7 @@
 
 Een digitale bijlage bij een klantcontact. Deze bijlage kan bestaan uit een bestand dat meegestuurd is met een e-mail of een ingescand document.
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.bijlage.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/Proxy-in-subobject/docs/schema/klant.bijlage.svg)
 
 ## Properties
 

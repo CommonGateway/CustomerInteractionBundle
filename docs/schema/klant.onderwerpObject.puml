@@ -5,6 +5,6 @@ header: Schema
 
 class Onderwerpobject {
   + objectIdentificator: object
-  + klantContact: https://commongateway.nl/klant.klantcontact.schema.json
+  + klantContact: object
 }
 @enduml
