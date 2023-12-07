@@ -136,7 +136,8 @@ class CustomerInteractionService
     public function recursiveFindIdentificators(array $result): array
     {
         if (array_key_exists('_self', $result)
-            && $result['_self']['schema']['ref'] === $this->configuration['identificatorEntity']) {
+            && $result['_self']['schema']['ref'] === $this->configuration['identificatorEntity']
+        ) {
             $result = $this->extendIdentificator($result);
 
             return $result;
