@@ -1,4 +1,11 @@
 <?php
+/**
+ * The Handler for handling extending identificators.
+ *
+ * @author Conduction.nl <info@conduction.nl>, Robert Zondervan <robert@conduction.nl>
+ *
+ * @license EUPL-1.2 https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12
+ */
 
 namespace CommonGateway\CustomerInteractionBundle\ActionHandler;
 
@@ -6,13 +13,6 @@ use CommonGateway\CoreBundle\ActionHandler\ActionHandlerInterface;
 use CommonGateway\CustomerInteractionBundle\Service\CustomerInteractionService;
 use CommonGateway\CustomerNotificationsBundle\Service\NotificationsService;
 
-/**
- * The Handler for handling notifications.
- *
- * @author Conduction.nl <info@conduction.nl>, Wilco Louwerse <wilco@conduction.nl>
- *
- * @license EUPL-1.2 https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12
- */
 class ExtendHandler implements ActionHandlerInterface
 {
 

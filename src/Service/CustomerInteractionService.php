@@ -1,4 +1,11 @@
 <?php
+/**
+ * Service for business logic in the customer interaction bundle.
+ *
+ * @author Conduction.nl <info@conduction.nl>, Robert Zondervan <robert@conduction.nl>
+ *
+ * @license EUPL-1.2 https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12
+ */
 
 namespace CommonGateway\CustomerInteractionBundle\Service;
 
@@ -11,17 +18,23 @@ class CustomerInteractionService
 {
 
     /**
-     * @var array The action configuration.
+     * The action configuration.
+     *
+     * @var array
      */
     private array $configuration;
 
     /**
-     * @var CallService The call service.
+     * The call service.
+     *
+     * @var CallService
      */
     private CallService $callService;
 
     /**
-     * @var EntityManagerInterface The entity manager.
+     * The entity manager.
+     *
+     * @var EntityManagerInterface
      */
     private EntityManagerInterface $entityManager;
 
@@ -101,6 +114,7 @@ class CustomerInteractionService
         }
 
         // Call the source and decode the result.
+        $endpoint = '';
         $response = $this->callService->call($source, $endpoint);
         $object   = $this->callService->decodeResponse($source, $response);
 
@@ -121,7 +135,8 @@ class CustomerInteractionService
      */
     public function recursiveFindIdentificators(array $result): array
     {
-        if (array_key_exists('_self', $result) && $result['_self']['schema']['ref'] === $this->configuration['identificatorEntity']) {
+        if (array_key_exists('_self', $result)
+            && $result['_self']['schema']['ref'] === $this->configuration['identificatorEntity']) {
             $result = $this->extendIdentificator($result);
 
             return $result;
