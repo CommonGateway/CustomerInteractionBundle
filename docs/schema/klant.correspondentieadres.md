@@ -2,7 +2,7 @@
 
 Het adres waarnaar de persoon of de organisatie de voor hen bestemde correspondentie laat verzenden.
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/Proxy-in-subobject/docs/schema/klant.correspondentieadres.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.correspondentieadres.svg)
 
 ## Properties
 
