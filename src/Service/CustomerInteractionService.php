@@ -36,7 +36,7 @@ class CustomerInteractionService
 
     /**
      * The entity manager.
-     * 
+     *
      * @var EntityManagerInterface
      */
     private EntityManagerInterface $entityManager;
@@ -48,21 +48,23 @@ class CustomerInteractionService
      */
     private RequestStack $requestStack;
 
+
     /**
      * The service constructor.
      *
-     * @param CallService $callService the call service
+     * @param CallService            $callService   the call service
      * @param EntityManagerInterface $entityManager the entity manager
-     * @param RequestStack $requestStack the request stack
+     * @param RequestStack           $requestStack  the request stack
      */
     public function __construct(
         CallService $callService,
         EntityManagerInterface $entityManager,
         RequestStack $requestStack
     ) {
-        $this->callService = $callService;
+        $this->callService   = $callService;
         $this->entityManager = $entityManager;
-        $this->requestStack = $requestStack;
+        $this->requestStack  = $requestStack;
+
     }//end __construct()
 
 
@@ -149,7 +151,7 @@ class CustomerInteractionService
      *
      * @return array The updated result.
      */
-    public function recursiveFindIdentificators(array $result, array $extend = []): array
+    public function recursiveFindIdentificators(array $result, array $extend=[]): array
     {
         if (array_key_exists('_self', $result)
             && $result['_self']['schema']['ref'] === $this->configuration['identificatorEntity']
@@ -185,7 +187,7 @@ class CustomerInteractionService
     {
         $this->configuration = $configuration;
 
-        $url = \Safe\parse_url($this->requestStack->getCurrentRequest()->getUri());
+        $url  = \Safe\parse_url($this->requestStack->getCurrentRequest()->getUri());
         $path = explode('/', $url['path']);
 
         if ($this->requestStack->getCurrentRequest()->getMethod() !== 'GET'
@@ -198,9 +200,10 @@ class CustomerInteractionService
         $extendQuery = $this->requestStack->getCurrentRequest()->query->get('_extend');
 
         $extendDot = new Dot();
-        foreach($extendQuery as $extend) {
+        foreach ($extendQuery as $extend) {
             $extendDot->add($extend, []);
         }
+
         $extend = $extendDot->jsonSerialize();
 
         // Fetch the response and check if it's valid.
