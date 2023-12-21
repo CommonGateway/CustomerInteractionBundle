@@ -18,23 +18,25 @@ softwareType: softwareAddon
 description:
   en:
     localisedName: null
-    genericName: Symfony bundle for customer interaction functionality
-    shortDescription: CustomerInteractionBundle
+    genericName: null
+    shortDescription: "Symfony bundle for customer interaction functionality"
     longDescription: "The CustomerInteractionBundle provides the common gateway with two functionalities, delivering the customer interaction registers and facilitating the customer interaction convience api."
     documentation: https://commongateway.github.io/CustomerInteractionBundle
     apiDocumentation: null
-    features: []
+    features:
+      - Common Ground Gateway Plugin
     screenshots: []
     videos: []
     awards: []
   nl:
     localisedName: null
-    genericName: Symfony bundle voor customer interaction functionaliteit
-    shortDescription: CustomerInteractionBundle
+    genericName: null
+    shortDescription: "Symfony bundle voor customer interaction functionaliteit"
     longDescription: "De CustomerInteractionBundle voorziet de common gateway in twee functionaliteiten, het uitleveren van de klantinteractie registers en het faciliteren van de klantinteractie convience api."
     documentation: https://commongateway.github.io/CustomerInteractionBundle
     apiDocumentation: null
-    features: []
+    features:
+      - Common Ground Gateway Plugin
     screenshots: []
     videos: []
     awards: []
