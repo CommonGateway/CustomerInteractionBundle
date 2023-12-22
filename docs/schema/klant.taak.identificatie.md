@@ -2,7 +2,7 @@
 
 Een taak.identificatie
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/OP-171-publiccode/docs/schema/klant.taak.identificatie.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.taak.identificatie.svg)
 
 ## Properties
 
