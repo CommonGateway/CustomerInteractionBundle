@@ -1,0 +1,20 @@
+{
+  "title": "Categorie",
+  "description": "Makes sure there are not multiple variants of the same categorie.",
+  "$id": "https://commongateway.nl/mapping/woo.categorie.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.1",
+  "passTrough": true,
+  "mapping": {
+    "plaatsgevondenOp": "registratiedatum",
+    "kanaal.soortDigitaalAdres": "kanaal",
+    "inhoud": "{{ gespreksresultaat }}<br>{{ notitie }}",
+    "onderwerp": "vraag",
+    "gaatOver.objectIdentificator.objectId": "zaaknummer",
+    "gaatOver.objectIdentificator.objectType": "zaken",
+    "gaatOVer.objectIdentificator.soortObjectId": "string",
+    "gaatOVer.objectIdentificator.register.type": "[zrc url]",
+    "indicatieContactGelukt": "{% if status == 'open'}}ja{% else %}nee{% endif %}",
+    "actors.0.organisatorischeEenheid.omschrijving": "afdeling"
+  }
+}
