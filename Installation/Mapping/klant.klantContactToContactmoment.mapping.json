@@ -1,0 +1,18 @@
+{
+  "title": "ContactMoment to KlantContact",
+  "description": "Makes sure there are not multiple variants of the same categorie.",
+  "$id": "https://commongateway.nl/mapping/klant.contactmomentToKlantContact.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.1",
+  "passTrough": true,
+  "mapping": {
+    "registratiedatum": "plaatsgevondenOp",
+    "kanaal": "kanaal.soortDigitaalAdres",
+    "gespreksresultaat": "inhoud",
+    "notitie": "inhoud",
+    "vraag": "onderwerp",
+    "zaaknummer": "gaatOver.objectIdentificator.objectId",
+    "status": "{% if indicatieContactGelukt == 'nee'}}open{% else %}afgehandeld{% endif %}",
+    "afdeling": "actors.0.organisatorischeEenheid.omschrijving"
+  }
+}
