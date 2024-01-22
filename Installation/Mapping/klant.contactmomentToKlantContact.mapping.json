@@ -14,7 +14,7 @@
     "gaatOver.objectIdentificator.objectType": "zaken",
     "gaatOVer.objectIdentificator.soortObjectId": "string",
     "gaatOVer.objectIdentificator.register.type": "[zrc url]",
-    "indicatieContactGelukt": "{% if status == 'open'}}nee{% else %}ja{% endif %}",
+    "indicatieContactGelukt": "{% if status == 'open'%}nee{% else %}ja{% endif %}",
     "actors.0.organisatorischeEenheid.omschrijving": "afdeling"
   }
 }

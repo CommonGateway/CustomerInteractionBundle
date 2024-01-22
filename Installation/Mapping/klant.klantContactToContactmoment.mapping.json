@@ -12,7 +12,7 @@
     "notitie": "inhoud",
     "vraag": "onderwerp",
     "zaaknummer": "gaatOver.objectIdentificator.objectId",
-    "status": "{% if indicatieContactGelukt == 'nee'}}open{% else %}afgehandeld{% endif %}",
+    "status": "{% if indicatieContactGelukt == 'nee'%}open{% else %}afgehandeld{% endif %}",
     "afdeling": "actors.0.organisatorischeEenheid.omschrijving"
   }
 }
