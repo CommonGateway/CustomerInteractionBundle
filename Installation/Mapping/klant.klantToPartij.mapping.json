@@ -1,0 +1,24 @@
+{
+  "title": "Klant to Partij",
+  "description": "Makes sure there are not multiple variants of the same categorie.",
+  "$id": "https://commongateway.nl/mapping/klant.contactmomentToKlantContact.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.1",
+  "passTrough": true,
+  "mapping": {
+    "nummer": "klantnummer",
+    "subjectType": "soortPartij",
+    "organisatie.naam": "bedrijfsnaam",
+    "persoon.achternaam": "achternaam",
+    "persoon.voornaam": "voornaam",
+    "persoon.voorvoegselAchternaam": "voorvoegselAchternaam",
+    "bezoekadres": "adressen.0",
+    "verstrekteAdressen": "{{ map('https://commongateway.nl/mapping/klant.emailToDigitaalAdres.mapping.json', emails, true)|merge(map('https://commongateway.nl/mapping/klant.telefoonnummerToDigitaalAdres.mapping.json', telefoonnummers, true))|json_encode }}]",
+    "externeIdentificaties.partijIdentificator.objectId": "embedded.subjectIdentificatie.inpBsn",
+    "externeIdentificaties.partijIdentificator.soortObjectId": "bsn",
+    "externeIdentificaties.partijIdentificator.rgister": "{brp}"
+  },
+  "cast": {
+    "verstrekteAdressen": "jsonToArray"
+  }
+}

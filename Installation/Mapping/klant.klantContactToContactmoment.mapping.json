@@ -10,7 +10,7 @@
     "kanaal": "kanaal.soortDigitaalAdres",
     "gespreksresultaat": "inhoud",
     "notitie": "inhoud",
-    "vraag": "onderwerp",
+    "afwijkendOnderwerp": "onderwerp",
     "zaaknummer": "gaatOver.objectIdentificator.objectId",
     "status": "{% if indicatieContactGelukt == 'nee'%}open{% else %}afgehandeld{% endif %}",
     "afdeling": "actors.0.organisatorischeEenheid.omschrijving",

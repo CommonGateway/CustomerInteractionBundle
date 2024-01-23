@@ -1,0 +1,13 @@
+{
+  "title": "Telefoonnummer To Digitaal Adres",
+  "description": "Makes sure there are not multiple variants of the same categorie.",
+  "$id": "https://commongateway.nl/mapping/klant.telefoonnummerToDigitaalAdres.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.1",
+  "passTrough": true,
+  "mapping": {
+    "soortDigitaalAdres": "telefoonnummer",
+    "omschrijving": "naam",
+    "adres": "telefoonnummer"
+  }
+}
