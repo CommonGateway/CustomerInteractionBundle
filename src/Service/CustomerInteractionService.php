@@ -48,7 +48,7 @@ class CustomerInteractionService
      * @var RequestStack
      */
     private RequestStack $requestStack;
-    
+
     /**
      * The Gateway Resource Service.
      *
@@ -60,9 +60,9 @@ class CustomerInteractionService
     /**
      * The service constructor.
      *
-     * @param CallService            $callService   The call service
-     * @param EntityManagerInterface $entityManager The entity manager
-     * @param RequestStack           $requestStack  The request stack
+     * @param CallService            $callService     The call service
+     * @param EntityManagerInterface $entityManager   The entity manager
+     * @param RequestStack           $requestStack    The request stack
      * @param GatewayResourceService $resourceService The resource service
      */
     public function __construct(
@@ -71,9 +71,9 @@ class CustomerInteractionService
         RequestStack $requestStack,
         GatewayResourceService $resourceService
     ) {
-        $this->callService   = $callService;
-        $this->entityManager = $entityManager;
-        $this->requestStack  = $requestStack;
+        $this->callService     = $callService;
+        $this->entityManager   = $entityManager;
+        $this->requestStack    = $requestStack;
         $this->resourceService = $resourceService;
 
     }//end __construct()
@@ -92,9 +92,9 @@ class CustomerInteractionService
     {
         // Build the object url.
         $url = $identificator['register'].'/'.$identificator['objecttype'].'/'.$identificator['objectId'];
-        
+
         $endpoint = null;
-        
+
         // Fetch the source.
         $source = $this->resourceService->findSourceForUrl($url, 'common-gateway/customer-interaction-bundle', $endpoint);
 
