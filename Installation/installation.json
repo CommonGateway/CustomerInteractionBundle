@@ -110,6 +110,19 @@
         ]
       },
       {
+        "$id": "https://commongateway.nl/klant.klant.schema.json",
+        "version": "0.0.1",
+        "reference": "https://commongateway.nl/klant.partij.schema.json",
+        "path": "klanten",
+        "methods": [
+          "GET",
+          "PATCH",
+          "POST",
+          "DELETE",
+          "GET"
+        ]
+      },
+      {
         "version": "0.0.1",
         "reference": "https://commongateway.nl/klant.taak.schema.json",
         "path": "taken",
