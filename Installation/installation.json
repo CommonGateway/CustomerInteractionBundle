@@ -1,5 +1,31 @@
 {
   "installationService": "CommonGateway\\CustomerInteractionBundle\\Service\\InstallationService",
+  "applications": [
+    {
+      "title": "KISS-application",
+      "$id": "https://docs.commongateway.nl/application/default.application.json",
+      "$schema": "https://docs.commongateway.nl/schemas/Application.schema.json",
+      "version": "0.0.4",
+      "description": "The default application containing KISS",
+      "configuration": {
+        "https://commongateway.nl/klant.klant.schema.json": {
+          "in": {
+            "body": {
+              "mapping": "https://commongateway.nl/mapping/klant.klantToPartij.mapping.json"
+            },
+            "query": {
+              "mapping": "https://commongateway.nl/mapping/klant.klantToPartij.mapping.json"
+            }
+          },
+          "out":{
+            "body": {
+              "mapping": "https://commongateway.nl/mapping/klant.partijToKlant.mapping.json"
+            }
+          }
+        }
+      }
+    }
+  ],
   "collections": [
     {
       "reference": "https://vng.opencatalogi.nl/collection/kic.klantinteracties.collection.json",
