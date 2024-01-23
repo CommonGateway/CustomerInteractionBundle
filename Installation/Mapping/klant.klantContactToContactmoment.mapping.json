@@ -13,6 +13,7 @@
     "vraag": "onderwerp",
     "zaaknummer": "gaatOver.objectIdentificator.objectId",
     "status": "{% if indicatieContactGelukt == 'nee'%}open{% else %}afgehandeld{% endif %}",
-    "afdeling": "actors.0.organisatorischeEenheid.omschrijving"
+    "afdeling": "actors.0.organisatorischeEenheid.omschrijving",
+    "medewerker":  "actors.1.medewerker"
   }
 }

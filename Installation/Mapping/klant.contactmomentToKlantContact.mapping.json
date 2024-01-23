@@ -15,6 +15,7 @@
     "gaatOVer.objectIdentificator.soortObjectId": "string",
     "gaatOVer.objectIdentificator.register.type": "[zrc url]",
     "indicatieContactGelukt": "{% if status == 'open'%}nee{% else %}ja{% endif %}",
-    "actors.0.organisatorischeEenheid.omschrijving": "afdeling"
+    "actors.0.organisatorischeEenheid.omschrijving": "afdeling",
+    "actors.1.medewerker":  "medewerker"
   }
 }

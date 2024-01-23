@@ -35,7 +35,7 @@
     },
     "contactnaam": {
       "type": "object",
-      "$ref": "https://commongateway.nl/klant.persoonsnaam.schema.json"
+      "$ref": "https://commongateway.nl/klant.contactnaam.schema.json"
     },
     "bezoekadres": {
       "type": "object",
