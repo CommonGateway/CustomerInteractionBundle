@@ -112,6 +112,19 @@
         ]
       },
       {
+        "$id": "https://commongateway.nl/klant.contactmoment.endpoint.json",
+        "version": "0.0.1",
+        "reference": "https://commongateway.nl/klant.klantcontact.schema.json",
+        "path": "contactmomenten",
+        "throws": ["klant.object.extend"],
+        "methods": [
+          "GET",
+          "PATCH",
+          "POST",
+          "GET"
+        ]
+      },
+      {
         "version": "0.0.1",
         "reference": "https://commongateway.nl/klant.medewerker.schema.json",
         "path": "medewerkers",

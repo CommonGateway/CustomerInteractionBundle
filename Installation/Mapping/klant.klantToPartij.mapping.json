@@ -14,7 +14,7 @@
     "persoon.voornaam": "voornaam",
     "persoon.voorvoegselAchternaam": "voorvoegselAchternaam",
     "bezoekadres": "adressen.0",
-    "verstrekteAdressen": "{{ map('https://commongateway.nl/mapping/klant.emailToDigitaalAdres.mapping.json', emails, true)|merge(map('https://commongateway.nl/mapping/klant.telefoonnummerToDigitaalAdres.mapping.json', telefoonnummers, true))|json_encode }}",
+    "verstrekteAdressen": "{% if not emails|default %}{% set emails = [] %}{% endif %}{% if not telefoonnummers|default %}{%set telefoonnummers = [] %}{%endif%}{{ map('https://commongateway.nl/mapping/klant.emailToDigitaalAdres.mapping.json', emails, true)|merge(map('https://commongateway.nl/mapping/klant.telefoonnummerToDigitaalAdres.mapping.json', telefoonnummers, true))|json_encode }}",
     "externeIdentificaties.0.partijIdentificator.objectId": "embedded.subjectIdentificatie.inpBsn",
     "externeIdentificaties.0.partijIdentificator.soortObjectId": "bsn",
     "externeIdentificaties.0.partijIdentificator.register": "{brp}",
