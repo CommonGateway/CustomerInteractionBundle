@@ -8,8 +8,7 @@
   "mapping": {
     "registratiedatum": "plaatsgevondenOp",
     "kanaal": "kanaal.soortDigitaalAdres",
-    "gespreksresultaat": "inhoud",
-    "notitie": "inhoud",
+    "tekst": "inhoud",
     "afwijkendOnderwerp": "onderwerp",
     "zaaknummer": "gaatOver.objectIdentificator.objectId",
     "status": "{% if indicatieContactGelukt == 'nee'%}open{% else %}afgehandeld{% endif %}",
