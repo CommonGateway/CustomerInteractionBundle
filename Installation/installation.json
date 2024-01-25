@@ -7,23 +7,36 @@
       "$schema": "https://docs.commongateway.nl/schemas/Application.schema.json",
       "version": "0.0.4",
       "description": "The default application containing KISS",
-      "configuration": {
-        "https://commongateway.nl/klant.klant.schema.json": {
-          "in": {
-            "body": {
-              "mapping": "https://commongateway.nl/mapping/klant.klantToPartij.mapping.json"
+      "configuration": [
+        {
+          "https://commongateway.nl/klant.klant.endpoint.json": {
+            "in": {
+              "body": {
+                "mapping": "https://commongateway.nl/mapping/klant.klantToPartij.mapping.json"
+              }
             },
-            "query": {
-              "mapping": "https://commongateway.nl/mapping/klant.klantToPartij.mapping.json"
+            "out":{
+              "body": {
+                "mapping": "https://commongateway.nl/mapping/klant.partijToKlant.mapping.json"
+              }
             }
-          },
-          "out":{
-            "body": {
-              "mapping": "https://commongateway.nl/mapping/klant.partijToKlant.mapping.json"
+          }
+        },
+        {
+          "https://commongateway.nl/klant.contactmoment.endpoint.json": {
+            "in": {
+              "body": {
+                "mapping": "https://commongateway.nl/mapping/klant.contactmomentToKlantContact.mapping.json"
+              }
+            },
+            "out":{
+              "body": {
+                "mapping": "https://commongateway.nl/mapping/klant.klantContactToContactmoment.mapping.json"
+              }
             }
           }
         }
-      }
+      ]
     }
   ],
   "collections": [
@@ -136,7 +149,7 @@
         ]
       },
       {
-        "$id": "https://commongateway.nl/klant.klant.schema.json",
+        "$id": "https://commongateway.nl/klant.klant.endpoint.json",
         "version": "0.0.1",
         "reference": "https://commongateway.nl/klant.partij.schema.json",
         "path": "klanten",
