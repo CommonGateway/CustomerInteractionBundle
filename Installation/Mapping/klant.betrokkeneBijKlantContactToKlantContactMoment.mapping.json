@@ -1,0 +1,18 @@
+{
+  "title": "BetrokkeneBijKlantContact to KlantContactMoment",
+  "description": "Makes sure there are not multiple variants of the same categorie.",
+  "$id": "https://commongateway.nl/mapping/klant.betrokkeneBijKlantContactToKlantContactMoment.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.1",
+  "passTrough": false,
+  "mapping": {
+		"contactmoment": "{% if contactmoment|default %}{{ map('https://commongateway.nl/mapping/klant.klantContactToContactmoment.mapping.json', klantcontact)|json_encode }}{% endif %}",	
+		"klant": "{% if partij|default %}{{ map('https://commongateway.nl/mapping/klant.klantToPartij.mapping.json', partij)|json_encode }}{% endif %}",
+		"contactmoment.kanaal": "{% if communicatiekanaal.soortDigitaalAdres == 'formulier'%}{{ 'contactformulier' }}{% else %}{{ communicatiekanaal.soortDigitaalAdres }}{% endif %}",
+		"contactmoment.voorkeurstaal": "voorkeurstaal"
+  },
+	"cast": {
+		"contactmoment": "jsonToArray",
+        "klant": "jsonToArray"
+	}
+}

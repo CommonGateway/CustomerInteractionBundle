@@ -1,6 +1,6 @@
 {
   "title": "ContactMoment to KlantContact",
-  "description": "Makes sure there are not multiple variants of the same categorie.",
+  "description": "Makes sure there are not multiple variants of the same categorie. Note Barry: If a todo is set its a contaactverzoek else contactmoment which uses tekst for notitie (correct me if Im wrong) ",
   "$id": "https://commongateway.nl/mapping/klant.contactmomentToKlantContact.mapping.json",
   "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
   "version": "0.0.1",
@@ -8,14 +8,14 @@
   "mapping": {
     "plaatsgevondenOp": "registratiedatum",
     "kanaal.soortDigitaalAdres": "kanaal",
-    "inhoud": "tekst",
+    "inhoud": " {% if tekst|default %}{{ tekst }}{% else %}{{ todo.description }}{% endif %}",
     "onderwerp": "afwijkendOnderwerp",
     "gaatOver.objectIdentificator.objectId": "zaaknummer",
     "gaatOver.objectIdentificator.objectType": "zaken",
     "gaatOver.objectIdentificator.soortObjectId": "string",
     "gaatOVer.objectIdentificator.register.type": "[zrc url]",
-    "indicatieContactGelukt": "{% if status == 'open'%}nee{% else %}ja{% endif %}",
+    "indicatieContactGelukt": "{% if tekst|default %}{{ ja }}{% else %}{{ nee }}{% endif %}",
     "actors.0.organisatorischeEenheid.omschrijving": "afdeling",
-    "actors.1.medewerker":  "medewerker"
+    "actors.1.medewerker":  "attendees.0"
   }
 }
