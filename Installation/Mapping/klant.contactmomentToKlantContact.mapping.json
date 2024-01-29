@@ -8,7 +8,7 @@
   "mapping": {
     "plaatsgevondenOp": "registratiedatum",
     "kanaal.soortDigitaalAdres": "kanaal",
-    "inhoud": " {% if tekst|default %}{{ tekst }}{% else %}{{ todo.description }}{% endif %}",
+    "inhoud": " {% if tekst|default %}{{ 'tekst='~tekst }}{% else %}{{ ' todo='~todo.description }}{% endif %}",
     "onderwerp": "afwijkendOnderwerp",
     "gaatOver.objectIdentificator.objectId": "zaaknummer",
     "gaatOver.objectIdentificator.objectType": "zaken",

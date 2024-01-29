@@ -14,8 +14,8 @@
     "voornaam": "persoon.voornaam",
     "voorvoegselAchternaam": "persoon.voorvoegselAchternaam",
     "embedded.subjectIdentificatie.inpBsn": "{% for identificatie in externeIdentificaties %}{% if identificatie.partijIdentificator.soortObjectId == 'bsn' %}{{ identificatie.partijIdentificator.objectId }}{% endif %}{% endfor %}",
-    "embedded.emails": "{{ map('https:\/\/commongateway.nl\/mapping\/klant.DigitaalAdresToEmail.mapping.json', embedded.verstrekteAdressen|filter(v => v.soortDigitaalAdres == 'emailadres'), true)|map(value => value)|json_encode }}",
-    "embedded.telefoonnummers": "{{ map('https:\/\/commongateway.nl\/mapping\/klant.DigitaalAdresToTelefoonnummer.mapping.json', embedded.verstrekteAdressen|filter(v => v.soortDigitaalAdres == 'telefoonnummer'), true)|map(value => value)|json_encode }}"
+    "embedded.emails": "{{ arrayValues(map('https:\/\/commongateway.nl\/mapping\/klant.DigitaalAdresToEmail.mapping.json', embedded.verstrekteAdressen|filter(v => v.soortDigitaalAdres == 'emailadres'), true)|map(value => value))|json_encode }}",
+    "embedded.telefoonnummers": "{{ arrayValues(map('https:\/\/commongateway.nl\/mapping\/klant.DigitaalAdresToTelefoonnummer.mapping.json', embedded.verstrekteAdressen|filter(v => v.soortDigitaalAdres == 'telefoonnummer'), true)|map(value => value))|json_encode }}"
   },
   "cast": {
     "adressen": "jsonToArray",

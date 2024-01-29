@@ -1,0 +1,14 @@
+{
+  "title": "BetrokkeneBijKlantContact to KlantContactMoment check",
+  "description": "Makes sure there are not multiple variants of the same categorie.",
+  "$id": "https://commongateway.nl/mapping/klant.betrokkeneBijKlantContactToKlantContactMomentCheck.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.1",
+  "passTrough": false,
+  "mapping": {
+    "#": "{% if results|default %}{{ map('https://commongateway.nl/mapping/klant.betrokkeneBijKlantContactToKlantContactMomentResults.mapping.json', _context, true)|json_encode }}{% else %}{{ map('https://commongateway.nl/mapping/klant.betrokkeneBijKlantContactToKlantContactMomentItem.mapping.json', _context, true)|json_encode }}{% endif %}"
+  },
+  "cast": {
+    "#": "jsonToArray"
+  }
+}

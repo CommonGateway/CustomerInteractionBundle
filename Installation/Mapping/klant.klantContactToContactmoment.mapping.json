@@ -8,7 +8,8 @@
   "mapping": {
     "registratiedatum": "plaatsgevondenOp",
     "kanaal": "kanaal.soortDigitaalAdres",
-    "todo.description": "inhoud",
+    "todo.description": "{% if 'todo=' in inhoud %}{% set parts = inhoud|split('todo=') %}{% set todoText = parts[1]|trim %}{{ todoText }}{% endif %}",
+    "tekst": "{%if 'tekst=' in inhoud %}{% set parts = inhoud|split('tekst=') %}{% set tekst = parts[1]|trim %}{{ tekst }}{% endif %}",
     "afwijkendOnderwerp": "onderwerp",
     "zaaknummer": "gaatOver.objectIdentificator.objectId",
     "status": "{% if indicatieContactGelukt == 'nee'%}open{% else %}afgehandeld{% endif %}",
