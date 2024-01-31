@@ -7,7 +7,7 @@
   "passTrough": false,
   "mapping": {
     "results": "{% if results|default %}{{ map('https://commongateway.nl/mapping/klant.betrokkeneBijKlantContactToKlantContactMomentItem.mapping.json', results, true)|json_encode }}{% endif %}"
-},
+  },
   "cast": {
     "results": "jsonToArray"
   }

@@ -3,10 +3,11 @@
   "description": "Makes sure there are not multiple variants of the same categorie.",
   "$id": "https://commongateway.nl/mapping/klant.betrokkeneBijKlantContactToKlantContactMomentCheck.mapping.json",
   "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "passTrough": false,
   "mapping": {
-    "#": "{% if results|default %}{{ map('https://commongateway.nl/mapping/klant.betrokkeneBijKlantContactToKlantContactMomentResults.mapping.json', _context, true)|json_encode }}{% else %}{{ map('https://commongateway.nl/mapping/klant.betrokkeneBijKlantContactToKlantContactMomentItem.mapping.json', _context, true)|json_encode }}{% endif %}"
+    "#": "{% if results|default %}{% set array = {results: results} %}{{ map('https://commongateway.nl/mapping/klant.betrokkeneBijKlantContactToKlantContactMomentResults.mapping.json', array, true)|json_encode }}{% elseif partij|default and klantcontact|default %}{% set array = {partij: partij, klantcontact: klantcontact} %}{{ map('https://commongateway.nl/mapping/klant.betrokkeneBijKlantContactToKlantContactMomentItem.mapping.json', array, true)|json_encode }}{% endif %}",
+    "test": "{% if partij|default and klantcontact|default %}{% set array = {partij: partij, klantcontact: klantcontact} %}{{ dump(array|keys) }}{% endif %}" 
   },
   "cast": {
     "#": "jsonToArray"
