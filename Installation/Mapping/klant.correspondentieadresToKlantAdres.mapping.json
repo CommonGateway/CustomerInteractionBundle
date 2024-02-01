@@ -17,7 +17,6 @@
 
   },
   "cast": {
-    "#": "jsonToArray",
     "huisnummer": "int"
   }
 }
