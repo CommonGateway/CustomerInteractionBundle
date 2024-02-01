@@ -7,7 +7,7 @@
     "passTrough": false,
     "mapping": {
         "contactmoment": "{% if klantcontact|default %}{{ map('https://commongateway.nl/mapping/klant.klantContactToContactmoment.mapping.json', klantcontact)|json_encode }}{% endif %}",	
-        "klant": "{% if partij|default %}{{ map('https://commongateway.nl/mapping/klant.partijToKlant.mapping.json', partij)|json_encode }}{% endif %}",
+        "klant": "{% if partij|default %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json', partij)|json_encode }}{% endif %}",
         "test": "{{ klantcontact is defined ? 'klantcontact is defined' : 'klantcontact not defined' }} {{ partij is defined ? 'partij is defined' : 'partij is not defined' }}}",
         "test2": "{{ _context|keys|json_encode }}"
     },
