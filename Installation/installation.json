@@ -186,18 +186,6 @@
           "DELETE",
           "GET"
         ]
-      },
-      {
-        "version": "0.0.1",
-        "reference": "https://commongateway.nl/klant.bericht.schema.json",
-        "path": "berichten",
-        "methods": [
-          "GET",
-          "PATCH",
-          "POST",
-          "DELETE",
-          "GET"
-        ]
       }
     ]
   }
