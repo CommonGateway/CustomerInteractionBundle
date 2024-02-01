@@ -6,7 +6,13 @@
   "version": "0.0.11",
   "passTrough": false,
   "mapping": {
-    "results": "{% if results|default %}{{ map('https://commongateway.nl/mapping/klant.betrokkeneBijKlantContactToKlantContactMomentItem.mapping.json', results, true)|json_encode }}{% endif %}"
+    "results": "{% if results|default %}{{ map('https://commongateway.nl/mapping/klant.betrokkeneBijKlantContactToKlantContactMomentItem.mapping.json', results, true)|json_encode }}{% endif %}",
+    "count": "count",
+    "limit": "limit",
+    "total": "total",
+    "offset": "offset",
+    "page": "page",
+    "pages": "pages"
   },
   "cast": {
     "results": "jsonToArray"
