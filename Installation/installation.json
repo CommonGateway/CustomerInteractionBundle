@@ -43,10 +43,6 @@
     {
       "reference": "https://vng.opencatalogi.nl/collection/kic.klantinteracties.collection.json",
       "schemaPrefix": "https://commongateway.nl/klant"
-    },
-    {
-      "reference": "https://vng.opencatalogi.nl/collection/klant.klanten.collection.json",
-      "schemaPrefix": "https://klantenBundle.nl/klant"
     }
   ],
   "endpoints": {
