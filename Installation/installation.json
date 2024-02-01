@@ -166,6 +166,7 @@
         "version": "0.0.1",
         "reference": "https://commongateway.nl/klant.partij.schema.json",
         "path": "klanten",
+        "throws": ["klant.object.extend"],
         "methods": [
           "GET",
           "PATCH",
