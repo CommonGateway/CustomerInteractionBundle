@@ -3,18 +3,15 @@
     "description": "Makes sure there are not multiple variants of the same categorie.",
     "$id": "https://commongateway.nl/mapping/klant.betrokkeneBijKlantContactToKlantContactMomentItem.mapping.json",
     "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
-    "version": "0.0.18",
+    "version": "0.0.19",
     "passTrough": false,
     "mapping": {
-        "contactmoment": "{% if klantcontact|default %}{{ map('https://commongateway.nl/mapping/klant.klantContactToContactmoment.mapping.json', klantcontact)|json_encode }}{% endif %}",	
-        "klant": "{% if partij|default %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json', partij)|json_encode }}{% endif %}",
-        "test": "{{ klantcontact is defined ? 'klantcontact is defined' : 'klantcontact not defined' }} {{ partij is defined ? 'partij is defined' : 'partij is not defined' }}}",
-        "test2": "{{ _context|keys|json_encode }}"
+        "contactmoment": "{% if klantcontact|default('null') %}{{ map('https://commongateway.nl/mapping/klant.klantContactToContactmoment.mapping.json', klantcontact)|json_encode }}{% endif %}",	
+        "klant": "{% if partij|default('null') %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json', partij)|json_encode }}{% endif %}"
     },
     "cast": {
         "contactmoment": "jsonToArray",
-        "klant": "jsonToArray",
-        "test2": "jsonToArray"
+        "klant": "jsonToArray"
     }
 }
   
