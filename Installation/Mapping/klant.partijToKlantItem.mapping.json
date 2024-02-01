@@ -10,7 +10,7 @@
     "id": "{{ id|default(_id) }}",
     "klantnummer": "{{ nummer|default('null') }}",
     "achternaam": "{{ persoon.achternaam|default('null') }}",
-    "adressen": "[{% if bezoekadres.embedded|default %}{{ map('https://commongateway.nl/mapping/klant.bezoekadresToKlantAdres.mapping.json', embedded.bezoekadres)|json_encode }}{% endif %}{% if embedded.bezoekadres|default embedded.correspondentieadres|default %}{{ ', ' }}{% endif %}{% if embedded.correspondentieadres|default %}{{ map('https://commongateway.nl/mapping/klant.correspondentieadresToKlantAdres.mapping.json', embedded.correspondentieadres)|json_encode }}{% endif %}]",
+    "adressen": "[{% if embedded.bezoekadres|default %}{{ map('https://commongateway.nl/mapping/klant.bezoekadresToKlantAdres.mapping.json', embedded.bezoekadres)|json_encode }}{% endif %}{% if embedded.bezoekadres|default embedded.correspondentieadres|default %}{{ ', ' }}{% endif %}{% if embedded.correspondentieadres|default %}{{ map('https://commongateway.nl/mapping/klant.correspondentieadresToKlantAdres.mapping.json', embedded.correspondentieadres)|json_encode }}{% endif %}]",
     "bedrijfsnaam": "{{ organisatie.naam|default('null') }}",
     "soortPartij": "{{ subjectType|default('null') }}",
     "voornaam": "{{ persoon.voornaam|default('null') }}",
