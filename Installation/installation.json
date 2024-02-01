@@ -17,7 +17,7 @@
             },
             "out":{
               "body": {
-                "mapping": "https://commongateway.nl/mapping/klant.partijToKlant.mapping.json"
+                "mapping": "https://commongateway.nl/mapping/klant.partijToKlantCheck.mapping.json"
               }
             }
           }
