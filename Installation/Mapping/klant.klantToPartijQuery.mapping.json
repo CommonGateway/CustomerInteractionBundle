@@ -1,0 +1,16 @@
+{
+  "title": "Klant to Partij Query",
+  "$id": "https://commongateway.nl/mapping/klant.klantToPartijQuery.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.1",
+  "passTrough": true,
+  "mapping": {
+    "externeIdentificaties&#46;partijIdentificator&#46;objectId": "embedded&#46;subjectIdentificatie&#46;inpBsn"
+  },
+  "unset": [
+    "embedded&#46;subjectIdentificatie&#46;inpBsn"
+  ],
+  "cast": {
+    "externeIdentificaties&#46;partijIdentificator&#46;objectId": "unsetIfValue==embedded&#46;subjectIdentificatie&#46;inpBsn"
+  }
+}
