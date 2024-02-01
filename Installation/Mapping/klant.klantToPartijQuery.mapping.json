@@ -5,12 +5,17 @@
   "version": "0.0.1",
   "passTrough": true,
   "mapping": {
-    "externeIdentificaties&#46;partijIdentificator&#46;objectId": "embedded&#46;subjectIdentificatie&#46;inpBsn"
+    "externeIdentificaties&#46;partijIdentificator&#46;objectId": "embedded&#46;subjectIdentificatie&#46;vestigingsNummer",
+    "externeIdentificaties&#46;partijIdentificator&#46;objectId": "embedded&#46;subjectIdentificatie&#46;inpBsn",
+    "soortPartij": "subjectType"
   },
   "unset": [
-    "embedded&#46;subjectIdentificatie&#46;inpBsn"
+    "embedded&#46;subjectIdentificatie&#46;inpBsn",
+    "embedded&#46;subjectIdentificatie&#46;vestigingsNummer",
+    "subjectType"
   ],
   "cast": {
-    "externeIdentificaties&#46;partijIdentificator&#46;objectId": "unsetIfValue==embedded&#46;subjectIdentificatie&#46;inpBsn"
+    "externeIdentificaties&#46;partijIdentificator&#46;objectId": "unsetIfValue==embedded&#46;subjectIdentificatie&#46;inpBsn",
+    "soortPartij": "unsetIfValue==subjectType"
   }
 }
