@@ -8,7 +8,7 @@
   "mapping": {
     "_self": "_self",
     "nummer": "klantnummer",
-    "subjectType": "soortPartij",
+    "soortPartij": "subjectType",
     "organisatie.naam": "bedrijfsnaam",
     "persoon.achternaam": "achternaam",
     "persoon.voornaam": "voornaam",
