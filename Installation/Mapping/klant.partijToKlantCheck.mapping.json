@@ -3,9 +3,9 @@
   "$id": "https://commongateway.nl/mapping/klant.partijToKlantCheck.mapping.json",
   "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
   "version": "0.0.1",
-  "passTrough": true,
+  "passTrough": false,
   "mapping": {
-    "#": "{% if results|default %}{% set input = {'results':results, 'count':count, 'limit':limit, 'total':total, 'offset':offset, 'page':page, 'pages':pages} %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantResults.mapping.json', input)|json_encode }}{% else %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json', _context)|json_encode }}{% endif %}"
+    "#": "{% if results|default %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantResults.mapping.json', _context)|json_encode }}{% else %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json', _context)|json_encode }}{% endif %}"
   },
   "cast": {
     "#": "jsonToArray"
