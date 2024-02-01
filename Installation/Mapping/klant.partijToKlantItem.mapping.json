@@ -1,0 +1,24 @@
+{
+  "title": "Partij to Klant Item",
+  "$id": "https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.3",
+  "passTrough": true,
+  "mapping": {
+    "klantnummer": "nummer",
+    "achternaam": "persoon.achternaam",
+    "adressen": "[{% if bezoekadres.embedded|default %}{{ map('https://commongateway.nl/mapping/klant.bezoekadresToKlantAdres.mapping.json', embedded.bezoekadres)|json_encode }}{% endif %}{% if embedded.bezoekadres|default embedded.correspondentieadres|default %}{{ ', ' }}{% endif %}{% if embedded.correspondentieadres|default %{{ map('https://commongateway.nl/mapping/klant.correspondentieadresToKlantAdres.mapping.json', embedded.correspondentieadres)|json_encode }}{% endif %}]",
+    "bedrijfsnaam": "organisatie.naam",
+    "soortPartij": "subjectType",
+    "voornaam": "persoon.voornaam",
+    "voorvoegselAchternaam": "persoon.voorvoegselAchternaam",
+    "embedded.subjectIdentificatie.inpBsn": "{% for identificatie in externeIdentificaties %}{% if identificatie.partijIdentificator.soortObjectId == 'bsn' %}{{ identificatie.partijIdentificator.objectId }}{% endif %}{% endfor %}",
+    "embedded.emails": "{% if embedded.verstrekteAdressen|default([]) %}{% set verstrekteAdressen = [] %}{% set verstrekteAdressen = verstrekteAdressen|merge(embedded.verstrekteAdressen) %}{{ arrayValues(map('https:\/\/commongateway.nl\/mapping\/klant.DigitaalAdresToEmail.mapping.json', verstrekteAdressen|filter(v => v.soortDigitaalAdres == 'emailadres'), true))|json_encode }}{% endif %}",
+    "embedded.telefoonnummers": "{% if embedded.verstrekteAdressen|default([]) %}{% set verstrekteAdressen = [] %}{% set verstrekteAdressen = verstrekteAdressen|merge(embedded.verstrekteAdressen) %}{{ arrayValues(map('https:\/\/commongateway.nl\/mapping\/klant.DigitaalAdresToTelefoonnummer.mapping.json', verstrekteAdressen|filter(v => v.soortDigitaalAdres == 'telefoonnummer'), true))|json_encode }}{% endif %}"
+  },
+  "cast": {
+    "adressen": "jsonToArray",
+    "embedded.emails": "jsonToArray",
+    "embedded.telefoonnummers": "jsonToArray"
+  }
+}

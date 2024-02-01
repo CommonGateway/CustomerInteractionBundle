@@ -1,0 +1,13 @@
+{
+  "title": "Partij to Klant Results",
+  "$id": "https://commongateway.nl/mapping/klant.partijToKlantResults.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.1",
+  "passTrough": true,
+  "mapping": {
+    "results": "{% if results|default %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json', results, true)|json_encode }}{% endif %}"
+  },
+  "cast": {
+    "results": "jsonToArray"
+  }
+}
