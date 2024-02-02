@@ -26,7 +26,7 @@ jobs:
           footer_logo_href: https://conduction.nl
           footer_content: "https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/footerContent.json"
           footer_content_header: "heading-3"
-          jumbotron_title: "Product Website CustomerInteractionBundle"
+          jumbotron_title: "CustomerInteractionBundle"
           jumbotron_subtitle: "Product page"
           jumbotron_description: "The CustomerInteractionBundle provides the common gateway with two functionalities, delivering the customer interaction registers and facilitating the customer interaction convience api."
           jumbotron_image: "https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/CustomerInteractionBundleLogo.svg"
