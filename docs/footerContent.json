@@ -9,21 +9,15 @@
         "icon": { "prefix": "fas", "icon": "home", "placement": "left" }
       },
       {
-        "ariaLabel": "Documentation",
-        "value": "Documentation",
-        "link": "https://commongateway.readthedocs.io/en/latest/",
-        "icon": { "prefix": "fab", "icon": "readthedocs", "placement": "left" }
-      },
-      {
-        "ariaLabel": "Slack",
-        "value": "Slack",
-        "link": "#",
-        "icon": { "prefix": "fab", "icon": "slack", "placement": "left" }
+        "ariaLabel": "Redocly",
+        "value": "Redocly",
+        "link": "https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/openapi.json&nocors",
+        "icon": { "prefix": "fab", "icon": "redocly", "placement": "left" }
       },
       {
         "ariaLabel": "Github",
         "value": "Github",
-        "link": "https://github.com/CommonGateway/CoreBundle",
+        "link": "https://github.com/commonGateway/customerInteractionBundle",
         "icon": { "prefix": "fab", "icon": "github", "placement": "left" }
       }
     ]
