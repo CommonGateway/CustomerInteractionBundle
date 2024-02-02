@@ -16,7 +16,7 @@ jobs:
         uses: OpenCatalogi/productpage-action@latest
         with:
           github_repository_name_as_prefix: true
-          github_repository_url: https://api.github.com/repos/CommonGateway/CustomerInteractionBundle
+          github_repository_url: https://github.com/commonGateway/customerInteractionBundle
           github_api_base_url: https://api.github.com/repos/CommonGateway/CustomerInteractionBundle/contents
           github_docs_directory_paths: '[{"name": "Classes","location": "/docs/classes"},{"name": "Service", "location": "/docs/classes/Service"}]'
           slack_url: "false"
