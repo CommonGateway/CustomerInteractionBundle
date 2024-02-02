@@ -3,19 +3,20 @@
   "description": "Makes sure there are not multiple variants of the same categorie. Note Barry: If a todo is set its a contaactverzoek else contactmoment which uses tekst for notitie (correct me if Im wrong) ",
   "$id": "https://commongateway.nl/mapping/klant.contactmomentToKlantContact.mapping.json",
   "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "passTrough": false,
   "mapping": {
     "plaatsgevondenOp": "registratiedatum",
     "kanaal.soortDigitaalAdres": "kanaal",
-    "inhoud": " {% if tekst|default %}{{ 'tekst='~tekst }}{% else %}{{ ' todo='~todo.description }}{% endif %}",
+    "inhoud": " {% if tekst|default %}{{ 'tekst='~tekst }}{% elseif todo|default %}{{ ' todo='~todo.description }}{% endif %}",
     "onderwerp": "afwijkendOnderwerp",
     "gaatOver.objectIdentificator.objectId": "zaaknummer",
     "gaatOver.objectIdentificator.objectType": "zaken",
     "gaatOver.objectIdentificator.soortObjectId": "string",
     "gaatOVer.objectIdentificator.register.type": "[zrc url]",
-    "indicatieContactGelukt": "{% if tekst|default %}{{ ja }}{% else %}{{ nee }}{% endif %}",
+    "indicatieContactGelukt": "{% if tekst|default %}{{ 'ja' }}{% else %}{{ 'nee' }}{% endif %}",
     "actors.0.organisatorischeEenheid.omschrijving": "afdeling",
     "actors.1.medewerker":  "attendees.0"
   }
 }
+  
