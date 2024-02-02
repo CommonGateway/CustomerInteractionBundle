@@ -366,7 +366,7 @@ jobs:
           version: 2.x
           command: require clean/phpdoc-md
       - name: Build the docs
-        run: vendor/bin/phpdoc-md
+        run: vendor/bin/phpdoc-md --ignore /docs
       - name: Git commit
         run: |
           git config user.name "GitHub Actions"
