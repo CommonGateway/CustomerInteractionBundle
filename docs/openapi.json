@@ -4741,7 +4741,7 @@
         ],
         "properties": {
           "voorkeurstaal": {
-            "$ref": "#/components/schemas/Voorkeurstaal"
+            "$ref": "#/components/schemas/Voorkeur"
           },
           "communicatiekanaal": {
             "$ref": "#/components/schemas/Digitaal Adres"
