@@ -1,0 +1,59 @@
+[
+  {
+    "label": "Home",
+    "type": "internal",
+    "current": {
+      "pathname": "/"
+    },
+    "handleClick": {
+      "link": "/"
+    }
+  },
+  {
+    "label": "Classes",
+    "current": {
+      "pathname": "/Classes"
+    },
+    "subItems": [
+      {
+        "label": "README",
+        "type": "internalMarkdown",
+        "current": {
+          "pathname": "/Classes/README"
+        },
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Classes",
+            "fileName": "README"
+          }
+        }
+      },
+      {
+        "label": "CustomerInteractionService",
+        "type": "internalMarkdown",
+        "current": {
+          "pathname": "/Service/CustomerInteractionService"
+        },
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Service",
+            "fileName": "CustomerInteractionService"
+          }
+        }
+      },
+      {
+        "label": "InstallationService",
+        "type": "internalMarkdown",
+        "current": {
+          "pathname": "/Service/InstallationService"
+        },
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Service",
+            "fileName": "InstallationService"
+          }
+        }
+      }
+    ]
+  }
+]
