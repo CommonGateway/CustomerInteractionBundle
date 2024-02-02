@@ -8,7 +8,7 @@ Een persoon of organisatie waarmee de gemeente een relatie heeft.
 
 (Uiteindelijk) belanghebbenden waarmee de gemeente geen direct contact heeft (of heeft gehad) (bijvoorbeeld door vertegenwoordiging) zien we als partijen waarmee de gemeente een relatie heeft.? Een vertegenwoordiger (van een belanghebbende) is een partij? Partijen zijn ???gekende??? personen of organisaties? Dit betekent dat er voor eerste registratie en bij eventueel (her)gebruik authenticatie heeft plaatsgevonden. Dit hoeft niet per se te gebeuren met DigiD, eHerkenning o.i.d. Er is dus ook niet altijd sprake van vastlegging en verwerking van een BSN of ander buiten de gemeente toegekend ID-nummer.?
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/product-page-fix/docs/schema/klant.partij.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.partij.svg)
 
 ## Properties
 
