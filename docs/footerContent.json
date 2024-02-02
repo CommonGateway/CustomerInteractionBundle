@@ -23,13 +23,13 @@
     ]
   },
   {
-    "title": "Classes",
+    "title": "Services",
     "items": [
       {
         "ariaLabel": "Readme",
         "value": "Readme",
         "internalMarkdown": {
-          "directoryName": "Classes",
+          "directoryName": "Service",
           "fileName": "README"
         }
       },

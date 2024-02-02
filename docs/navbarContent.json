@@ -20,20 +20,20 @@
     }
   },
   {
-    "label": "Classes",
+    "label": "Services",
     "current": {
-      "pathname": "/Classes"
+      "pathname": "/Service"
     },
     "subItems": [
       {
         "label": "README",
         "type": "internalMarkdown",
         "current": {
-          "pathname": "/Classes/README"
+          "pathname": "/Service/README"
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "Classes",
+            "directoryName": "Service",
             "fileName": "README"
           }
         }
