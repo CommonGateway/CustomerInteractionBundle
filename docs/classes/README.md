@@ -1,3 +1,4 @@
 # CommonGateway\CustomerInteractionBundle
 
-* [Service\InstallationService](Service/InstallationService.md) 
+* [Classes\Service\CustomerInteractionService](Service/CustomerInteractionService.md)
+* [Classes\Service\InstallationService](Service/InstallationService.md)
