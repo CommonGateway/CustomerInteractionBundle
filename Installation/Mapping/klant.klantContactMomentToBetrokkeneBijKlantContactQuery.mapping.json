@@ -1,0 +1,26 @@
+{
+  "title": "KlantContactMoment to BetrokkeneBijKlantContact query",
+  "description": "Makes sure there are not multiple variants of the same categorie.",
+  "$id": "https://commongateway.nl/mapping/klant.klantContactMomentToBetrokkeneBijKlantQuery.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.1",
+  "passTrough": false,
+  "mapping": {
+		"_order[embedded.klantcontact.geregistreerdOp]": "{% if _order[embedded.contactmoment.registratiedatum]|default %}",
+    "embedded.klantcontact.inhoud": "{% if embedded.contactmoment.todo|default %}",
+    "partij": "{% if klant|default %}",
+    "klantcontact": "{% if contactmoment|default %}",
+    "_self.owner.id": "{% if _self.owner.id|default %}",
+    "_page": "{% if _page|default %}",
+    "_limit": "{% if _limit|default %}"
+  },
+	"cast": {
+		"_order[embedded.klantcontact.geregistreerdOp]": "unsetIfValue==",
+    "embedded.klantcontact.inhoud": "unsetIfValue==",
+    "partij": "unsetIfValue==",
+    "klantcontact": "unsetIfValue==",
+    "_self.owner.id": "unsetIfValue==",
+    "_page": "unsetIfValue==",
+    "_limit": "unsetIfValue=="
+	}
+}
