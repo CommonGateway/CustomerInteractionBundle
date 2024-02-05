@@ -1,0 +1,14 @@
+{
+  "title": "KlantContact to Contactmoment check",
+  "description": "Makes sure there are not multiple variants of the same categorie.",
+  "$id": "https://commongateway.nl/mapping/klant.klantContactToContactmomentCheck.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.4",
+  "passTrough": false,
+  "mapping": {
+      "#": "{% if results is defined %}{{ map('https://commongateway.nl/mapping/klant.klantContactToContactmomentResults.mapping.json', _context)|json_encode }}{% else %}{{ map('https://commongateway.nl/mapping/klant.klantContactToContactmomentItem.mapping.json', _context)|json_encode }}{% endif %}"
+  },
+  "cast": {
+    "#": "jsonToArray"
+  }
+}

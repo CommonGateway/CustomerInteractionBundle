@@ -5,7 +5,7 @@
       "title": "KISS-application",
       "$id": "https://docs.commongateway.nl/application/default.application.json",
       "$schema": "https://docs.commongateway.nl/schemas/Application.schema.json",
-      "version": "0.0.4",
+      "version": "0.0.6",
       "description": "The default application containing KISS",
       "configuration": [
         {
@@ -34,7 +34,16 @@
             },
             "out":{
               "body": {
-                "mapping": "https://commongateway.nl/mapping/klant.klantContactToContactmoment.mapping.json"
+                "mapping": "https://commongateway.nl/mapping/klant.klantContactToContactmomentCheck.mapping.json"
+              }
+            }
+          }
+        },
+        {
+          "https://commongateway.nl/klant.klantcontactmoment.endpoint.json": {
+            "out":{
+              "body": {
+                "mapping": "https://commongateway.nl/mapping/klant.betrokkeneBijKlantContactToKlantContactMomentCheck.mapping.json"
               }
             }
           }
@@ -50,18 +59,33 @@
   ],
   "endpoints": {
     "schemas": [
-      {
-        "version": "0.0.2",
-        "reference": "https://commongateway.nl/klant.betrokkeneBijKlantcontact.schema.json",
-        "path": "betrokkenenbijklantcontact",
-        "throws": ["klant.object.extend"],
-        "methods": [
-          "GET",
-          "PATCH",
-          "POST",
-          "GET"
-        ]
-      },
+        {
+          "version": "0.0.2",
+          "reference": "https://commongateway.nl/klant.betrokkeneBijKlantcontact.schema.json",
+          "path": "betrokkenenbijklantcontact",
+          "throws": ["klant.object.extend"],
+          "methods": [
+            "GET",
+            "PATCH",
+            "POST",
+            "GET"
+          ]
+        },
+        {
+          "$id": "https://commongateway.nl/klant.klantcontactmoment.endpoint.json",
+          "version": "0.0.1",
+          "reference": "https://commongateway.nl/klant.betrokkeneBijKlantcontact.schema.json",
+          "path": "klantcontactmomenten",
+          "throws": ["klant.object.extend"],
+          "methods": [
+            "GET",
+            "PUT",
+            "PATCH",
+            "POST",
+            "DELETE",
+            "GET"
+          ]
+        },
       {
         "version": "0.0.1",
         "reference": "https://commongateway.nl/klant.bijlage.schema.json",
@@ -190,3 +214,4 @@
     ]
   }
 }
+  

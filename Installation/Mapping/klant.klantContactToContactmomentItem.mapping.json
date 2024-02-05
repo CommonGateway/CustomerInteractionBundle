@@ -1,0 +1,34 @@
+{
+  "title": "KlantContact to Contactmoment item",
+  "description": "Makes sure there are not multiple variants of the same categorie.. Note Barry: If a todo is set its a contaactverzoek else contactmoment which uses tekst for notitie (correct me if Im wrong) ",
+  "$id": "https://commongateway.nl/mapping/klant.klantContactToContactmomentItem.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.14",
+  "passTrough": false,
+  "mapping": {
+    "_id": "_id",
+    "_self": "_self",
+    "id": "{{ id|default(_id) }}",
+    "registratiedatum": "{{ plaatsgevondenOp|default('null') }}",
+    "kanaal": "{{ embedded.kanaal.soortDigitaalAdres|default('null') }}",
+    "todo.description": "{% if inhoud|default and 'todo=' in inhoud %}{% set parts = inhoud|split('todo=') %}{% set todoText = parts[1]|trim %}{{ todoText }}{% endif %}",
+    "tekst": "{% if inhoud|default and 'tekst=' in inhoud %}{% set parts = inhoud|split('tekst=') %}{% set tekstWithTodo = parts[1]|trim %}{% set todoParts = tekstWithTodo|split('todo=') %}{% set tekst = todoParts[0]|trim %}{{ tekst }}{% else %}null{% endif %}",
+    "afwijkendOnderwerp": "{{ onderwerp|default('null') }}",
+    "zaaknummer": "{{ gaatOver.objectIdentificator.objectId|default('null') }}",
+    "status": "{% if indicatieContactGelukt|default and indicatieContactGelukt == 'nee'%}open{% else %}afgehandeld{% endif %}",
+    "afdeling": "{{ embedded.actors.0.embedded.organisatorischeEenheid.omschrijving|default('null') }}",
+    "attendees.0":  "{{ embedded.actors.1.embedded.medewerker.eMailadres|default() }}"
+  },
+  "cast": {
+    "registratiedatum": "nullStringToNull",
+    "kanaal": "nullStringToNull",
+    "tekst": "nullStringToNull",
+    "afwijkendOnderwerp": "nullStringToNull",
+    "zaaknummer": "nullStringToNull",
+    "status": "nullStringToNull",
+    "attendees.0": "unsetIfValue==",
+    "attendees": "unsetIfValue==",
+    "afdeling": "nullStringToNull",
+    "todo.description": "unsetIfValue=="
+  }
+}

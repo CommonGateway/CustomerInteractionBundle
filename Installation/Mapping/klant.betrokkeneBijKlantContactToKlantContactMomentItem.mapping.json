@@ -3,11 +3,14 @@
     "description": "Makes sure there are not multiple variants of the same categorie.",
     "$id": "https://commongateway.nl/mapping/klant.betrokkeneBijKlantContactToKlantContactMomentItem.mapping.json",
     "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
-    "version": "0.0.19",
+    "version": "0.0.21",
     "passTrough": false,
     "mapping": {
-        "contactmoment": "{% if klantcontact|default('null') %}{{ map('https://commongateway.nl/mapping/klant.klantContactToContactmoment.mapping.json', klantcontact)|json_encode }}{% endif %}",	
-        "klant": "{% if partij|default('null') %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json', partij)|json_encode }}{% endif %}"
+        "_id": "_id",
+        "_self": "_self",
+        "id": "{{ id|default(_id) }}",
+        "contactmoment": "{% if embedded.klantcontact|default('null') %}{{ map('https://commongateway.nl/mapping/klant.klantContactToContactmomentItem.mapping.json', embedded.klantcontact)|json_encode }}{% endif %}",	
+        "klant": "{% if embedded.partij|default('null') %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json', embedded.partij)|json_encode }}{% endif %}"
     },
     "cast": {
         "contactmoment": "jsonToArray",
