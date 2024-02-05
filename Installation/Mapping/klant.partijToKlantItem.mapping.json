@@ -15,6 +15,7 @@
     "subjectType": "{{ soortPartij|default('null') }}",
     "voornaam": "{{ persoon.voornaam|default('null') }}",
     "voorvoegselAchternaam": "{{ persoon.voorvoegselAchternaam|default('null') }}",
+    "embedded.subjectIdentificatie.vestigingsNummer": "{% for identificatie in externeIdentificaties %}{% if identificatie.partijIdentificator.soortObjectId == 'string' %}{{ identificatie.partijIdentificator.objectId }}{% endif %}{% endfor %}",
     "embedded.subjectIdentificatie.inpBsn": "{% for identificatie in externeIdentificaties %}{% if identificatie.partijIdentificator.soortObjectId == 'bsn' %}{{ identificatie.partijIdentificator.objectId }}{% endif %}{% endfor %}",
     "embedded.emails": "{% if embedded.verstrekteAdressen|default([]) %}{% set verstrekteAdressen = [] %}{% set verstrekteAdressen = verstrekteAdressen|merge(embedded.verstrekteAdressen) %}{{ arrayValues(map('https:\/\/commongateway.nl\/mapping\/klant.DigitaalAdresToEmail.mapping.json', verstrekteAdressen|filter(v => v.soortDigitaalAdres == 'emailadres'), true))|json_encode }}{% endif %}",
     "embedded.telefoonnummers": "{% if embedded.verstrekteAdressen|default([]) %}{% set verstrekteAdressen = [] %}{% set verstrekteAdressen = verstrekteAdressen|merge(embedded.verstrekteAdressen) %}{{ arrayValues(map('https:\/\/commongateway.nl\/mapping\/klant.DigitaalAdresToTelefoonnummer.mapping.json', verstrekteAdressen|filter(v => v.soortDigitaalAdres == 'telefoonnummer'), true))|json_encode }}{% endif %}"
@@ -27,6 +28,8 @@
     "subjectType": "nullStringToNull",
     "voornaam": "nullStringToNull",
     "voorvoegselAchternaam": "nullStringToNull",
+    "embedded.subjectIdentificatie.vestigingsNummer": "setNullIfValue==",
+    "embedded.subjectIdentificatie.inpBsn": "setNullIfValue==",
     "embedded.emails": "jsonToArray",
     "embedded.telefoonnummers": "jsonToArray"
   }
