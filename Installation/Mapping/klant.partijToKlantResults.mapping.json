@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "passTrough": false,
   "mapping": {
-    "results": "{% if results|default %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json', results, true)|json_encode }}{% endif %}",
+    "results": "{{ map('https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json', results, true)|json_encode }}",
     "count": "count",
     "limit": "limit",
     "total": "total",
