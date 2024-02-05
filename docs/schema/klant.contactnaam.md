@@ -2,7 +2,7 @@
 
 No description available.
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/old-contactmomenten-api-wilco/docs/schema/klant.contactnaam.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/old-contactmomenten-api-barry/docs/schema/klant.contactnaam.svg)
 
 ## Properties
 

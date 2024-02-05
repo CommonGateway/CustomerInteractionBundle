@@ -2,7 +2,7 @@
 
 Een taak voor een burger, inwoner of vertegenwoordiger van een organisatie die moet worden uitgevoerd
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/old-contactmomenten-api-wilco/docs/schema/klant.taak.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/old-contactmomenten-api-barry/docs/schema/klant.taak.svg)
 
 ## Properties
 
