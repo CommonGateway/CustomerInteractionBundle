@@ -3,16 +3,16 @@
   "description": "Makes sure there are not multiple variants of the same categorie.",
   "$id": "https://commongateway.nl/mapping/klant.klantContactMomentToBetrokkeneBijKlantQuery.mapping.json",
   "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "passTrough": false,
   "mapping": {
-		"_order[embedded.klantcontact.geregistreerdOp]": "{% if _order[embedded.contactmoment.registratiedatum]|default %}",
-    "embedded.klantcontact.inhoud": "{% if embedded.contactmoment.todo|default %}",
-    "partij": "{% if klant|default %}",
-    "klantcontact": "{% if contactmoment|default %}",
-    "_self.owner.id": "{% if _self.owner.id|default %}",
-    "_page": "{% if _page|default %}",
-    "_limit": "{% if _limit|default %}"
+		"_order[embedded.klantcontact.geregistreerdOp]": "{% if _order[embedded.contactmoment.registratiedatum]|default %}}{{ _order[embedded.contactmoment.registratiedatum] }}{% endif %}",
+    "embedded.klantcontact.inhoud": "{% if embedded.contactmoment.todo|default %}}{{ _page }}{% endif %}",
+    "partij": "{% if klant|default %}}{{ klant }}{% endif %}",
+    "klantcontact": "{% if contactmoment|default %}}{{ contactmoment }}{% endif %}",
+    "_self.owner.id": "{% if _self.owner.id|default %}}{{ _self.owner.id }}{% endif %}",
+    "_page": "{% if _page|default %}{{ _page }}{% endif %}",
+    "_limit": "{% if _limit|default %}{{ _limit }}{% endif %}"
   },
 	"cast": {
 		"_order[embedded.klantcontact.geregistreerdOp]": "unsetIfValue==",

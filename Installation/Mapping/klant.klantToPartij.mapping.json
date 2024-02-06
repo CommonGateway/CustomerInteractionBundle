@@ -3,7 +3,7 @@
   "description": "Makes sure there are not multiple variants of the same categorie.",
   "$id": "https://commongateway.nl/mapping/klant.klantToPartij.mapping.json",
   "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "passTrough": false,
   "mapping": {
     "_self": "_self",
@@ -21,7 +21,7 @@
     "externeIdentificaties.0.partijIdentificator.objectId": "{% if subjectIdentificatie.vestigingsNummer|default %}{{ subjectIdentificatie.vestigingsNummer }}{% elseif subjectIdentificatie.inpBsn|default %}{{ subjectIdentificatie.inpBsn }}{% endif %}",
     "indicatieActief": "true",
     "indicatieGeheimhouding": "false",
-    "interneNotitie": "Automatisch aangemaakt vanuit KISS."
+    "interneNotitie": "{{ functie|default('null') }}"
   },
   "cast": {
     "nummer": "int",
@@ -33,6 +33,7 @@
     "externeIdentificaties.0.partijIdentificator.soortObjectId": "unsetIfValue==",
     "externeIdentificaties.0.partijIdentificator.objectId": "unsetIfValue==",
     "indicatieActief": "bool",
-    "indicatieGeheimhouding": "bool"
+    "indicatieGeheimhouding": "bool",
+    "interneNotitie": "nullStringToNull"
   }
 }
