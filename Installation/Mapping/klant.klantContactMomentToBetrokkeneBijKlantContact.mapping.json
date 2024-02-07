@@ -3,20 +3,20 @@
   "description": "Makes sure there are not multiple variants of the same categorie.",
   "$id": "https://commongateway.nl/mapping/klant.klantContactMomentToBetrokkeneBijKlantContact.mapping.json",
   "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "passTrough": false,
   "mapping": {
-		"klantcontact": "{% if contactmoment|default %}{{ map('https://commongateway.nl/mapping/klant.contactmomentToKlantContact.mapping.json', contactmoment)|json_encode }}",	
-		"partij": "{% if klant|default %}{{ map('https://commongateway.nl/mapping/klant.klantToPartij.mapping.json', klant)|json_encode }}",
-		"contactnaam.voornaam": "klant.voornaam",
-		"contactnaam.achternaam": "klant.achternaam",
-		"contactnaam.voorvoegselAchternaam": "klant.voorvoegselActhernaam",
-		"communicatiekanaal.soortDigitaalAdres": "{% if contactmoment.kanaal == 'contactformulier'%}{{ 'formulier' }}{% else %}{{ contactmoment.kanaal }}{% endif %}",
+		"klantcontact": "{% if contactmoment|default %}{{ contactmoment }}{% endif %}",	
+		"partij": "{% if klant|default %}{{ klant }}{% endif %}",
+		"communicatiekanaal.soortDigitaalAdres": "{% if contactmoment.kanaal|default and contactmoment.kanaal == 'contactformulier'%}{{ 'formulier' }}{% elseif contactmoment.kanaal|default %}{{ contactmoment.kanaal }}{% endif %}",
 		"rol": "{{ 'klant' }}",
 		"voorkeurstaal": "contactmoment.voorkeurstaal"
   },
 	"cast": {
-		"klantcontact": "jsonToArray",
-		"partij": "jsonToArray"
+		"klantcontact": "unsetIfValue==",
+		"partij": "unsetIfValue==",
+		"voorkeurstaal": "unsetIfValue==contactmoment.voorkeurstaal",
+		"communicatiekanaal.soortDigitaalAdres": "unsetIfValue==",
+		"communicatiekanaal": "unsetIfValue=="
 	}
 }
