@@ -2,7 +2,7 @@
 
 No description available.
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/old-contactmomenten-api-barry/docs/schema/klant.contactpersoon.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/old-contactmomenten-api/docs/schema/klant.contactpersoon.svg)
 
 ## Properties
 
