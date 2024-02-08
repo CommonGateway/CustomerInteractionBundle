@@ -6,7 +6,7 @@
   "version": "0.0.1",
   "passTrough": false,
   "mapping": {
-    "_order&#91;embedded&#46;klantcontact&#46;plaatsgevondenOp&#93;": "{% if attribute(_context, ' _order&#91;embedded&#46;contactmoment&#46;registratiedatum&#93;') is defined %}{{ attribute(_context, '_order&#91;embedded&#46;contactmoment&#46;registratiedatum&#93;') }}{% endif %}",
+    "_order.embedded&#46;klantcontact&#46;plaatsgevondenOp": "desc",
     "embedded&#46;klantcontact&#46;todo": "{% if attribute(_context, 'embedded&#46;contactmoment&#46;todo') is defined %}{{ attribute(_context, 'embedded&#46;contactmoment&#46;todo') }}{% endif %}",
     "partij": "{% if klant|default %}{{ klant }}{% endif %}",
     "klantcontact": "{% if contactmoment|default %}{{ contactmoment }}{% endif %}",
@@ -15,7 +15,8 @@
     "_limit": "{% if _limit|default %}{{ _limit }}{% endif %}"
   },
   "cast": {
-    "_order&#91;embedded&#46;klantcontact&#46;plaatsgevondenOp&#93;": "unsetIfValue==",
+    "_order.embedded&#46;klantcontact&#46;plaatsgevondenOp": "unsetIfValue==",
+    "_order": "unsetIfValue==",
     "embedded&#46;klantcontact&#46;todo": "unsetIfValue==",
     "partij": "unsetIfValue==",
     "klantcontact": "unsetIfValue==",

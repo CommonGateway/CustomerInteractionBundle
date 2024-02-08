@@ -12,7 +12,7 @@
     "bronorganisatie": "{{ nummer|default('null') }}",
     "registratiedatum": "{{ plaatsgevondenOp|default('null') }}",
     "kanaal": "{{ embedded.kanaal.soortDigitaalAdres|default('null') }}",
-    "embedded.todo.description": "{{ todo|default('null') }}",
+    "embedded.todo.description": "{% if todo|default %}{{ todo|default }}{% endif %}",
     "tekst": "{{ inhoud|default('null') }}",
     "resultaat": "{{ resultaat|default('null') }}",
     "afwijkendOnderwerp": "{{ onderwerp|default('null') }}",
@@ -32,10 +32,10 @@
     "afwijkendOnderwerp": "nullStringToNull",
     "zaaknummer": "nullStringToNull",
     "status": "nullStringToNull",
-    "embedded.attendees.0": "unsetIfValue==",
-    "embedded.attendees": "unsetIfValue==",
+    "embedded.todo.attendees.0": "unsetIfValue==",
+    "embedded.todo.attendees": "unsetIfValue==",
     "afdeling": "nullStringToNull",
-    "embedded.todo.description": "unsetIfValue==",
+    "embedded.todo.description": ["nullStringToNullunsetIfValue==", ""],
     "embedded.todo": "unsetIfValue=="
   }
 }

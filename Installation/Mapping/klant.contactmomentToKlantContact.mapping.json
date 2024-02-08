@@ -40,7 +40,12 @@
     "kanaal.soortDigitaalAdres": "unsetIfValue==kanaal",
     "kanaal": "unsetIfValue==",
     "actors.0.organisatorischeEenheid.omschrijving": "unsetIfValue==afdeling",
-    "actors.1.medewerker": "unsetIfValue==todo.attendees.0"
+    "actors.0.organisatorischeEenheid": "unsetIfValue==",
+    "actors.0": "unsetIfValue==",
+    "actors.1.medewerker.eMailadres": "unsetIfValue==todo.attendees.0",
+    "actors.1.medewerker": "unsetIfValue==",
+    "actors.1.": "unsetIfValue==",
+    "actors": "unsetIfValue=="
 
 
   }
