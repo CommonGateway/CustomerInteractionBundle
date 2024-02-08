@@ -1,29 +1,99 @@
 {
   "installationService": "CommonGateway\\CustomerInteractionBundle\\Service\\InstallationService",
+  "applications": [
+    {
+      "title": "KISS-application",
+      "$id": "https://docs.commongateway.nl/application/default.application.json",
+      "$schema": "https://docs.commongateway.nl/schemas/Application.schema.json",
+      "version": "0.0.1",
+      "description": "The default application containing KISS",
+      "configuration": [
+        {
+          "https://commongateway.nl/klant.klant.endpoint.json": {
+            "in": {
+              "body": {
+                "mapping": "https://commongateway.nl/mapping/klant.klantToPartij.mapping.json"
+              },
+              "query": {
+                "mapping": "https://commongateway.nl/mapping/klant.klantToPartijQuery.mapping.json"
+              }
+            },
+            "out":{
+              "body": {
+                "mapping": "https://commongateway.nl/mapping/klant.partijToKlantCheck.mapping.json"
+              }
+            }
+          }
+        },
+        {
+          "https://commongateway.nl/klant.contactmoment.endpoint.json": {
+            "in": {
+              "body": {
+                "mapping": "https://commongateway.nl/mapping/klant.contactmomentToKlantContact.mapping.json"
+              }
+            },
+            "out":{
+              "body": {
+                "mapping": "https://commongateway.nl/mapping/klant.klantContactToContactmomentCheck.mapping.json"
+              }
+            }
+          }
+        },
+        {
+          "https://commongateway.nl/klant.klantcontactmoment.endpoint.json": {
+            "in":{
+              "body": {
+                "mapping": "https://commongateway.nl/mapping/klant.klantContactMomentToBetrokkeneBijKlantContact.mapping.json"
+              },
+              "query": {
+                "mapping": "https://commongateway.nl/mapping/klant.klantContactMomentToBetrokkeneBijKlantQuery.mapping.json"
+              }
+            },
+            "out":{
+              "body": {
+                "mapping": "https://commongateway.nl/mapping/klant.betrokkeneBijKlantContactToKlantContactMomentCheck.mapping.json"
+              }
+            }
+        }
+        }
+      ]
+    }
+  ],
   "collections": [
     {
       "reference": "https://vng.opencatalogi.nl/collection/kic.klantinteracties.collection.json",
       "schemaPrefix": "https://commongateway.nl/klant"
-    },
-    {
-      "reference": "https://vng.opencatalogi.nl/collection/klant.klanten.collection.json",
-      "schemaPrefix": "https://klantenBundle.nl/klant"
     }
   ],
   "endpoints": {
     "schemas": [
-      {
-        "version": "0.0.2",
-        "reference": "https://commongateway.nl/klant.betrokkeneBijKlantcontact.schema.json",
-        "path": "betrokkenenbijklantcontact",
-        "throws": ["klant.object.extend"],
-        "methods": [
-          "GET",
-          "PATCH",
-          "POST",
-          "GET"
-        ]
-      },
+        {
+          "version": "0.0.2",
+          "reference": "https://commongateway.nl/klant.betrokkeneBijKlantcontact.schema.json",
+          "path": "betrokkenenbijklantcontact",
+          "throws": ["klant.object.extend"],
+          "methods": [
+            "GET",
+            "PATCH",
+            "POST",
+            "GET"
+          ]
+        },
+        {
+          "$id": "https://commongateway.nl/klant.klantcontactmoment.endpoint.json",
+          "version": "0.0.1",
+          "reference": "https://commongateway.nl/klant.betrokkeneBijKlantcontact.schema.json",
+          "path": "klantcontactmomenten",
+          "throws": ["klant.object.extend"],
+          "methods": [
+            "GET",
+            "PUT",
+            "PATCH",
+            "POST",
+            "DELETE",
+            "GET"
+          ]
+        },
       {
         "version": "0.0.1",
         "reference": "https://commongateway.nl/klant.bijlage.schema.json",
@@ -73,6 +143,19 @@
         ]
       },
       {
+        "$id": "https://commongateway.nl/klant.contactmoment.endpoint.json",
+        "version": "0.0.1",
+        "reference": "https://commongateway.nl/klant.klantcontact.schema.json",
+        "path": "contactmomenten",
+        "throws": ["klant.object.extend"],
+        "methods": [
+          "GET",
+          "PATCH",
+          "POST",
+          "GET"
+        ]
+      },
+      {
         "version": "0.0.1",
         "reference": "https://commongateway.nl/klant.medewerker.schema.json",
         "path": "medewerkers",
@@ -110,11 +193,14 @@
         ]
       },
       {
+        "$id": "https://commongateway.nl/klant.klant.endpoint.json",
         "version": "0.0.1",
-        "reference": "https://commongateway.nl/klant.taak.schema.json",
-        "path": "taken",
+        "reference": "https://commongateway.nl/klant.partij.schema.json",
+        "path": "klanten",
+        "throws": ["klant.object.extend"],
         "methods": [
           "GET",
+          "PUT",
           "PATCH",
           "POST",
           "DELETE",
@@ -123,8 +209,8 @@
       },
       {
         "version": "0.0.1",
-        "reference": "https://commongateway.nl/klant.bericht.schema.json",
-        "path": "berichten",
+        "reference": "https://commongateway.nl/klant.taak.schema.json",
+        "path": "taken",
         "methods": [
           "GET",
           "PATCH",
@@ -136,3 +222,4 @@
     ]
   }
 }
+  

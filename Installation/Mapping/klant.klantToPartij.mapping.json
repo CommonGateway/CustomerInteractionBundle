@@ -1,0 +1,43 @@
+{
+  "title": "Klant to Partij",
+  "description": "Makes sure there are not multiple variants of the same categorie.",
+  "$id": "https://commongateway.nl/mapping/klant.klantToPartij.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.1",
+  "passTrough": false,
+  "mapping": {
+    "_id": "{% if _id|default %}{{ _id }}{% endif %}",
+    "_self": "_self",
+    "id": "{% if id|default %}{{ id }}{% elseif _id|default %}{{ _id }}{% endif %}",
+    "nummer": "klantnummer",
+    "soortPartij": "subjectType",
+    "organisatie.naam": "bedrijfsnaam",
+    "persoon.achternaam": "achternaam",
+    "persoon.voornaam": "voornaam",
+    "persoon.voorvoegselAchternaam": "voorvoegselAchternaam",
+    "bezoekadres": "adressen.0",
+    "verstrekteAdressen": "{% if not emails|default %}{% set emails = [] %}{% endif %}{% if not telefoonnummers|default %}{%set telefoonnummers = [] %}{%endif%}{{ map('https://commongateway.nl/mapping/klant.emailToDigitaalAdres.mapping.json', emails, true)|merge(map('https://commongateway.nl/mapping/klant.telefoonnummerToDigitaalAdres.mapping.json', telefoonnummers, true))|json_encode }}",
+    "externeIdentificaties.0.partijIdentificator.register": "{% if subjectIdentificatie.vestigingsNummer|default %}{kvkUrl}{% elseif subjectIdentificatie.inpBsn|default %}{brpUrl}{% endif %}",
+    "externeIdentificaties.0.partijIdentificator.objecttype": "{% if subjectIdentificatie.vestigingsNummer|default %}v1/zoeken{% elseif subjectIdentificatie.inpBsn|default %}ingeschrevenpersonen{% endif %}",
+    "externeIdentificaties.0.partijIdentificator.soortObjectId": "{% if subjectIdentificatie.vestigingsNummer|default %}string{% elseif subjectIdentificatie.inpBsn|default %}bsn{% endif %}",
+    "externeIdentificaties.0.partijIdentificator.objectId": "{% if subjectIdentificatie.vestigingsNummer|default %}{{ subjectIdentificatie.vestigingsNummer }}{% elseif subjectIdentificatie.inpBsn|default %}{{ subjectIdentificatie.inpBsn }}{% endif %}",
+    "indicatieActief": "true",
+    "indicatieGeheimhouding": "false",
+    "interneNotitie": "{{ functie|default('null') }}"
+  },
+  "cast": {
+    "_id": "unsetIfValue==",
+    "id": "unsetIfValue==",
+    "nummer": "int",
+    "organisatie.naam": "unsetIfValue==",
+    "bezoekadres": "unsetIfValue==adressen.0",
+    "verstrekteAdressen": "jsonToArray",
+    "externeIdentificaties.0.partijIdentificator.register": "unsetIfValue==",
+    "externeIdentificaties.0.partijIdentificator.objecttype": "unsetIfValue==",
+    "externeIdentificaties.0.partijIdentificator.soortObjectId": "unsetIfValue==",
+    "externeIdentificaties.0.partijIdentificator.objectId": "unsetIfValue==",
+    "indicatieActief": "bool",
+    "indicatieGeheimhouding": "bool",
+    "interneNotitie": "nullStringToNull"
+  }
+}

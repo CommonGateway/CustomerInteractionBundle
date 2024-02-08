@@ -1,0 +1,13 @@
+{
+  "title": "Partij to Klant Check",
+  "$id": "https://commongateway.nl/mapping/klant.partijToKlantCheck.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.1",
+  "passTrough": false,
+  "mapping": {
+    "#": "{% if results is defined %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantResults.mapping.json', _context)|json_encode }}{% else %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json', _context)|json_encode }}{% endif %}"
+  },
+  "cast": {
+    "#": "jsonToArray"
+  }
+}

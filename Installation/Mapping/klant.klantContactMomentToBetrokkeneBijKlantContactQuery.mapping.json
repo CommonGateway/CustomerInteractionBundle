@@ -1,0 +1,27 @@
+{
+  "title": "KlantContactMoment to BetrokkeneBijKlantContact query",
+  "description": "Makes sure there are not multiple variants of the same categorie.",
+  "$id": "https://commongateway.nl/mapping/klant.klantContactMomentToBetrokkeneBijKlantQuery.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.1",
+  "passTrough": false,
+  "mapping": {
+    "_order.embedded&#46;klantcontact&#46;plaatsgevondenOp": "desc",
+    "embedded&#46;klantcontact&#46;todo": "{% if attribute(_context, 'embedded&#46;contactmoment&#46;todo') is defined %}{{ attribute(_context, 'embedded&#46;contactmoment&#46;todo') }}{% endif %}",
+    "partij": "{% if klant|default %}{{ klant }}{% endif %}",
+    "klantcontact": "{% if contactmoment|default %}{{ contactmoment }}{% endif %}",
+    "_self&#46;owner&#46;id": "{% if attribute(_context, '_self&#46;owner&#46;id') is defined %}{{ attribute(_context, '_self&#46;owner&#46;id') }}{% endif %}",
+    "_page": "{% if _page|default %}{{ _page }}{% endif %}",
+    "_limit": "{% if _limit|default %}{{ _limit }}{% endif %}"
+  },
+  "cast": {
+    "_order.embedded&#46;klantcontact&#46;plaatsgevondenOp": "unsetIfValue==",
+    "_order": "unsetIfValue==",
+    "embedded&#46;klantcontact&#46;todo": "unsetIfValue==",
+    "partij": "unsetIfValue==",
+    "klantcontact": "unsetIfValue==",
+    "_self&#46;owner&#46;id": "unsetIfValue==",
+    "_page": "unsetIfValue==",
+    "_limit": "unsetIfValue=="
+  }
+}

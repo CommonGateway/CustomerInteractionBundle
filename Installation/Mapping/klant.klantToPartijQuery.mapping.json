@@ -1,0 +1,23 @@
+{
+  "title": "Klant to Partij Query",
+  "$id": "https://commongateway.nl/mapping/klant.klantToPartijQuery.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.1",
+  "passTrough": true,
+  "mapping": {
+    "externeIdentificaties&#46;partijIdentificator&#46;objectId": "{% if attribute(_context, 'embedded&#46;subjectIdentificatie&#46;vestigingsNummer') is defined %}{{ attribute(_context, 'embedded&#46;subjectIdentificatie&#46;vestigingsNummer') }}{% elseif attribute(_context, 'embedded&#46;subjectIdentificatie&#46;inpBsn') is defined %}{{ attribute(_context, 'embedded&#46;subjectIdentificatie&#46;inpBsn') }}{% endif %}",
+    "soortPartij": "subjectType",
+    "interneNotitie": "functie"
+  },
+  "unset": [
+    "embedded&#46;subjectIdentificatie&#46;inpBsn",
+    "embedded&#46;subjectIdentificatie&#46;vestigingsNummer",
+    "subjectType",
+    "functie" 
+  ],
+  "cast": {
+    "externeIdentificaties&#46;partijIdentificator&#46;objectId": "unsetIfValue==",
+    "soortPartij": "unsetIfValue==subjectType",
+    "interneNotitie": "unsetIfValue==functie"
+  }
+}

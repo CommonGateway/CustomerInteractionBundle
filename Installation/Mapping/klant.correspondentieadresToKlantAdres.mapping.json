@@ -1,0 +1,22 @@
+{
+  "title": "Correspondentieadres to KlantAdres",
+  "description": "Makes sure there are not multiple variants of the same adres.",
+  "$id": "https://commongateway.nl/mapping/klant.correspondentieadresToKlantAdres.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.1",
+  "passTrough": false,
+  "mapping": {
+    "naam": "{% if soortCorrespondentieadres|default %}{{ soortCorrespondentieadres }}{% endif %}",
+    "straatnaam": "{% if straat|default %}{{ straat }}{% endif %}",
+    "huisnummer": "{% if huisnummer|default %}{{ huisnummer }}{% endif %}",
+    "huisletter": "{% if huisletter|default %}{{ huisletter }}{% endif %}",
+    "huisnummertoevoeging": "{% if huisnummertoevoeging|default %}{{ huisnummertoevoeging }}{% endif %}",
+    "postcode": "{% if postcode|default %}{{ postcode }}{% endif %}",
+    "woonplaatsnaam": "{% if woonplaats|default %}{{ woonplaats }}{% endif %}",
+    "landcode": "{% if embedded.land.landcode|default %}{{ embedded.land.landcode }}{% endif %}"
+
+  },
+  "cast": {
+    "huisnummer": "int"
+  }
+}

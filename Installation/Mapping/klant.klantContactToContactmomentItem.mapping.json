@@ -1,0 +1,41 @@
+{
+  "title": "KlantContact to Contactmoment item",
+  "description": "Makes sure there are not multiple variants of the same categorie.. Note Barry: If a todo is set its a contaactverzoek else contactmoment which uses tekst for notitie (correct me if Im wrong) ",
+  "$id": "https://commongateway.nl/mapping/klant.klantContactToContactmomentItem.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.1",
+  "passTrough": false,
+  "mapping": {
+    "_id": "{% if _id|default %}{{ _id }}{% endif %}",
+    "_self": "_self",
+    "id": "{% if id|default %}{{ id }}{% elseif _id|default %}{{ _id }}{% endif %}",
+    "bronorganisatie": "{{ nummer|default('null') }}",
+    "registratiedatum": "{{ plaatsgevondenOp|default('null') }}",
+    "kanaal": "{{ embedded.kanaal.soortDigitaalAdres|default('null') }}",
+    "embedded.todo.description": "{% if todo|default %}{{ todo|default }}{% endif %}",
+    "tekst": "{{ inhoud|default('null') }}",
+    "resultaat": "{{ resultaat|default('null') }}",
+    "afwijkendOnderwerp": "{{ onderwerp|default('null') }}",
+    "zaaknummer": "{{ gaatOver.objectIdentificator.objectId|default('null') }}",
+    "status": "{% if indicatieContactGelukt|default and indicatieContactGelukt == 'nee'%}open{% else %}afgehandeld{% endif %}",
+    "afdeling": "{{ embedded.actors.0.embedded.organisatorischeEenheid.omschrijving|default('null') }}", 
+    "embedded.todo.attendees.0":  "{% if embedded.actors.1.embedded.medewerker.eMailadres|default %}{{ embedded.actors.1.embedded.medewerker.eMailadres }}{% elseif actors.1.medewerker.eMailadres|default %}{{ actors.1.medewerker.eMailadres }}{% endif %}"
+  },
+  "cast": {
+    "_id": "unsetIfValue==",
+    "id": "unsetIfValue==",
+    "bronorganisatie": ["string", "nullStringToNull"],
+    "registratiedatum": "nullStringToNull",
+    "kanaal": "nullStringToNull",
+    "tekst": "nullStringToNull",
+    "resultaat": "nullStringToNull",
+    "afwijkendOnderwerp": "nullStringToNull",
+    "zaaknummer": "nullStringToNull",
+    "status": "nullStringToNull",
+    "embedded.todo.attendees.0": "unsetIfValue==",
+    "embedded.todo.attendees": "unsetIfValue==",
+    "afdeling": "nullStringToNull",
+    "embedded.todo.description": ["nullStringToNullunsetIfValue==", ""],
+    "embedded.todo": "unsetIfValue=="
+  }
+}
