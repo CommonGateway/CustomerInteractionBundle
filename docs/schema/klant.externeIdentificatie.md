@@ -2,7 +2,7 @@
 
 De identificatiecode van een Relatie zoals die in een andere (authentieke?) registratie gevoerd wordt.
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/old-contactmomenten-api/docs/schema/klant.externeIdentificatie.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/old-contactmomenten-api-barry/docs/schema/klant.externeIdentificatie.svg)
 
 ## Properties
 
