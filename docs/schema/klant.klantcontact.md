@@ -19,6 +19,7 @@ Het klantcontact is bedoeld om inwoners of ondernemers die contact hebben gehad 
 | kanaal | object | Het communicatiekanaal dat tijdens het klantcontact werd gebruikt. | No |
 | inhoud | string | N/A | No |
 | todo | string | N/A | No |
+| resultaat | string | N/A | No |
 | indicatieContactGelukt | string | Deze enumeratie is toegevoegd omdat de ingevulde waarde geen boolean kan zijn (waar of niet waar). De gewenste waarden zijn Ja of leeg. Als het attribuut dus opgenomen wordt heeft het de Nill waarde of de waarde `Ja`.
 
 `ja` - Het verzoek is afgehandeld. | No |

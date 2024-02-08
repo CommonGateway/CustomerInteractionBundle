@@ -139,6 +139,7 @@ class Klantcontact {
   + kanaal: object
   + inhoud: string
   + todo: string
+  + resultaat: string
   + indicatieContactGelukt: string
   + taal: string
   + vertrouwelijk: string
