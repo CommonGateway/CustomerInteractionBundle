@@ -11,6 +11,7 @@ namespace CommonGateway\CustomerInteractionBundle\Service;
 
 use Adbar\Dot;
 use App\Entity\Gateway as Source;
+use CommonGateway\CoreBundle\Service\GatewayResourceService;
 use CommonGateway\CoreBundle\Service\CallService;
 use Doctrine\ORM\EntityManagerInterface;
 use Ramsey\Uuid\Uuid;
@@ -48,67 +49,34 @@ class CustomerInteractionService
      */
     private RequestStack $requestStack;
 
+    /**
+     * The Gateway Resource Service.
+     *
+     * @var GatewayResourceService
+     */
+    private GatewayResourceService $resourceService;
+
 
     /**
      * The service constructor.
      *
-     * @param CallService            $callService   the call service
-     * @param EntityManagerInterface $entityManager the entity manager
-     * @param RequestStack           $requestStack  the request stack
+     * @param CallService            $callService     The call service
+     * @param EntityManagerInterface $entityManager   The entity manager
+     * @param RequestStack           $requestStack    The request stack
+     * @param GatewayResourceService $resourceService The resource service
      */
     public function __construct(
         CallService $callService,
         EntityManagerInterface $entityManager,
-        RequestStack $requestStack
+        RequestStack $requestStack,
+        GatewayResourceService $resourceService
     ) {
-        $this->callService   = $callService;
-        $this->entityManager = $entityManager;
-        $this->requestStack  = $requestStack;
+        $this->callService     = $callService;
+        $this->entityManager   = $entityManager;
+        $this->requestStack    = $requestStack;
+        $this->resourceService = $resourceService;
 
     }//end __construct()
-
-
-    /**
-     * Find a source for a given url.
-     *
-     * @param string $url      The url of the object to be found.
-     * @param string $endpoint The resulting endpoint (the remainder of the path)
-     *
-     * @return Source|null The resulting source.
-     *
-     * @throws \Safe\Exceptions\UrlException
-     */
-    private function getSource(string $url, ?string &$endpoint): ?Source
-    {
-        // 1. Get the domain from the url
-        $parse    = \Safe\parse_url($url);
-        $location = $parse['scheme'].'://'.$parse['host'];
-
-        // 2.a Try to establish a source for the domain
-        $source = $this->entityManager->getRepository('App:Gateway')->findOneBy(['location' => $location]);
-
-        // 2.b The source might be on a path e.g. /v1 so if whe cant find a source let try to cycle
-        if ($source instanceof Source === false && isset($parse['path']) === true) {
-            foreach (explode('/', $parse['path']) as $pathPart) {
-                if ($pathPart !== '') {
-                    $location = $location.'/'.$pathPart;
-                }
-
-                $source = $this->entityManager->getRepository('App:Gateway')->findOneBy(['location' => $location]);
-                if ($source !== null) {
-                    $endpoint = str_replace($location, '', $url);
-                    break;
-                }
-            }
-        }
-
-        if ($source instanceof Source === false) {
-            return null;
-        }
-
-        return $source;
-
-    }//end getSource()
 
 
     /**
@@ -125,8 +93,10 @@ class CustomerInteractionService
         // Build the object url.
         $url = $identificator['register'].'/'.$identificator['objecttype'].'/'.$identificator['objectId'];
 
+        $endpoint = null;
+
         // Fetch the source.
-        $source = $this->getSource($url, $endpoint);
+        $source = $this->resourceService->findSourceForUrl($url, 'common-gateway/customer-interaction-bundle', $endpoint);
 
         if ($source === null) {
             return $identificator;
