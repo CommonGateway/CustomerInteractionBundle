@@ -135,21 +135,18 @@ class Medewerker {
 }
 class Klantcontact {
   + nummer: integer
-  + interneNotitie: string
-  + indicatieGeheimhouding: boolean
-  + voorkeurstaal: object
-  + indicatieActief: boolean
-  + soortPartij: string
-  + organisatie: object
-  + persoon: object
-  + contactpersoon: object
-  + voorkeurskanaal: object
-  + verstrekteAdressen: array
-  + bezoekadres: object
-  + correspondentieadres: object
-  + externeIdentificaties: array
-  + vertegenwoordiger: object
-  + vertegenwoordigde: object
+  + onderwerp: string
+  + kanaal: object
+  + inhoud: string
+  + indicatieContactGelukt: string
+  + taal: string
+  + vertrouwelijk: string
+  + plaatsgevondenOp: datetime
+  + actors: array
+  + bijlage: array
+  + gaatOver: object
+  + interneTaakOntstaanUit: array
+  + geregistreerdOp: datetime
 }
 class Organisatie {
   + naam: string
@@ -175,55 +172,5 @@ class Land {
 }
 class Persoonsnaam {
   + contactnaam: object
-}
-class Correspondentieadres {
-  + aanduidingBijHuisnummer: string
-  + adresregelBuitenland1: string
-  + adresregelBuitenland2: string
-  + adresregelBuitenland3: string
-  + antwoordnummer: integer
-  + huisletter: string
-  + huisnummer: integer
-  + huisnummertoevoeging: string
-  + land: object
-  + postbusnummer: integer
-  + postcode: string
-  + soortCorrespondentieadres: string
-  + straat: string
-  + woonplaats: string
-}
-class Actor {
-  + klantcontact: array
-  + naam: string
-  + soortActor: string
-  + medewerker: object
-  + geautomatiseerdeActor: object
-  + organisatorischeEenheid: object
-}
-class Contactnaam {
-  + achternaam: string
-  + voornaam: string
-  + voorvoegselAchternaam: string
-  + voorletters: string
-}
-class Bezoekadres {
-  + aanduidingBijHuisnummer: string
-  + adresregelBuitenland1: string
-  + adresregelBuitenland2: string
-  + adresregelBuitenland3: string
-  + huisletter: string
-  + huisnummer: integer
-  + huisnummertoevoeging: string
-  + land: object
-  + postcode: string
-  + soortBezoekadres: string
-  + straat: string
-  + woonplaats: string
-}
-class Land {
-  + einddatumLand: date
-  + ingangsdatumLand: date
-  + landcode: string
-  + landnaam: string
 }
 @enduml
