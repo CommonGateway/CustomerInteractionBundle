@@ -14,7 +14,6 @@
     "postcode": "{% if postcode|default %}{{ postcode }}{% endif %}",
     "woonplaatsnaam": "{% if woonplaats|default %}{{ woonplaats }}{% endif %}",
     "landcode": "{% if embedded.land.landcode|default %}{{ embedded.land.landcode }}{% endif %}"
-
   },
   "cast": {
     "huisnummer": "int"
