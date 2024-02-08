@@ -3,16 +3,16 @@
     "description": "Makes sure there are not multiple variants of the same categorie.",
     "$id": "https://commongateway.nl/mapping/klant.betrokkeneBijKlantContactToKlantContactMomentItem.mapping.json",
     "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
-    "version": "0.0.32",
+    "version": "0.0.1",
     "passTrough": false,
     "mapping": {
         "_id": "{% if _id|default %}{{ _id }}{% endif %}",
         "_self": "_self",
         "id": "{% if id|default %}{{ id }}{% elseif _id|default %}{{ _id }}{% endif %}",
-        "contactmoment": "{% if embedded.klantcontact|default %}{{ map('https://commongateway.nl/mapping/klant.klantContactToContactmomentItem.mapping.json', embedded.klantcontact)._self.self }}{% elseif klantcontact|default and klantcontact is not iterable %}{{ map('https://commongateway.nl/mapping/klant.klantContactToContactmomentItem.mapping.json', getObject(klantcontact))._self.self }}{% endif %}",	
-        "klant": "{% if embedded.partij|default %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json', embedded.partij)._self.self }}{% elseif partij|default and partij is not iterable %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json', getObject(partij))._self.self }}{% endif %}",
-        "embedded.contactmoment": "{% if embedded.klantcontact|default %}{{ map('https://commongateway.nl/mapping/klant.klantContactToContactmomentItem.mapping.json', embedded.klantcontact)|json_encode }}{% elseif klantcontact|default and klantcontact is not iterable %}{{ map('https://commongateway.nl/mapping/klant.klantContactToContactmomentItem.mapping.json', getObject(klantcontact))|json_encode }}{% endif %}",	
-        "embedded.klant": "{% if embedded.partij|default %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json', embedded.partij)|json_encode }}{% elseif partij|default and partij is not iterable %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json', getObject(partij))|json_encode }}{% endif %}"
+        "contactmoment": "{% if klantcontact|default %}{{ klantcontact }}{% endif %}",	
+        "klant": "{% if partij|default %}{{ partij }}{% endif %}",
+        "embedded.contactmoment": "{% if embedded.klantcontact|default %}{{ map('https://commongateway.nl/mapping/klant.klantContactToContactmomentItem.mapping.json', embedded.klantcontact)|json_encode }}{% endif %}",	
+        "embedded.klant": "{% if embedded.partij|default %}{{ map('https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json', embedded.partij)|json_encode }}{% endif %}"
     },
     "cast": {
         "_id": "unsetIfValue==",

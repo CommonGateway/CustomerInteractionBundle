@@ -2,7 +2,7 @@
   "title": "Partij to Klant Item",
   "$id": "https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json",
   "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
-  "version": "0.0.10",
+  "version": "0.0.1",
   "passTrough": false,
   "mapping": {
     "_id": "{% if _id|default %}{{ _id }}{% endif %}",
