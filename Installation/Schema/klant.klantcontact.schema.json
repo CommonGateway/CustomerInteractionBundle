@@ -34,10 +34,12 @@
     },
     "todo": {
       "type": "string",
+      "description": "This field is for backwards compatibilty with the klantenbundle.",
       "deprecated": true
     },
     "resultaat": {
       "type": "string",
+      "description": "This field is for backwards compatibilty with the klantenbundle.",
       "deprecated": true
     },
     "indicatieContactGelukt": {
