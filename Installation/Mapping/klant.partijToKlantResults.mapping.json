@@ -1,0 +1,19 @@
+{
+  "title": "Partij to Klant Results",
+  "$id": "https://commongateway.nl/mapping/klant.partijToKlantResults.mapping.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
+  "version": "0.0.1",
+  "passTrough": false,
+  "mapping": {
+    "results": "{{ map('https://commongateway.nl/mapping/klant.partijToKlantItem.mapping.json', results, true)|json_encode }}",
+    "count": "count",
+    "limit": "limit",
+    "total": "total",
+    "offset": "offset",
+    "page": "page",
+    "pages": "pages"
+  },
+  "cast": {
+    "results": "jsonToArray"
+  }
+}

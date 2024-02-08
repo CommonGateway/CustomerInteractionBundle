@@ -1,21 +1,43 @@
 {
   "title": "ContactMoment to KlantContact",
-  "description": "Makes sure there are not multiple variants of the same categorie.",
+  "description": "Makes sure there are not multiple variants of the same categorie. Note Barry: If a todo is set its a contaactverzoek else contactmoment which uses tekst for notitie (correct me if Im wrong) ",
   "$id": "https://commongateway.nl/mapping/klant.contactmomentToKlantContact.mapping.json",
   "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
-  "version": "0.0.1",
+  "version": "0.0.17",
   "passTrough": false,
   "mapping": {
+    "nummer": "bronorganisatie",
+    "geregistreerdOp": "registratiedatum",
     "plaatsgevondenOp": "registratiedatum",
     "kanaal.soortDigitaalAdres": "kanaal",
-    "inhoud": "tekst",
+    "inhoud": " {% if tekst|default %}{{ 'tekst='~tekst }}{% elseif todo|default %}{{ ' todo='~todo.description }}{% endif %}",
     "onderwerp": "afwijkendOnderwerp",
-    "gaatOver.objectIdentificator.objectId": "zaaknummer",
-    "gaatOver.objectIdentificator.objectType": "zaken",
-    "gaatOver.objectIdentificator.soortObjectId": "string",
-    "gaatOVer.objectIdentificator.register.type": "[zrc url]",
-    "indicatieContactGelukt": "{% if status == 'open'%}nee{% else %}ja{% endif %}",
+    "gaatOver.objectIdentificator.objectId": "{% if zaaknummer|default %}{{ zaaknummer }}{% endif %}",
+    "gaatOver.objectIdentificator.objectType": "{% if zaaknummer|default %}{{ 'zaken' }}{% endif %}",
+    "gaatOver.objectIdentificator.soortObjectId": "{% if zaaknummer|default %}{{ 'string' }}{% endif %}",
+    "gaatOVer.objectIdentificator.register.type": "{% if zrcUrl|default %}{{ zrcUrl }}{% endif %}",
+    "indicatieContactGelukt": "{% if tekst|default %}{{ 'ja' }}{% else %}{{ 'nee' }}{% endif %}",
     "actors.0.organisatorischeEenheid.omschrijving": "afdeling",
-    "actors.1.medewerker":  "medewerker"
+    "actors.1.medewerker.eMailadres":  "todo.attendees.0"
+  },
+  "cast": {
+    "nummer": ["int", "unsetIfValue==bronorganisatie"],
+    "gaatOver.objectIdentificator.objectId": "unsetIfValue==",
+    "gaatOver.objectIdentificator.objectType": "unsetIfValue==",
+    "gaatOver.objectIdentificator.soortObjectId": "unsetIfValue==",
+    "gaatOver.objectIdentificator.register.type": "unsetIfValue==",
+    "gaatOver.objectIdentificator.register": "unsetIfValue==",
+    "gaatOver.objectIdentificator": "unsetIfValue==",
+    "gaatOver": "unsetIfValue==",
+    "geregistreerdOp": "unsetIfValue==registratiedatum",
+    "plaatsgevondenOp": "unsetIfValue==registratiedatum",
+    "onderwerp": "unsetIfValue==afwijkendOnderwerp",
+    "kanaal.soortDigitaalAdres": "unsetIfValue==kanaal",
+    "kanaal": "unsetIfValue==",
+    "actors.0.organisatorischeEenheid.omschrijving": "unsetIfValue==afdeling",
+    "actors.1.medewerker": "unsetIfValue==todo.attendees.0"
+
+
   }
 }
+  
