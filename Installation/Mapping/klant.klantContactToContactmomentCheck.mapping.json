@@ -6,7 +6,7 @@
   "version": "0.0.1",
   "passTrough": false,
   "mapping": {
-      "#": "{% if results is defined %}{{ map('https://commongateway.nl/mapping/klant.klantContactToContactmomentResults.mapping.json', _context)|json_encode }}{% else %}{{ map('https://commongateway.nl/mapping/klant.klantContactToContactmomentItem.mapping.json', _context)|json_encode }}{% endif %}"
+    "#": "{% if results is defined %}{{ map('https://commongateway.nl/mapping/klant.klantContactToContactmomentResults.mapping.json', _context)|json_encode }}{% else %}{{ map('https://commongateway.nl/mapping/klant.klantContactToContactmomentItem.mapping.json', _context)|json_encode }}{% endif %}"
   },
   "cast": {
     "#": "jsonToArray"

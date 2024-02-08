@@ -6,17 +6,17 @@
   "version": "0.0.1",
   "passTrough": false,
   "mapping": {
-		"klantcontact": "{% if contactmoment|default %}{{ contactmoment }}{% endif %}",	
-		"partij": "{% if klant|default %}{{ klant }}{% endif %}",
-		"communicatiekanaal.soortDigitaalAdres": "{% if contactmoment.kanaal|default and contactmoment.kanaal == 'contactformulier'%}{{ 'formulier' }}{% elseif contactmoment.kanaal|default %}{{ contactmoment.kanaal }}{% endif %}",
-		"rol": "{{ 'klant' }}",
-		"voorkeurstaal": "contactmoment.voorkeurstaal"
+    "klantcontact": "{% if contactmoment|default %}{{ contactmoment }}{% endif %}",
+    "partij": "{% if klant|default %}{{ klant }}{% endif %}",
+    "communicatiekanaal.soortDigitaalAdres": "{% if contactmoment.kanaal|default and contactmoment.kanaal == 'contactformulier'%}{{ 'formulier' }}{% elseif contactmoment.kanaal|default %}{{ contactmoment.kanaal }}{% endif %}",
+    "rol": "{{ 'klant' }}",
+    "voorkeurstaal": "contactmoment.voorkeurstaal"
   },
-	"cast": {
-		"klantcontact": "unsetIfValue==",
-		"partij": "unsetIfValue==",
-		"voorkeurstaal": "unsetIfValue==contactmoment.voorkeurstaal",
-		"communicatiekanaal.soortDigitaalAdres": "unsetIfValue==",
-		"communicatiekanaal": "unsetIfValue=="
-	}
+  "cast": {
+    "klantcontact": "unsetIfValue==",
+    "partij": "unsetIfValue==",
+    "voorkeurstaal": "unsetIfValue==contactmoment.voorkeurstaal",
+    "communicatiekanaal.soortDigitaalAdres": "unsetIfValue==",
+    "communicatiekanaal": "unsetIfValue=="
+  }
 }

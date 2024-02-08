@@ -6,11 +6,11 @@
   "version": "0.0.1",
   "passTrough": false,
   "mapping": {
-		"klantcontact": "{% if contactmoment|default %}{{ contactmoment }}{% endif %}",	
-		"partij": "{% if klant|default %}{{ klant }}{% endif %}"
+    "klantcontact": "{% if contactmoment|default %}{{ contactmoment }}{% endif %}",
+    "partij": "{% if klant|default %}{{ klant }}{% endif %}"
   },
 	"cast": {
-		"klantcontact": "unsetIfValue==",
-		"partij": "unsetIfValue=="
+      "klantcontact": "unsetIfValue==",
+      "partij": "unsetIfValue=="
 	}
 }
