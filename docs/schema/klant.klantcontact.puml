@@ -8,6 +8,7 @@ class Klantcontact {
   + onderwerp: string
   + kanaal: object
   + inhoud: string
+  + todo: string
   + indicatieContactGelukt: string
   + taal: string
   + vertrouwelijk: string
