@@ -36,6 +36,10 @@
       "type": "string",
       "deprecated": true
     },
+    "resultaat": {
+      "type": "string",
+      "deprecated": true
+    },
     "indicatieContactGelukt": {
       "type": "string",
       "description": "Deze enumeratie is toegevoegd omdat de ingevulde waarde geen boolean kan zijn (waar of niet waar). De gewenste waarden zijn Ja of leeg. Als het attribuut dus opgenomen wordt heeft het de Nill waarde of de waarde `Ja`.\n\n`ja` - Het verzoek is afgehandeld.",
