@@ -2,22 +2,31 @@
   "title": "Klant to Partij Query",
   "$id": "https://commongateway.nl/mapping/klant.klantToPartijQuery.mapping.json",
   "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "passTrough": true,
   "mapping": {
+    "_order.persoon&#46;achternaam": "asc",
     "externeIdentificaties&#46;partijIdentificator&#46;objectId": "{% if attribute(_context, 'embedded&#46;subjectIdentificatie&#46;vestigingsNummer') is defined %}{{ attribute(_context, 'embedded&#46;subjectIdentificatie&#46;vestigingsNummer') }}{% elseif attribute(_context, 'embedded&#46;subjectIdentificatie&#46;inpBsn') is defined %}{{ attribute(_context, 'embedded&#46;subjectIdentificatie&#46;inpBsn') }}{% endif %}",
     "soortPartij": "subjectType",
-    "interneNotitie": "functie"
+    "interneNotitie": "functie",
+    "embedded&#46;verstrekteAdressen&#46;adres.like": "{% if attribute(attribute(_context, 'embedded&#46;emails&#46;email'), 'like') is defined %}{{ attribute(attribute(_context, 'embedded&#46;emails&#46;email'), 'like') }}{% elseif attribute(attribute(_context, 'embedded&#46;telefoonnummers&#46;telefoonnummer'), 'like') %}{{ attribute(attribute(_context, 'embedded&#46;telefoonnummers&#46;telefoonnummer'), 'like') }}{% endif %}",
+    "embedded&#46;verstrekteAdressen&#46;soortDigitaalAdres": "{% if attribute(attribute(_context, 'embedded&#46;emails&#46;email'), 'like') is defined %}emailadres{% elseif attribute(attribute(_context, 'embedded&#46;telefoonnummers&#46;telefoonnummer'), 'like') %}telefoonnummer{% endif %}"
   },
   "unset": [
+    "_order.achternaam",
     "embedded&#46;subjectIdentificatie&#46;inpBsn",
     "embedded&#46;subjectIdentificatie&#46;vestigingsNummer",
     "subjectType",
-    "functie" 
+    "functie",
+    "embedded&#46;emails&#46;email",
+    "embedded&#46;telefoonnummers&#46;telefoonnummer"
   ],
   "cast": {
+    "_order.persoon&#46;achternaam": "unsetIfValue==achternaam",
     "externeIdentificaties&#46;partijIdentificator&#46;objectId": "unsetIfValue==",
     "soortPartij": "unsetIfValue==subjectType",
-    "interneNotitie": "unsetIfValue==functie"
+    "interneNotitie": "unsetIfValue==functie",
+    "embedded&#46;verstrekteAdressen&#46;adres.like": "unsetIfValue==",
+    "embedded&#46;verstrekteAdressen&#46;soortDigitaalAdres": "unsetIfValue=="
   }
 }
