@@ -3,7 +3,7 @@
   "description": "Makes sure there are not multiple variants of the same categorie. Note Barry: If a todo is set its a contaactverzoek else contactmoment which uses tekst for notitie (correct me if Im wrong) ",
   "$id": "https://commongateway.nl/mapping/klant.contactmomentToKlantContact.mapping.json",
   "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "passTrough": false,
   "mapping": {
     "nummer": "bronorganisatie",
@@ -19,7 +19,7 @@
     "gaatOver.objectIdentificator.soortObjectId": "{% if zaaknummer|default %}{{ 'string' }}{% endif %}",
     "gaatOVer.objectIdentificator.register.type": "{% if zrcUrl|default %}{{ zrcUrl }}{% endif %}",
     "indicatieContactGelukt": "{% if tekst|default %}{{ 'ja' }}{% else %}{{ 'nee' }}{% endif %}",
-    "actors.0.organisatorischeEenheid.omschrijving": "afdeling",
+    "actors.0.organisatorischeEenheid": "{% if afdeling|default and afdeling is not iterable %}{% set afdeling = getObject(afdeling) %}{{ map('https://commongateway.nl/mapping/klant.afdelingToOrganisatorischeEenheid.mapping.json', afdeling)|json_encode }}{% endif %}",
     "actors.1.medewerker.eMailadres":  "todo.attendees.0"
   },
   "cast": {
@@ -39,8 +39,7 @@
     "onderwerp": "unsetIfValue==afwijkendOnderwerp",
     "kanaal.soortDigitaalAdres": "unsetIfValue==kanaal",
     "kanaal": "unsetIfValue==",
-    "actors.0.organisatorischeEenheid.omschrijving": "unsetIfValue==afdeling",
-    "actors.0.organisatorischeEenheid": "unsetIfValue==",
+    "actors.0.organisatorischeEenheid": ["jsonToArray", "unsetIfValue=="],
     "actors.0": "unsetIfValue==",
     "actors.1.medewerker.eMailadres": "unsetIfValue==todo.attendees.0",
     "actors.1.medewerker": "unsetIfValue==",
