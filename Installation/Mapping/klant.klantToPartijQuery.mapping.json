@@ -9,8 +9,8 @@
     "externeIdentificaties&#46;partijIdentificator&#46;objectId": "{% if attribute(_context, 'embedded&#46;subjectIdentificatie&#46;vestigingsNummer') is defined %}{{ attribute(_context, 'embedded&#46;subjectIdentificatie&#46;vestigingsNummer') }}{% elseif attribute(_context, 'embedded&#46;subjectIdentificatie&#46;inpBsn') is defined %}{{ attribute(_context, 'embedded&#46;subjectIdentificatie&#46;inpBsn') }}{% endif %}",
     "soortPartij": "subjectType",
     "interneNotitie": "functie",
-    "embedded&#46;verstrekteAdressen&#46;adres.like": "{% if attribute(attribute(_context, 'embedded&#46;emails&#46;email'), 'like') is defined %}{{ attribute(attribute(_context, 'embedded&#46;emails&#46;email'), 'like') }}{% elseif attribute(attribute(_context, 'embedded&#46;telefoonnummers&#46;telefoonnummer'), 'like') %}{{ attribute(attribute(_context, 'embedded&#46;telefoonnummers&#46;telefoonnummer'), 'like') }}{% endif %}",
-    "embedded&#46;verstrekteAdressen&#46;soortDigitaalAdres": "{% if attribute(attribute(_context, 'embedded&#46;emails&#46;email'), 'like') is defined %}emailadres{% elseif attribute(attribute(_context, 'embedded&#46;telefoonnummers&#46;telefoonnummer'), 'like') %}telefoonnummer{% endif %}"
+    "embedded&#46;verstrekteAdressen&#46;adres.like": "{% if attribute(attribute(_context, 'embedded&#46;emails&#46;email'), 'like') is defined %}{{ attribute(attribute(_context, 'embedded&#46;emails&#46;email'), 'like') }}{% elseif attribute(attribute(_context, 'embedded&#46;telefoonnummers&#46;telefoonnummer'), 'like') is defined %}{{ attribute(attribute(_context, 'embedded&#46;telefoonnummers&#46;telefoonnummer'), 'like') }}{% endif %}",
+    "embedded&#46;verstrekteAdressen&#46;soortDigitaalAdres": "{% if attribute(attribute(_context, 'embedded&#46;emails&#46;email'), 'like') is defined %}emailadres{% elseif attribute(attribute(_context, 'embedded&#46;telefoonnummers&#46;telefoonnummer'), 'like') is defined %}telefoonnummer{% endif %}"
   },
   "unset": [
     "_order.achternaam",
