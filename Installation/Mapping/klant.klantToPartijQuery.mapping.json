@@ -5,7 +5,7 @@
   "version": "0.0.2",
   "passTrough": true,
   "mapping": {
-    "_order.persoon&#46;achternaam": "asc",
+    "_order.persoon&#46;achternaam": "{{ _order.achternaam|default }}",
     "externeIdentificaties&#46;partijIdentificator&#46;objectId": "{% if attribute(_context, 'embedded&#46;subjectIdentificatie&#46;vestigingsNummer') is defined %}{{ attribute(_context, 'embedded&#46;subjectIdentificatie&#46;vestigingsNummer') }}{% elseif attribute(_context, 'embedded&#46;subjectIdentificatie&#46;inpBsn') is defined %}{{ attribute(_context, 'embedded&#46;subjectIdentificatie&#46;inpBsn') }}{% endif %}",
     "soortPartij": "subjectType",
     "interneNotitie": "functie",
@@ -22,7 +22,7 @@
     "embedded&#46;telefoonnummers&#46;telefoonnummer"
   ],
   "cast": {
-    "_order.persoon&#46;achternaam": "unsetIfValue==achternaam",
+    "_order": "unsetIfValue==",
     "externeIdentificaties&#46;partijIdentificator&#46;objectId": "unsetIfValue==",
     "soortPartij": "unsetIfValue==subjectType",
     "interneNotitie": "unsetIfValue==functie",
