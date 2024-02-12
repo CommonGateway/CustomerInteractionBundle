@@ -3,7 +3,7 @@
   "description": "Makes sure there are not multiple variants of the same categorie. Note Barry: If a todo is set its a contaactverzoek else contactmoment which uses tekst for notitie (correct me if Im wrong) ",
   "$id": "https://commongateway.nl/mapping/klant.contactmomentToKlantContact.mapping.json",
   "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "passTrough": false,
   "mapping": {
     "nummer": "bronorganisatie",
@@ -43,7 +43,7 @@
     "actors.0": "unsetIfValue==",
     "actors.1.medewerker.eMailadres": "unsetIfValue==todo.attendees.0",
     "actors.1.medewerker": "unsetIfValue==",
-    "actors.1.": "unsetIfValue==",
+    "actors.1": "unsetIfValue==",
     "actors": "unsetIfValue=="
   }
 }
