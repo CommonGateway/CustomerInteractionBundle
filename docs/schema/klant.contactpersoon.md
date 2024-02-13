@@ -2,7 +2,7 @@
 
 No description available.
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/map-afdeling/docs/schema/klant.contactpersoon.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.contactpersoon.svg)
 
 ## Properties
 
