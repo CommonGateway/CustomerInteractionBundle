@@ -2,7 +2,7 @@
 
 Een taak.identificatie
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/klantcontactmoment-mapping/docs/schema/klant.taak.identificatie.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.taak.identificatie.svg)
 
 ## Properties
 
