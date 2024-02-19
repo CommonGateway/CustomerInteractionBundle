@@ -35,7 +35,7 @@
     "embedded.todo.attendees.0": "unsetIfValue==",
     "embedded.todo.attendees": "unsetIfValue==",
     "afdeling": "nullStringToNull",
-    "embedded.todo.description": ["nullStringToNullunsetIfValue==", ""],
+    "embedded.todo.description": ["nullStringToNull", "unsetIfValue=="],
     "embedded.todo": "unsetIfValue=="
   }
 }
