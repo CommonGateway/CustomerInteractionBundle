@@ -90,17 +90,18 @@ outputTypes:
   - application/json+ld
   - application/xml
   - application/x-yaml
-nl: 
+nl:
   countryExtensionVersion: null
-  commonground: 
-    intendedOrganisations: []
-    installationType: null
-    layerType: data
-  gemma:
-    bedrijfsfuncties: []
-    bedrijfsservices: []
-    applicatiefunctie: null
-    model: null
   upl: []
+  vng:
+    commonground:
+      installationType: null
+      intendedOrganisations: []
+      layerType: data
+    gemma:
+      applicatiefunctie: null
+      bedrijfsfuncties: []
+      bedrijfsservices: []
+      model: null
 downloadUrls:
   - https://github.com/CommonGateway/CustomerInteractionBundle/archive/refs/heads/main.zip
