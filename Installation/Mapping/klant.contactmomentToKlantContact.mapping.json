@@ -3,14 +3,14 @@
   "description": "Makes sure there are not multiple variants of the same categorie. Note Barry: If a todo is set its a contaactverzoek else contactmoment which uses tekst for notitie (correct me if Im wrong) ",
   "$id": "https://commongateway.nl/mapping/klant.contactmomentToKlantContact.mapping.json",
   "$schema": "https://docs.commongateway.nl/schemas/Mapping.schema.json",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "passTrough": false,
   "mapping": {
     "nummer": "bronorganisatie",
     "geregistreerdOp": "registratiedatum",
     "plaatsgevondenOp": "registratiedatum",
     "kanaal.soortDigitaalAdres": "kanaal",
-    "inhoud": " {% if tekst|default %}{{ tekst }}{% endif %}",
+    "inhoud": "{% if tekst|default %}{{ tekst }}{% endif %}",
     "todo": "{% if todo|default %}{{ todo.description }}{% endif %}",
     "resultaat": "{% if resultaat|default %}{{ resultaat }}{% endif %}",
     "onderwerp": "afwijkendOnderwerp",
@@ -19,8 +19,7 @@
     "gaatOver.objectIdentificator.soortObjectId": "{% if zaaknummer|default %}{{ 'string' }}{% endif %}",
     "gaatOVer.objectIdentificator.register.type": "{% if zrcUrl|default %}{{ zrcUrl }}{% endif %}",
     "indicatieContactGelukt": "{% if tekst|default %}{{ 'ja' }}{% else %}{{ 'nee' }}{% endif %}",
-    "actors.0.organisatorischeEenheid": "{% if afdeling|default and afdeling is not iterable %}{% set afdeling = getObject(afdeling) %}{{ map('https://commongateway.nl/mapping/klant.afdelingToOrganisatorischeEenheid.mapping.json', afdeling)|json_encode }}{% endif %}",
-    "actors.1.medewerker.eMailadres":  "todo.attendees.0"
+    "actors": "[{% if afdeling|default and afdeling is not iterable %}{% set afdeling = getObject(afdeling) %}{{ '{\"organisatorischeEenheid\":'~map('https://commongateway.nl/mapping/klant.afdelingToOrganisatorischeEenheid.mapping.json', afdeling)|json_encode~'}' }}{% endif %}{% if afdeling|default and afdeling is not iterable and todo.attendees.0|default %}{{ ', '  }}{% endif %}{% if todo.attendees.0|default %}{{ '{\"medewerker\": {\"eMailadres\": \"'~todo.attendees.0~'\"}}' }}{% endif %} ]"
   },
   "cast": {
     "nummer": ["int", "unsetIfValue==bronorganisatie"],
@@ -39,11 +38,8 @@
     "onderwerp": "unsetIfValue==afwijkendOnderwerp",
     "kanaal.soortDigitaalAdres": "unsetIfValue==kanaal",
     "kanaal": "unsetIfValue==",
-    "actors.0.organisatorischeEenheid": ["jsonToArray", "unsetIfValue=="],
     "actors.0": "unsetIfValue==",
-    "actors.1.medewerker.eMailadres": "unsetIfValue==todo.attendees.0",
-    "actors.1.medewerker": "unsetIfValue==",
     "actors.1": "unsetIfValue==",
-    "actors": "unsetIfValue=="
+    "actors": ["jsonToArray", "unsetIfValue=="]
   }
 }
