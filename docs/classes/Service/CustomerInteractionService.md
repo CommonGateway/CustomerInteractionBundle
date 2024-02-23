@@ -1,6 +1,6 @@
 # CommonGateway\CustomerInteractionBundle\Service\CustomerInteractionService  
 
-An example service for adding business logic to your class.
+
 
 
 
@@ -10,8 +10,10 @@ An example service for adding business logic to your class.
 
 | Name | Description |
 |------|-------------|
-|[__construct](#customerinteractionservice__construct)||
-|[customerInteractionHandler](#customerinteractionservicecustomerinteractionhandler)|An example handler that is triggered by an action.|
+|[__construct](#customerinteractionservice__construct)|The service constructor.|
+|[extendHandler](#customerinteractionserviceextendhandler)|Extend requests to external sources|
+|[extendIdentificator](#customerinteractionserviceextendidentificator)|Extend an identificator object with the subobject.|
+|[recursiveFindIdentificators](#customerinteractionservicerecursivefindidentificators)|Recursively walk trough the result of the original request and extend the identificators.|
 
 
 
@@ -21,16 +23,23 @@ An example service for adding business logic to your class.
 **Description**
 
 ```php
- __construct (void)
+public __construct (\CallService $callService, \EntityManagerInterface $entityManager, \RequestStack $requestStack, \GatewayResourceService $resourceService)
 ```
 
- 
+The service constructor. 
 
  
 
 **Parameters**
 
-`This function has no parameters.`
+* `(\CallService) $callService`
+: The call service  
+* `(\EntityManagerInterface) $entityManager`
+: The entity manager  
+* `(\RequestStack) $requestStack`
+: The request stack  
+* `(\GatewayResourceService) $resourceService`
+: The resource service  
 
 **Return Values**
 
@@ -40,30 +49,90 @@ An example service for adding business logic to your class.
 <hr />
 
 
-### CustomerInteractionService::customerInteractionHandler  
+### CustomerInteractionService::extendHandler  
 
 **Description**
 
 ```php
-public customerInteractionHandler (array $data, array $configuration)
+public extendHandler (array $data, array $configuration)
 ```
 
-An example handler that is triggered by an action. 
+Extend requests to external sources 
 
  
 
 **Parameters**
 
 * `(array) $data`
-: The data array  
+: The result of the original request.  
 * `(array) $configuration`
-: The configuration array  
+: The configuration of this action, contains the entity that should be extended.  
 
 **Return Values**
 
 `array`
 
-> A handler must ALWAYS return an array
+> The updated data.
+
+
+<hr />
+
+
+### CustomerInteractionService::extendIdentificator  
+
+**Description**
+
+```php
+public extendIdentificator (array $identificator)
+```
+
+Extend an identificator object with the subobject. 
+
+ 
+
+**Parameters**
+
+* `(array) $identificator`
+: The identificator object.  
+
+**Return Values**
+
+`array`
+
+> The resulting identificator object.
+
+
+**Throws Exceptions**
+
+
+`\Exception`
+
+
+<hr />
+
+
+### CustomerInteractionService::recursiveFindIdentificators  
+
+**Description**
+
+```php
+public recursiveFindIdentificators (array $result)
+```
+
+Recursively walk trough the result of the original request and extend the identificators. 
+
+ 
+
+**Parameters**
+
+* `(array) $result`
+: The result to check and update.  
+
+**Return Values**
+
+`array`
+
+> The updated result.
 
 
 <hr />
