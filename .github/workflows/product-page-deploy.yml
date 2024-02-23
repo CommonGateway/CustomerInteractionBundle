@@ -1,13 +1,13 @@
-name: My ProductPage & PublicCode Workflow
+name: My Product Page Workflow
+
+permissions:
+  contents: write
 
 on:
   push:
     branches:
       - main
       - master
-
-permissions:
-  contents: write
 
 jobs:
   build:
@@ -19,13 +19,10 @@ jobs:
           github_repository_name_as_prefix: false
           github_repository_url: https://github.com/commonGateway/CustomerInteractionBundle
           github_api_base_url: https://api.github.com/repos/CommonGateway/CustomerInteractionBundle/contents
-          github_docs_directory_paths: '[{"name": "Classes","location": "/docs/classes"},{"name": "Service", "location": "/docs/classes/Service"}]'
-          slack_url: "false"
-          read_the_docs_url: "false"
-          navbar_content: "https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/navbarContent.json"
+          navbar_content: 'https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/master/docs/NavbarContent.json'
           footer_show_logo: true
-          footer_logo_href: https://conduction.nl
-          footer_content: "https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/footerContent.json"
+          footer_logo_href: "https://opencatalogi.nl/"
+          footer_content: 'https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/master/docs/FooterContent.json'
           footer_content_header: "heading-3"
           jumbotron_title: "Klanten Register"
           jumbotron_subtitle: "Alle verschillende VNG klant api's in één motor blok"
@@ -35,5 +32,3 @@ jobs:
           page_title: "Klanten Register"
           nl_design_theme_classname: "open-webconcept-theme"
           pull_from_branche: "development"
-      - name: Create or Update publiccode.yaml
-        uses: OpenCatalogi/publiccode-action@latest
