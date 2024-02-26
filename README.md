@@ -4,12 +4,12 @@ KlantenRegister is de spil in het web van klantinteractie binnen de overheid. He
 
 ### Kernvoordelen
 
-- **Centraal Overzicht:** Eén centrale locatie voor alle klantgegevens en interacties.
-- **Efficiëntie in Beheer:** Vereenvoudigt het beheer van klantinteracties en -gegevens.
-- **Interoperabiliteit:** Ondersteunt de integratie met andere systemen via gestandaardiseerde API's.
-- **Toegankelijkheid:** Maakt gegevens toegankelijk voor geautoriseerde gebruikers, met respect voor privacy en beveiliging.
-- **Flexibiliteit:** Kan worden uitgebreid en aangepast aan de behoeften van elke organisatie.
-- **Compliance:** Voldoet aan de relevante wet- en regelgeving voor gegevensbeheer.
+* **Centraal Overzicht:** Eén centrale locatie voor alle klantgegevens en interacties.
+* **Efficiëntie in Beheer:** Vereenvoudigt het beheer van klantinteracties en -gegevens.
+* **Interoperabiliteit:** Ondersteunt de integratie met andere systemen via gestandaardiseerde API's.
+* **Toegankelijkheid:** Maakt gegevens toegankelijk voor geautoriseerde gebruikers, met respect voor privacy en beveiliging.
+* **Flexibiliteit:** Kan worden uitgebreid en aangepast aan de behoeften van elke organisatie.
+* **Compliance:** Voldoet aan de relevante wet- en regelgeving voor gegevensbeheer.
 
 ## Installatie
 
@@ -17,9 +17,9 @@ KlantenRegister is de spil in het web van klantinteractie binnen de overheid. He
 
 #### Vereisten
 
-- PHP 7.4 of hoger
-- Symfony 5 of hoger
-- Toegang tot de CustomerInteractionBundle
+* PHP 7.4 of hoger
+* Symfony 5 of hoger
+* Toegang tot de CustomerInteractionBundle
 
 #### Stap-voor-stap Installatie
 
