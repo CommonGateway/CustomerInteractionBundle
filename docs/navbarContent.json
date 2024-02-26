@@ -20,50 +20,13 @@
     }
   },
   {
-    "label": "Services",
+    "label": "Registers",
+    "type": "external",
     "current": {
-      "pathname": "/Service"
+      "pathname": "/registers"
     },
-    "subItems": [
-      {
-        "label": "README",
-        "type": "internalMarkdown",
-        "current": {
-          "pathname": "/Service/README"
-        },
-        "handleClick": {
-          "internalMarkdown": {
-            "directoryName": "Service",
-            "fileName": "README"
-          }
-        }
-      },
-      {
-        "label": "CustomerInteractionService",
-        "type": "internalMarkdown",
-        "current": {
-          "pathname": "/Service/CustomerInteractionService"
-        },
-        "handleClick": {
-          "internalMarkdown": {
-            "directoryName": "Service",
-            "fileName": "CustomerInteractionService"
-          }
-        }
-      },
-      {
-        "label": "InstallationService",
-        "type": "internalMarkdown",
-        "current": {
-          "pathname": "/Service/InstallationService"
-        },
-        "handleClick": {
-          "internalMarkdown": {
-            "directoryName": "Service",
-            "fileName": "InstallationService"
-          }
-        }
+    "handleClick": {
+      "link":  "https://openregisters.app/" 
       }
-    ]
   }
 ]
