@@ -70,7 +70,7 @@ Ruben van der Linde
 
 ## 17 Wat is een korte omschrijving van het product?
 
-Alle verschillende VNG klant api's in één motor blok
+Een centrale plek voor klant informatie met koppeling op uw huidige zaaksysteem en het BRP.
 
 ## 18 Hoeverre draagt het initiatief volgens jou bij aan de wendbaarheid van gemeenten?
 
