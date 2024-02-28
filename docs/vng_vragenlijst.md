@@ -2,7 +2,7 @@
 
 ## 1 Wat is de naam van het initiatief dat je wilt aanmelden?
 
-KlantenRegister
+Klantenregister
 
 ## 2 Wat voor type product is het initiatief?
 
@@ -10,7 +10,12 @@ KlantenRegister
 
 ## 3 Indien een toepassing, welke componenten zijn hierin opgenomen?
 
-KlantenRegister bundelt de verschillende VNG klant API's in één motorblok, bekend als de CustomerInteractionBundle. Dit omvat toegang tot Klanten API's, Taken API, Berichten API, en ondersteunt het ophalen van klantinformatie via BSN met een externeIdentificatie.
+* FSC/NLX
+
+* Objectstore(MonggoDB)
+* Symfony
+* API Platform
+* Database(MySQL/PostgrSQL/MsSQL)
 
 ## 4 Indien het initiatief software betreft, is het parallel te gebruiken naast de bestaande software die het moet vervangen?
 
@@ -18,37 +23,69 @@ Ja, KlantenRegister is ontworpen om naadloos te integreren met bestaande systeme
 
 ## 5 Indien een toepassing, pitch je product. Waarom zouden anderen moeten mee doen met de ontwikkeling of waarom zouden andere gemeenten jouw product moeten implementeren?
 
-KlantenRegister centraliseert en vereenvoudigt de toegang tot klantgerelateerde gegevens en interacties binnen overheidsinstanties, wat essentieel is voor het verbeteren van de dienstverlening en het efficiënt beheren van klantinteracties in overeenstemming met de Common Ground principes.
+KlantenRegister is een essentieel onderdeel van de digitale transformatie binnen overheidsinstanties, gericht op het centraliseren van klantgegevens om interacties te stroomlijnen en dienstverlening te verbeteren. Het platform past binnen de Common Ground visie door de nadruk te leggen op snelheid, efficiëntie, en schaalbaarheid. KlantenRegister bundelt verschillende VNG klant API's tot één geïntegreerd systeem, wat de afhandeling van inwonerinteracties vereenvoudigt.
 
 ## 6 In welk domein past het initiatief?
 
-* Dienstverlening
+Overkoepelend/ randvoorwaardelijk voor CG
+Dienstverlening
 
 ## 7 Welk type organisaties zijn betrokken?
 
 * Gemeenten
 * Leveranciers
 * VNG
+* Ketenpartners
 
 ## 8 Welke gemeenten zijn aangesloten bij de realisatie van dit initiatief?
 
-De gemeenten die meedoen met de fieldlabs van de VNG Realisatie zijn betrokken bij de realisatie van KlantenRegister.
+Rotterdam (Via OpenCatalogi)
+Gouda (Via OpenCatalogi)
+Noordwijk (Via OpenWoo.app)
+Tubbergen (Via OpenWoo.app)
+Epe (Via OpenWoo.app)
+Dinkelland (Via OpenWoo.app)
+Leiden (Via OpenCatalogi)
+Roermond (Via OpenWoo.app)
+Assen (Via OpenWoo.app)
+Hilversum (Via OpenWoo.app)
+Haarlemermeer (Via OpenWoo.app)
+Enschede (Via OpenWoo.app)
+Eindhoven (Via OpenWoo.app)
+Hardewijk (Via OpenWoo.app)
 
 ## 9 Welke gemeenten maken gebruik van dit initiatief?
 
-De gemeenten die meedoen met de fieldlabs van de VNG Realisatie maken gebruik van KlantenRegister.
+Noordwijk (Via OpenWoo.app)
+Tubbergen (Via OpenWoo.app)
+Epe(Via OpenWoo.app)
+Rotterdam (Via OpenCatalogi)
+Gouda (Via OpenWoo.app)
+Zutphen (Via OpenWoo.app)
+Roosendaal (Via OpenWoo.app)
+Alkmaar (Via OpenCatalogi)
+Barendrecht (Via Open Registers | Klanten)
+Albrandswaard (Via Open Registers | Klanten)
+Ridderkerk (Via Open Registers | Klanten)
+Hoeksche Waard (Via Open Registers | Klanten)
+Sud-West Fryslan (Via Open Registers | Klanten)
+Fryske Marren (Via Open Registers | Klanten)
 
 ## 10 Welke leveranciers zijn betrokken?
 
-Informatie over specifieke leveranciers die betrokken zijn bij KlantenRegister is niet beschikbaar.
+Conduction B.V (Via OpenWoo.app en  OpenCatalogi)
+Yard (Via OpenWoo.app)
+Acato (Via OpenWoo.app)
+Sim Groep (Via OpenWoo.app en  OpenCatalogi)
+Xxllnc (Via OpenWoo.app en Open Registers | Klanten)
 
 ## 11 Wat is de startdatum van het initiatief?
 
-2023
+01-06-2023
 
 ## 12 Wanneer wordt verwacht dat het initiatief ready for use is? Of sinds wanneer is het initiatief ready for use?
 
-01-03-2024
+01-11-2023
 
 ## 13 Welke organisatie wordt aangehouden als contact organisatie?
 
@@ -68,7 +105,7 @@ Ruben van der Linde
 
 ## 17 Wat is een korte omschrijving van het product?
 
-KlantenRegister faciliteert een gecentraliseerde benadering voor het beheer van klantgegevens en interacties, ondersteund door de integratie van diverse VNG klant API's in één overzichtelijke bundel.
+Een centrale plek voor klant informatie met koppeling op uw huidige zaaksysteem en het BRP.
 
 ## 18 Hoeverre draagt het initiatief volgens jou bij aan de wendbaarheid van gemeenten?
 
@@ -96,7 +133,7 @@ KlantenRegister draagt indirect bij aan de regie op gegevens door het vereenvoud
 
 ## 24 Waar staat informatie over de planning? Voeg indien mogelijk de link toe
 
-Informatie over de planning van KlantenRegister is niet beschikbaar.
+Deze informaite is te vinden op de productpagina van KlantenRegister: <https://klanten.openregisters.app/>
 
 ## 25 Op welke laag of op welke lagen bevindt dit initiatief zich
 
@@ -105,15 +142,16 @@ Informatie over de planning van KlantenRegister is niet beschikbaar.
 
 ## 26 Welke API-standaarden zijn toegepast?
 
-Informatie over specifieke API-standaarden toegepast in KlantenRegister is niet beschikbaar.
+Haal Centraal
+API-standaarden voor ZGW-werken
+NL-API strategie
+NL-GOV profiel voor cloud events
 
 ## 27 In welke fase bevindt het initiatief zich?
 
-* Doorontwikkeling en beheer
+* Doorontwikkeling en beheer (stabiel, onderdeel gevestigde orde)
 
 ## 28 Waar zijn jullie tegenaan gelopen? In zowel ontwikkeling en waar van toepassing bij de implementatie Noem de een tot drie grootste punten
-
-Informatie over specifieke uitdagingen of knelpunten bij de ontwikkeling of implementatie van KlantenRegister is niet beschikbaar.
 
 ## 29 Zijn er nog vragen naar aanleiding van dit intakeformulier?
 
