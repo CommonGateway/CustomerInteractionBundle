@@ -2,7 +2,7 @@
 
 No description available.
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.voorkeur.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/Symfony-updates/docs/schema/klant.voorkeur.svg)
 
 ## Properties
 
