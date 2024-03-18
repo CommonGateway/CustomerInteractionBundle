@@ -2,6 +2,11 @@
 title: All schemas
 footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
 header: Schema
+class Betrokenne {
+  + betrokkeneType: string
+  + rolType: string
+  + betrokkene: object
+}
 class Partij {
   + nummer: integer
   + interneNotitie: string
@@ -106,15 +111,23 @@ class Organisatie {
 }
 class Taak {
   + id: string
+  + type: string
+  + url: string
   + data: array
   + zaak: string
   + title: string
+  + onderwerp: string
+  + toelichting: string
   + status: string
   + formulier: object
   + verloopdatum: string
+  + vervaldatum: string
   + identificatie: object
   + verzonden_data: array
   + verwerker_taak_id: string
+  + betrokkenen: array
+  + partij: object
+  + extraData: array
 }
 class Actor {
   + klantcontact: array
@@ -127,6 +140,11 @@ class Actor {
 class TaakIdentificatie {
   + type: string
   + value: string
+}
+class BetrokenneMedewerkerOfPersoon {
+  + naam: string
+  + medewerkerIdentificatie: string
+  + inpBsn: string
 }
 class Identificator {
   + objecttype: string

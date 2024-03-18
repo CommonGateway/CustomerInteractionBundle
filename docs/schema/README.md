@@ -4,6 +4,7 @@
 
 | Class | Documentation |
 |-------|--------------|
+| Betrokenne | [klant.taak.betrokkene.md](klant.taak.betrokkene.md) |
 | Partij | [klant.partij.md](klant.partij.md) |
 | Digitaal Adres | [klant.digitaalAdres.md](klant.digitaalAdres.md) |
 | Correspondentieadres | [klant.correspondentieadres.md](klant.correspondentieadres.md) |
@@ -21,6 +22,7 @@
 | Taak | [klant.taak.md](klant.taak.md) |
 | Actor | [klant.actor.md](klant.actor.md) |
 | TaakIdentificatie | [klant.taak.identificatie.md](klant.taak.identificatie.md) |
+| BetrokenneMedewerkerOfPersoon | [klant.taak.betrokkeneMedewerkerOfPersoon.md](klant.taak.betrokkeneMedewerkerOfPersoon.md) |
 | Identificator | [klant.identificator.md](klant.identificator.md) |
 | Bezoekadres | [klant.bezoekadres.md](klant.bezoekadres.md) |
 | Contactnaam | [klant.contactnaam.md](klant.contactnaam.md) |
