@@ -5,14 +5,22 @@ header: Schema
 
 class Taak {
   + id: string
+  + type: string
+  + url: string
   + data: array
   + zaak: string
   + title: string
+  + onderwerp: string
+  + toelichting: string
   + status: string
   + formulier: object
   + verloopdatum: string
+  + vervaldatum: string
   + identificatie: object
   + verzonden_data: array
   + verwerker_taak_id: string
+  + betrokkenen: array
+  + partij: object
+  + extraData: array
 }
 @enduml
