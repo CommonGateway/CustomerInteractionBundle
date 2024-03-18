@@ -1,0 +1,25 @@
+{
+  "title": "Betrokenne",
+  "$id": "https://commongateway.nl/klant.taak.betrokkene.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "description": "Een betrokkene medewerker of persoon",
+  "required": ["id", "title"],
+  "properties": {
+    "betrokkeneType": {
+      "type": "string",
+      "enum": [
+        "medewerker",
+        "natuurlijk_persoon"
+      ]
+    },
+    "rolType": {
+      "type": "string"
+    },
+    "betrokkene": {
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.taak.betrokkeneMedewerkerOfPersoon.schema.json"
+    }
+  }
+}
