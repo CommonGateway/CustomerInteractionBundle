@@ -4874,7 +4874,7 @@
     "/kic/v1/berichten/{id}": {
       "get": {
         "tags": [
-          "taak"
+          "bericht"
         ],
         "summary": "Bericht",
         "description": "Een Bericht",
@@ -4916,7 +4916,7 @@
       },
       "patch": {
         "tags": [
-          "taak"
+          "bericht"
         ],
         "summary": "Bericht",
         "description": "Een Bericht",
@@ -4972,7 +4972,7 @@
       },
       "delete": {
         "tags": [
-          "taak"
+          "bericht"
         ],
         "summary": "Bericht",
         "description": "Een Bericht",
@@ -5032,7 +5032,7 @@
     "/kic/v1/berichten": {
       "get": {
         "tags": [
-          "taak"
+          "bericht"
         ],
         "summary": "Berichten",
         "description": "Een Bericht",
@@ -5127,7 +5127,7 @@
       },
       "post": {
         "tags": [
-          "taak"
+          "bericht"
         ],
         "summary": "Bericht",
         "description": "Een taak voor een burger, inwoner of vertegenwoordiger van een organisatie die moet worden uitgevoerd",
