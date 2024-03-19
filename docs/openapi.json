@@ -4870,6 +4870,306 @@
           }
         ]
       }
+    },
+    "/kic/v1/berichten/{id}": {
+      "get": {
+        "tags": [
+          "taak"
+        ],
+        "summary": "Bericht",
+        "description": "Een Bericht",
+        "operationId": "bericht-get-item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Een taak voor een burger, inwoner of vertegenwoordiger van een organisatie die moet worden uitgevoerd",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bericht"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bericht"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://localhost",
+            "description": "The kubernetes server"
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "taak"
+        ],
+        "summary": "Bericht",
+        "description": "Een Bericht",
+        "operationId": "bericht-patch-item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Bericht"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/Taak"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Een taak voor een burger, inwoner of vertegenwoordiger van een organisatie die moet worden uitgevoerd",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bericht"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bericht"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://localhost",
+            "description": "The kubernetes server"
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "taak"
+        ],
+        "summary": "Bericht",
+        "description": "Een Bericht",
+        "operationId": "bericht-delete-item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Een taak voor een burger, inwoner of vertegenwoordiger van een organisatie die moet worden uitgevoerd",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "examples": [
+                    "Object is successfully deleted"
+                  ]
+                },
+                "examples": {
+                  "default": {
+                    "value": "Object is successfully deleted"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "string",
+                  "examples": [
+                    "Object is successfully deleted"
+                  ]
+                },
+                "examples": {
+                  "default": {
+                    "value": "Object is successfully deleted"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://localhost",
+            "description": "The kubernetes server"
+          }
+        ]
+      }
+    },
+    "/kic/v1/berichten": {
+      "get": {
+        "tags": [
+          "taak"
+        ],
+        "summary": "Berichten",
+        "description": "Een Bericht",
+        "operationId": "bericht-get-collection",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "count": {
+                      "type": "integer",
+                      "examples": [
+                        1
+                      ]
+                    },
+                    "next": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "uri"
+                    },
+                    "previous": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "uri"
+                    },
+                    "results": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Bericht"
+                      }
+                    }
+                  },
+                  "required": [
+                    "count",
+                    "results"
+                  ]
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "count": {
+                      "type": "integer",
+                      "examples": [
+                        1
+                      ]
+                    },
+                    "next": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "uri"
+                    },
+                    "previous": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "uri"
+                    },
+                    "results": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Bericht"
+                      }
+                    }
+                  },
+                  "required": [
+                    "count",
+                    "results"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://localhost",
+            "description": "The kubernetes server"
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "taak"
+        ],
+        "summary": "Bericht",
+        "description": "Een taak voor een burger, inwoner of vertegenwoordiger van een organisatie die moet worden uitgevoerd",
+        "operationId": "bericht-post-item",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Bericht"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/Taak"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Een Bericht",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bericht"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bericht"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://localhost",
+            "description": "The kubernetes server"
+          }
+        ]
+      }
     }
   },
   "components": {
@@ -5239,7 +5539,7 @@
               "null"
             ],
             "cascade": true,
-            "defaultValue": "false"
+            "defaultValue": false
           },
           "indicatieActief": {
             "type": [
@@ -5247,7 +5547,7 @@
               "null"
             ],
             "cascade": true,
-            "defaultValue": "true"
+            "defaultValue": true
           },
           "soortPartij": {
             "type": [
@@ -5291,6 +5591,12 @@
           },
           "vertegenwoordigde": {
             "$ref": "#/components/schemas/Partij"
+          },
+          "berichten": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Bericht"
+            }
           }
         },
         "required": [
@@ -5388,6 +5694,84 @@
           "register"
         ],
         "version": "0.0.1"
+      },
+      "Bericht": {
+        "type": "object",
+        "properties": {
+          "batchID": {
+            "type": "string",
+            "description": "GUID zonder accolades in registry format."
+          },
+          "aanmaakDatum": {
+            "type": "string",
+            "description": "Datum waarop de batch is aangemaakt.",
+            "format": "date-time"
+          },
+          "berichtLeverancierID": {
+            "type": "string",
+            "description": "Het OIN van uw organisaite, 20 cijfers.",
+            "maxLength": 20
+          },
+          "berichtID": {
+            "type": "string",
+            "description": "GUID in registry format."
+          },
+          "berichtType": {
+            "type": "string",
+            "description": "De letterlijke naam van het berichtType."
+          },
+          "publicatieDatum": {
+            "type": "string",
+            "description": "Datum waarop het bericht wordt gepubliceerd.",
+            "format": "date-time"
+          },
+          "onderwerp": {
+            "type": "string",
+            "description": "Onderwerp van het bericht.",
+            "maxLength": 50
+          },
+          "berichttekst": {
+            "type": "string",
+            "description": "Tekst van het bericht.",
+            "maxLength": 4000
+          },
+          "referentie": {
+            "type": "string",
+            "description": "Uw eigen referentiegegevens.",
+            "maxLength": 25
+          },
+          "gebruikerID": {
+            "type": "string",
+            "description": "BSN van geadresseerde.",
+            "format": "bsn"
+          },
+          "soortGebruiker": {
+            "type": "string",
+            "description": "Vaste waarde: Burger.",
+            "default": "Burger"
+          },
+          "inhoud": {
+            "type": "string",
+            "description": "Inhoud (PDF) als base64."
+          },
+          "bijlageType": {
+            "type": "string",
+            "description": "Vaste waarde: Pdf.",
+            "default": "Pdf"
+          },
+          "omschrijving": {
+            "type": "string",
+            "description": "Omschrijving van de bijlage.",
+            "maxLength": 40
+          },
+          "volgorde": {
+            "type": "string",
+            "description": "Indien 1 bijlage meegestuurd \"1\" indien 2 bijlagen meegestuurd \"2\""
+          },
+          "partij": {
+            "$ref": "#/components/schemas/Partij"
+          }
+        }
       },
       "Klantcontact": {
         "type": "object",

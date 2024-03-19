@@ -4,15 +4,21 @@ footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle
 header: Schema
 
 class Bericht {
-  + id: string
-  + gebruikerID: string
-  + soortGebruiker: string
+  + batchID: string
+  + aanmaakDatum: string
+  + berichtLeverancierID: string
+  + berichtID: string
+  + berichtType: string
+  + publicatieDatum: string
   + onderwerp: string
   + berichttekst: string
   + referentie: string
-  + handelingsPerspectief: string
-  + eindDatumHandelingsTermijn: datetime
-  + bijlagen: array
-  + geopend: boolean
+  + gebruikerID: string
+  + soortGebruiker: string
+  + inhoud: string
+  + bijlageType: string
+  + omschrijving: string
+  + volgorde: string
+  + partij: object
 }
 @enduml

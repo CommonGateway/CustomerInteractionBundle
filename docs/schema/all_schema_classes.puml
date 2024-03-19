@@ -7,6 +7,24 @@ class Betrokenne {
   + rolType: string
   + betrokkene: object
 }
+class Bericht {
+  + batchID: string
+  + aanmaakDatum: string
+  + berichtLeverancierID: string
+  + berichtID: string
+  + berichtType: string
+  + publicatieDatum: string
+  + onderwerp: string
+  + berichttekst: string
+  + referentie: string
+  + gebruikerID: string
+  + soortGebruiker: string
+  + inhoud: string
+  + bijlageType: string
+  + omschrijving: string
+  + volgorde: string
+  + partij: object
+}
 class Partij {
   + nummer: integer
   + interneNotitie: string
@@ -24,6 +42,7 @@ class Partij {
   + externeIdentificaties: array
   + vertegenwoordiger: object
   + vertegenwoordigde: object
+  + berichten: array
 }
 class DigitaalAdres {
   + adres: string
