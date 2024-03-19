@@ -23,7 +23,7 @@ KlantenRegister is de spil in het web van klantinteractie binnen de overheid. He
 
 #### Stap-voor-stap Installatie
 
-1. Clone het KlantenRegister repository: `git clone https://github.com/CommonGateway/KlantenRegister.git`
+1. Clone het CustomerInteractionBundle repository: `git clone https://github.com/CommonGateway/CustomerInteractionBundle.git`
 2. Installeer de benodigde afhankelijkheden: `composer install`
 3. Configureer uw omgevingsvariabelen (.env) voor de CustomerInteractionBundle.
 4. Volg de specifieke configuratie-instructies voor uw systeem.
@@ -31,6 +31,14 @@ KlantenRegister is de spil in het web van klantinteractie binnen de overheid. He
 ## Gebruik
 
 Na installatie en configuratie kunt u de KlantenRegister inrichten voor uw organisatie. U kunt klantinteracties en -gegevens beheren via een gebruiksvriendelijke interface, waarbij u de controle behoudt over de datastructuur en de toegang tot gegevens.
+
+### Backwards compatibility
+
+Het KlantenRegister heeft ook backwards compatibility met de oudere (deprecated) [KlantenBundle](https://github.com/CommonGateway/KlantenBundle).
+De volgende endpoints zijn zo ingericht dat ze zich gedragen zoals de KlantenBundle dat deed, maar op de achtergrond worden er nieuwe CustomerInteractionBundle objecten gebruikt:
+- /api/kic/v1/klanten => op de achtergrond: partij
+- /api/kic/v1/contactmomenten => op de achtergrond: klantcontact
+- /api/kic/v1/klantcontactmomenten => op de achtergrond: betrokkeneBijKlantcontact
 
 ## Bijdragen
 
