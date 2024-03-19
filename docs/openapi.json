@@ -4901,7 +4901,7 @@
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/Taak"
+                  "$ref": "#/components/schemas/Bericht"
                 }
               }
             }
@@ -4957,7 +4957,7 @@
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/Taak"
+                  "$ref": "#/components/schemas/Bericht"
                 }
               }
             }
@@ -5105,7 +5105,7 @@
                     "results": {
                       "type": "array",
                       "items": {
-                        "$ref": "#/components/schemas/Taak"
+                        "$ref": "#/components/schemas/Bericht"
                       }
                     }
                   },
@@ -5157,7 +5157,7 @@
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/Taak"
+                  "$ref": "#/components/schemas/Bericht"
                 }
               }
             }
