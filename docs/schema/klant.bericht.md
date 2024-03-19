@@ -24,3 +24,4 @@ No description available.
 | omschrijving | string | Omschrijving van de bijlage. | No |
 | volgorde | string | Indien 1 bijlage meegestuurd "1" indien 2 bijlagen meegestuurd "2" | No |
 | partij | object | N/A | No |
+| betrokkene | object | N/A | No |

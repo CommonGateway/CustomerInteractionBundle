@@ -24,6 +24,7 @@ class Bericht {
   + omschrijving: string
   + volgorde: string
   + partij: object
+  + betrokkene: object
 }
 class Partij {
   + nummer: integer

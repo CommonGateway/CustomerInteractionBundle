@@ -20,5 +20,6 @@ class Bericht {
   + omschrijving: string
   + volgorde: string
   + partij: object
+  + betrokkene: object
 }
 @enduml
