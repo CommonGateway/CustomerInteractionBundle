@@ -5770,8 +5770,52 @@
           },
           "partij": {
             "$ref": "#/components/schemas/Partij"
+          },
+          "betrokkene": {
+            "$ref": "#/components/schemas/Taak-betrokkene"
           }
         }
+      },
+      "Taak-betrokkene": {
+        "type": "object",
+        "title": "Taak betrokkene",
+        "description": "Een taak betrokkene",
+        "properties": {
+          "betrokkeneType": {
+            "type": "string",
+            "enum": [
+              "medewerker",
+              "natuurlijk_persoon"
+            ]
+          },
+          "rolType": {
+            "type": "string"
+          },
+          "betrokkene": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Taak-betrokkene-medewerker-of-persoon"
+            }
+          }
+        },
+        "version": "0.0.1"
+      },
+      "Taak-betrokkene-medewerker-of-persoon": {
+        "type": "object",
+        "title": "Taak betrokkene medewerker of persoon",
+        "description": "Een taak betrokkene medewerker of persoon",
+        "properties": {
+          "naam": {
+            "type": "string"
+          },
+          "medewerkerIdentificatie": {
+            "type": "string"
+          },
+          "inpBsn": {
+            "type": "string"
+          }
+        },
+        "version": "0.0.1"
       },
       "Klantcontact": {
         "type": "object",
@@ -6260,47 +6304,6 @@
             ]
           },
           "value": {
-            "type": "string"
-          }
-        },
-        "version": "0.0.1"
-      },
-      "Taak-betrokkene": {
-        "type": "object",
-        "title": "Taak betrokkene",
-        "description": "Een taak betrokkene",
-        "properties": {
-          "betrokkeneType": {
-            "type": "string",
-            "enum": [
-              "medewerker",
-              "natuurlijk_persoon"
-            ]
-          },
-          "rolType": {
-            "type": "string"
-          },
-          "betrokkene": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Taak-betrokkene-medewerker-of-persoon"
-            }
-          }
-        },
-        "version": "0.0.1"
-      },
-      "Taak-betrokkene-medewerker-of-persoon": {
-        "type": "object",
-        "title": "Taak betrokkene medewerker of persoon",
-        "description": "Een taak betrokkene medewerker of persoon",
-        "properties": {
-          "naam": {
-            "type": "string"
-          },
-          "medewerkerIdentificatie": {
-            "type": "string"
-          },
-          "inpBsn": {
             "type": "string"
           }
         },
