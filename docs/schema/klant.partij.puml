@@ -20,5 +20,6 @@ class Partij {
   + externeIdentificaties: array
   + vertegenwoordiger: object
   + vertegenwoordigde: object
+  + berichten: array
 }
 @enduml

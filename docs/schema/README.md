@@ -5,6 +5,7 @@
 | Class | Documentation |
 |-------|--------------|
 | Betrokenne | [klant.taak.betrokkene.md](klant.taak.betrokkene.md) |
+| Bericht | [klant.bericht.md](klant.bericht.md) |
 | Partij | [klant.partij.md](klant.partij.md) |
 | Digitaal Adres | [klant.digitaalAdres.md](klant.digitaalAdres.md) |
 | Correspondentieadres | [klant.correspondentieadres.md](klant.correspondentieadres.md) |
