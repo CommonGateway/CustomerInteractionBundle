@@ -36,9 +36,10 @@ Na installatie en configuratie kunt u de KlantenRegister inrichten voor uw organ
 
 Het KlantenRegister heeft ook backwards compatibility met de oudere (deprecated) [KlantenBundle](https://github.com/CommonGateway/KlantenBundle).
 De volgende endpoints zijn zo ingericht dat ze zich gedragen zoals de KlantenBundle dat deed, maar op de achtergrond worden er nieuwe CustomerInteractionBundle objecten gebruikt:
-- /api/kic/v1/klanten => op de achtergrond: partij
-- /api/kic/v1/contactmomenten => op de achtergrond: klantcontact
-- /api/kic/v1/klantcontactmomenten => op de achtergrond: betrokkeneBijKlantcontact
+
+* /api/kic/v1/klanten => op de achtergrond: partij
+* /api/kic/v1/contactmomenten => op de achtergrond: klantcontact
+* /api/kic/v1/klantcontactmomenten => op de achtergrond: betrokkeneBijKlantcontact
 
 ## Bijdragen
 
