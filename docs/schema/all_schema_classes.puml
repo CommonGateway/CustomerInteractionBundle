@@ -43,6 +43,7 @@ class Partij {
   + vertegenwoordiger: object
   + vertegenwoordigde: object
   + berichten: array
+  + taken: array
 }
 class DigitaalAdres {
   + adres: string

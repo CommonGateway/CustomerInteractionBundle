@@ -31,3 +31,4 @@ Een persoon of organisatie waarmee de gemeente een relatie heeft.
 | vertegenwoordiger | object | N/A | No |
 | vertegenwoordigde | object | N/A | No |
 | berichten | array | N/A | No |
+| taken | array | N/A | No |
