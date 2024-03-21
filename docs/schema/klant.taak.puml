@@ -21,6 +21,5 @@ class Taak {
   + verwerker_taak_id: string
   + betrokkenen: array
   + partij: object
-  + extraData: array
 }
 @enduml
