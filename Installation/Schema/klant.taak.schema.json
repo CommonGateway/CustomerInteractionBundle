@@ -28,6 +28,10 @@
       "type": "string",
       "format": "uri"
     },
+    "product": {
+      "type": "string",
+      "format": "uri"
+    },
     "title": {
       "type": "string",
       "required": true
@@ -50,10 +54,6 @@
     "formulier": {
       "type": "object",
       "$ref": "https://commongateway.nl/klant.taak.formulier.schema.json"
-    },
-    "verloopdatum": {
-      "type": "string",
-      "format": "datetime"
     },
     "vervaldatum": {
       "type": "string",
