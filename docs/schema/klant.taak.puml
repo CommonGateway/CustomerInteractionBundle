@@ -9,12 +9,12 @@ class Taak {
   + url: string
   + data: array
   + zaak: string
+  + product: string
   + title: string
   + onderwerp: string
   + toelichting: string
   + status: string
   + formulier: object
-  + verloopdatum: string
   + vervaldatum: string
   + identificatie: object
   + verzonden_data: array
