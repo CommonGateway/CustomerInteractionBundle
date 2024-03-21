@@ -80,10 +80,6 @@
       "type": "object",
       "$ref": "https://commongateway.nl/klant.partij.schema.json",
       "inversedBy": "taken"
-    },
-    "extraData": {
-      "type": "array",
-      "format": "json"
     }
   }
 }
