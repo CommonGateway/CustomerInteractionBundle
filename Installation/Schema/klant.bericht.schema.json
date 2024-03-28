@@ -78,7 +78,8 @@
     },
     "partij": {
       "type": "object",
-      "$ref": "https://commongateway.nl/klant.partij.schema.json"
+      "$ref": "https://commongateway.nl/klant.partij.schema.json",
+      "inversedBy": "berichten"
     }
   }
 }

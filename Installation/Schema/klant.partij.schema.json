@@ -94,7 +94,8 @@
       "type": "array",
       "items": {
           "$ref": "https://commongateway.nl/klant.bericht.schema.json"
-      }
+      },
+      "inversedBy": "partij"
     }
   }
 }
