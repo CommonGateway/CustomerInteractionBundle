@@ -1,0 +1,85 @@
+{
+  "title": "Bericht",
+  "$id": "https://commongateway.nl/klant.bericht.schema.json",
+  "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
+  "version": "0.0.1",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "batchID": {
+      "type": "string",
+      "description": "GUID zonder accolades in registry format."
+    },
+    "aanmaakDatum": {
+      "type": "string",
+      "format": "datetime",
+      "description": "Datum waarop de batch is aangemaakt."
+    },
+    "berichtLeverancierID": {
+      "type": "string",
+      "maxLenght": 20,
+      "description": "Het OIN van uw organisaite, 20 cijfers."
+    },
+    "berichtID": {
+      "type": "string",
+      "description": "GUID in registry format."
+    },
+    "berichtType": {
+      "type": "string",
+      "description": "De letterlijke naam van het berichtType."
+    },
+    "publicatieDatum": {
+      "type": "string",
+      "format": "datetime",
+      "description": "Datum waarop het bericht wordt gepubliceerd."
+    },
+    "onderwerp": {
+      "type": "string",
+      "maxLength": 50,
+      "description": "Onderwerp van het bericht."
+    },
+    "berichttekst": {
+      "type": "string",
+      "maxLength": 4000,
+      "description": "Tekst van het bericht."
+    },
+    "referentie": {
+      "type": "string",
+      "maxLength": 25,
+      "description": "Uw eigen referentiegegevens."
+    },
+    "gebruikerID": {
+      "type": "string",
+      "format": "bsn",
+      "description": "BSN van geadresseerde."
+    },
+    "soortGebruiker": {
+      "type": "string",
+      "default": "Burger",
+      "description": "Vaste waarde: Burger."
+    },
+    "inhoud": {
+      "type": "string",
+      "description": "Inhoud (PDF) als base64."
+    },
+    "bijlageType": {
+      "type": "string",
+      "default": "Pdf",
+      "description": "Vaste waarde: Pdf."
+    },
+    "omschrijving": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "Omschrijving van de bijlage."
+    },
+    "volgorde": {
+      "type": "string",
+      "description": "Indien 1 bijlage meegestuurd \"1\" indien 2 bijlagen meegestuurd \"2\""
+    },
+    "partij": {
+      "type": "object",
+      "$ref": "https://commongateway.nl/klant.partij.schema.json",
+      "inversedBy": "berichten"
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 Iemand die voor of namens de gemeente werkzaamheden verricht.
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/documentation-2024-Klant/docs/schema/klant.medewerker.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.medewerker.svg)
 
 ## Properties
 

@@ -1,0 +1,12 @@
+@startuml
+title: Betrokenne
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
+class Betrokenne {
+  + betrokkeneType: string
+  + rolType: string
+  + betrokkene: object
+  + partij: object
+}
+@enduml
