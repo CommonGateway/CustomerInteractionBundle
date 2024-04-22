@@ -24,3 +24,4 @@ Een taak voor een burger, inwoner of vertegenwoordiger van een organisatie die m
 | verzonden_data | array | N/A | No |
 | verwerker_taak_id | string | N/A | No |
 | betrokkenen | array | N/A | No |
+| extraData | array | N/A | No |
