@@ -2,7 +2,7 @@
   "title": "Taak",
   "$id": "https://commongateway.nl/klant.taak.schema.json",
   "$schema": "https://docs.commongateway.nl/schemas/Entity.schema.json",
-  "version": "0.0.4",
+  "version": "0.0.3",
   "type": "object",
   "description": "Een taak voor een burger, inwoner of vertegenwoordiger van een organisatie die moet worden uitgevoerd",
   "required": ["id", "title"],
@@ -75,6 +75,10 @@
       "items": {
           "$ref": "https://commongateway.nl/klant.taak.betrokkene.schema.json"
       }
+    },
+    "extraData": {
+      "type": "array",
+      "format": "json"
     }
   }
 }
