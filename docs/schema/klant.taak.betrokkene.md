@@ -2,7 +2,7 @@
 
 Een betrokkene medewerker of persoon
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.taak.betrokkene.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/taak-object-changes-2/docs/schema/klant.taak.betrokkene.svg)
 
 ## Properties
 
@@ -11,3 +11,4 @@ Een betrokkene medewerker of persoon
 | betrokkeneType | string | N/A | No |
 | rolType | string | N/A | No |
 | betrokkene | object | N/A | No |
+| partij | object | N/A | No |

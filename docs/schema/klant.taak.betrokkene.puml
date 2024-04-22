@@ -7,5 +7,6 @@ class Betrokenne {
   + betrokkeneType: string
   + rolType: string
   + betrokkene: object
+  + partij: object
 }
 @enduml
