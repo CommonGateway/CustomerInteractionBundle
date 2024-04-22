@@ -19,6 +19,7 @@ class Taak {
   + verzonden_data: array
   + verwerker_taak_id: string
   + betrokkenen: array
+  + extraData: array
 }
 class GeautomatiseerdeActor {
   + functie: string

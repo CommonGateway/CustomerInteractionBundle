@@ -2,7 +2,7 @@
 
 Een betrokkene medewerker of persoon
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/taak-object-changes-2/docs/schema/klant.taak.betrokkeneMedewerkerOfPersoon.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.taak.betrokkeneMedewerkerOfPersoon.svg)
 
 ## Properties
 

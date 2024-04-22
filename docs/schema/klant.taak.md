@@ -2,7 +2,7 @@
 
 Een taak voor een burger, inwoner of vertegenwoordiger van een organisatie die moet worden uitgevoerd
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/taak-object-changes-2/docs/schema/klant.taak.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.taak.svg)
 
 ## Properties
 
@@ -24,3 +24,4 @@ Een taak voor een burger, inwoner of vertegenwoordiger van een organisatie die m
 | verzonden_data | array | N/A | No |
 | verwerker_taak_id | string | N/A | No |
 | betrokkenen | array | N/A | No |
+| extraData | array | N/A | No |
