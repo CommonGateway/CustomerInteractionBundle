@@ -6,6 +6,9 @@ In de meeste gevallen zijn taken gerelateerd aan een lopende zaak, bijvoorbeeld 
 
 Taken passen daarmee goed in gedachten over proces automatisering en/og bpmn modelen (zijn daarvoor zelfs randvoorwaardenlijk) maar hebben met name daarbuiten een rol door het verminderen van de complexiteit van formulieren (immers het stellen van vragen achteraf verminder de noodzaak van het stellen van vragen vooraf) ze dragen daarmee bij aan de toegankenlijkheid van overheids dienstverlening.
 
+> [!NOTE]  
+> Taken maken vanuit de GEMMA geen onderdeel uit van de klanten interactie API (de standaard waar het Klanten Register op is gebaseerd) omdat een taak object klant specifiek is hebben we het register uitgebreid met dit object
+
 ## Wat doet een taak?
 Een taak verwitigd de gebruiker van een verwachte actie, in het merendeel van het gevallen is dat een link naar een digitaal formulier (bijvoorbeeld uploaden document) en gekopeld aan een zaak. Maar dat is niet dwingend. Taken kunnen ook onstaan vanuit het concept pro actieve dienstverlening en verwijzen naar een formulier dat een zaak creert of opstart bijvoorbeeld "Nieuw paspoort aanvragen" of "parkeer verunning verlengen" ze passen in deze context dan ook ini de gedachte van regels.overheid.nl waarbij we kunnen detecteren dat een huishouden bijvoorbeeld recht heeft op uursubsidie en een aanvraag daarvoor klaarzetten (met taak om deze verder in te vullen en in te dienen).
 
