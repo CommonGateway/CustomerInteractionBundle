@@ -6,16 +6,11 @@ Klantenregister
 
 ## 2 Wat voor type product is het initiatief?
 
-* Toepassing (bruikbare oplossing)
+* Component
 
 ## 3 Indien een toepassing, welke componenten zijn hierin opgenomen?
 
-* FSC/NLX
-
-* Objectstore(MonggoDB)
-* Symfony
-* API Platform
-* Database(MySQL/PostgrSQL/MsSQL)
+* Open Registers
 
 ## 4 Indien het initiatief software betreft, is het parallel te gebruiken naast de bestaande software die het moet vervangen?
 
@@ -39,37 +34,23 @@ Dienstverlening
 
 ## 8 Welke gemeenten zijn aangesloten bij de realisatie van dit initiatief?
 
-Rotterdam (Via OpenCatalogi)
-Gouda (Via OpenCatalogi)
-Noordwijk (Via OpenWoo.app)
-Tubbergen (Via OpenWoo.app)
-Epe (Via OpenWoo.app)
-Dinkelland (Via OpenWoo.app)
-Leiden (Via OpenCatalogi)
-Roermond (Via OpenWoo.app)
-Assen (Via OpenWoo.app)
-Hilversum (Via OpenWoo.app)
-Haarlemermeer (Via OpenWoo.app)
-Enschede (Via OpenWoo.app)
-Eindhoven (Via OpenWoo.app)
-Hardewijk (Via OpenWoo.app)
+Gouda
+Buren 
+Barendrecht
+Albrandswaard 
+Ridderkerk 
+Hoeksche Waard 
+Fryske Marren 
 
 ## 9 Welke gemeenten maken gebruik van dit initiatief?
 
-Noordwijk (Via OpenWoo.app)
-Tubbergen (Via OpenWoo.app)
-Epe(Via OpenWoo.app)
-Rotterdam (Via OpenCatalogi)
-Gouda (Via OpenWoo.app)
-Zutphen (Via OpenWoo.app)
-Roosendaal (Via OpenWoo.app)
-Alkmaar (Via OpenCatalogi)
-Barendrecht (Via Open Registers | Klanten)
-Albrandswaard (Via Open Registers | Klanten)
-Ridderkerk (Via Open Registers | Klanten)
-Hoeksche Waard (Via Open Registers | Klanten)
-Sud-West Fryslan (Via Open Registers | Klanten)
-Fryske Marren (Via Open Registers | Klanten)
+Gouda (Binnen Mijn Zaken / Omnichannel)
+Buren (Binnen Mijn Zaken / Omnichannel)
+Barendrecht (Binnen Mijn Zaken / Omnichannel)
+Albrandswaard (Binnen Mijn Zaken / Omnichannel)
+Ridderkerk (Binnen Mijn Zaken / Omnichannel)
+Hoeksche Waard (Binnen Mijn Zaken / Omnichannel)
+Fryske Marren (Binnen Mijn Zaken / Omnichannel)
 
 ## 10 Welke leveranciers zijn betrokken?
 
@@ -152,6 +133,10 @@ NL-GOV profiel voor cloud events
 * Doorontwikkeling en beheer (stabiel, onderdeel gevestigde orde)
 
 ## 28 Waar zijn jullie tegenaan gelopen? In zowel ontwikkeling en waar van toepassing bij de implementatie Noem de een tot drie grootste punten
+
+- Er zijn veel verschillende klanten API's gedefineerd door de VNG
+- Aanpassingen aan de standaarden gebeuren buiten het zicht van de community 
+- Pas eind 2024 definitieve standaard terwijl we NU in productie meoten
 
 ## 29 Zijn er nog vragen naar aanleiding van dit intakeformulier?
 
