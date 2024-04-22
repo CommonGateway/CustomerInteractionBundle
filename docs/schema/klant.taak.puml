@@ -13,14 +13,12 @@ class Taak {
   + onderwerp: string
   + toelichting: string
   + status: string
-  + formulier: object
+  + actie: object
   + verloopdatum: string
   + vervaldatum: string
   + identificatie: object
   + verzonden_data: array
   + verwerker_taak_id: string
   + betrokkenen: array
-  + partij: object
-  + extraData: array
 }
 @enduml
