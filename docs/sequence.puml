@@ -1,0 +1,26 @@
+@startuml
+title Lagen model voor klant interacties
+
+!define RECTANGLE class
+
+RECTANGLE "Klant Interactie Component" {
+  RECTANGLE "Laag 1: Data Opslag" {
+    - Object Store Oplossing (MongoDB)
+  }
+
+  RECTANGLE "Laag 2: API's" {
+    - Adapter naar Klant Interactie CRUD API's
+  }
+
+  RECTANGLE "Laag 3: Integratie" {
+    - Integratie van Diverse Gegevensbronnen
+    - Bronoverstijgende Extensie zonder Koppeling van Registers
+  }
+
+  RECTANGLE "Laag 4: Business Rules" {
+    - Brononafhankelijke Serviceaanbieding
+  }
+}
+
+
+@enduml
