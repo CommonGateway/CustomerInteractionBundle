@@ -1,8 +1,8 @@
-## Over KlantenRegister
+# Over KlantenRegister
 
 KlantenRegister is de spil in het web van klantinteractie binnen de overheid. Het systeem integreert naadloos klantinteractie registers en de klanten interactie convenience API. Het maakt gebruik van de CustomerInteractionBundle om alle interacties met inwoners gestructureerd en toegankelijk te houden, waardoor overheidsmedewerkers efficiënter kunnen werken.
 
-### Kernvoordelen
+## Kernvoordelen
 
 * **Centraal Overzicht:** Eén centrale locatie voor alle klantgegevens en interacties.
 * **Efficiëntie in Beheer:** Vereenvoudigt het beheer van klantinteracties en -gegevens.
@@ -10,6 +10,12 @@ KlantenRegister is de spil in het web van klantinteractie binnen de overheid. He
 * **Toegankelijkheid:** Maakt gegevens toegankelijk voor geautoriseerde gebruikers, met respect voor privacy en beveiliging.
 * **Flexibiliteit:** Kan worden uitgebreid en aangepast aan de behoeften van elke organisatie.
 * **Compliance:** Voldoet aan de relevante wet- en regelgeving voor gegevensbeheer.
+
+## Multiytenency
+
+## Federatief
+
+Door gebruik te maken van het [Open Register Framework](https://openregisters.app/) kunnen de klantregisters op een federatieve manier benaderd worden, wat interorganisatorische samenwerking en data-uitwisseling mogelijk maakt. Dit stelt inwoners in staat om via één centrale omgeving toegang te krijgen tot hun gegevens, taken en berichten van verschillende organisaties. Deze aanpak bevordert niet alleen de efficiëntie, maar ook de transparantie en gebruiksvriendelijkheid voor de gebruiker.
 
 ## Installatie
 
