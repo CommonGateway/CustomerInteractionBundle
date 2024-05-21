@@ -11,11 +11,10 @@ KlantenRegister is de spil in het web van klantinteractie binnen de overheid. He
 * **Flexibiliteit:** Kan worden uitgebreid en aangepast aan de behoeften van elke organisatie.
 * **Compliance:** Voldoet aan de relevante wet- en regelgeving voor gegevensbeheer.
 
-
 ## Multiytenency
 
-
 ## Federatief
+
 Door gebruik te maken van het [Open Register Framework](https://openregisters.app/) kunnen de klantregisters op een federatieve manier benaderd worden, wat interorganisatorische samenwerking en data-uitwisseling mogelijk maakt. Dit stelt inwoners in staat om via één centrale omgeving toegang te krijgen tot hun gegevens, taken en berichten van verschillende organisaties. Deze aanpak bevordert niet alleen de efficiëntie, maar ook de transparantie en gebruiksvriendelijkheid voor de gebruiker.
 
 ## Installatie
@@ -47,8 +46,6 @@ De volgende endpoints zijn zo ingericht dat ze zich gedragen zoals de KlantenBun
 * /api/kic/v1/klanten => op de achtergrond: partij
 * /api/kic/v1/contactmomenten => op de achtergrond: klantcontact
 * /api/kic/v1/klantcontactmomenten => op de achtergrond: betrokkeneBijKlantcontact
-
-
 
 ## Bijdragen
 
