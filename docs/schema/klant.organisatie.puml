@@ -1,9 +1,0 @@
-@startuml
-title: Organisatie
-footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
-header: Schema
-
-class Organisatie {
-  + naam: string
-}
-@enduml
