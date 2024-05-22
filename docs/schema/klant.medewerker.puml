@@ -1,0 +1,11 @@
+@startuml
+title: Medewerker
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
+class Medewerker {
+  + eMailadres: string
+  + functie: string
+  + telefoonnummer: string
+}
+@enduml

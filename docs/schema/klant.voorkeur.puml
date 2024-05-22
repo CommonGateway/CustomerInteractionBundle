@@ -1,0 +1,10 @@
+@startuml
+title: Voorkeur
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
+class Voorkeur {
+  + code: string
+  + naam: string
+}
+@enduml

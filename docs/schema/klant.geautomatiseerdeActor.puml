@@ -1,0 +1,10 @@
+@startuml
+title: GeautomatiseerdeActor
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
+class GeautomatiseerdeActor {
+  + functie: string
+  + omschrijving: string
+}
+@enduml

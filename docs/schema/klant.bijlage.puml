@@ -1,0 +1,10 @@
+@startuml
+title: Bijlage
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
+class Bijlage {
+  + objectIdentificator: object
+  + klantcontact: object
+}
+@enduml

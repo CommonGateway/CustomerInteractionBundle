@@ -1,0 +1,10 @@
+@startuml
+title: Onderwerpobject
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
+class Onderwerpobject {
+  + objectIdentificator: object
+  + klantContact: object
+}
+@enduml

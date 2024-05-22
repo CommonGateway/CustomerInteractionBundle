@@ -1,0 +1,9 @@
+@startuml
+title: Persoonsnaam
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
+class Persoonsnaam {
+  + contactnaam: object
+}
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+title: Klantcontact
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
+class Klantcontact {
+  + nummer: integer
+  + onderwerp: string
+  + kanaal: object
+  + inhoud: string
+  + todo: string
+  + resultaat: string
+  + indicatieContactGelukt: string
+  + taal: string
+  + vertrouwelijk: string
+  + plaatsgevondenOp: datetime
+  + actors: array
+  + bijlage: array
+  + gaatOver: object
+  + interneTaakOntstaanUit: array
+  + geregistreerdOp: datetime
+}
+@enduml

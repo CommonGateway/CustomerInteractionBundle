@@ -1,0 +1,11 @@
+@startuml
+title: DigitaalAdres
+footer: Common Gateway Plugin | Commongateway | Customerinteractionbundle 
+header: Schema
+
+class DigitaalAdres {
+  + adres: string
+  + omschrijving: string
+  + soortDigitaalAdres: string
+}
+@enduml
