@@ -2,7 +2,7 @@
 
 No description available.
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.bericht.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/pluginpage-update/docs/schema/klant.bericht.svg)
 
 ## Properties
 
