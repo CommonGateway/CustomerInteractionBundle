@@ -20,7 +20,7 @@ jobs:
           github_repository_url: https://github.com/commonGateway/CustomerInteractionBundle
           github_api_base_url: https://api.github.com/repos/CommonGateway/CustomerInteractionBundle/contents
           github_docs_directory_paths: '[{"name": "Classes","location": "/docs/classes"},{"name": "Schema","location": "/docs/schema"},{"name": "Service", "location": "/docs/classes/Service"},{"name": "docs", "location": "/docs"}]'
-          slack_url: "https://samenorganiseren.slack.com/archives/C03JLP1EUH4"
+          slack_url: "https://github.com/openwebconcept/"
           read_the_docs_url: "false"
           navbar_content: "https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/navbarContent.json"
           footer_show_logo: true

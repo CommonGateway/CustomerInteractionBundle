@@ -49,8 +49,8 @@
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "taken",
-            "fileName": "klanten"
+            "directoryName": "docs",
+            "fileName": "Taken"
           }
         }
       },
@@ -63,20 +63,7 @@
         "handleClick": {
           "internalMarkdown": {
             "directoryName": "berichten",
-            "fileName": "berichten"
-          }
-        }
-      },
-      {
-        "label": "Objecten",
-        "type": "internalMarkdown",
-        "current": {
-          "pathname": "/docs/schema/README"
-        },
-        "handleClick": {
-          "internalMarkdown": {
-            "directoryName": "objecten",
-            "fileName": "README"
+            "fileName": "Berichten"
           }
         }
       },
