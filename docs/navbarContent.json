@@ -71,11 +71,11 @@
         "label": "Objecten",
         "type": "internalMarkdown",
         "current": {
-          "pathname": "/Documentatie/schema/README"
+          "pathname": "/Documentatie/schema"
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "docs/schema/README",
+            "directoryName": "docs",
             "fileName": "README"
           }
         }
