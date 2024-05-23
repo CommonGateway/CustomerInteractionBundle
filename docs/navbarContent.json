@@ -94,6 +94,19 @@
         }
       },
       {
+        "label": "Installatie",
+        "type": "internalMarkdown",
+        "current": {
+          "pathname": "/Documentatie/Installatie"
+        },
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Documentatie",
+            "fileName": "Installatie"
+          }
+        }
+      },
+      {
         "label": "API (OAS)",
         "type": "external",
         "current": {
