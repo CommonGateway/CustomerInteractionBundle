@@ -23,7 +23,7 @@
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "docs",
+            "directoryName": "Documentatie",
             "fileName": "Architectuur"
           }
         }
@@ -36,7 +36,7 @@
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "docs",
+            "directoryName": "Documentatie",
             "fileName": "Features"
           }
         }
@@ -45,12 +45,12 @@
         "label": "Taken",
         "type": "internalMarkdown",
         "current": {
-          "pathname": "/docs/klanten"
+          "pathname": "/docs/Taken"
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "taken",
-            "fileName": "klanten"
+            "directoryName": "Documentatie",
+            "fileName": "Taken"
           }
         }
       },
@@ -62,7 +62,7 @@
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "berichten",
+            "directoryName": "Documentatie",
             "fileName": "berichten"
           }
         }
@@ -75,7 +75,7 @@
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "objecten",
+            "directoryName": "Documentatie",
             "fileName": "README"
           }
         }
@@ -88,6 +88,7 @@
         },
         "handleClick": {
           "internalMarkdown": {
+            "directoryName": "Documentatie",
             "fileName": "Kosten"
           }
         }
