@@ -32,12 +32,12 @@
         "label": "Functionaliteit",
         "type": "internalMarkdown",
         "current": {
-          "pathname": "/docs/Features"
+          "pathname": "/docs/features"
         },
         "handleClick": {
           "internalMarkdown": {
             "directoryName": "docs",
-            "fileName": "Features"
+            "fileName": "features"
           }
         }
       },
@@ -45,12 +45,12 @@
         "label": "Taken",
         "type": "internalMarkdown",
         "current": {
-          "pathname": "/docs/Taken"
+          "pathname": "/docs/taken"
         },
         "handleClick": {
           "internalMarkdown": {
             "directoryName": "docs",
-            "fileName": "Taken"
+            "fileName": "taken"
           }
         }
       },
@@ -75,7 +75,7 @@
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "docs",
+            "directoryName": "docs/schema/README",
             "fileName": "README"
           }
         }
