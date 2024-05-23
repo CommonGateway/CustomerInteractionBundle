@@ -19,11 +19,11 @@
         "label": "Architectuur",
         "type": "internalMarkdown",
         "current": {
-          "pathname": "/Documentatie/Architectuur"
+          "pathname": "/docs/Architectuur"
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "Documentatie",
+            "directoryName": "docs",
             "fileName": "Architectuur"
           }
         }
@@ -32,11 +32,11 @@
         "label": "Functionaliteit",
         "type": "internalMarkdown",
         "current": {
-          "pathname": "/Documentatie/Features"
+          "pathname": "/docs/Features"
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "Documentatie",
+            "directoryName": "docs",
             "fileName": "Features"
           }
         }
@@ -45,11 +45,11 @@
         "label": "Taken",
         "type": "internalMarkdown",
         "current": {
-          "pathname": "/Documentatie/Taken"
+          "pathname": "/docs/Taken"
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "Documentatie",
+            "directoryName": "docs",
             "fileName": "Taken"
           }
         }
@@ -62,7 +62,7 @@
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "Documentatie",
+            "directoryName": "docs",
             "fileName": "berichten"
           }
         }
@@ -75,7 +75,7 @@
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "Documentatie",
+            "directoryName": "docs",
             "fileName": "README"
           }
         }
@@ -84,11 +84,11 @@
         "label": "Kosten",
         "type": "internalMarkdown",
         "current": {
-          "pathname": "/Documentatie/Kosten"
+          "pathname": "/docs/Kosten"
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "Documentatie",
+            "directoryName": "docs",
             "fileName": "Kosten"
           }
         }
@@ -97,11 +97,11 @@
         "label": "Installatie",
         "type": "internalMarkdown",
         "current": {
-          "pathname": "/Documentatie/Installatie"
+          "pathname": "/docs/Installatie"
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "Documentatie",
+            "directoryName": "docs",
             "fileName": "Installatie"
           }
         }
