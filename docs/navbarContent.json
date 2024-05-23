@@ -75,7 +75,7 @@
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "docs",
+            "directoryName": "schema",
             "fileName": "README"
           }
         }
