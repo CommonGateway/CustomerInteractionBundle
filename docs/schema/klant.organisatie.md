@@ -2,7 +2,7 @@
 
 No description available.
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.organisatie.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/plugin-klanten-update/docs/schema/klant.organisatie.svg)
 
 ## Properties
 
