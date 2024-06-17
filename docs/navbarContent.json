@@ -113,7 +113,7 @@
           "pathname": "/Documentatie/API"
         },
         "handleClick": {
-          "link": "https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/Documentatie/openapi.json&nocors"
+          "link": "https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/openapi.json&nocors"
         }
       }
     ]
