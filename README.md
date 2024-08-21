@@ -6,7 +6,7 @@ KlantenRegister is de spil in het web van klantinteractie binnen de overheid. He
 
 De architectuur van KlantenRegister is gebaseerd op erkende klantinteractiepatronen en dienstverleningsmodellen:
 
-* **Klanten en Taken**: Deze zijn gebaseerd op klantinteractiepatronen zoals beschreven in het [Klantinteractie Informatiemodel](https://vng-realisatie.github.io/klantinteracties/informatiemodel/semantisch_model). Dit model biedt een gestandaardiseerde manier om interacties met klanten te structureren en beheren.
+* **Klanten en Taken**: Deze zijn gebaseerd op klantinteractiepatronen zoals beschreven in het [Klantinteractie Informatiemodel](https://vng-realisatie.github.io/klantinteracties/informatiemodel/semantisch_model). Dit model biedt een gestandaardiseerde manier om interacties met klanten te structureren en beheren. Let op in dit model kent men niet de term Klanten maar gebruikt men de term Partij(en). Dat betekend dat een Klant een Partij is en omgekeerd.
 
 * **Berichten**: Berichten binnen het KlantenRegister zijn gebaseerd op het [dienstverleningsforum Dienstverleningsmodel](https://dienstverleningsplatform.gitbook.io/platform-generieke-dienstverlening-public/patronen/berichten). Dit model biedt richtlijnen voor het uitwisselen van berichten tussen verschillende dienstverleningssystemen, waardoor een consistente en efficiënte communicatie mogelijk wordt.
 
