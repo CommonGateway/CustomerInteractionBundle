@@ -50,7 +50,7 @@
         "handleClick": {
           "link": "https://vng-realisatie.github.io/klantinteracties/informatiemodel/semantisch_model"
         }
-      }
+      },
       {
         "label": "Platform Dienstverlening",
         "type": "external",
@@ -60,7 +60,7 @@
         "handleClick": {
           "link": "https://dienstverleningsplatform.gitbook.io/platform-generieke-dienstverlening-public/patronen/berichten"
         }
-      }
+      },
       {
         "label": "API (OAS)",
         "type": "external",
