@@ -3,6 +3,7 @@
 KlantenRegister is de spil in het web van klantinteractie binnen de overheid. Het systeem integreert naadloos klantinteractieregisters en de klantinteractie-convenience API. Het maakt gebruik van de CustomerInteractionBundle om alle interacties met inwoners gestructureerd en toegankelijk te houden, waardoor overheidsmedewerkers efficiënter kunnen werken.
 
 ## Architectuur
+
 De architectuur van KlantenRegister is gebaseerd op erkende klantinteractiepatronen en dienstverleningsmodellen:
 
 * **Klanten en Taken**: Deze zijn gebaseerd op klantinteractiepatronen zoals beschreven in het [Klantinteractie Informatiemodel](https://vng-realisatie.github.io/klantinteracties/informatiemodel/semantisch_model). Dit model biedt een gestandaardiseerde manier om interacties met klanten te structureren en beheren.
@@ -11,7 +12,7 @@ De architectuur van KlantenRegister is gebaseerd op erkende klantinteractiepatro
 
 Binnen de documentatie van platform dienstverlening vind je ook meer terug over de toepassing van taken.
 
-* **Api first**:  [API documentatie](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/openapi.json&nocors#tag/partij). 
+* **Api first**:  [API documentatie](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/openapi.json\&nocors#tag/partij).
 
 ## Backwards compatibility
 
