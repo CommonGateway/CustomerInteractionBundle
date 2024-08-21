@@ -14,6 +14,8 @@ Binnen de documentatie van platform dienstverlening vind je ook meer terug over 
 
 * **Api first**:  [API documentatie](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/openapi.json\&nocors#tag/partij).
 
+> **Note** Binnen VNG architectuur heten klanten partijen
+
 ## Backwards compatibility
 
 Het KlantenRegister heeft ook backwards compatibility met de oudere (deprecated) [KlantenBundle](https://github.com/CommonGateway/KlantenBundle). De volgende endpoints zijn zo ingericht dat ze zich gedragen zoals de KlantenBundle dat deed, maar op de achtergrond worden er nieuwe CustomerInteractionBundle objecten gebruikt:

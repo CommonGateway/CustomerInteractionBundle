@@ -14,33 +14,7 @@
     "current": {
       "pathname": "/docs"
     },
-    "subItems": [
-      {
-        "label": "Architectuur",
-        "type": "internalMarkdown",
-        "current": {
-          "pathname": "/docs/Architectuur"
-        },
-        "handleClick": {
-          "internalMarkdown": {
-            "directoryName": "docs",
-            "fileName": "Architectuur"
-          }
-        }
-      },
-      {
-        "label": "Functionaliteit",
-        "type": "internalMarkdown",
-        "current": {
-          "pathname": "/docs/features"
-        },
-        "handleClick": {
-          "internalMarkdown": {
-            "directoryName": "docs",
-            "fileName": "features"
-          }
-        }
-      },
+    "subItems": [ 
       {
         "label": "Taken",
         "type": "internalMarkdown",
@@ -51,19 +25,6 @@
           "internalMarkdown": {
             "directoryName": "docs",
             "fileName": "taken"
-          }
-        }
-      },
-      {
-        "label": "Berichten",
-        "type": "internalMarkdown",
-        "current": {
-          "pathname": "/Documentatie/berichten"
-        },
-        "handleClick": {
-          "internalMarkdown": {
-            "directoryName": "docs",
-            "fileName": "berichten"
           }
         }
       },
@@ -81,31 +42,25 @@
         }
       },
       {
-        "label": "Kosten",
-        "type": "internalMarkdown",
+        "label": "Klantinteractie Informatiemodel",
+        "type": "external",
         "current": {
-          "pathname": "/docs/Kosten"
+          "pathname": "/Documentatie/API"
         },
         "handleClick": {
-          "internalMarkdown": {
-            "directoryName": "docs",
-            "fileName": "Kosten"
-          }
+          "link": "https://vng-realisatie.github.io/klantinteracties/informatiemodel/semantisch_model"
         }
-      },
+      }
       {
-        "label": "Installatie",
-        "type": "internalMarkdown",
+        "label": "Platform Dienstverlening",
+        "type": "external",
         "current": {
-          "pathname": "/docs/Installatie"
+          "pathname": "/Documentatie/API"
         },
         "handleClick": {
-          "internalMarkdown": {
-            "directoryName": "docs",
-            "fileName": "Installatie"
-          }
+          "link": "https://dienstverleningsplatform.gitbook.io/platform-generieke-dienstverlening-public/patronen/berichten"
         }
-      },
+      }
       {
         "label": "API (OAS)",
         "type": "external",
