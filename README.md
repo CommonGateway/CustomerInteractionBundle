@@ -13,43 +13,7 @@ Binnen de documentatie van platform dienstverlening vind je ook meer terug over 
 
 * **Api first**:  [API documentatie](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/openapi.json&nocors#tag/partij). 
 
-## Kernvoordelen
-
-* **Centraal Overzicht:** Eén centrale locatie voor alle klantgegevens en interacties.
-* **Efficiëntie in Beheer:** Vereenvoudigt het beheer van klantinteracties en -gegevens.
-* **Interoperabiliteit:** Ondersteunt de integratie met andere systemen via gestandaardiseerde API's.
-* **Toegankelijkheid:** Maakt gegevens toegankelijk voor geautoriseerde gebruikers, met respect voor privacy en beveiliging.
-* **Flexibiliteit:** Kan worden uitgebreid en aangepast aan de behoeften van elke organisatie.
-* **Compliance:** Voldoet aan de relevante wet- en regelgeving voor gegevensbeheer.
-
-## Multitenancy
-
-## Federatief
-
-Door gebruik te maken van het [Open Register Framework](https://openregisters.app/) kunnen de klantregisters op een federatieve manier benaderd worden, wat interorganisatorische samenwerking en data-uitwisseling mogelijk maakt. Dit stelt inwoners in staat om via één centrale omgeving toegang te krijgen tot hun gegevens, taken en berichten van verschillende organisaties. Deze aanpak bevordert niet alleen de efficiëntie, maar ook de transparantie en gebruiksvriendelijkheid voor de gebruiker.
-
-## Installatie
-
-### Lokale Installatie
-
-#### Vereisten
-
-* PHP 7.4 of hoger
-* Symfony 5 of hoger
-* Toegang tot de CustomerInteractionBundle
-
-#### Stap-voor-stap Installatie
-
-1. Clone het CustomerInteractionBundle repository: `git clone https://github.com/CommonGateway/CustomerInteractionBundle.git`
-2. Installeer de benodigde afhankelijkheden: `composer install`
-3. Configureer uw omgevingsvariabelen (.env) voor de CustomerInteractionBundle.
-4. Volg de specifieke configuratie-instructies voor uw systeem.
-
-## Gebruik
-
-Na installatie en configuratie kunt u de KlantenRegister inrichten voor uw organisatie. U kunt klantinteracties en -gegevens beheren via een gebruiksvriendelijke interface, waarbij u de controle behoudt over de datastructuur en de toegang tot gegevens.
-
-### Backwards compatibility
+## Backwards compatibility
 
 Het KlantenRegister heeft ook backwards compatibility met de oudere (deprecated) [KlantenBundle](https://github.com/CommonGateway/KlantenBundle). De volgende endpoints zijn zo ingericht dat ze zich gedragen zoals de KlantenBundle dat deed, maar op de achtergrond worden er nieuwe CustomerInteractionBundle objecten gebruikt:
 
