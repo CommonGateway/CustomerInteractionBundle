@@ -11,6 +11,8 @@ De architectuur van KlantenRegister is gebaseerd op erkende klantinteractiepatro
 
 Binnen de documentatie van platform dienstverlening vind je ook meer terug over de toepassing van taken.
 
+* **Api first**:  [API documentatie](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/openapi.json&nocors#tag/partij). 
+
 ## Kernvoordelen
 
 * **Centraal Overzicht:** Eén centrale locatie voor alle klantgegevens en interacties.
