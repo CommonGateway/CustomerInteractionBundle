@@ -2,13 +2,13 @@
 
 Een taak voor een burger, inwoner of vertegenwoordiger van een organisatie die moet worden uitgevoerd
 
-![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/main/docs/schema/klant.taak.svg)
+![Class Diagram](https://github.com/CommonGateway/CustomerInteractionBundle/blob/taken-id/docs/schema/klant.taak.svg)
 
 ## Properties
 
 | Property | Type | Description | Required |
 |----------|------|-------------|----------|
-| id | string | De unieke id van dit object voor verder gebruik | Yes |
+| id | string | De unieke id van dit object voor verder gebruik | No |
 | type | string | N/A | No |
 | url | string | N/A | No |
 | data | array | N/A | No |
