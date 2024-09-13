@@ -35,7 +35,8 @@ Medewerker -> Zaaksysteem: Zet Zaak op gereed
 Medewerker -> Medewerker: Beoordeel zaak
 Medewerker -> Medewerker: Constateer dat extra document acoord is
 Medewerker -> Zaaksysteem: Zet zaak op afgehandeld
-KTB -> "Output Management Component": Stuur event naar Output Management Component
+Zaaksysteem -> "Output Management Component": Stuur event naar Output Management Component
+"Output Management Component" -> Zaaksysteem: Haal zaak op a.h.v. event
 "Output Management Component" -> KTB: Haal klant op en bepaal voorkeurskanaal
 KTB -> "Output Management Component": Stuur klantgegevens en voorkeurskanaal
 "Output Management Component" -> "Output Management Component": Creëer bericht
