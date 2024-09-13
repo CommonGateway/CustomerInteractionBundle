@@ -8,7 +8,7 @@ Een taak voor een burger, inwoner of vertegenwoordiger van een organisatie die m
 
 | Property | Type | Description | Required |
 |----------|------|-------------|----------|
-| id | string | De unieke id van dit object voor verder gebruik | Yes |
+| id | string | De unieke id van dit object voor verder gebruik | No |
 | type | string | N/A | No |
 | url | string | N/A | No |
 | data | array | N/A | No |
