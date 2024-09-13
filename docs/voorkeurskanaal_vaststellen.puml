@@ -1,0 +1,7 @@
+@startuml
+
+participant Zaaksysteem
+participant KTB as "Klanten, Taken & Berichten (KTB)"
+participant "Output Management Component"
+
+@enduml

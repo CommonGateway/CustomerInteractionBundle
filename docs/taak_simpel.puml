@@ -1,0 +1,23 @@
+@startuml
+actor Medewerker
+actor Klant
+participant Zaaksysteem
+participant KTB as "Klanten, Taken & Berichten (KTB)"
+participant "Output Management Component"
+participant MijnOmgeving
+
+Medewerker -> Zaaksysteem: Maak verzoek tot aanvulling aan (extra document)
+Zaaksysteem -> KTB: Schrijf taak weg in KTB
+KTB -> "Output Management Component": Stuur event naar Output Management Component
+"Output Management Component" -> KTB: Haal taak op a.h.v. event
+"Output Management Component" -> KTB: Haal klant op en bepaal voorkeurskanaal
+KTB -> "Output Management Component": Stuur klantgegevens en voorkeurskanaal
+"Output Management Component" -> Klant: Verstuur bericht via voorkeurskanaal
+"Output Management Component" -> KTB: Sla bericht op in KTB
+
+Klant -> MijnOmgeving: Log in op MijnOmgeving
+MijnOmgeving -> KTB: Haal taak op uit KTB
+Klant -> MijnOmgeving: Voer taak uit door document te uploaden
+MijnOmgeving -> KTB: Zet taak op gereed
+MijnOmgeving -> Zaaksysteem: Voeg document toe aan Zaaksysteem
+@enduml

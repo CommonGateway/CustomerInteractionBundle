@@ -24,6 +24,27 @@ Het KlantenRegister heeft ook backwards compatibility met de oudere (deprecated)
 * /api/kic/v1/contactmomenten => op de achtergrond: klantcontact
 * /api/kic/v1/klantcontactmomenten => op de achtergrond: betrokkeneBijKlantcontact
 
+## Sequence Diagrammen
+
+Om een beter inzicht te geven in de werking van het KlantenRegister, hebben we een aantal sequence diagrammen opgesteld. Deze diagrammen illustreren de interacties tussen verschillende componenten en actoren in het systeem, met een focus op taken en klantinteracties.
+
+### Taak Simpel
+![Taak Simpel](docs/taak_simpel.svg)
+
+Dit diagram toont een vereenvoudigde weergave van het taakproces, waarbij een medewerker een verzoek tot aanvulling maakt en de klant hierop reageert via MijnOmgeving.
+
+### Taak Uitgebreid
+![Taak Uitgebreid](docs/taak_uitgebreid.svg)
+
+Het uitgebreide taakdiagram geeft een meer gedetailleerd overzicht van het volledige proces, inclusief de creatie van een zaak, beoordeling door een medewerker, en de afhandeling van de taak.
+
+### Voorkeurskanaal Vaststellen
+![Voorkeurskanaal Vaststellen](docs/voorkeurskanaal_vaststellen.svg)
+
+Dit diagram laat zien hoe het systeem het voorkeurskanaal van een klant bepaalt en gebruikt voor communicatie, wat een belangrijk aspect is van klantgerichte dienstverlening.
+
+Deze diagrammen bieden een visuele representatie van de processen binnen het KlantenRegister en helpen bij het begrijpen van de interacties tussen verschillende componenten en actoren in het systeem.
+
 ## Bijdragen
 
 Wilt u bijdragen aan de ontwikkeling van KlantenRegister? Uw input is welkom, of het nu gaat om foutmeldingen, verbetervoorstellen, of codebijdragen. Raadpleeg onze `CONTRIBUTING.md` voor meer informatie over hoe u kunt deelnemen.
