@@ -29,17 +29,17 @@ Het KlantenRegister heeft ook backwards compatibility met de oudere (deprecated)
 Om een beter inzicht te geven in de werking van het KlantenRegister, hebben we een aantal sequence diagrammen opgesteld. Deze diagrammen illustreren de interacties tussen verschillende componenten en actoren in het systeem, met een focus op taken en klantinteracties.
 
 ### Taak Simpel
-![Taak Simpel](docs/taak_simpel.svg)
+![Taak Simpel](https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/taak_simpel.svg)
 
 Dit diagram toont een vereenvoudigde weergave van het taakproces, waarbij een medewerker een verzoek tot aanvulling maakt en de klant hierop reageert via MijnOmgeving.
 
 ### Taak Uitgebreid
-![Taak Uitgebreid](docs/taak_uitgebreid.svg)
+![Taak Uitgebreid](https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/taak_uitgebreid.svg)
 
 Het uitgebreide taakdiagram geeft een meer gedetailleerd overzicht van het volledige proces, inclusief de creatie van een zaak, beoordeling door een medewerker, en de afhandeling van de taak.
 
 ### Voorkeurskanaal Vaststellen
-![Voorkeurskanaal Vaststellen](docs/voorkeurskanaal_vaststellen.svg)
+![Voorkeurskanaal Vaststellen](https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/voorkeurskanaal_vaststellen.svg)
 
 Dit diagram laat zien hoe het systeem het voorkeurskanaal van een klant bepaalt en gebruikt voor communicatie, wat een belangrijk aspect is van klantgerichte dienstverlening.
 
