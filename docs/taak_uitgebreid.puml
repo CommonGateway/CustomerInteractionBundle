@@ -2,44 +2,41 @@
 actor Medewerker
 actor Klant
 participant Zaaksysteem
-participant KTB as "Klanten, Taken & Berichten (KTB)"
-participant "Output Management Component"
+participant KTB as "Klanten, Taken & Berichten - Registers"
+participant "Afhandelcomponent"
 participant MijnOmgeving
 
 Klant -> MijnOmgeving: Log in op MijnOmgeving
-Klant -> MijnOmgeving: Vraag e-dienst en product aan
+Klant -> MijnOmgeving: Vraag een product aan
 MijnOmgeving -> Zaaksysteem: Creëer zaak
-Zaaksysteem -> Medewerker: Notificeer medewerker over nieuwe zaak
+Medewerker -> Medewerker: Neemt zaak in behandeling
 Medewerker -> Medewerker: Beoordeel zaak
 Medewerker -> Medewerker: Constateer dat extra document nodig is
 
 Medewerker -> Zaaksysteem: Maak verzoek tot aanvulling aan (extra document)
-Zaaksysteem -> KTB: Schrijf taak weg in KTB
-KTB -> "Output Management Component": Stuur event naar Output Management Component
-"Output Management Component" -> KTB: Haal taak op a.h.v. event
-"Output Management Component" -> KTB: Haal klant op en bepaal voorkeurskanaal
-KTB -> "Output Management Component": Stuur klantgegevens en voorkeurskanaal
-"Output Management Component" -> "Output Management Component": Creëer bericht
-"Output Management Component" -> Klant: Verstuur bericht via voorkeurskanaal
-"Output Management Component" -> KTB: Sla bericht op in KTB
+Zaaksysteem -> KTB: Schrijf taak weg in Takenregister (Zaakspecifiek voorkeurskanaal in extraData-veld)
+KTB -> "Afhandelcomponent": Stuur event "Nieuwe taak" naar Afhandelcomponent
+"Afhandelcomponent" -> KTB: Haalt taak op uit Takenregister 
+"Afhandelcomponent" -> KTB: Haalt klant op uit het Klantenregister (tbv Voorkeurskanaal als niet gevuld in taak)
+"Afhandelcomponent" -> "Afhandelcomponent": Creëer bericht
+"Afhandelcomponent" -> Klant: Verstuur bericht via voorkeurskanaal
+"Afhandelcomponent" -> KTB: Sla bericht op in Berichtenregister
 
 Klant -> MijnOmgeving: Log in op MijnOmgeving
-MijnOmgeving -> KTB: Haal taak op uit KTB
+MijnOmgeving -> KTB: Haalt taak op uit Takenregister
 Klant -> MijnOmgeving: Voer taak uit door document te uploaden
-MijnOmgeving -> KTB: Zet taak op gereed
+MijnOmgeving -> KTB: Update taakstatus in Takenregister naar "gesloten"
 MijnOmgeving -> Zaaksysteem: Voeg document toe aan Zaaksysteem
 
 
 Zaaksysteem -> Medewerker: Notificeer medewerker over toegevoegd document
-Medewerker -> Zaaksysteem: Zet Zaak op gereed
-Medewerker -> Medewerker: Beoordeel zaak
-Medewerker -> Medewerker: Constateer dat extra document acoord is
-Medewerker -> Zaaksysteem: Zet zaak op afgehandeld
-Zaaksysteem -> "Output Management Component": Stuur event naar Output Management Component
-"Output Management Component" -> Zaaksysteem: Haal zaak op a.h.v. event
-"Output Management Component" -> KTB: Haal klant op en bepaal voorkeurskanaal
-KTB -> "Output Management Component": Stuur klantgegevens en voorkeurskanaal
-"Output Management Component" -> "Output Management Component": Creëer bericht
-"Output Management Component" -> Klant: Verstuur bericht via voorkeurskanaal
-"Output Management Component" -> KTB: Sla bericht op in KTB
+Medewerker -> Medewerker: Beoordeelt document
+Medewerker -> Medewerker: Accepteert document
+Medewerker -> Zaaksysteem: Zet zaak naar volgende status
+Zaaksysteem -> "Afhandelcomponent": Stuur event "update zaakstatus" naar Afhandelcomponent
+"Afhandelcomponent" -> Zaaksysteem: Haal zaak op a.h.v. "update zaakstatus" (inclusief zaak voorkeurskanaal)
+"Afhandelcomponent" -> KTB: Haalt klant op uit Klantenregister
+"Afhandelcomponent" -> "Afhandelcomponent": Creëer bericht
+"Afhandelcomponent" -> Klant: Verstuur bericht via voorkeurskanaal
+"Afhandelcomponent" -> KTB: Sla bericht op in Berichtenregister
 @enduml
