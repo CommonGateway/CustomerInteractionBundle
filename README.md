@@ -10,7 +10,7 @@ De architectuur van Klantenregister is gebaseerd op erkende klantinteractiepatro
 
 * **Berichten**: Berichten binnen het KlantenRegister zijn gebaseerd op het [dienstverleningsforum Dienstverleningsmodel](https://dienstverleningsplatform.gitbook.io/platform-generieke-dienstverlening-public/patronen/berichten). Dit model biedt richtlijnen voor het uitwisselen van berichten tussen verschillende dienstverleningssystemen, waardoor een consistente en efficiënte communicatie mogelijk wordt. [Berichten API](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/openapi.json\&nocors#tag/bericht)
 
-Voor meer informatie verwijzen wij door naar de documentatie van Platform Dienstverlening. 
+Voor meer informatie verwijzen wij door naar de documentatie van Platform Dienstverlening.
 
 * **Api first**:  [API documentatie](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/openapi.json\&nocors#tag/partij).
 
