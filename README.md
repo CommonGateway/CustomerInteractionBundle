@@ -1,16 +1,16 @@
-# Over Klanten Register
+# Over Klantenregister
 
-KlantenRegister is de spil in het web van klantinteractie binnen de overheid. Het systeem integreert naadloos klantinteractieregisters en de klantinteractie-convenience API. Het maakt gebruik van de CustomerInteractionBundle om alle interacties met inwoners gestructureerd en toegankelijk te houden, waardoor overheidsmedewerkers efficiënter kunnen werken.
+Het Klantenregister is de spil in het web van klantinteractie binnen de overheid. Het systeem integreert naadloos klantinteractieregisters en de klantinteractie-convenience API. Het maakt gebruik van de CustomerInteractionBundle om alle interacties met inwoners gestructureerd en toegankelijk te houden, waardoor overheidsmedewerkers efficiënter kunnen werken.
 
 ## Architectuur
 
-De architectuur van KlantenRegister is gebaseerd op erkende klantinteractiepatronen en dienstverleningsmodellen:
+De architectuur van Klantenregister is gebaseerd op erkende klantinteractiepatronen en dienstverleningsmodellen:
 
-* **Klanten en Taken**: Deze zijn gebaseerd op klantinteractiepatronen zoals beschreven in het [Klantinteractie Informatiemodel](https://vng-realisatie.github.io/klantinteracties/informatiemodel/semantisch_model). Dit model biedt een gestandaardiseerde manier om interacties met klanten te structureren en beheren. Let op in dit model kent men niet de term Klanten maar gebruikt men de term Partij(en). Dat betekend dat een Klant een Partij is en omgekeerd. [Partij API](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/openapi.json\&nocors#tag/partij) [Taken API](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/openapi.json\&nocors#tag/taak)
+* **Klanten en Taken**: Deze zijn gebaseerd op klantinteractiepatronen zoals beschreven in het [Klantinteractie Informatiemodel](https://vng-realisatie.github.io/klantinteracties/informatiemodel/semantisch_model). Dit model biedt een gestandaardiseerde manier om interacties met klanten te structureren en beheren. Let op in dit model kent men niet de term Klanten maar gebruikt men de term Partij(en). [Partij API](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/openapi.json\&nocors#tag/partij) / [Taken API](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/openapi.json\&nocors#tag/taak)
 
 * **Berichten**: Berichten binnen het KlantenRegister zijn gebaseerd op het [dienstverleningsforum Dienstverleningsmodel](https://dienstverleningsplatform.gitbook.io/platform-generieke-dienstverlening-public/patronen/berichten). Dit model biedt richtlijnen voor het uitwisselen van berichten tussen verschillende dienstverleningssystemen, waardoor een consistente en efficiënte communicatie mogelijk wordt. [Berichten API](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/openapi.json\&nocors#tag/bericht)
 
-Binnen de documentatie van platform dienstverlening vind je ook meer terug over de toepassing van taken.
+Voor meer informatie verwijzen wij door naar de documentatie van Platform Dienstverlening. 
 
 * **Api first**:  [API documentatie](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/CommonGateway/CustomerInteractionBundle/main/docs/openapi.json\&nocors#tag/partij).
 
@@ -18,7 +18,7 @@ Binnen de documentatie van platform dienstverlening vind je ook meer terug over 
 
 ## Backwards compatibility
 
-Het KlantenRegister heeft ook backwards compatibility met de oudere (deprecated) [KlantenBundle](https://github.com/CommonGateway/KlantenBundle). De volgende endpoints zijn zo ingericht dat ze zich gedragen zoals de KlantenBundle dat deed, maar op de achtergrond worden er nieuwe CustomerInteractionBundle objecten gebruikt:
+Het Klantenregister is ook backwards compatible met de oudere (deprecated) [KlantenBundle](https://github.com/CommonGateway/KlantenBundle). De volgende endpoints zijn zo ingericht dat ze zich gedragen zoals de KlantenBundle dat deed, maar op de achtergrond worden er nieuwe CustomerInteractionBundle objecten gebruikt:
 
 * /api/kic/v1/klanten => op de achtergrond: partij
 * /api/kic/v1/contactmomenten => op de achtergrond: klantcontact
@@ -26,7 +26,7 @@ Het KlantenRegister heeft ook backwards compatibility met de oudere (deprecated)
 
 ## Sequence Diagrammen
 
-Om een beter inzicht te geven in de werking van het KlantenRegister, hebben we een aantal sequence diagrammen opgesteld. Deze diagrammen illustreren de interacties tussen verschillende componenten en actoren in het systeem, met een focus op taken en klantinteracties.
+Om een beter inzicht te geven in de werking van het Klantenregister, hebben we een aantal sequence diagrammen opgesteld. Deze diagrammen illustreren de interacties tussen verschillende componenten en actoren in het systeem, met een focus op taken en klantinteracties.
 
 ### Taak Simpel
 
