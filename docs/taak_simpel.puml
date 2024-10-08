@@ -2,7 +2,9 @@
 actor Medewerker
 actor Klant
 participant Zaaksysteem
-participant KTB as "Klanten, Taken & Berichten "
+participant KTB as "Takenregister "
+participant Klanten as "Klantenregister"
+participant Berichten as "Berichtenregister"
 participant "Afhandelcomponent"
 participant MijnOmgeving
 
@@ -10,9 +12,9 @@ Medewerker -> Zaaksysteem: Maak verzoek tot aanvulling aan (extra document)
 Zaaksysteem -> KTB: Schrijf taak weg in Takenregister (Zaakspecifiek voorkeurskanaal in extraData-veld)
 KTB -> "Afhandelcomponent": Stuur event "Nieuwe taak" naar Afhandelcomponent
 "Afhandelcomponent" -> KTB: Haalt taak op uit Takenregister 
-"Afhandelcomponent" -> KTB: Haalt klant op uit het Klantenregister (tbv Voorkeurskanaal als niet gevuld in taak)
+"Afhandelcomponent" -> Klanten: Haalt klant op uit het Klantenregister (tbv Voorkeurskanaal als niet gevuld in taak)
 "Afhandelcomponent" -> Klant: Verstuur bericht via voorkeurskanaal
-"Afhandelcomponent" -> KTB: Sla bericht op in Berichtenregister
+"Afhandelcomponent" -> Berichten: Sla bericht op in Berichtenregister
 
 Klant -> MijnOmgeving: Log in op MijnOmgeving
 MijnOmgeving -> KTB: Haal taak op uit Takenregister
