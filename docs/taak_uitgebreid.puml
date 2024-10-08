@@ -2,7 +2,9 @@
 actor Medewerker
 actor Klant
 participant Zaaksysteem
-participant KTB as "Klanten, Taken & Berichten - Registers"
+participant KTB as "Takenregister "
+participant Klanten as "Klantenregister"
+participant Berichten as "Berichtenregister"
 participant "Afhandelcomponent"
 participant MijnOmgeving
 
@@ -17,10 +19,10 @@ Medewerker -> Zaaksysteem: Maak verzoek tot aanvulling aan (extra document)
 Zaaksysteem -> KTB: Schrijf taak weg in Takenregister (Zaakspecifiek voorkeurskanaal in extraData-veld)
 KTB -> "Afhandelcomponent": Stuur event "Nieuwe taak" naar Afhandelcomponent
 "Afhandelcomponent" -> KTB: Haalt taak op uit Takenregister 
-"Afhandelcomponent" -> KTB: Haalt klant op uit het Klantenregister (tbv Voorkeurskanaal als niet gevuld in taak)
+"Afhandelcomponent" -> Klanten: Haalt klant op uit het Klantenregister (tbv Voorkeurskanaal als niet gevuld in taak)
 "Afhandelcomponent" -> "Afhandelcomponent": Creëer bericht
 "Afhandelcomponent" -> Klant: Verstuur bericht via voorkeurskanaal
-"Afhandelcomponent" -> KTB: Sla bericht op in Berichtenregister
+"Afhandelcomponent" -> Berichten: Sla bericht op in Berichtenregister
 
 Klant -> MijnOmgeving: Log in op MijnOmgeving
 MijnOmgeving -> KTB: Haalt taak op uit Takenregister
@@ -35,8 +37,8 @@ Medewerker -> Medewerker: Accepteert document
 Medewerker -> Zaaksysteem: Zet zaak naar volgende status
 Zaaksysteem -> "Afhandelcomponent": Stuur event "update zaakstatus" naar Afhandelcomponent
 "Afhandelcomponent" -> Zaaksysteem: Haal zaak op a.h.v. "update zaakstatus" (inclusief zaak voorkeurskanaal)
-"Afhandelcomponent" -> KTB: Haalt klant op uit Klantenregister
+"Afhandelcomponent" -> Klanten: Haalt klant op uit Klantenregister
 "Afhandelcomponent" -> "Afhandelcomponent": Creëer bericht
 "Afhandelcomponent" -> Klant: Verstuur bericht via voorkeurskanaal
-"Afhandelcomponent" -> KTB: Sla bericht op in Berichtenregister
+"Afhandelcomponent" -> Berichten: Sla bericht op in Berichtenregister
 @enduml
